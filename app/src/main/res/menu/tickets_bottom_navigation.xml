@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/opened_tickets"
+        android:title="@string/opened_tickets"
+        android:icon="@drawable/navigation_opened_tickets" />
+
+    <item
+        android:id="@id/closed_tickets"
+        android:title="@string/closed_tickets"
+        android:icon="@drawable/navigation_closed_tickets"/>
+</menu>

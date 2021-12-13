@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@id/product_container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    app:cardCornerRadius="15dp"
+    android:layout_marginBottom="15dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="?color_light_separate">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_height="150dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@id/product_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:roundedCornerRadius="15dp"
+                android:scaleType="centerCrop"
+                fresco:placeholderImage="?color_grey" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15dp"
+                android:paddingStart="10dp"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:background="@drawable/input_rectangle_background">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/icon_check_blue"
+                    fresco:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/verified_by_picassos_developers"
+                    android:textSize="10sp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="?color_dark"
+                    fresco:ignore="SmallSp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/product_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Title"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="11sp"
+                android:textColor="?color_dark"
+                fresco:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$250"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="16sp"
+                    android:textColor="?color_dark"
+                    fresco:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@id/product_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$350"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_danger"
+                    fresco:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

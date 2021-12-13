@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/promotion_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/promotion_backgrond"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@id/promotion_image"
+        android:layout_width="312dp"
+        app:roundedCornerRadius="11dp"
+        android:layout_height="312dp"
+        android:layout_centerInParent="true"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="?color_card_alert" />
+
+    <ProgressBar
+        android:id="@id/progress_bar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="?color_dark"
+        tools:targetApi="lollipop" />
+
+</RelativeLayout>

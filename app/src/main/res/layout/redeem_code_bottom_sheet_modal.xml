@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="41dp"
+            android:layout_height="6dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="?divider_inline" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/opensans_bold"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/redeem_gift_card"
+            android:textColor="?color_dark"
+            android:textSize="13sp"
+            tools:ignore="SmallSp" />
+
+        <EditText
+            android:id="@id/redeem_code"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/input_rectangle_background_sheet"
+            android:hint="@string/enter_code"
+            android:inputType="text"
+            android:layoutDirection="ltr"
+            android:maxLines="1"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="?color_dark"
+            android:textColorHint="?color_dark"
+            android:textSize="11sp"
+            tools:ignore="Autofill,RtlSymmetry,SmallSp,TextFields" />
+
+        <TextView
+            android:id="@id/agreement_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:textColorLink="?color_dark"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/gift_card_notice_agreement"
+            android:textColor="?color_dark"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="25dp">
+
+            <Button
+                android:id="@id/redeem"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/button_primary"
+                android:text="@string/redeem"
+                android:enabled="false"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textAllCaps="false"
+                android:textSize="11sp"
+                android:textColor="@color/color_white" />
+
+            <TextView
+                android:id="@id/response"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:visibility="gone"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/gift_card_successfully_redeemed"
+                android:textColor="#05BE70"
+                android:textSize="11sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

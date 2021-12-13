@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/refresh_layout"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    android:background="?color_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:id="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@id/go_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingStart="0dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/icon_back"
+                app:tint="?color_dark"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/write_a_review"
+                android:textAllCaps="true"
+                android:textColor="?color_dark"
+                android:textSize="14sp"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:cardCornerRadius="27.5dp"
+                app:cardBackgroundColor="?color_grey"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@id/review_author_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="?color_dark"
+                    android:text="O"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@id/review_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Author"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="?color_dark"
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <TextView
+                    android:id="@id/learn_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:textColorLink="?color_dark"
+                    android:text="@string/reviews_are_public_and_include_your_account_name_username"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="?color_dark"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RatingBar
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:id="@id/review_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:numStars="5"
+            android:progressTint="@color/color_blue"
+            android:progressBackgroundTint="?color_dark"
+            android:stepSize="1"
+            android:isIndicator="false" />
+
+        <TextView
+            android:id="@id/rating_callback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textColorLink="?color_dark"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:text="@string/oh_no_a_bad_review_maybe_we_can_help_improve_your_experience_with_mint_contact_us_whenever_you_need_and_we_ll_be_there_for_the_rescue"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="?color_dark"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <EditText
+            android:id="@id/review_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbar_background"
+            android:hint="@string/describe_your_experience"
+            android:inputType="textMultiLine"
+            android:paddingStart="20dp"
+            android:layout_marginTop="15dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="?color_dark"
+            android:maxLength="250"
+            android:textColorHint="?color_dark"
+            android:textDirection="locale"
+            android:textSize="13sp"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@id/length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_gravity="end"
+            android:textColorLink="?color_dark"
+            android:text="0/250"
+            android:textColor="?color_dark"
+            android:textSize="11sp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <Button
+            android:id="@id/post_review"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/input_background_primary"
+            android:text="@string/post_review"
+            android:textAllCaps="false"
+            android:textColor="?color_light_separate"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

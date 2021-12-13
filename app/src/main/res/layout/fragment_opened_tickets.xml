@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/toolbar_background"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@id/go_back"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="5dp"
+                        android:src="@drawable/icon_back"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription,RtlSymmetry" />
+
+                    <TextView
+                        android:id="@id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="3dp"
+                        android:fontFamily="@font/pacifico_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/opened_tickets"
+                        android:textColor="?color_dark"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/toolbar"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/opened_tickets"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/opensans_bold"
+                            android:textSize="12sp"
+                            android:textColor="?color_dark"
+                            android:textAllCaps="true"
+                            tools:ignore="SmallSp" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            layout="@layout/include_internet_connection" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@id/no_items"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="?color_light_separate"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="20dp"
+                                android:textAlignment="center"
+                                android:text="@string/you_don_t_have_any_opened_tickets_click_to_add_a_new_one"
+                                android:textColor="?color_dark" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@id/recycler_tickets"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="10dp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@id/open_ticket"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardBackgroundColor="?color_dark"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_add"
+            android:padding="12dp"
+            app:tint="?color_light_separate"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

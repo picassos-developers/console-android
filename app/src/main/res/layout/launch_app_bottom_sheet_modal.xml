@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/launch_your_application"
+            android:textColor="?color_dark"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColorLink="?color_dark"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/quickly_start_testing_your_app_after_the_changes_you_ve_made"
+            android:textColor="?color_dark"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@id/normal_process"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="?color_background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="14dp"
+                        android:src="@drawable/icon_launch"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp"
+                        android:text="@string/launch_normal_process" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@id/wordpress_provider"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="?color_background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="14dp"
+                        android:src="@drawable/icon_wordpress"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp"
+                        android:text="@string/wordpress" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@id/webview_provider"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="?color_background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="14dp"
+                        android:src="@drawable/icon_webview"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp"
+                        android:text="@string/webview" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@id/youtube_provider"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="?color_background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="14dp"
+                        android:src="@drawable/icon_youtube"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp"
+                        android:text="@string/youtube" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@id/vimeo_provider"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="?color_background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="14dp"
+                        android:src="@drawable/icon_vimeo"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp"
+                        android:text="@string/vimeo" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@id/facebook_provider"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="?color_background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="14dp"
+                        android:src="@drawable/icon_facebook"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp"
+                        android:text="@string/facebook" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@id/pinterest_provider"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="?color_background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="14dp"
+                        android:src="@drawable/icon_pinterest"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp"
+                        android:text="@string/pinterest" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@id/maps_provider"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="?color_background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="14dp"
+                        android:src="@drawable/icon_maps"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp"
+                        android:text="@string/maps" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@id/imgur_provider"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="?color_background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="14dp"
+                        android:src="@drawable/icon_imgur"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp"
+                        android:text="@string/imgur" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

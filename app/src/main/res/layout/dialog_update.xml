@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_margin="15dp"
+    android:paddingStart="5dp"
+    android:paddingTop="25dp"
+    android:background="@drawable/popup_background"
+    android:paddingEnd="5dp"
+    android:paddingBottom="25dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="?color_dark"
+        android:text="@string/a_new_version_is_now_available_please_update_to_the_latest_version"
+        android:textSize="13sp"
+        android:layout_gravity="center"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@id/update_app"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_gravity="center"
+        android:background="@drawable/input_rectangle_background"
+        android:text="@string/update"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:textColor="?color_dark"
+        android:textSize="13sp" />
+
+</LinearLayout>

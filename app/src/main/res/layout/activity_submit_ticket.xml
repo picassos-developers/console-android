@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/toolbar_background"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@id/go_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/icon_back"
+                app:tint="?color_dark"
+                tools:ignore="ContentDescription,RtlSymmetry" />
+
+            <TextView
+                android:id="@id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/pacifico_regular"
+                android:gravity="center_vertical"
+                android:text="@string/submit_request"
+                android:textColor="?color_dark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="@string/submit_request"
+                    android:textAllCaps="true"
+                    android:textColor="?color_dark"
+                    android:textSize="12sp"
+                    tools:ignore="SmallSp" />
+
+                <EditText
+                    android:id="@id/ticket_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input_rectangle_background"
+                    android:hint="@string/subject"
+                    android:inputType="text"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="?color_dark"
+                    android:textColorHint="?color_dark"
+                    android:textDirection="locale"
+                    android:textSize="13sp"
+                    tools:ignore="Autofill,LabelFor" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@id/ticket_type_chooser"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="?color_light_separate"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:id="@id/ticket_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="@string/ticket_type"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@id/ticket_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input_rectangle_background"
+                    android:gravity="top"
+                    android:hint="@string/ticket_description"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:minHeight="100dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="?color_dark"
+                    android:textColorHint="?color_dark"
+                    android:textDirection="locale"
+                    android:textSize="13sp"
+                    tools:ignore="Autofill,LabelFor" />
+
+                <Button
+                    android:id="@id/open_ticket"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_background_primary"
+                    android:text="@string/open_ticket"
+                    android:textAllCaps="false"
+                    android:textColor="?color_light_separate"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@id/agreement_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColorLink="?color_dark"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/check_out_our_help_center_before_submitting_a_ticket_your_issue_has_probably_been_addressed_there_already"
+                    android:textColor="?color_dark"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

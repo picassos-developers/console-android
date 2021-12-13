@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="41dp"
+                android:layout_height="6dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="?divider_inline" />
+
+            <EditText
+                android:id="@id/navigation_title_input"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/input_background_alternative"
+                android:hint="@string/navigation_title"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textSize="14sp"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@id/navigation_link_input"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_background_alternative"
+                android:hint="@string/navigation_link"
+                android:inputType="textUri"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textSize="14sp"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@id/navigation_icon_input"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_background_alternative"
+                android:hint="@string/navigation_icon"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textSize="14sp"
+                tools:ignore="Autofill" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/open_outside_app"
+                    android:layout_alignParentStart="true"
+                    android:textColor="?color_dark"
+                    android:textSize="15sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@id/navigation_behavior_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:thumb="@drawable/switch_thumb"
+                    app:track="@drawable/switch_track" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enable_premium_link"
+                    android:layout_alignParentStart="true"
+                    android:textColor="?color_dark"
+                    android:textSize="15sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@id/navigation_premium_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:thumb="@drawable/switch_thumb"
+                    app:track="@drawable/switch_track" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@id/add_navigation_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/input_background_alternative"
+                android:text="@string/add_navigation"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textColor="?color_dark" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

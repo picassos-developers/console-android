@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/toolbar_background"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@id/go_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_back"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription,RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="@font/pacifico_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/pinterest"
+                    android:textColor="?color_dark"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@id/pinterest_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="@string/pinterest"
+                        android:textAllCaps="true"
+                        android:textColor="?color_dark"
+                        android:textSize="12sp"
+                        tools:ignore="SmallSp" />
+
+                    <EditText
+                        android:id="@id/access_token"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/input_rectangle_background"
+                        android:hint="@string/access_token"
+                        android:inputType="text"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="?color_dark"
+                        android:textColorHint="?color_dark"
+                        android:textDirection="locale"
+                        android:textSize="13sp"
+                        tools:ignore="Autofill,LabelFor" />
+
+                    <EditText
+                        android:id="@id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/input_rectangle_background"
+                        android:hint="@string/username"
+                        android:inputType="text"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="?color_dark"
+                        android:textColorHint="?color_dark"
+                        android:textDirection="locale"
+                        android:textSize="13sp"
+                        tools:ignore="Autofill,LabelFor" />
+
+                    <EditText
+                        android:id="@id/per_page"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/input_rectangle_background"
+                        android:hint="@string/per_page"
+                        android:inputType="number"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="?color_dark"
+                        android:textColorHint="?color_dark"
+                        android:textDirection="locale"
+                        android:textSize="13sp"
+                        tools:ignore="Autofill,LabelFor" />
+
+                    <EditText
+                        android:id="@id/board_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/input_rectangle_background"
+                        android:hint="@string/board_name"
+                        android:inputType="text"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="?color_dark"
+                        android:textColorHint="?color_dark"
+                        android:textDirection="locale"
+                        android:textSize="13sp"
+                        tools:ignore="Autofill,LabelFor" />
+
+                    <Button
+                        android:id="@id/update_pinterest"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/input_background_primary"
+                        android:text="@string/save"
+                        android:textAllCaps="false"
+                        android:textColor="?color_light_separate"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <include
+                layout="@layout/include_internet_connection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

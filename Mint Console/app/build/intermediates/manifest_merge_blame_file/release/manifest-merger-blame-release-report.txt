@@ -1,0 +1,568 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.picassos.mint.console.android"
+4    android:versionCode="19"
+5    android:versionName="19.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="22"
+8-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:6:5-67
+11-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:6:22-64
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:7:5-65
+12-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:7:22-62
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:8:5-81
+13-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:8:22-78
+14    <uses-permission android:name="com.android.vending.BILLING" />
+14-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:9:5-67
+14-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:9:22-64
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:24:5-79
+16-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:24:22-76
+17    <uses-permission android:name="android.permission.WAKE_LOCK" />
+17-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:25:5-68
+17-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:25:22-65
+18    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+18-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:26:5-110
+18-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:26:22-107
+19    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+19-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:26:5-82
+19-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:26:22-79
+20
+21    <application
+21-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:11:5-146:19
+22        android:name="com.picassos.mint.console.android.App"
+22-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:12:9-28
+23        android:allowBackup="true"
+23-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:13:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.5.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/0abfa35c045bdc256505e12da0424298/core-1.5.0/AndroidManifest.xml:24:18-86
+25        android:icon="@mipmap/ic_launcher"
+25-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:14:9-43
+26        android:label="@string/app_name"
+26-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:15:9-41
+27        android:supportsRtl="true"
+27-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:16:9-35
+28        android:theme="@style/AppTheme" >
+28-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:17:9-40
+29        <activity
+29-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:18:9-20:39
+30            android:name="com.picassos.mint.console.android.activities.store.powerups.customdarkmode.SetupCustomDarkModeActivity"
+30-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:19:13-97
+31            android:exported="true" />
+31-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:20:13-36
+32        <activity
+32-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:21:9-23:39
+33            android:name="com.picassos.mint.console.android.activities.store.powerups.policies.FinishPoliciesSetupActivity"
+33-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:22:13-91
+34            android:exported="true" />
+34-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:23:13-36
+35        <activity android:name="com.picassos.mint.console.android.activities.store.powerups.policies.SetupPoliciesActivity" />
+35-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:24:9-94
+35-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:24:19-91
+36        <activity
+36-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:25:9-27:39
+37            android:name="com.picassos.mint.console.android.activities.store.WriteReviewActivity"
+37-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:26:13-65
+38            android:exported="true" />
+38-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:27:13-36
+39        <activity
+39-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:28:9-30:39
+40            android:name="com.picassos.mint.console.android.activities.CheckStatusActivity"
+40-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:29:13-59
+41            android:exported="true" />
+41-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:30:13-36
+42        <activity
+42-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:31:9-33:39
+43            android:name="com.picassos.mint.console.android.activities.store.ProductPurchasedActivity"
+43-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:32:13-70
+44            android:exported="true" />
+44-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:33:13-36
+45        <activity
+45-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:34:9-36:39
+46            android:name="com.picassos.mint.console.android.activities.store.ViewProductActivity"
+46-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:35:13-65
+47            android:exported="true" />
+47-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:36:13-36
+48        <activity
+48-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:37:9-39:39
+49            android:name="com.picassos.mint.console.android.activities.ClaimGiftActivity"
+49-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:38:13-57
+50            android:exported="true" />
+50-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:39:13-36
+51        <activity
+51-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:40:9-42:39
+52            android:name="com.picassos.mint.console.android.activities.GiftActivity"
+52-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:41:13-52
+53            android:exported="true" />
+53-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:42:13-36
+54        <activity
+54-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:43:9-45:39
+55            android:name="com.picassos.mint.console.android.activities.PreviewWizardsActivity"
+55-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:44:13-62
+56            android:exported="true" />
+56-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:45:13-36
+57        <activity
+57-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:46:9-48:39
+58            android:name="com.picassos.mint.console.android.activities.LoginProvidersActivity"
+58-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:47:13-62
+59            android:exported="true" />
+59-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:48:13-36
+60
+61        <provider
+62            android:name="androidx.core.content.FileProvider"
+62-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:51:13-62
+63            android:authorities="com.picassos.mint.console.android.provider"
+63-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:52:13-60
+64            android:exported="false"
+64-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:53:13-37
+65            android:grantUriPermissions="true" >
+65-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:54:13-47
+66            <meta-data
+66-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:55:13-57:58
+67                android:name="android.support.FILE_PROVIDER_PATHS"
+67-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:56:17-67
+68                android:resource="@xml/provider_paths" />
+68-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:57:17-55
+69        </provider>
+70
+71        <activity android:name="com.picassos.mint.console.android.activities.DownloadsActivity" />
+71-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:60:9-66
+71-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:60:19-63
+72        <activity
+72-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:61:9-63:39
+73            android:name="com.picassos.mint.console.android.activities.about.AboutConsoleActivity"
+73-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:62:13-66
+74            android:exported="true" />
+74-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:63:13-36
+75        <activity android:name="com.picassos.mint.console.android.activities.EditProjectActivity" />
+75-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:64:9-68
+75-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:64:19-65
+76        <activity android:name="com.picassos.mint.console.android.activities.manageAds.SetGoogleAdmobActivity" />
+76-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:65:9-81
+76-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:65:19-78
+77        <activity android:name="com.picassos.mint.console.android.activities.manageAds.SetFacebookNetworkActivity" />
+77-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:66:9-85
+77-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:66:19-82
+78        <activity android:name="com.picassos.mint.console.android.activities.forgotPassword.ResetPasswordActivity" />
+78-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:67:9-85
+78-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:67:19-82
+79        <activity android:name="com.picassos.mint.console.android.activities.forgotPassword.EnterVerificationActivity" />
+79-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:68:9-89
+79-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:68:19-86
+80        <activity android:name="com.picassos.mint.console.android.activities.ProjectsActivity" />
+80-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:69:9-65
+80-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:69:19-62
+81        <activity android:name="com.picassos.mint.console.android.activities.RegisterActivity" />
+81-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:70:9-65
+81-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:70:19-62
+82        <activity android:name="com.picassos.mint.console.android.activities.AddProjectActivity" />
+82-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:71:9-67
+82-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:71:19-64
+83        <activity android:name="com.picassos.mint.console.android.activities.NotificationPreviewActivity" />
+83-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:72:9-76
+83-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:72:19-73
+84        <activity android:name="com.picassos.mint.console.android.activities.NotificationsActivity" />
+84-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:73:9-70
+84-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:73:19-67
+85        <activity android:name="com.picassos.mint.console.android.activities.helpCentre.SearchArticlesActivity" />
+85-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:74:9-82
+85-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:74:19-79
+86        <activity android:name="com.picassos.mint.console.android.activities.helpCentre.UpdateTicketActivity" />
+86-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:75:9-80
+86-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:75:19-77
+87        <activity android:name="com.picassos.mint.console.android.activities.helpCentre.EditCommentActivity" />
+87-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:76:9-79
+87-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:76:19-76
+88        <activity android:name="com.picassos.mint.console.android.activities.helpCentre.CommentsActivity" />
+88-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:77:9-76
+88-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:77:19-73
+89        <activity android:name="com.picassos.mint.console.android.activities.helpCentre.CheckTicketActivity" />
+89-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:78:9-79
+89-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:78:19-76
+90        <activity android:name="com.picassos.mint.console.android.activities.helpCentre.ViewArticleActivity" />
+90-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:79:9-79
+90-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:79:19-76
+91        <activity android:name="com.picassos.mint.console.android.activities.helpCentre.ArticlesActivity" />
+91-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:80:9-76
+91-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:80:19-73
+92        <activity android:name="com.picassos.mint.console.android.activities.helpCentre.ViewTicketActivity" />
+92-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:81:9-78
+92-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:81:19-75
+93        <activity android:name="com.picassos.mint.console.android.activities.about.MyTicketsActivity" />
+93-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:82:9-72
+93-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:82:19-69
+94        <activity android:name="com.picassos.mint.console.android.activities.helpCentre.SubmitTicketActivity" />
+94-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:83:9-80
+94-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:83:19-77
+95        <activity android:name="com.picassos.mint.console.android.activities.about.UpdatePasswordActivity" />
+95-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:84:9-77
+95-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:84:19-74
+96        <activity android:name="com.picassos.mint.console.android.activities.about.ManageAccountActivity" />
+96-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:85:9-76
+96-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:85:19-73
+97        <activity android:name="com.picassos.mint.console.android.activities.about.GenerateAuthLoginActivity" />
+97-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:86:9-80
+97-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:86:19-77
+98        <activity android:name="com.picassos.mint.console.android.activities.QrLoginActivity" />
+98-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:87:9-64
+98-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:87:19-61
+99        <activity android:name="com.picassos.mint.console.android.activities.EditWizardActivity" />
+99-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:88:9-67
+99-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:88:19-64
+100        <activity android:name="com.picassos.mint.console.android.activities.manageAds.ManageAdsActivity" />
+100-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:89:9-76
+100-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:89:19-73
+101        <activity android:name="com.picassos.mint.console.android.activities.providers.WordpressActivity" />
+101-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:90:9-76
+101-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:90:19-73
+102        <activity android:name="com.picassos.mint.console.android.activities.WizardsActivity" />
+102-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:91:9-64
+102-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:91:19-61
+103        <activity android:name="com.picassos.mint.console.android.activities.providers.VimeoActivity" />
+103-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:92:9-72
+103-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:92:19-69
+104        <activity android:name="com.picassos.mint.console.android.activities.providers.YoutubeActivity" />
+104-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:93:9-74
+104-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:93:19-71
+105        <activity android:name="com.picassos.mint.console.android.activities.providers.MapsActivity" />
+105-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:94:9-71
+105-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:94:19-68
+106        <activity android:name="com.picassos.mint.console.android.activities.providers.PinterestActivity" />
+106-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:95:9-76
+106-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:95:19-73
+107        <activity android:name="com.picassos.mint.console.android.activities.providers.ImgurActivity" />
+107-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:96:9-72
+107-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:96:19-69
+108        <activity android:name="com.picassos.mint.console.android.activities.providers.FacebookActivity" />
+108-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:97:9-75
+108-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:97:19-72
+109        <activity android:name="com.picassos.mint.console.android.activities.ManageUpdatesActivity" />
+109-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:98:9-70
+109-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:98:19-67
+110        <activity android:name="com.picassos.mint.console.android.activities.SplashActivity" >
+110-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:99:9-118:20
+110-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:100:13-54
+111            <intent-filter>
+111-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:102:13-106:29
+112                <action android:name="android.intent.action.MAIN" />
+112-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:103:17-69
+112-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:103:25-66
+113
+114                <category android:name="android.intent.category.LAUNCHER" />
+114-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:105:17-77
+114-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:105:27-74
+115            </intent-filter>
+116            <intent-filter>
+116-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:107:13-117:29
+117                <action android:name="android.intent.action.VIEW" />
+117-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:108:17-69
+117-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:108:25-66
+118
+119                <category android:name="android.intent.category.DEFAULT" />
+119-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:110:17-76
+119-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:110:27-73
+120                <category android:name="android.intent.category.BROWSABLE" />
+120-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:111:17-78
+120-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:111:27-75
+121
+122                <data
+122-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:113:17-116:46
+123                    android:host="console.themintapp.com"
+123-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:114:21-58
+124                    android:pathPrefix="/tickets"
+124-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:115:21-50
+125                    android:scheme="https" />
+125-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:116:21-43
+126            </intent-filter>
+127        </activity>
+128        <activity android:name="com.picassos.mint.console.android.activities.GetStartedActivity" />
+128-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:119:9-67
+128-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:119:19-64
+129        <activity android:name="com.picassos.mint.console.android.activities.providers.WebviewActivity" />
+129-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:120:9-74
+129-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:120:19-71
+130        <activity android:name="com.picassos.mint.console.android.activities.ManageUsersActivity" />
+130-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:121:9-68
+130-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:121:19-65
+131        <activity android:name="com.picassos.mint.console.android.activities.ControllerActivity" />
+131-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:122:9-67
+131-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:122:19-64
+132        <activity android:name="com.picassos.mint.console.android.activities.about.PurchasesActivity" />
+132-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:123:9-72
+132-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:123:19-69
+133        <activity android:name="com.picassos.mint.console.android.activities.PoliciesActivity" />
+133-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:124:9-65
+133-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:124:19-62
+134        <activity android:name="com.picassos.mint.console.android.activities.EditNavigationActivity" />
+134-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:125:9-71
+134-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:125:19-68
+135        <activity
+135-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:126:9-129:56
+136            android:name="com.picassos.mint.console.android.activities.LoginActivity"
+136-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:127:13-53
+137            android:screenOrientation="portrait" />
+137-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:128:13-49
+138        <activity
+138-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:130:9-133:56
+139            android:name="com.picassos.mint.console.android.activities.MainActivity"
+139-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:131:13-52
+140            android:screenOrientation="portrait" />
+140-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:132:13-49
+141
+142        <service
+142-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:135:9-141:19
+143            android:name="com.picassos.mint.console.android.firebase.MyFirebaseMessagingService"
+143-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:136:13-64
+144            android:exported="false" >
+144-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:137:13-37
+145            <intent-filter>
+145-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:138:13-140:29
+146                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+146-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:139:17-78
+146-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:139:25-75
+147            </intent-filter>
+148        </service>
+149
+150        <meta-data
+150-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:143:9-145:67
+151            android:name="com.google.firebase.messaging.default_notification_channel_id"
+151-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:144:13-89
+152            android:value="@string/notification_channel_server" />
+152-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:145:13-64
+153
+154        <activity
+154-->[com.karumi:dexter:6.2.3] /Users/noor/.gradle/caches/transforms-2/files-2.1/86b1c87ba06c216566a31a30b166cc80/jetified-dexter-6.2.3/AndroidManifest.xml:27:9-29:72
+155            android:name="com.karumi.dexter.DexterActivity"
+155-->[com.karumi:dexter:6.2.3] /Users/noor/.gradle/caches/transforms-2/files-2.1/86b1c87ba06c216566a31a30b166cc80/jetified-dexter-6.2.3/AndroidManifest.xml:28:13-60
+156            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+156-->[com.karumi:dexter:6.2.3] /Users/noor/.gradle/caches/transforms-2/files-2.1/86b1c87ba06c216566a31a30b166cc80/jetified-dexter-6.2.3/AndroidManifest.xml:29:13-69
+157
+158        <service
+158-->[com.ixuea:android-downloader:3.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/27996eaf409918a52075530ce383c992/jetified-android-downloader-3.0.0/AndroidManifest.xml:10:9-16:19
+159            android:name="com.ixuea.android.downloader.DownloadService"
+159-->[com.ixuea:android-downloader:3.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/27996eaf409918a52075530ce383c992/jetified-android-downloader-3.0.0/AndroidManifest.xml:11:13-72
+160            android:exported="true" >
+160-->[com.ixuea:android-downloader:3.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/27996eaf409918a52075530ce383c992/jetified-android-downloader-3.0.0/AndroidManifest.xml:12:13-36
+161            <intent-filter>
+161-->[com.ixuea:android-downloader:3.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/27996eaf409918a52075530ce383c992/jetified-android-downloader-3.0.0/AndroidManifest.xml:13:13-15:29
+162                <action android:name="com.ixuea.android.downloader.DOWNLOAD_SERVICE" />
+162-->[com.ixuea:android-downloader:3.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/27996eaf409918a52075530ce383c992/jetified-android-downloader-3.0.0/AndroidManifest.xml:14:17-88
+162-->[com.ixuea:android-downloader:3.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/27996eaf409918a52075530ce383c992/jetified-android-downloader-3.0.0/AndroidManifest.xml:14:25-85
+163            </intent-filter>
+164        </service>
+165
+166        <provider
+166-->[com.squareup.picasso:picasso:2.71828] /Users/noor/.gradle/caches/transforms-2/files-2.1/eef3852d2f77388ebe9d9ec97923ef41/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+167            android:name="com.squareup.picasso.PicassoProvider"
+167-->[com.squareup.picasso:picasso:2.71828] /Users/noor/.gradle/caches/transforms-2/files-2.1/eef3852d2f77388ebe9d9ec97923ef41/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+168            android:authorities="com.picassos.mint.console.android.com.squareup.picasso"
+168-->[com.squareup.picasso:picasso:2.71828] /Users/noor/.gradle/caches/transforms-2/files-2.1/eef3852d2f77388ebe9d9ec97923ef41/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+169            android:exported="false" />
+169-->[com.squareup.picasso:picasso:2.71828] /Users/noor/.gradle/caches/transforms-2/files-2.1/eef3852d2f77388ebe9d9ec97923ef41/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+170
+171        <service
+171-->[androidx.room:room-runtime:2.3.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/b4186ea4aa3c0dfa291e6ffd05144042/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
+172            android:name="androidx.room.MultiInstanceInvalidationService"
+172-->[androidx.room:room-runtime:2.3.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/b4186ea4aa3c0dfa291e6ffd05144042/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
+173            android:directBootAware="true"
+173-->[androidx.room:room-runtime:2.3.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/b4186ea4aa3c0dfa291e6ffd05144042/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
+174            android:exported="false" />
+174-->[androidx.room:room-runtime:2.3.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/b4186ea4aa3c0dfa291e6ffd05144042/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
+175        <!--
+176             FirebaseMessagingService performs security checks at runtime,
+177             but set to not exported to explicitly avoid allowing another app to call it.
+178        -->
+179        <service
+179-->[com.google.firebase:firebase-messaging:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/2ac93a3797825b1fc459aae86c759d6c/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:28:9-35:19
+180            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+180-->[com.google.firebase:firebase-messaging:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/2ac93a3797825b1fc459aae86c759d6c/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:29:13-82
+181            android:directBootAware="true"
+181-->[com.google.firebase:firebase-messaging:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/2ac93a3797825b1fc459aae86c759d6c/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:30:13-43
+182            android:exported="false" >
+182-->[com.google.firebase:firebase-messaging:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/2ac93a3797825b1fc459aae86c759d6c/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:31:13-37
+183            <intent-filter android:priority="-500" >
+183-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:138:13-140:29
+184                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+184-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:139:17-78
+184-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:139:25-75
+185            </intent-filter>
+186        </service>
+187        <service
+187-->[com.google.firebase:firebase-messaging:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/2ac93a3797825b1fc459aae86c759d6c/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:36:9-42:19
+188            android:name="com.google.firebase.components.ComponentDiscoveryService"
+188-->[com.google.firebase:firebase-messaging:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/2ac93a3797825b1fc459aae86c759d6c/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:37:13-84
+189            android:directBootAware="true"
+189-->[com.google.firebase:firebase-common:19.5.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/2b0f2c17f8f0e0d366d4015355eeda12/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
+190            android:exported="false" >
+190-->[com.google.firebase:firebase-messaging:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/2ac93a3797825b1fc459aae86c759d6c/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:38:13-37
+191            <meta-data
+191-->[com.google.firebase:firebase-messaging:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/2ac93a3797825b1fc459aae86c759d6c/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:39:13-41:85
+192                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+192-->[com.google.firebase:firebase-messaging:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/2ac93a3797825b1fc459aae86c759d6c/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:40:17-119
+193                android:value="com.google.firebase.components.ComponentRegistrar" />
+193-->[com.google.firebase:firebase-messaging:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/2ac93a3797825b1fc459aae86c759d6c/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:41:17-82
+194            <meta-data
+194-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/574731156934f3bf03db88e4930176e4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:30:13-32:85
+195                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+195-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/574731156934f3bf03db88e4930176e4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:31:17-139
+196                android:value="com.google.firebase.components.ComponentRegistrar" />
+196-->[com.google.android.gms:play-services-measurement-api:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/574731156934f3bf03db88e4930176e4/jetified-play-services-measurement-api-18.0.2/AndroidManifest.xml:32:17-82
+197            <meta-data
+197-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:32:13-34:85
+198                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+198-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:33:17-96
+199                android:value="com.google.firebase.components.ComponentRegistrar" />
+199-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:34:17-82
+200            <meta-data
+200-->[com.google.firebase:firebase-installations:16.3.5] /Users/noor/.gradle/caches/transforms-2/files-2.1/b5263935c7d2bb218c4b5c52f4e490be/jetified-firebase-installations-16.3.5/AndroidManifest.xml:18:13-20:85
+201                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+201-->[com.google.firebase:firebase-installations:16.3.5] /Users/noor/.gradle/caches/transforms-2/files-2.1/b5263935c7d2bb218c4b5c52f4e490be/jetified-firebase-installations-16.3.5/AndroidManifest.xml:19:17-127
+202                android:value="com.google.firebase.components.ComponentRegistrar" />
+202-->[com.google.firebase:firebase-installations:16.3.5] /Users/noor/.gradle/caches/transforms-2/files-2.1/b5263935c7d2bb218c4b5c52f4e490be/jetified-firebase-installations-16.3.5/AndroidManifest.xml:20:17-82
+203            <meta-data
+203-->[com.google.firebase:firebase-datatransport:17.0.10] /Users/noor/.gradle/caches/transforms-2/files-2.1/1442f1df26d63b7acd91a03a60eab50d/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:28:13-30:85
+204                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+204-->[com.google.firebase:firebase-datatransport:17.0.10] /Users/noor/.gradle/caches/transforms-2/files-2.1/1442f1df26d63b7acd91a03a60eab50d/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:29:17-115
+205                android:value="com.google.firebase.components.ComponentRegistrar" />
+205-->[com.google.firebase:firebase-datatransport:17.0.10] /Users/noor/.gradle/caches/transforms-2/files-2.1/1442f1df26d63b7acd91a03a60eab50d/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:30:17-82
+206            <!--
+207                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+208                clients to use it as well, by defining this registrar in their own core/common library.
+209            -->
+210            <meta-data
+210-->[com.google.firebase:firebase-common:19.5.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/2b0f2c17f8f0e0d366d4015355eeda12/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
+211                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+211-->[com.google.firebase:firebase-common:19.5.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/2b0f2c17f8f0e0d366d4015355eeda12/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
+212                android:value="com.google.firebase.components.ComponentRegistrar" />
+212-->[com.google.firebase:firebase-common:19.5.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/2b0f2c17f8f0e0d366d4015355eeda12/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
+213        </service>
+214
+215        <receiver
+215-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:29:9-33:20
+216            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+216-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:30:13-85
+217            android:enabled="true"
+217-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:31:13-35
+218            android:exported="false" >
+218-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:32:13-37
+219        </receiver>
+220
+221        <service
+221-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:35:9-38:40
+222            android:name="com.google.android.gms.measurement.AppMeasurementService"
+222-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:36:13-84
+223            android:enabled="true"
+223-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:37:13-35
+224            android:exported="false" />
+224-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:38:13-37
+225        <service
+225-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:39:9-43:72
+226            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+226-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:40:13-87
+227            android:enabled="true"
+227-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:41:13-35
+228            android:exported="false"
+228-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:42:13-37
+229            android:permission="android.permission.BIND_JOB_SERVICE" />
+229-->[com.google.android.gms:play-services-measurement:18.0.2] /Users/noor/.gradle/caches/transforms-2/files-2.1/f5bc2371b7912ae72fa9d093c1b24530/jetified-play-services-measurement-18.0.2/AndroidManifest.xml:43:13-69
+230
+231        <receiver
+231-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:37:9-44:20
+232            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+232-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:38:13-78
+233            android:exported="true"
+233-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:39:13-36
+234            android:permission="com.google.android.c2dm.permission.SEND" >
+234-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:40:13-73
+235            <intent-filter>
+235-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:41:13-43:29
+236                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+236-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:42:17-81
+236-->[com.google.firebase:firebase-iid:21.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/e0cca69de206d7a92428bcea34e3b727/jetified-firebase-iid-21.0.1/AndroidManifest.xml:42:25-78
+237            </intent-filter>
+238        </receiver>
+239
+240        <provider
+240-->[com.google.firebase:firebase-common:19.5.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/2b0f2c17f8f0e0d366d4015355eeda12/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
+241            android:name="com.google.firebase.provider.FirebaseInitProvider"
+241-->[com.google.firebase:firebase-common:19.5.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/2b0f2c17f8f0e0d366d4015355eeda12/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
+242            android:authorities="com.picassos.mint.console.android.firebaseinitprovider"
+242-->[com.google.firebase:firebase-common:19.5.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/2b0f2c17f8f0e0d366d4015355eeda12/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
+243            android:directBootAware="true"
+243-->[com.google.firebase:firebase-common:19.5.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/2b0f2c17f8f0e0d366d4015355eeda12/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
+244            android:exported="false"
+244-->[com.google.firebase:firebase-common:19.5.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/2b0f2c17f8f0e0d366d4015355eeda12/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
+245            android:initOrder="100" />
+245-->[com.google.firebase:firebase-common:19.5.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/2b0f2c17f8f0e0d366d4015355eeda12/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
+246
+247        <activity
+247-->[com.google.android.gms:play-services-base:17.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/7a5879a4d6c6aa7dbe4fa71367692277/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+248            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+248-->[com.google.android.gms:play-services-base:17.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/7a5879a4d6c6aa7dbe4fa71367692277/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+249            android:exported="false"
+249-->[com.google.android.gms:play-services-base:17.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/7a5879a4d6c6aa7dbe4fa71367692277/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+250            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+250-->[com.google.android.gms:play-services-base:17.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/7a5879a4d6c6aa7dbe4fa71367692277/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+251
+252        <meta-data
+252-->[com.google.android.gms:play-services-basement:17.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/b684d3c2d86a5a72ecfa2b4f7a750415/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+253            android:name="com.google.android.gms.version"
+253-->[com.google.android.gms:play-services-basement:17.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/b684d3c2d86a5a72ecfa2b4f7a750415/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+254            android:value="@integer/google_play_services_version" />
+254-->[com.google.android.gms:play-services-basement:17.0.0] /Users/noor/.gradle/caches/transforms-2/files-2.1/b684d3c2d86a5a72ecfa2b4f7a750415/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+255        <meta-data
+255-->[com.android.billingclient:billing:2.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/a767d8c5849d8e51a6c7fabd6b26e2d3/jetified-billing-2.0.1/AndroidManifest.xml:13:9-15:37
+256            android:name="com.google.android.play.billingclient.version"
+256-->[com.android.billingclient:billing:2.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/a767d8c5849d8e51a6c7fabd6b26e2d3/jetified-billing-2.0.1/AndroidManifest.xml:14:13-73
+257            android:value="2.0.1" />
+257-->[com.android.billingclient:billing:2.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/a767d8c5849d8e51a6c7fabd6b26e2d3/jetified-billing-2.0.1/AndroidManifest.xml:15:13-34
+258
+259        <activity
+259-->[com.android.billingclient:billing:2.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/a767d8c5849d8e51a6c7fabd6b26e2d3/jetified-billing-2.0.1/AndroidManifest.xml:17:9-20:75
+260            android:name="com.android.billingclient.api.ProxyBillingActivity"
+260-->[com.android.billingclient:billing:2.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/a767d8c5849d8e51a6c7fabd6b26e2d3/jetified-billing-2.0.1/AndroidManifest.xml:18:13-78
+261            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+261-->[com.android.billingclient:billing:2.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/a767d8c5849d8e51a6c7fabd6b26e2d3/jetified-billing-2.0.1/AndroidManifest.xml:19:13-96
+262            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+262-->[com.android.billingclient:billing:2.0.1] /Users/noor/.gradle/caches/transforms-2/files-2.1/a767d8c5849d8e51a6c7fabd6b26e2d3/jetified-billing-2.0.1/AndroidManifest.xml:20:13-72
+263
+264        <service
+264-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/noor/.gradle/caches/transforms-2/files-2.1/5587c36040f96c47d766f74607fbb56d/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+265            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+265-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/noor/.gradle/caches/transforms-2/files-2.1/5587c36040f96c47d766f74607fbb56d/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+266            android:exported="false" >
+266-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/noor/.gradle/caches/transforms-2/files-2.1/5587c36040f96c47d766f74607fbb56d/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+267            <meta-data
+267-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/noor/.gradle/caches/transforms-2/files-2.1/5587c36040f96c47d766f74607fbb56d/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+268                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+268-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/noor/.gradle/caches/transforms-2/files-2.1/5587c36040f96c47d766f74607fbb56d/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+269                android:value="cct" />
+269-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/noor/.gradle/caches/transforms-2/files-2.1/5587c36040f96c47d766f74607fbb56d/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+270        </service>
+271        <service
+271-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/noor/.gradle/caches/transforms-2/files-2.1/e5ebfa0e9bf326f2324fc39f9eb40ea5/jetified-transport-runtime-2.2.5/AndroidManifest.xml:26:9-30:19
+272            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+272-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/noor/.gradle/caches/transforms-2/files-2.1/e5ebfa0e9bf326f2324fc39f9eb40ea5/jetified-transport-runtime-2.2.5/AndroidManifest.xml:27:13-117
+273            android:exported="false"
+273-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/noor/.gradle/caches/transforms-2/files-2.1/e5ebfa0e9bf326f2324fc39f9eb40ea5/jetified-transport-runtime-2.2.5/AndroidManifest.xml:28:13-37
+274            android:permission="android.permission.BIND_JOB_SERVICE" >
+274-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/noor/.gradle/caches/transforms-2/files-2.1/e5ebfa0e9bf326f2324fc39f9eb40ea5/jetified-transport-runtime-2.2.5/AndroidManifest.xml:29:13-69
+275        </service>
+276
+277        <receiver
+277-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/noor/.gradle/caches/transforms-2/files-2.1/e5ebfa0e9bf326f2324fc39f9eb40ea5/jetified-transport-runtime-2.2.5/AndroidManifest.xml:32:9-34:40
+278            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+278-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/noor/.gradle/caches/transforms-2/files-2.1/e5ebfa0e9bf326f2324fc39f9eb40ea5/jetified-transport-runtime-2.2.5/AndroidManifest.xml:33:13-132
+279            android:exported="false" />
+279-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/noor/.gradle/caches/transforms-2/files-2.1/e5ebfa0e9bf326f2324fc39f9eb40ea5/jetified-transport-runtime-2.2.5/AndroidManifest.xml:34:13-37
+280    </application>
+281
+282</manifest>

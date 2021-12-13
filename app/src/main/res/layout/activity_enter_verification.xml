@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/enter_verification_code"
+                android:textColor="?color_dark"
+                android:textSize="19sp" />
+
+            <EditText
+                android:id="@id/verification_code"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_rectangle_background"
+                android:hint="@string/verification_code"
+                android:inputType="number"
+                android:layoutDirection="ltr"
+                android:maxLines="1"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textSize="14sp"
+                tools:ignore="Autofill,RtlSymmetry,SmallSp,TextFields" />
+
+            <Button
+                android:id="@id/verify"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_rectangle_background"
+                android:text="@string/verify"
+                android:textAllCaps="false"
+                android:textColor="?color_dark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

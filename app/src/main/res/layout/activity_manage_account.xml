@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toolbar_background"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="25dp">
+
+                <ImageView
+                    android:id="@id/go_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_back"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription,RtlSymmetry" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="15dp"
+                        app:cardBackgroundColor="?color_background"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="0dp">
+
+                        <TextView
+                            android:id="@id/username_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="R"
+                            android:textAllCaps="true"
+                            android:textColor="?color_dark"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@id/user_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/username"
+                        android:textColor="?color_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/email"
+                        android:textColor="?color_dark"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@id/account_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:text="@string/username"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/input_rectangle_background"
+                        android:hint="@string/username"
+                        android:inputType="text"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="?color_dark"
+                        android:textColorHint="?color_dark"
+                        android:textDirection="locale"
+                        android:textSize="13sp"
+                        tools:ignore="Autofill,LabelFor" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="7dp"
+                        android:text="@string/password"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@id/change_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        app:cardBackgroundColor="?color_light_separate"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:text="@string/change_password"
+                            android:textColor="?color_dark"
+                            android:textSize="13sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="7dp"
+                        android:text="@string/newsletter"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toolbar_background"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/mint_console_newsletter"
+                            android:textColor="?color_dark"
+                            android:textSize="13sp"
+                            tools:ignore="RelativeOverlap" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@id/mint_console_newsletter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="8dp"
+                            android:thumb="@drawable/switch_thumb"
+                            app:track="@drawable/switch_track" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/toolbar_background"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/beta_newsletter"
+                            android:textColor="?color_dark"
+                            android:textSize="13sp"
+                            tools:ignore="RelativeOverlap" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@id/beta_newsletter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="8dp"
+                            android:thumb="@drawable/switch_thumb"
+                            app:track="@drawable/switch_track" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/toolbar_background"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/picassos_newsletter"
+                            android:textColor="?color_dark"
+                            android:textSize="13sp"
+                            tools:ignore="RelativeOverlap" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@id/picassos_newsletter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="8dp"
+                            android:thumb="@drawable/switch_thumb"
+                            app:track="@drawable/switch_track" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="7dp"
+                        android:text="@string/tfa"
+                        android:textColor="?color_dark"
+                        android:textSize="13sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toolbar_background"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/two_factor_auth"
+                            android:textColor="?color_dark"
+                            android:textSize="13sp"
+                            tools:ignore="RelativeOverlap" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@id/two_factor_auth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="8dp"
+                            android:thumb="@drawable/switch_thumb"
+                            app:track="@drawable/switch_track" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@id/save"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/input_background_primary"
+                    android:text="@string/save"
+                    android:textAllCaps="false"
+                    android:textColor="?color_light_separate"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                layout="@layout/include_internet_connection" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

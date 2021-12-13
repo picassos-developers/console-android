@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/toolbar_background"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@id/go_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_back"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription,RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="@font/pacifico_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/view_ticket"
+                    android:textColor="?color_dark"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/include_internet_connection" />
+
+            <LinearLayout
+                android:id="@id/ticket_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@id/ticket_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Ticket Title"
+                    android:layout_marginStart="10dp"
+                    android:textColor="?color_dark"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@id/ticket_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Ticket ID [000000] • Date"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="true"
+                    android:textColor="?color_dark"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@id/ticket_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_rectangle_background"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:paddingStart="20dp"
+                    android:minHeight="100dp"
+                    android:gravity="top"
+                    android:enabled="false"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="15dp"
+                    android:hint="Ticket Description"
+                    android:textColor="?color_dark"
+                    android:textColorHint="?color_dark"
+                    android:textDirection="locale"
+                    android:textSize="13sp"
+                    tools:ignore="Autofill,HardcodedText,LabelFor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="@string/responds"
+                    android:textAllCaps="true"
+                    android:textColor="?color_dark"
+                    android:textSize="12sp"
+                    tools:ignore="SmallSp" />
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/include_internet_connection" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@id/no_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="?color_light_separate"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:textAlignment="center"
+                        android:text="@string/no_responds"
+                        android:textColor="?color_dark" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@id/recycler_ticket_responds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

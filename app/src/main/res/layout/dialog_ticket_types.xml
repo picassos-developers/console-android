@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/popup_background"
+    android:layout_margin="20dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@id/dialog_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_close"
+            app:tint="?color_dark"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:padding="6dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/ticket_type"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="?color_dark"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recycler_types"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:visibility="visible" />
+
+</LinearLayout>

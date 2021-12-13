@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:id="@id/product_container"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="15dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="110dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@id/product_thumbnail"
+            android:layout_width="220dp"
+            android:layout_height="110dp"
+            app:roundedCornerRadius="15dp"
+            fresco:placeholderImage="?color_grey" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/input_rectangle_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$250"
+                android:textColor="?color_dark"
+                android:textSize="10sp"
+                fresco:ignore="HardcodedText,SmallSp" />
+
+            <TextView
+                android:id="@id/product_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="$350"
+                android:textColor="@color/color_danger"
+                android:textSize="9sp"
+                fresco:ignore="HardcodedText,SmallSp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/product_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_regular"
+            android:maxLines="2"
+            android:text="Product Title"
+            android:textColor="?color_dark"
+            android:textSize="11sp"
+            fresco:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>

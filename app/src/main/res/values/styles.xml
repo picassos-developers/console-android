@@ -1,0 +1,68 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="color_light">@color/color_white</item>
+        <item name="color_background">@color/color_background</item>
+        <item name="color_background_alternative">@color/color_background</item>
+        <item name="color_lighter">@color/color_light_white</item>
+        <item name="color_dark">@color/color_dark</item>
+        <item name="color_grey">@color/color_grey</item>
+        <item name="color_light_separate">@color/color_white</item>
+        <item name="color_dark_separate">@color/reverse_dark</item>
+        <item name="divider_inline">@drawable/divider_inline_light</item>
+        <item name="color_icon">@color/color_grey_lighter</item>
+        <item name="header_logo">@drawable/header_logo_light</item>
+        <item name="color_card_alert">@color/color_alert_light</item>
+        <item name="color_active">@color/color_active_light</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:listDivider">@color/color_background</item>
+        <item name="android:textColorSecondary">@color/color_dark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="DarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/color_dark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="color_light">@color/color_dark</item>
+        <item name="color_background">@color/color_dark</item>
+        <item name="color_background_alternative">@color/color_darker</item>
+        <item name="color_lighter">@color/color_darker</item>
+        <item name="color_dark">@color/color_white</item>
+        <item name="color_grey">@color/reverse_dark</item>
+        <item name="color_light_separate">@color/reverse_dark</item>
+        <item name="color_dark_separate">@color/color_white</item>
+        <item name="divider_inline">@drawable/divider_inline_dark</item>
+        <item name="color_icon">@color/reverse_dark</item>
+        <item name="header_logo">@drawable/header_logo_dark</item>
+        <item name="color_card_alert">@color/color_darker</item>
+        <item name="color_active">@color/color_active_dark</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:listDivider">@color/color_dark</item>
+        <item name="android:textColorSecondary">@color/color_white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <style name="SmallSize">
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <!--  Custom Modal  -->
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_modal_shape</item>
+    </style>
+
+</resources>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/toolbar_background"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@id/go_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_back"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription,RtlSymmetry" />
+
+                <TextView
+                    android:id="@id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="@font/pacifico_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/manage_login"
+                    android:textColor="?color_dark"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/login_providers_container"
+                android:layout_width="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColorLink="?color_dark"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/here_you_can_enable_and_disable_your_app_s_login_providers_donut_log_in_is_configured_by_default"
+                    android:textColor="?color_dark"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/toolbar_background"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/input_background_alternative"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="15dp"
+                        tools:ignore="RelativeOverlap">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:paddingStart="0dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="0dp"
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/icon_donut"
+                            app:tint="?color_dark"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/donut"
+                            android:textColor="?color_dark"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@id/donut_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:thumb="@drawable/switch_thumb_big"
+                        app:track="@drawable/switch_track_big" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/toolbar_background"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/input_background_alternative"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="15dp"
+                        tools:ignore="RelativeOverlap">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:paddingStart="0dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="0dp"
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/icon_google"
+                            app:tint="?color_dark"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/google"
+                            android:textColor="?color_dark"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@id/google_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:thumb="@drawable/switch_thumb_big"
+                        app:track="@drawable/switch_track_big" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/toolbar_background"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/input_background_alternative"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="15dp"
+                        tools:ignore="RelativeOverlap">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:paddingStart="0dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="0dp"
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/icon_facebook"
+                            app:tint="?color_dark"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/facebook"
+                            android:textColor="?color_dark"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@id/facebook_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:thumb="@drawable/switch_thumb_big"
+                        app:track="@drawable/switch_track_big" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/toolbar_background"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="15dp"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/input_background_alternative"
+                        android:orientation="horizontal"
+                        tools:ignore="RelativeOverlap">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:paddingStart="0dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="0dp"
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/icon_google"
+                            app:tint="?color_dark"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/firebase"
+                            android:layout_marginStart="5dp"
+                            android:textColor="?color_dark"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@id/firebase_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:thumb="@drawable/switch_thumb_big"
+                        app:track="@drawable/switch_track_big" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@id/update_login_providers"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/input_background_primary"
+                    android:text="@string/update"
+                    android:textAllCaps="false"
+                    android:textColor="?color_light_separate"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                layout="@layout/include_internet_connection" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

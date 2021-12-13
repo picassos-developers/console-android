@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/toolbar_background"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@id/go_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/icon_back"
+                app:tint="?color_dark"
+                tools:ignore="ContentDescription,RtlSymmetry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/pacifico_regular"
+                android:gravity="center_vertical"
+                android:text="@string/request_custom_darkmode"
+                android:textColor="?color_dark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/your_links"
+            android:textAllCaps="true"
+            android:textColor="?color_dark"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+
+        <EditText
+            android:id="@id/links"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/input_rectangle_background"
+            android:gravity="top"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="300dp"
+            android:paddingStart="15dp"
+            android:hint="@string/add_your_links_here"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:textColor="?color_dark"
+            android:textColorHint="?color_dark"
+            android:textDirection="locale"
+            android:textSize="12sp"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/enter_the_specific_links_for_all_the_pages_you_want_modified_for_dark_mode_please_enter_a_link_in_each_line"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="?color_dark"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:id="@id/setup_custom_darkmode"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/input_background_primary"
+            android:text="@string/request_custom_darkmode"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textColor="?color_light_separate" />
+
+        <TextView
+            android:id="@id/response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:visibility="gone"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/custom_dark_mode_card_activated_successfully_expect_your_modified_version_of_the_code_to_be_ready_in_less_than_3_business_days_depending_on_the_number_of_pages_requested"
+            android:textColor="#05BE70"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

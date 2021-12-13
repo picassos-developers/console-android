@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/item_background"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="15dp"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".7"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle"
+            android:src="@drawable/icon_paid"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            app:tint="?color_dark"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/purchase_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?color_dark"
+                android:textSize="14sp"
+                android:text="Purchase Title"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@id/purchase_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?color_dark"
+                android:text="Purchase ID"
+                android:textSize="10sp"
+                tools:ignore="HardcodedText,SmallSp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".3"
+        android:gravity="end"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/purchase_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?color_dark"
+            android:textSize="14sp"
+            android:text="Purchase Price"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@id/purchase_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?color_dark"
+            android:text="Purchase Date"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+    </LinearLayout>
+
+</LinearLayout>

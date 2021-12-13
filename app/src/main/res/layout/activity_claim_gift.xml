@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@id/go_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/icon_back"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription,RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/claim_gift"
+                    android:textAllCaps="true"
+                    android:textColor="?color_dark"
+                    android:textSize="14sp"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/how_to_claim_your_customization_gift"
+                android:textAlignment="center"
+                android:textColor="?color_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/customization_card_usually_cost_40_but_now_you_can_get_one_for_free_by_following_these_steps"
+                android:textColor="?color_dark"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@id/gift_steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:alpha=".9"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColorLink="@color/color_blue"
+                android:text="@string/claim_gift_steps"
+                android:textColor="?color_dark"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/request_customization"
+                android:textAllCaps="true"
+                android:textColor="?color_dark"
+                android:textSize="12sp"
+                tools:ignore="SmallSp" />
+
+            <EditText
+                android:id="@id/application_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/input_rectangle_background"
+                android:hint="@string/application_name"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textDirection="locale"
+                android:textSize="13sp"
+                tools:ignore="Autofill,LabelFor" />
+
+            <EditText
+                android:id="@id/package_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/input_rectangle_background"
+                android:hint="@string/package_name"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textDirection="locale"
+                android:textSize="13sp"
+                tools:ignore="Autofill,LabelFor" />
+
+            <EditText
+                android:id="@id/drive_link"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/input_rectangle_background"
+                android:hint="@string/drive_link"
+                android:inputType="textUri"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textDirection="locale"
+                android:textSize="13sp"
+                tools:ignore="Autofill,LabelFor" />
+
+            <Button
+                android:id="@id/submit_ticket"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/input_background_primary"
+                android:text="@string/submit_request"
+                android:textAllCaps="false"
+                android:textColor="?color_light_separate"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@id/agreement_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:textColorLink="?color_dark"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/please_read_our_terms_of_use_for_details_about_our_customization_card_system"
+                android:textColor="?color_dark"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@id/response"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:visibility="gone"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/request_submitted_successfully_we_will_verify_your_data_and_send_you_the_customized_source_code_to"
+                android:textColor="#05BE70"
+                android:textSize="11sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

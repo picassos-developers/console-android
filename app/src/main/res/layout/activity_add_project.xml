@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/add_project"
+                android:textColor="?color_dark"
+                android:textSize="19sp" />
+
+            <EditText
+                android:id="@id/project_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_rectangle_background"
+                android:hint="@string/project_name"
+                android:inputType="text"
+                android:layoutDirection="ltr"
+                android:maxLines="1"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textSize="14sp"
+                tools:ignore="Autofill,TextFields" />
+
+            <EditText
+                android:id="@id/project_purchasecode"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_rectangle_background"
+                android:hint="@string/project_purchasecode"
+                android:inputType="text"
+                android:paddingEnd="20dp"
+                android:layoutDirection="ltr"
+                android:maxLines="1"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textSize="14sp"
+                tools:ignore="Autofill,SmallSp,TextFields" />
+
+            <EditText
+                android:id="@id/project_packagename"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_rectangle_background"
+                android:hint="@string/project_packagename"
+                android:inputType="text"
+                android:paddingEnd="20dp"
+                android:layoutDirection="ltr"
+                android:maxLines="1"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textSize="14sp"
+                tools:ignore="Autofill,SmallSp,TextFields" />
+
+            <Button
+                android:id="@id/add_project"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/input_background_primary"
+                android:text="@string/create_project"
+                android:textAllCaps="false"
+                android:textColor="?color_light_separate"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@id/visit_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/the_purchase_code_is_acquired_when_you_purchase_mint_haven_t_purchased_get_mint_here"
+                android:layout_marginStart="30dp"
+                android:textColorLink="@color/color_blue"
+                android:layout_marginEnd="30dp"
+                android:textAlignment="center"
+                android:textColor="?color_dark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

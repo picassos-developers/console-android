@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="?color_light_separate"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="?color_background"
+        android:padding="10dp"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:padding="7dp"
+            android:src="@drawable/logo_mini"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_marginTop="35dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@id/notifications"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="14dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/icon_bell_filled"
+                app:tint="?color_dark"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@id/downloads"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="14dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/icon_download"
+                app:tint="?color_dark"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@id/check_status"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="14dp"
+                android:src="@drawable/icon_server_filled"
+                app:tint="?color_dark"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@id/project_options"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="14dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/icon_more_horizontal"
+                app:tint="?color_dark"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="?color_grey"
+                app:cardCornerRadius="17.5dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@id/project_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="M"
+                    android:textAllCaps="true"
+                    android:textColor="?color_dark"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="20dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:background="?color_light_separate"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textAllCaps="true"
+                android:layout_marginStart="3dp"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="?color_dark"/>
+
+            <LinearLayout
+                android:id="@id/menu_manage_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_manage_users"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manage_users"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_manage_login_providers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_login"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manage_login"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_wizards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_swipe"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wizards"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_manage_updates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_updates"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manage_updates"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_manage_ads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_ads"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manage_ads"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/providers"
+                android:textAllCaps="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="3dp"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="?color_dark"/>
+
+            <LinearLayout
+                android:id="@id/menu_webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_webview"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/webview"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_wordpress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_wordpress"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wordpress"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_youtube"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_youtube"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/youtube"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_vimeo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_vimeo"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vimeo"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_facebook"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/facebook"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_pinterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_pinterest"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pinterest"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_imgur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_imgur"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imgur"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_maps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_maps"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maps"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/customization"
+                android:textAllCaps="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="3dp"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="?color_dark"/>
+
+            <LinearLayout
+                android:id="@id/menu_custom_css"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_css"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/custom_css"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_dark_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_darkmode"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dark_mode"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/policies"
+                android:textAllCaps="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="3dp"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="?color_dark"/>
+
+            <LinearLayout
+                android:id="@id/menu_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_privacy"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privacy_policy"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_terms_of_use"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_terms"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_of_use"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

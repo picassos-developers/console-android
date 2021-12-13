@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/home"
+        android:title="@string/home"
+        android:icon="@drawable/navigation_home" />
+
+    <item
+        android:id="@id/navigation"
+        android:title="@string/navigation"
+        android:icon="@drawable/navigation_menus"/>
+
+    <item
+        android:id="@id/notification"
+        android:title="@string/notification"
+        android:icon="@drawable/navigation_notifications"/>
+
+    <item
+        android:id="@id/power_store"
+        android:title="@string/power_store"
+        android:icon="@drawable/navigation_store"/>
+
+    <item
+        android:id="@id/help_centre"
+        android:title="@string/help_centre"
+        android:icon="@drawable/navigation_help_centre"/>
+</menu>

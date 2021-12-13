@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?color_background"
+    tools:context=".activities.about.MyTicketsActivity">
+
+    <FrameLayout
+        android:id="@id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="?color_dark"
+        app:elevation="0dp"
+        app:itemIconTint="@color/navigation_item"
+        app:itemTextAppearanceActive="@style/SmallSize"
+        app:itemTextAppearanceInactive="@style/SmallSize"
+        app:itemTextColor="@color/navigation_item"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/tickets_bottom_navigation" />
+
+</RelativeLayout>

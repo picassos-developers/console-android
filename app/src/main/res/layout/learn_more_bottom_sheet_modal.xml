@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="41dp"
+            android:layout_height="6dp"
+            android:layout_marginTop="15dp"
+            android:background="?divider_inline" />
+
+        <TextView
+            android:id="@id/learnmore_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Title"
+            android:textColor="?color_dark"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <TextView
+            android:id="@id/learnmore_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="15dp"
+            android:text="Description"
+            android:textAlignment="center"
+            android:textColor="?color_dark"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:layout_marginBottom="25dp">
+
+            <Button
+                android:id="@id/button_learnmore"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/input_background_alternative"
+                android:paddingStart="25dp"
+                android:textSize="12sp"
+                android:paddingEnd="25dp"
+                android:text="@string/learnmore"
+                android:layout_marginEnd="15dp"
+                android:textAllCaps="false"
+                android:textColor="?color_dark" />
+
+            <Button
+                android:id="@id/button_dismiss"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textSize="12sp"
+                android:background="@drawable/input_background_alternative"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:text="@string/got_it"
+                android:textAllCaps="false"
+                android:textColor="?color_dark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

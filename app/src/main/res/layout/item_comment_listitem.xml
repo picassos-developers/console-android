@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:cardCornerRadius="27.5dp"
+        app:cardBackgroundColor="?color_light_separate"
+        app:cardElevation="0dp">
+
+        <TextView
+            android:id="@id/comment_author_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="?color_dark"
+            android:text="O"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            tools:ignore="HardcodedText" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/toolbar_background"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@id/comment_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="?color_dark"
+                android:textSize="11sp"
+                tools:ignore="HardcodedText,SmallSp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="•"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="?color_dark"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"
+                android:textSize="11sp"
+                tools:ignore="HardcodedText,SmallSp" />
+
+            <TextView
+                android:id="@id/comment_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 min ago"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="?color_dark"
+                android:textSize="11sp"
+                tools:ignore="HardcodedText,SmallSp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@id/comment_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hey Guys, Been throwing up some designs in my shop as stickers. Feel free to drop on by."
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="?color_dark"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="7dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/icon_thumb_up"
+                app:tint="?color_dark"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@id/comment_votes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="50 Up vote"
+                android:layout_marginStart="5dp"
+                android:textColor="?color_dark"
+                android:textSize="13sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
