@@ -453,4 +453,5 @@
     <string name="imgur_is_an_image_hosting_and_sharing_site_share_your_content_in_your_app_with_imgur_content_provider">Imgur is an image hosting and sharing site. Share your content in your app with Imgur content provider.</string>
     <string name="add_navigation_tab">Add Navigation Tab</string>
     <string name="have_us_customize_your_app_for_free">Have us customize your app for free.</string>
+    <string name="test">Test</string>
 </resources>
