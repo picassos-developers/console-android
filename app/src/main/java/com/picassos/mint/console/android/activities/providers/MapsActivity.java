@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -16,6 +18,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,6 +30,7 @@ import com.picassos.mint.console.android.adapter.MapStylesAdapter;
 import com.picassos.mint.console.android.constants.API;
 import com.picassos.mint.console.android.models.Maps;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
+import com.picassos.mint.console.android.sheets.ProviderOptionsBottomSheetModal;
 import com.picassos.mint.console.android.utils.Helper;
 import com.picassos.mint.console.android.utils.RequestDialog;
 import com.picassos.mint.console.android.utils.Toasto;
@@ -39,12 +43,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MapsActivity extends AppCompatActivity {
+public class MapsActivity extends AppCompatActivity implements ProviderOptionsBottomSheetModal.OnRemoveListener {
+
+    private Bundle bundle;
+    private Intent intent;
     private ConsolePreferences consolePreferences;
     private RequestDialog requestDialog;
 
-    private TextView mapStyle;
+    private String request;
     private String mapValue;
+
+    private EditText label, icon;
+    private TextView mapStyle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,27 +67,62 @@ public class MapsActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_maps);
 
+        bundle = new Bundle();
+        intent = new Intent();
+
+        // get request type
+        request = getIntent().getStringExtra("request");
+
         // initialize request dialog
         requestDialog = new RequestDialog(this);
 
         // close activity
         findViewById(R.id.go_back).setOnClickListener(v -> finish());
 
+        // more options
+        findViewById(R.id.more_options).setOnClickListener(v -> {
+            bundle.putInt("identifier", getIntent().getIntExtra("identifier", 0));
+            bundle.putString("type", getIntent().getStringExtra("type"));
+            ProviderOptionsBottomSheetModal providerOptionsBottomSheetModal = new ProviderOptionsBottomSheetModal();
+            providerOptionsBottomSheetModal.setArguments(bundle);
+            providerOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
+        });
+        if (request.equals("add")) {
+            findViewById(R.id.more_options).setVisibility(View.GONE);
+        }
+
+        // toolbar title
+        TextView toolbarTitle = findViewById(R.id.toolbar_title);
+        if (request.equals("update")) {
+            toolbarTitle.setText(getIntent().getStringExtra("label"));
+        }
+
         // map style chooser
         CardView mapStyleChooser = findViewById(R.id.map_style_chooser);
         mapStyleChooser.setOnClickListener(v -> styleChooserDialog());
 
         // maps data
+        label = findViewById(R.id.provider_label);
+        icon = findViewById(R.id.provider_icon);
         mapStyle = findViewById(R.id.map_style);
 
         // request data
-        requestData();
+        if (request.equals("update")) {
+            requestData();
+        }
 
         // save data
         Button save = findViewById(R.id.update_maps);
         save.setOnClickListener(v -> {
             if (!TextUtils.isEmpty(mapStyle.getText().toString())) {
-                requestUpdateMaps();
+                switch (request) {
+                    case "add":
+                        requestAddMaps();
+                        break;
+                    case "update":
+                        requestUpdateMaps();
+                        break;
+                }
             } else {
                 Toasto.show_toast(this, getString(R.string.all_fields_are_required), 0, 2);
             }
@@ -92,6 +137,9 @@ public class MapsActivity extends AppCompatActivity {
 
             requestData();
         });
+        if (request.equals("add")) {
+            refresh.setEnabled(false);
+        }
     }
 
     /**
@@ -107,6 +155,12 @@ public class MapsActivity extends AppCompatActivity {
                     try {
                         JSONObject object = new JSONObject(response);
                         JSONObject root = object.getJSONObject("maps");
+                        JSONObject general = root.getJSONObject("general");
+
+                        // label, icon
+                        label.setText(general.getString("label"));
+                        icon.setText(general.getString("icon"));
+
                         // maps data
                         switch (root.getString("style")) {
                             case "map_aubergine":
@@ -156,11 +210,47 @@ public class MapsActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
                 params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                params.put("identifier", String.valueOf(getIntent().getIntExtra("identifier", 0)));
                 return params;
             }
         };
 
         Volley.newRequestQueue(this).add(request);
+    }
+
+    /**
+     * request add maps
+     */
+    private void requestAddMaps() {
+        if (consolePreferences.loadSecretAPIKey().equals("demo")) {
+            Toasto.show_toast(this, getString(R.string.demo_project), 1,0 );
+        } else {
+            requestDialog.show();
+            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_ADD_MAPS_PROVIDER,
+                    response -> {
+                        if (response.equals("200")) {
+                            intent.putExtra("added", true);
+                            setResult(Activity.RESULT_OK, intent);
+                            finish();
+                        }
+                        requestDialog.dismiss();
+                    }, error -> {
+                requestDialog.dismiss();
+                Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);
+            }){
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                    params.put("label", label.getText().toString());
+                    params.put("icon", icon.getText().toString());
+                    params.put("style", mapValue);
+                    return params;
+                }
+            };
+
+            Volley.newRequestQueue(this).add(request);
+        }
     }
 
     /**
@@ -171,20 +261,26 @@ public class MapsActivity extends AppCompatActivity {
             Toasto.show_toast(this, getString(R.string.demo_project), 1,0 );
         } else {
             requestDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_MAPS,
+            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_MAPS_PROVIDER,
                     response -> {
-                        if (response.contains("exception:configuration?success")) {
-                            Toasto.show_toast(this, getString(R.string.maps_updated), 0, 0);
+                        if (response.equals("200")) {
+                            Toasto.show_toast(this, getString(R.string.maps_updated), 1, 0);
+                            intent.putExtra("updated", true);
+                            setResult(Activity.RESULT_OK, intent);
+                            finish();
                         }
                         requestDialog.dismiss();
                     }, error -> {
                 requestDialog.dismiss();
-                Toasto.show_toast(this, "exception:error?" + error.getMessage(), 0, 1);
+                Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);
             }){
                 @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<>();
                     params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                    params.put("identifier", String.valueOf(getIntent().getIntExtra("identifier", 0)));
+                    params.put("label", label.getText().toString());
+                    params.put("icon", icon.getText().toString());
                     params.put("style", mapValue);
                     return params;
                 }
@@ -243,5 +339,12 @@ public class MapsActivity extends AppCompatActivity {
         }
 
         stylesDialog.show();
+    }
+
+    @Override
+    public void onRemoveListener(int requestCode) {
+        intent.putExtra("remove", true);
+        setResult(Activity.RESULT_OK, intent);
+        finish();
     }
 }

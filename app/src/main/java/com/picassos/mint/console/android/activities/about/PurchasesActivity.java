@@ -21,7 +21,6 @@ import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.sheets.RedeemCodeBottomSheetModal;
 import com.picassos.mint.console.android.utils.Helper;
 import com.picassos.mint.console.android.utils.RequestDialog;
-import com.picassos.mint.console.android.utils.Toasto;
 
 import org.json.JSONArray;
 import org.json.JSONException;

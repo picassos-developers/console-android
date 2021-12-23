@@ -19,6 +19,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -32,7 +34,6 @@ public class ProjectOptionsBottomSheetModal extends BottomSheetDialogFragment {
 
     View view;
     private ConsolePreferences consolePreferences;
-    public static final int REQUEST_PROJECT_ACTION = 1;
 
     public interface OnEditListener {
         void onEditListener(boolean edited);
@@ -63,7 +64,7 @@ public class ProjectOptionsBottomSheetModal extends BottomSheetDialogFragment {
         consolePreferences = new ConsolePreferences(requireContext());
 
         // edit project
-        view.findViewById(R.id.project_options).setOnClickListener(v -> startActivityForResult(new Intent(requireContext(), EditProjectActivity.class), REQUEST_PROJECT_ACTION));
+        view.findViewById(R.id.project_options).setOnClickListener(v -> startActivityForResult.launch(new Intent(requireContext(), EditProjectActivity.class)));
 
         // manage credentials
         view.findViewById(R.id.manage_credentials).setOnClickListener(v -> {
@@ -108,14 +109,10 @@ public class ProjectOptionsBottomSheetModal extends BottomSheetDialogFragment {
         super.onCreate(savedInstanceState);
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_PROJECT_ACTION) {
-            if (resultCode == Activity.RESULT_OK) {
-                onEditListener.onEditListener(true);
-                dismiss();
-            }
+    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+        if (result != null && result.getResultCode() == Activity.RESULT_OK) {
+            onEditListener.onEditListener(true);
+            dismiss();
         }
-    }
+    });
 }

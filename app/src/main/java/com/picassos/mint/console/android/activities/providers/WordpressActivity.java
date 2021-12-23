@@ -7,10 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
@@ -31,7 +34,9 @@ import com.picassos.mint.console.android.constants.AuthAPI;
 import com.picassos.mint.console.android.models.wordpress.CategoryDesigns;
 import com.picassos.mint.console.android.models.wordpress.PostDesigns;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
+import com.picassos.mint.console.android.sheets.ProviderOptionsBottomSheetModal;
 import com.picassos.mint.console.android.utils.Helper;
+import com.picassos.mint.console.android.utils.InputFilterRange;
 import com.picassos.mint.console.android.utils.RequestDialog;
 import com.picassos.mint.console.android.utils.Toasto;
 
@@ -43,15 +48,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class WordpressActivity extends AppCompatActivity {
+public class WordpressActivity extends AppCompatActivity implements ProviderOptionsBottomSheetModal.OnRemoveListener {
 
+    private Bundle bundle;
+    private Intent intent;
     private ConsolePreferences consolePreferences;
     private RequestDialog requestDialog;
+
+    private String request;
     private String categoryAuth;
     private String postAuth;
 
-    private EditText baseUrl;
-    private EditText perPage;
+    private EditText label, icon, baseUrl, perPage;
     private TextView categoryDesign;
     private TextView postDesign;
 
@@ -67,11 +75,35 @@ public class WordpressActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_wordpress);
 
+        bundle = new Bundle();
+        intent = new Intent();
+
+        // get request type
+        request = getIntent().getStringExtra("request");
+
         // initialize request dialog
         requestDialog = new RequestDialog(this);
 
         // close activity
         findViewById(R.id.go_back).setOnClickListener(v -> finish());
+
+        // more options
+        findViewById(R.id.more_options).setOnClickListener(v -> {
+            bundle.putInt("identifier", getIntent().getIntExtra("identifier", 0));
+            bundle.putString("type", getIntent().getStringExtra("type"));
+            ProviderOptionsBottomSheetModal providerOptionsBottomSheetModal = new ProviderOptionsBottomSheetModal();
+            providerOptionsBottomSheetModal.setArguments(bundle);
+            providerOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
+        });
+        if (request.equals("add")) {
+            findViewById(R.id.more_options).setVisibility(View.GONE);
+        }
+
+        // toolbar title
+        TextView toolbarTitle = findViewById(R.id.toolbar_title);
+        if (request.equals("update")) {
+            toolbarTitle.setText(getIntent().getStringExtra("label"));
+        }
 
         // category design chooser
         CardView categoryDesignChooser = findViewById(R.id.category_design_chooser);
@@ -86,11 +118,16 @@ public class WordpressActivity extends AppCompatActivity {
         postDesign = findViewById(R.id.post_design);
 
         // wordpress data
+        label = findViewById(R.id.provider_label);
+        icon = findViewById(R.id.provider_icon);
         baseUrl = findViewById(R.id.base_url);
         perPage = findViewById(R.id.per_page);
+        perPage.setFilters(new InputFilter[]{ new InputFilterRange("1", "25")});
 
         // request data
-        requestData();
+        if (request.equals("update")) {
+            requestData();
+        }
 
         // save data
         Button save = findViewById(R.id.update_wordpress);
@@ -99,7 +136,14 @@ public class WordpressActivity extends AppCompatActivity {
                     && !TextUtils.isEmpty(perPage.getText().toString())
                     && !TextUtils.isEmpty(categoryDesign.getText().toString())
                     && !TextUtils.isEmpty(postDesign.getText().toString())) {
-                requestUpdateWordpress();
+                switch (request) {
+                    case "add":
+                        requestAddWordpress();
+                        break;
+                    case "update":
+                        requestUpdateWordpress();
+                        break;
+                }
             } else {
                 Toasto.show_toast(this, getString(R.string.all_fields_are_required), 0, 2);
             }
@@ -114,6 +158,9 @@ public class WordpressActivity extends AppCompatActivity {
 
             requestData();
         });
+        if (request.equals("add")) {
+            refresh.setEnabled(false);
+        }
     }
 
     /**
@@ -129,17 +176,15 @@ public class WordpressActivity extends AppCompatActivity {
                     try {
                         JSONObject object = new JSONObject(response);
                         JSONObject root = object.getJSONObject("wordpress");
-                        // wordpress data
-                        if (root.getString("base_url").equals("exception:error?wordpress_base_url")) {
-                            baseUrl.setText("");
-                        } else {
-                            baseUrl.setText(root.getString("base_url"));
-                        }
-                        if (root.getString("per_page").equals("exception:error?wordpress_per_page")) {
-                            perPage.setText("");
-                        } else {
-                            perPage.setText(root.getString("per_page"));
-                        }
+                        JSONObject general = root.getJSONObject("general");
+
+                        // label, icon
+                        label.setText(general.getString("label"));
+                        icon.setText(general.getString("icon"));
+
+                        baseUrl.setText(root.getString("base_url"));
+                        perPage.setText(root.getString("per_page"));
+
                         categoryAuth = root.getString("category_design");
                         postAuth = root.getString("post_design");
                         switch (root.getString("category_design")) {
@@ -203,11 +248,50 @@ public class WordpressActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
                 params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                params.put("identifier", String.valueOf(getIntent().getIntExtra("identifier", 0)));
                 return params;
             }
         };
 
         Volley.newRequestQueue(this).add(request);
+    }
+
+    /**
+     * request add wordpress provider
+     */
+    private void requestAddWordpress() {
+        if (consolePreferences.loadSecretAPIKey().equals("demo")) {
+            Toasto.show_toast(this, getString(R.string.demo_project), 1, 0);
+        } else {
+            requestDialog.show();
+            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_ADD_WORDPRESS_PROVIDER,
+                    response -> {
+                        if (response.equals("200")) {
+                            intent.putExtra("added", true);
+                            setResult(Activity.RESULT_OK, intent);
+                            finish();
+                        }
+                        requestDialog.dismiss();
+                    }, error -> {
+                requestDialog.dismiss();
+                Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);
+            }){
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                    params.put("label", label.getText().toString());
+                    params.put("icon", icon.getText().toString());
+                    params.put("base_url", baseUrl.getText().toString());
+                    params.put("per_page", perPage.getText().toString());
+                    params.put("category_design", categoryAuth);
+                    params.put("post_design", postAuth);
+                    return params;
+                }
+            };
+
+            Volley.newRequestQueue(this).add(request);
+        }
     }
 
     /**
@@ -220,8 +304,11 @@ public class WordpressActivity extends AppCompatActivity {
             requestDialog.show();
             StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_WORDPRESS,
                     response -> {
-                        if (response.contains("exception:configuration?success")) {
-                            Toasto.show_toast(this, getString(R.string.wordpress_updated), 0, 0);
+                        if (response.equals("200")) {
+                            Toasto.show_toast(this, getString(R.string.wordpress_updated), 1, 0);
+                            intent.putExtra("updated", true);
+                            setResult(Activity.RESULT_OK, intent);
+                            finish();
                         }
                         requestDialog.dismiss();
                     }, error -> {
@@ -232,6 +319,9 @@ public class WordpressActivity extends AppCompatActivity {
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<>();
                     params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                    params.put("identifier", String.valueOf(getIntent().getIntExtra("identifier", 0)));
+                    params.put("label", label.getText().toString());
+                    params.put("icon", icon.getText().toString());
                     params.put("base_url", baseUrl.getText().toString());
                     params.put("per_page", perPage.getText().toString());
                     params.put("category_design", categoryAuth);
@@ -338,5 +428,12 @@ public class WordpressActivity extends AppCompatActivity {
         }
 
         designsDialog.show();
+    }
+
+    @Override
+    public void onRemoveListener(int requestCode) {
+        intent.putExtra("removed", true);
+        setResult(Activity.RESULT_OK, intent);
+        finish();
     }
 }

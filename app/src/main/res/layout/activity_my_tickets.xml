@@ -18,12 +18,12 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
-        android:background="?color_dark"
+        android:background="?color_light_separate"
         app:elevation="0dp"
-        app:itemIconTint="@color/navigation_item"
+        app:itemIconTint="@color/tickets_navigation_item"
         app:itemTextAppearanceActive="@style/SmallSize"
         app:itemTextAppearanceInactive="@style/SmallSize"
-        app:itemTextColor="@color/navigation_item"
+        app:itemTextColor="@color/tickets_navigation_item"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/tickets_bottom_navigation" />
 

@@ -2,19 +2,22 @@ package com.picassos.mint.console.android.models;
 
 public class Navigations {
     private int id;
-    private String title;
-    private String link;
+    private int identifier;
+    private int enabled;
+    private String type;
+    private String label;
     private String icon;
-    private String behavior;
-    private String premium;
 
-    public Navigations(int id, String title, String link, String icon, String behavior, String premium) {
+    public Navigations() {
+    }
+
+    public Navigations(int id, int identifier, int enabled, String type, String label, String icon) {
         this.id = id;
-        this.title = title;
-        this.link = link;
+        this.identifier = identifier;
+        this.enabled = enabled;
+        this.type = type;
+        this.label = label;
         this.icon = icon;
-        this.behavior = behavior;
-        this.premium = premium;
     }
 
     public int getId() {
@@ -25,20 +28,28 @@ public class Navigations {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public int getIdentifier() {
+        return identifier;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setIdentifier(int identifier) {
+        this.identifier = identifier;
     }
 
-    public String getLink() {
-        return link;
+    public int getEnabled() {
+        return enabled;
     }
 
-    public void setLink(String link) {
-        this.link = link;
+    public void setEnabled(int enabled) {
+        this.enabled = enabled;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
     }
 
     public String getIcon() {
@@ -49,19 +60,11 @@ public class Navigations {
         this.icon = icon;
     }
 
-    public String getBehavior() {
-        return behavior;
+    public String getType() {
+        return type;
     }
 
-    public void setBehavior(String behavior) {
-        this.behavior = behavior;
-    }
-
-    public String getPremium() {
-        return premium;
-    }
-
-    public void setPremium(String premium) {
-        this.premium = premium;
+    public void setType(String type) {
+        this.type = type;
     }
 }

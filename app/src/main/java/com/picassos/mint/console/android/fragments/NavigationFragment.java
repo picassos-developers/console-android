@@ -1,34 +1,49 @@
 package com.picassos.mint.console.android.fragments;
 
-import android.app.Activity;
+import static android.app.Activity.RESULT_OK;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.fragment.app.FragmentResultListener;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.picassos.mint.console.android.adapter.NavigationsAdapter;
+import com.picassos.mint.console.android.activities.providers.FacebookActivity;
+import com.picassos.mint.console.android.activities.providers.ImgurActivity;
+import com.picassos.mint.console.android.activities.providers.MapsActivity;
+import com.picassos.mint.console.android.activities.providers.PinterestActivity;
+import com.picassos.mint.console.android.activities.providers.VimeoActivity;
+import com.picassos.mint.console.android.activities.providers.WebviewActivity;
+import com.picassos.mint.console.android.activities.providers.WordpressActivity;
+import com.picassos.mint.console.android.activities.providers.YoutubeActivity;
 import com.picassos.mint.console.android.R;
+import com.picassos.mint.console.android.adapter.NavigationsAdapter;
 import com.picassos.mint.console.android.constants.API;
-import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.models.Navigations;
-import com.picassos.mint.console.android.sheets.AddNavigationBottomSheetModal;
+import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
+import com.picassos.mint.console.android.sheets.ChooseProviderBottomSheetModal;
 import com.picassos.mint.console.android.sheets.ManageAccountsBottomSheetModal;
-import com.picassos.mint.console.android.sheets.NavigationOptionsBottomSheetModal;
+import com.picassos.mint.console.android.sheets.ChooseDefaultNavigationBottomSheetModal;
 import com.picassos.mint.console.android.utils.AboutDialog;
-import com.picassos.mint.console.android.utils.IntentHandler;
 import com.picassos.mint.console.android.utils.RequestDialog;
+import com.picassos.mint.console.android.utils.Toasto;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,13 +56,12 @@ import java.util.Map;
 
 public class NavigationFragment extends Fragment {
 
+    Bundle bundle;
     View view;
 
-    // Bundle
-    private Bundle bundle;
 
-    // REQUEST CODE
-    public static final int REQUEST_NAVIGATION_ACTION = 1;
+    // REQUEST CODES
+    private static final int REQUEST_SELECT_PROVIDER = 1;
 
     RequestDialog requestDialog;
     private ConsolePreferences consolePreferences;
@@ -61,10 +75,9 @@ public class NavigationFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_navigation, container, false);
 
-        // initialize bundle
-        // & console shared preferences
+        // initialize bundle & shared preferences
         bundle = new Bundle();
-        consolePreferences = new ConsolePreferences(requireActivity().getApplicationContext());
+        consolePreferences = new ConsolePreferences(requireContext());
 
         return view;
     }
@@ -91,33 +104,65 @@ public class NavigationFragment extends Fragment {
         });
 
         // Initialize navigations recyclerview
-        RecyclerView navigationsRecyclerview = view.findViewById(R.id.recycler_navigations);
+        RecyclerView navigationsRecyclerview = view.findViewById(R.id.recycler_providers);
 
-        navigationsAdapter = new NavigationsAdapter(navigationsList, click -> IntentHandler.handleIntent(getContext(), click.getLink()), longClick -> {
-            bundle.putInt("navigation_id", longClick.getId());
-            bundle.putString("navigation_title", longClick.getTitle());
-            bundle.putString("navigation_link", longClick.getLink());
-            bundle.putString("navigation_icon", longClick.getIcon());
-            bundle.putString("navigation_behavior", longClick.getBehavior());
-            bundle.putString("navigation_premium", longClick.getPremium());
+        // providers adapter
+        navigationsAdapter = new NavigationsAdapter(navigationsList, click -> {
+            Intent intent = new Intent();
+            intent.putExtra("request", "update");
+            intent.putExtra("identifier", click.getIdentifier());
+            intent.putExtra("label", click.getLabel());
+            intent.putExtra("type", click.getType());
 
-            NavigationOptionsBottomSheetModal navigationOptionsBottomSheetModal = new NavigationOptionsBottomSheetModal();
-            navigationOptionsBottomSheetModal.setArguments(bundle);
-            navigationOptionsBottomSheetModal.setTargetFragment(NavigationFragment.this, REQUEST_NAVIGATION_ACTION);
-            navigationOptionsBottomSheetModal.show(requireFragmentManager(), "TAG");
+            switch (click.getType()) {
+                case "webview":
+                    intent.setClass(requireContext(), WebviewActivity.class);
+                    startActivityForResult.launch(intent);
+                    break;
+                case "wordpress":
+                    intent.setClass(requireContext(), WordpressActivity.class);
+                    startActivityForResult.launch(intent);
+                    break;
+                case "youtube":
+                    intent.setClass(requireContext(), YoutubeActivity.class);
+                    startActivityForResult.launch(intent);
+                    break;
+                case "vimeo":
+                    intent.setClass(requireContext(), VimeoActivity.class);
+                    startActivityForResult.launch(intent);
+                    break;
+                case "pinterest":
+                    intent.setClass(requireContext(), PinterestActivity.class);
+                    startActivityForResult.launch(intent);
+                    break;
+                case "facebook":
+                    intent.setClass(requireContext(), FacebookActivity.class);
+                    startActivityForResult.launch(intent);
+                    break;
+                case "imgur":
+                    intent.setClass(requireContext(), ImgurActivity.class);
+                    startActivityForResult.launch(intent);
+                    break;
+                case "google_maps":
+                    intent.setClass(requireContext(), MapsActivity.class);
+                    startActivityForResult.launch(intent);
+                    break;
+            }
+        }, state -> {
+            int currentState = -1; if (state.getEnabled() == 1) { currentState = 0; } else if (state.getEnabled() == 0) { currentState = 1; }
+            requestUpdateNavigation(state.getIdentifier(), currentState);
         });
 
         navigationsRecyclerview.setAdapter(navigationsAdapter);
-        navigationsRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+        navigationsRecyclerview.setLayoutManager(new GridLayoutManager(requireContext(), 2));
 
         // request navigations
         requestNavigations();
 
         // add navigation
         view.findViewById(R.id.add_navigation).setOnClickListener(v -> {
-            AddNavigationBottomSheetModal addNavigationBottomSheetModal = new AddNavigationBottomSheetModal();
-            addNavigationBottomSheetModal.setTargetFragment(NavigationFragment.this, REQUEST_NAVIGATION_ACTION);
-            addNavigationBottomSheetModal.show(requireFragmentManager(), "TAG");
+            ChooseProviderBottomSheetModal chooseProviderBottomSheetModal = new ChooseProviderBottomSheetModal();
+            chooseProviderBottomSheetModal.show(getChildFragmentManager(), "TAG");
         });
 
         // Refresh Layout
@@ -127,31 +172,94 @@ public class NavigationFragment extends Fragment {
                 refresh.setRefreshing(false);
             }
 
-            refreshFragment();
+            requestNavigations();
         });
     }
 
     /**
      * request navigations
      */
+    @SuppressLint({"NotifyDataSetChanged", "SetTextI18n"})
     private void requestNavigations() {
         view.findViewById(R.id.internet_connection).setVisibility(View.GONE);
         requestDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_NAVIGATIONS,
+        // clear, notify data changed
+        navigationsList.clear();
+        navigationsAdapter.notifyDataSetChanged();
+
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_PROVIDER_MENUS,
                 response -> {
+                    Log.v("TEST", response);
 
                     try {
                         JSONObject obj = new JSONObject(response);
 
-                        JSONArray array = obj.getJSONArray("navigations");
+                        JSONObject root = obj.getJSONObject("navigations");
+                        JSONArray array = root.getJSONArray("data");
+
+                        // navigations
+                        TextView navigationTabs = view.findViewById(R.id.total_tabs);
+                        navigationTabs.setText(String.valueOf(root.getInt("total_navigation_tabs")));
 
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
-                            Navigations navigations = new Navigations(object.getInt("id"), object.getString("title"), object.getString("link"), object.getString("icon"), object.getString("behavior"), object.getString("premium"));
-                            navigationsList.add(navigations);
+                            Navigations menus = new Navigations(object.getInt("id"), object.getInt("identifier"), object.getInt("enabled"), object.getString("type"),  object.getString("label"), object.getString("icon"));
+                            navigationsList.add(menus);
                             navigationsAdapter.notifyDataSetChanged();
                         }
+
+                        // default provider
+                        JSONObject default_provider = root.getJSONObject("default_provider");
+
+                        ImageView defaultProviderIcon = view.findViewById(R.id.default_provider_icon);
+                        switch (default_provider.getString("type")) {
+                            case "wordpress":
+                                defaultProviderIcon.setImageResource(R.drawable.icon_wordpress);
+                                break;
+                            case "webview":
+                                defaultProviderIcon.setImageResource(R.drawable.icon_webview);
+                                break;
+                            case "youtube":
+                                defaultProviderIcon.setImageResource(R.drawable.icon_youtube);
+                                break;
+                            case "vimeo":
+                                defaultProviderIcon.setImageResource(R.drawable.icon_vimeo);
+                                break;
+                            case "facebook":
+                                defaultProviderIcon.setImageResource(R.drawable.icon_facebook);
+                                break;
+                            case "pinterest":
+                                defaultProviderIcon.setImageResource(R.drawable.icon_pinterest);
+                                break;
+                            case "maps":
+                                defaultProviderIcon.setImageResource(R.drawable.icon_maps);
+                                break;
+                            case "imgur":
+                                defaultProviderIcon.setImageResource(R.drawable.icon_imgur);
+                                break;
+                        }
+                        TextView defaultProvider = view.findViewById(R.id.default_provider);
+                        defaultProvider.setText(getString(R.string.default_provider) + ": " + default_provider.getString("label").substring(0, 1).toUpperCase() + default_provider.getString("label").substring(1));
+                        // set provider
+                        view.findViewById(R.id.default_provider_container).setOnClickListener(v -> {
+                            try {
+                                bundle.putInt("identifier", default_provider.getInt("identifier"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                            requireActivity().getSupportFragmentManager().setFragmentResultListener("request", getViewLifecycleOwner(), new FragmentResultListener() {
+                                @Override
+                                public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+
+                                }
+                            });
+
+                            ChooseDefaultNavigationBottomSheetModal chooseDefaultNavigationBottomSheetModal = new ChooseDefaultNavigationBottomSheetModal();
+                            chooseDefaultNavigationBottomSheetModal.setArguments(bundle);
+                            chooseDefaultNavigationBottomSheetModal.show(requireFragmentManager(), "TAG");
+                        });
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -172,21 +280,40 @@ public class NavigationFragment extends Fragment {
         Volley.newRequestQueue(requireActivity().getApplicationContext()).add(request);
     }
 
-    public void refreshFragment() {
-        navigationsList.clear();
-        navigationsAdapter.notifyDataSetChanged();
-        requireFragmentManager().beginTransaction().detach(this).attach(this).commit();
-        requestNavigations();
-    }
+    /**
+     * request update navigation
+     */
+    private void requestUpdateNavigation(int id, int state) {
+        if (consolePreferences.loadSecretAPIKey().equals("demo")) {
+            Toasto.show_toast(requireContext(), getString(R.string.demo_project), 1, 0);
+        } else {
+            requestDialog.show();
+            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_PROVIDERS,
+                    response -> {
+                        if (response.equals("200")) {
+                            requestDialog.dismiss();
+                        }
+                    }, error -> {
+                requestDialog.dismiss();
+                Toasto.show_toast(requireContext(), getString(R.string.unknown_issue), 1, 2);
+            }){
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                    params.put("identifier", String.valueOf(id));
+                    params.put("state", String.valueOf(state));
+                    return params;
+                }
+            };
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_NAVIGATION_ACTION) {
-            if (resultCode == Activity.RESULT_OK) {
-                refreshFragment();
-            }
+            Volley.newRequestQueue(requireContext()).add(request);
         }
     }
 
+    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+        if (result != null && result.getResultCode() == RESULT_OK) {
+            requestNavigations();
+        }
+    });
 }

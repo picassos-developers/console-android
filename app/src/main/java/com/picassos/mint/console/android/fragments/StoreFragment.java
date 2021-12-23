@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,11 +24,13 @@ import com.picassos.mint.console.android.Config;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.activities.store.ViewProductActivity;
 import com.picassos.mint.console.android.adapter.AffiliateProductsAdapter;
+import com.picassos.mint.console.android.adapter.AuthorBadgesAdapter;
 import com.picassos.mint.console.android.adapter.ProductsAdapter;
 import com.picassos.mint.console.android.constants.API;
 import com.picassos.mint.console.android.libraries.showcaseview.GuideView;
 import com.picassos.mint.console.android.libraries.showcaseview.config.DismissType;
 import com.picassos.mint.console.android.libraries.showcaseview.config.Gravity;
+import com.picassos.mint.console.android.models.AuthorBadges;
 import com.picassos.mint.console.android.models.Product;
 import com.picassos.mint.console.android.models.ProductAffiliate;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
@@ -35,6 +38,7 @@ import com.picassos.mint.console.android.sheets.AffiliateProductDetailsBottomShe
 import com.picassos.mint.console.android.sheets.ManageAccountsBottomSheetModal;
 import com.picassos.mint.console.android.utils.AboutDialog;
 import com.picassos.mint.console.android.utils.RequestDialog;
+import com.picassos.mint.console.android.utils.Toasto;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -52,6 +56,10 @@ public class StoreFragment extends Fragment {
     Bundle bundle;
     RequestDialog requestDialog;
     private ConsolePreferences consolePreferences;
+
+    // Author Badges
+    private final List<AuthorBadges> authorBadgesList = new ArrayList<>();
+    private AuthorBadgesAdapter authorBadgesAdapter;
 
     // Product
     private final List<Product> productList = new ArrayList<>();
@@ -137,6 +145,17 @@ public class StoreFragment extends Fragment {
         // request affiliate products
         requestAffiliateProducts();
 
+        // Initialize badges recyclerview
+        RecyclerView badgesRecyclerview = view.findViewById(R.id.recycler_badges);
+
+        authorBadgesAdapter = new AuthorBadgesAdapter(requireContext(), authorBadgesList, click -> Toasto.show_toast(requireContext(), click.getLabel(), 1, 0));
+
+        badgesRecyclerview.setAdapter(authorBadgesAdapter);
+        badgesRecyclerview.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
+
+        // request picassos badges
+        requestPicassosBadges();
+
         // Refresh Layout
         SwipeRefreshLayout refresh = view.findViewById(R.id.refresh_layout);
         refresh.setOnRefreshListener(() -> {
@@ -146,6 +165,45 @@ public class StoreFragment extends Fragment {
             requestProducts();
             requestAffiliateProducts();
         });
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    private void requestPicassosBadges() {
+        StringRequest request = new StringRequest(Request.Method.GET, "https://api.envato.com/v1/market/user-badges:" + Config.ENVATO_USERNAME + ".json",
+                response -> {
+                    try {
+                        JSONObject obj = new JSONObject(response);
+                        JSONArray array = obj.getJSONArray("user-badges");
+
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject object = array.getJSONObject(i);
+
+                            AuthorBadges authorBadges = new AuthorBadges(object.getString("name"), object.getString("label"), object.getString("image"));
+                            authorBadgesList.add(authorBadges);
+                            authorBadgesAdapter.notifyDataSetChanged();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    requestDialog.dismiss();
+                }, error -> {
+            requestDialog.dismiss();
+            view.findViewById(R.id.store_container).setVisibility(View.GONE);
+            view.findViewById(R.id.internet_connection).setVisibility(View.VISIBLE);
+            view.findViewById(R.id.try_again).setOnClickListener(v -> {
+                requestProducts();
+                requestAffiliateProducts();
+            });
+        }) {
+            @Override
+            public Map<String, String> getHeaders() {
+                HashMap<String, String> headers = new HashMap<>();
+                headers.put("Authorization", "Bearer " + Config.ENVATO_PERSONAL_TOKEN);
+                return headers;
+            }
+        };
+
+        Volley.newRequestQueue(requireActivity().getApplicationContext()).add(request);
     }
 
     /**

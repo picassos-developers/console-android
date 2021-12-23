@@ -130,10 +130,9 @@
                                 android:layout_marginStart="20dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="20dp"
-                                android:text="File a ticket and we will get back to you as soon as possible."
+                                android:text="@string/file_a_ticket_and_we_will_get_back_to_you_as_soon_as_possible"
                                 android:textAlignment="center"
-                                android:textColor="?color_dark"
-                                tools:ignore="HardcodedText" />
+                                android:textColor="?color_dark" />
 
                         </LinearLayout>
 

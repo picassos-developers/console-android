@@ -3,11 +3,15 @@ package com.picassos.mint.console.android.activities.providers;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
@@ -15,7 +19,9 @@ import com.android.volley.toolbox.Volley;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.constants.API;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
+import com.picassos.mint.console.android.sheets.ProviderOptionsBottomSheetModal;
 import com.picassos.mint.console.android.utils.Helper;
+import com.picassos.mint.console.android.utils.InputFilterRange;
 import com.picassos.mint.console.android.utils.RequestDialog;
 import com.picassos.mint.console.android.utils.Toasto;
 
@@ -25,14 +31,16 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ImgurActivity extends AppCompatActivity {
+public class ImgurActivity extends AppCompatActivity implements ProviderOptionsBottomSheetModal.OnRemoveListener {
 
+    private Bundle bundle;
+    private Intent intent;
     private ConsolePreferences consolePreferences;
     private RequestDialog requestDialog;
 
-    private EditText accessToken;
-    private EditText username;
-    private EditText perPage;
+    private String request;
+
+    private EditText label, icon, accessToken, perPage, username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,19 +53,48 @@ public class ImgurActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_imgur);
 
+        bundle = new Bundle();
+        intent = new Intent();
+
+        // get request type
+        request = getIntent().getStringExtra("request");
+
         // initialize request dialog
         requestDialog = new RequestDialog(this);
 
         // close activity
         findViewById(R.id.go_back).setOnClickListener(v -> finish());
 
+        // more options
+        findViewById(R.id.more_options).setOnClickListener(v -> {
+            bundle.putInt("identifier", getIntent().getIntExtra("identifier", 0));
+            bundle.putString("type", getIntent().getStringExtra("type"));
+            ProviderOptionsBottomSheetModal providerOptionsBottomSheetModal = new ProviderOptionsBottomSheetModal();
+            providerOptionsBottomSheetModal.setArguments(bundle);
+            providerOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
+        });
+        if (request.equals("add")) {
+            findViewById(R.id.more_options).setVisibility(View.GONE);
+        }
+
+        // toolbar title
+        TextView toolbarTitle = findViewById(R.id.toolbar_title);
+        if (request.equals("update")) {
+            toolbarTitle.setText(getIntent().getStringExtra("label"));
+        }
+
         // imgur data
+        label = findViewById(R.id.provider_label);
+        icon = findViewById(R.id.provider_icon);
         accessToken = findViewById(R.id.access_token);
         username = findViewById(R.id.username);
         perPage = findViewById(R.id.per_page);
+        perPage.setFilters(new InputFilter[]{ new InputFilterRange("1", "25")});
 
         // request data
-        requestData();
+        if (request.equals("update")) {
+            requestData();
+        }
 
         // save data
         Button save = findViewById(R.id.update_imgur);
@@ -65,7 +102,14 @@ public class ImgurActivity extends AppCompatActivity {
             if (!TextUtils.isEmpty(accessToken.getText().toString())
                     && !TextUtils.isEmpty(username.getText().toString())
                     && !TextUtils.isEmpty(perPage.getText().toString())) {
-                requestUpdateImgur();
+                switch (request) {
+                    case "add":
+                        requestAddImgur();
+                        break;
+                    case "update":
+                        requestUpdateImgur();
+                        break;
+                }
             } else {
                 Toasto.show_toast(this, getString(R.string.all_fields_are_required), 0, 2);
             }
@@ -80,6 +124,9 @@ public class ImgurActivity extends AppCompatActivity {
 
             requestData();
         });
+        if (request.equals("add")) {
+            refresh.setEnabled(false);
+        }
     }
 
     /**
@@ -94,22 +141,15 @@ public class ImgurActivity extends AppCompatActivity {
                     try {
                         JSONObject object = new JSONObject(response);
                         JSONObject root = object.getJSONObject("imgur");
-                        // imgur data
-                        if (root.getString("access_token").equals("exception:error?imgur_access_token")) {
-                            accessToken.setText("");
-                        } else {
-                            accessToken.setText(root.getString("access_token"));
-                        }
-                        if (root.getString("username").equals("exception:error?imgur_username")) {
-                            username.setText("");
-                        } else {
-                            username.setText(root.getString("username"));
-                        }
-                        if (root.getString("per_page").equals("exception:error?imgur_per_page")) {
-                            perPage.setText("");
-                        } else {
-                            perPage.setText(root.getString("per_page"));
-                        }
+                        JSONObject general = root.getJSONObject("general");
+
+                        // label, icon
+                        label.setText(general.getString("label"));
+                        icon.setText(general.getString("icon"));
+
+                        accessToken.setText(root.getString("access_token"));
+                        username.setText(root.getString("username"));
+                        perPage.setText(root.getString("per_page"));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -125,6 +165,7 @@ public class ImgurActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
                 params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                params.put("identifier", String.valueOf(getIntent().getIntExtra("identifier", 0)));
                 return params;
             }
         };
@@ -133,27 +174,31 @@ public class ImgurActivity extends AppCompatActivity {
     }
 
     /**
-     * request update imgur
+     * request add imgur provider
      */
-    private void requestUpdateImgur() {
+    private void requestAddImgur() {
         if (consolePreferences.loadSecretAPIKey().equals("demo")) {
             Toasto.show_toast(this, getString(R.string.demo_project), 1, 0);
         } else {
             requestDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_IMGUR,
+            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_ADD_IMGUR_PROVIDER,
                     response -> {
-                        if (response.contains("exception:configuration?success")) {
-                            Toasto.show_toast(this, getString(R.string.imgur_updated), 0, 0);
+                        if (response.equals("200")) {
+                            intent.putExtra("added", true);
+                            setResult(Activity.RESULT_OK, intent);
+                            finish();
                         }
                         requestDialog.dismiss();
                     }, error -> {
                 requestDialog.dismiss();
-                Toasto.show_toast(this, "exception:error?" + error.getMessage(), 0, 1);
+                Toasto.show_toast(this, getString(R.string.unknown_issue), 0, 1);
             }){
                 @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<>();
                     params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                    params.put("label", label.getText().toString());
+                    params.put("icon", icon.getText().toString());
                     params.put("access_token", accessToken.getText().toString());
                     params.put("username", username.getText().toString());
                     params.put("per_page", perPage.getText().toString());
@@ -165,4 +210,49 @@ public class ImgurActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * request update imgur
+     */
+    private void requestUpdateImgur() {
+        if (consolePreferences.loadSecretAPIKey().equals("demo")) {
+            Toasto.show_toast(this, getString(R.string.demo_project), 1, 0);
+        } else {
+            requestDialog.show();
+            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_IMGUR_PROVIDER,
+                    response -> {
+                        if (response.equals("200")) {
+                            Toasto.show_toast(this, getString(R.string.imgur_updated), 0, 0);
+                            intent.putExtra("updated", true);
+                            setResult(Activity.RESULT_OK, intent);
+                            finish();
+                        }
+                        requestDialog.dismiss();
+                    }, error -> {
+                requestDialog.dismiss();
+                Toasto.show_toast(this, getString(R.string.unknown_issue), 0, 1);
+            }){
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                    params.put("identifier", String.valueOf(getIntent().getIntExtra("identifier", 0)));
+                    params.put("label", label.getText().toString());
+                    params.put("icon", icon.getText().toString());
+                    params.put("access_token", accessToken.getText().toString());
+                    params.put("username", username.getText().toString());
+                    params.put("per_page", perPage.getText().toString());
+                    return params;
+                }
+            };
+
+            Volley.newRequestQueue(this).add(request);
+        }
+    }
+
+    @Override
+    public void onRemoveListener(int requestCode) {
+        intent.putExtra("remove", true);
+        setResult(Activity.RESULT_OK, intent);
+        finish();
+    }
 }

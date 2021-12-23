@@ -1,12 +1,12 @@
 package com.picassos.mint.console.android.activities;
 
-import androidx.annotation.Nullable;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -45,9 +45,6 @@ import java.util.Objects;
 public class LoginActivity extends AppCompatActivity {
 
     Bundle bundle;
-
-    // REQUEST CODES
-    private static final int REQUEST_QR_LOGIN_CODE = 1;
 
     ConsolePreferences consolePreferences;
     RequestDialog requestDialog;
@@ -133,7 +130,7 @@ public class LoginActivity extends AppCompatActivity {
         // Login with QR
         findViewById(R.id.qr_login).setOnClickListener(v -> {
             Intent qrLogin = new Intent(this, QrLoginActivity.class);
-            startActivityForResult(qrLogin, REQUEST_QR_LOGIN_CODE);
+            startActivityForResult.launch(qrLogin);
         });
 
         // Forgot Password
@@ -353,13 +350,9 @@ public class LoginActivity extends AppCompatActivity {
         new GetAccountsTask().execute();
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_QR_LOGIN_CODE) {
-            if (resultCode == Activity.RESULT_OK) {
-                requestLoginViaQR(Objects.requireNonNull(data).getStringExtra("token"));
-            }
+    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+        if (result != null && result.getResultCode() == RESULT_OK) {
+            requestLoginViaQR(Objects.requireNonNull(result.getData()).getStringExtra("token"));
         }
-    }
+    });
 }

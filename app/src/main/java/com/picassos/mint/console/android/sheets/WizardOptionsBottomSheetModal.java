@@ -1,7 +1,8 @@
 package com.picassos.mint.console.android.sheets;
 
+import static android.app.Activity.RESULT_OK;
+
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -31,7 +36,6 @@ public class WizardOptionsBottomSheetModal extends BottomSheetDialogFragment {
     View view;
     RequestDialog requestDialog;
     private ConsolePreferences consolePreferences;
-    public static final int REQUEST_WIZARD_ACTION = 2;
 
     public interface OnDeleteListener {
         void onDeleteListener(boolean delete);
@@ -76,8 +80,8 @@ public class WizardOptionsBottomSheetModal extends BottomSheetDialogFragment {
         // get wizard details
         int wizardId = requireArguments().getInt("wizard_id");
         String wizardTitle = requireArguments().getString("wizard_title");
-        String wizardDescription = getArguments().getString("wizard_description");
-        String wizardThumbnail = getArguments().getString("wizard_thumbnail");
+        String wizardDescription = requireArguments().getString("wizard_description");
+        String wizardThumbnail = requireArguments().getString("wizard_thumbnail");
 
         // initialize request dialog
         requestDialog = new RequestDialog(requireContext());
@@ -89,7 +93,7 @@ public class WizardOptionsBottomSheetModal extends BottomSheetDialogFragment {
             intent.putExtra("wizard_title", wizardTitle);
             intent.putExtra("wizard_description", wizardDescription);
             intent.putExtra("wizard_thumbnail", wizardThumbnail);
-            startActivityForResult(intent, REQUEST_WIZARD_ACTION);
+            startActivityForResult.launch(intent);
         });
 
         // delete wizard
@@ -147,14 +151,13 @@ public class WizardOptionsBottomSheetModal extends BottomSheetDialogFragment {
         }
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_WIZARD_ACTION) {
-            if (resultCode == Activity.RESULT_OK) {
+    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+        @Override
+        public void onActivityResult(ActivityResult result) {
+            if (result != null && result.getResultCode() == RESULT_OK) {
                 onEditListener.onEditListener(true);
                 dismiss();
             }
         }
-    }
+    });
 }

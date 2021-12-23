@@ -30,6 +30,7 @@
     <item name="delete_all_notifications" type="id" />
     <item name="notifications_list" type="id" />
     <item name="board_name" type="id" />
+    <item name="total_tabs" type="id" />
     <item name="update_pinterest" type="id" />
     <item name="total_credits" type="id" />
     <item name="dark_mode" type="id" />
@@ -47,6 +48,7 @@
     <item name="email_address_container" type="id" />
     <item name="get_started" type="id" />
     <item name="download_via_wifi" type="id" />
+    <item name="push_notifications_container" type="id" />
     <item name="status_container" type="id" />
     <item name="controller_content" type="id" />
     <item name="default_provider_container" type="id" />
@@ -129,6 +131,7 @@
     <item name="account_container" type="id" />
     <item name="policies_container" type="id" />
     <item name="map_style" type="id" />
+    <item name="more_options" type="id" />
     <item name="update_maps" type="id" />
     <item name="current_password" type="id" />
     <item name="new_password" type="id" />
@@ -189,6 +192,7 @@
     <item name="youtube_link" type="id" />
     <item name="copy_link" type="id" />
     <item name="wizard_title" type="id" />
+    <item name="remove_provider" type="id" />
     <item name="wizard_description" type="id" />
     <item name="wizard_thumbnail" type="id" />
     <item name="add_wizard_button" type="id" />
@@ -214,6 +218,7 @@
     <item name="visits" type="id" />
     <item name="navigation_drawer" type="id" />
     <item name="write_review" type="id" />
+    <item name="recycler_badges" type="id" />
     <item name="recycler_accounts" type="id" />
     <item name="recycler_reviews" type="id" />
     <item name="add_account" type="id" />
@@ -226,6 +231,7 @@
     <item name="submit_ticket_widget" type="id" />
     <item name="power_store_container" type="id" />
     <item name="add_project" type="id" />
+    <item name="recycler_providers" type="id" />
     <item name="loading_title" type="id" />
     <item name="loading_description" type="id" />
     <item name="store_container" type="id" />
@@ -278,12 +284,14 @@
     <item name="normal_process" type="id" />
     <item name="facebook_provider" type="id" />
     <item name="vimeo_provider" type="id" />
+    <item name="provider_action" type="id" />
     <item name="pinterest_provider" type="id" />
     <item name="imgur_provider" type="id" />
     <item name="maps_provider" type="id" />
     <item name="base_url" type="id" />
     <item name="update_webview" type="id" />
     <item name="bookmarks_page" type="id" />
+    <item name="system_default_browser" type="id" />
     <item name="downloads_page" type="id" />
     <item name="post_design" type="id" />
     <item name="update_wordpress" type="id" />
@@ -292,6 +300,7 @@
     <item name="force_update_chooser" type="id" />
     <item name="force_update" type="id" />
     <item name="category_design" type="id" />
+    <item name="qr_code_scanner" type="id" />
     <item name="update_configuration" type="id" />
     <item name="category_design_chooser" type="id" />
     <item name="latest_update" type="id" />
@@ -345,6 +354,7 @@
     <item name="disable_ads" type="id" />
     <item name="menu_webview" type="id" />
     <item name="menu_wordpress" type="id" />
+    <item name="add_provider_menu" type="id" />
     <item name="menu_youtube" type="id" />
     <item name="menu_vimeo" type="id" />
     <item name="menu_facebook" type="id" />
@@ -377,6 +387,7 @@
     <item name="product_thumbnail" type="id" />
     <item name="share_product" type="id" />
     <item name="purchase_thumbnail" type="id" />
+    <item name="badge_thumbnail" type="id" />
     <item name="product_title" type="id" />
     <item name="purchase_id" type="id" />
     <item name="purchase_title" type="id" />
@@ -405,11 +416,15 @@
     <item name="download_privacy" type="id" />
     <item name="download_terms" type="id" />
     <item name="package_one" type="id" />
+    <item name="provider_container" type="id" />
     <item name="package_two" type="id" />
     <item name="package_three" type="id" />
     <item name="package_four" type="id" />
     <item name="package_five" type="id" />
     <item name="package_six" type="id" />
     <item name="package_seven" type="id" />
+    <item name="provider_label" type="id" />
+    <item name="provider_state" type="id" />
+    <item name="provider_icon" type="id" />
 
 </resources>

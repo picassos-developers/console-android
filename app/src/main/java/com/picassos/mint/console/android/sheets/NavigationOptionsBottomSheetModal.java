@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -32,7 +34,6 @@ public class NavigationOptionsBottomSheetModal extends BottomSheetDialogFragment
     View view;
     RequestDialog requestDialog;
     private ConsolePreferences consolePreferences;
-    public static final int REQUEST_NAVIGATION_ACTION = 2;
 
     public NavigationOptionsBottomSheetModal() {
 
@@ -66,7 +67,7 @@ public class NavigationOptionsBottomSheetModal extends BottomSheetDialogFragment
             intent.putExtra("navigation_icon", navigationIcon);
             intent.putExtra("navigation_behavior", navigationBehavior);
             intent.putExtra("navigation_premium", navigationPremium);
-            startActivityForResult(intent, REQUEST_NAVIGATION_ACTION);
+            startActivityForResult.launch(intent);
         });
 
         // delete navigation
@@ -124,16 +125,12 @@ public class NavigationOptionsBottomSheetModal extends BottomSheetDialogFragment
         }
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_NAVIGATION_ACTION) {
-            if (resultCode == Activity.RESULT_OK) {
-                Intent intent = new Intent();
-                intent.putExtra("request", "delete");
-                Objects.requireNonNull(getTargetFragment()).onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, intent);
-                dismiss();
-            }
+    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+        if (result != null && result.getResultCode() == Activity.RESULT_OK) {
+            Intent intent = new Intent();
+            intent.putExtra("request", "delete");
+            Objects.requireNonNull(getTargetFragment()).onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, intent);
+            dismiss();
         }
-    }
+    });
 }

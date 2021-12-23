@@ -116,6 +116,10 @@
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/release/layout_fragment_blank.xml.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/fragment_blank.xml"
+    },
+    {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/release/drawable_navigation_home.xml.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/navigation_home.xml"
     },
@@ -712,6 +716,10 @@
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/activity_edit_navigation.xml"
     },
     {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/release/layout_item_author_badge.xml.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/item_author_badge.xml"
+    },
+    {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/release/drawable_video_style_five.png.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/video_style_five.png"
     },
@@ -1092,12 +1100,12 @@
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/toast_layout_alert.xml"
     },
     {
-        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/release/layout_add_wizard_bottom_sheet_modal.xml.flat",
-        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/add_wizard_bottom_sheet_modal.xml"
-    },
-    {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/release/layout_activity_login.xml.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/release/layout_add_wizard_bottom_sheet_modal.xml.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/add_wizard_bottom_sheet_modal.xml"
     },
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/release/font_poppins_semibold.ttf.flat",

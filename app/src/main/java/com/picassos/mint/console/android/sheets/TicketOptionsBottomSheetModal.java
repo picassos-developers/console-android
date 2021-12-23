@@ -1,5 +1,7 @@
 package com.picassos.mint.console.android.sheets;
 
+import static android.app.Activity.RESULT_OK;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -31,7 +35,6 @@ public class TicketOptionsBottomSheetModal extends BottomSheetDialogFragment {
     View view;
     RequestDialog requestDialog;
     private ConsolePreferences consolePreferences;
-    public static final int REQUEST_UPDATE_TICKET_CODE = 1;
 
     public TicketOptionsBottomSheetModal() {
 
@@ -57,7 +60,7 @@ public class TicketOptionsBottomSheetModal extends BottomSheetDialogFragment {
             Intent intent = new Intent(getContext(), UpdateTicketActivity.class);
             intent.putExtra("ticket_id", ticketId);
             intent.putExtra("ticket_description", ticketDescription);
-            startActivityForResult(intent, REQUEST_UPDATE_TICKET_CODE);
+            startActivityForResult.launch(intent);
         });
 
         // close ticket
@@ -111,16 +114,12 @@ public class TicketOptionsBottomSheetModal extends BottomSheetDialogFragment {
         Volley.newRequestQueue(requireActivity().getApplicationContext()).add(request);
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_UPDATE_TICKET_CODE) {
-            if (resultCode == Activity.RESULT_OK) {
-                Intent intent = new Intent();
-                intent.putExtra("request", "update");
-                Objects.requireNonNull(getTargetFragment()).onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, intent);
-                dismiss();
-            }
+    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+        if (result != null && result.getResultCode() == RESULT_OK) {
+            Intent intent = new Intent();
+            intent.putExtra("request", "update");
+            Objects.requireNonNull(getTargetFragment()).onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, intent);
+            dismiss();
         }
-    }
+    });
 }

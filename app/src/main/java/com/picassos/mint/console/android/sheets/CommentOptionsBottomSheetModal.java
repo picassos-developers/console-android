@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -50,21 +52,6 @@ public class CommentOptionsBottomSheetModal extends BottomSheetDialogFragment {
 
     }
 
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        try {
-            onRemoveListener = (OnRemoveListener) context;
-        } catch (final ClassCastException e) {
-            throw new ClassCastException(context.toString() + " must implement onRemoveListener");
-        }
-        try {
-            onUpdateListener = (OnUpdateListener) context;
-        } catch (final ClassCastException e) {
-            throw new ClassCastException(context.toString() + " must implement onUpdateListener");
-        }
-    }
-
     @SuppressLint("SetTextI18n")
     @Nullable
     @Override
@@ -85,7 +72,7 @@ public class CommentOptionsBottomSheetModal extends BottomSheetDialogFragment {
             Intent intent = new Intent(getContext(), EditCommentActivity.class);
             intent.putExtra("comment_id", commentId);
             intent.putExtra("comment_description", commentDescription);
-            startActivityForResult(intent, REQUEST_UPDATE_COMMENT_CODE);
+            startActivityForResult.launch(intent);
         });
 
         // remove comment
@@ -102,6 +89,21 @@ public class CommentOptionsBottomSheetModal extends BottomSheetDialogFragment {
         super.onCreate(savedInstanceState);
     }
 
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        try {
+            onRemoveListener = (OnRemoveListener) context;
+        } catch (final ClassCastException e) {
+            throw new ClassCastException(context.toString() + " must implement onRemoveListener");
+        }
+        try {
+            onUpdateListener = (OnUpdateListener) context;
+        } catch (final ClassCastException e) {
+            throw new ClassCastException(context.toString() + " must implement onUpdateListener");
+        }
+    }
+
     /**
      * request remove comment
      *
@@ -116,7 +118,7 @@ public class CommentOptionsBottomSheetModal extends BottomSheetDialogFragment {
                         onRemoveListener.onRemoveListener(REQUEST_REMOVE_COMMENT_CODE);
                         dismiss();
                     } else {
-                        Toasto.show_toast(requireContext(), getString(R.string.unknown_issue), 0, 2);
+                        Toasto.show_toast(requireActivity().getApplicationContext(), requireActivity().getString(R.string.unknown_issue), 1, 2);
                     }
                     requestDialog.dismiss();
                 }, error -> {
@@ -135,14 +137,10 @@ public class CommentOptionsBottomSheetModal extends BottomSheetDialogFragment {
         Volley.newRequestQueue(requireActivity().getApplicationContext()).add(request);
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_UPDATE_COMMENT_CODE) {
-            if (resultCode == Activity.RESULT_OK) {
-                onUpdateListener.onUpdateListener(REQUEST_UPDATE_COMMENT_CODE);
-                dismiss();
-            }
+    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+        if (result != null && result.getResultCode() == Activity.RESULT_OK) {
+            onUpdateListener.onUpdateListener(REQUEST_UPDATE_COMMENT_CODE);
+            dismiss();
         }
-    }
+    });
 }

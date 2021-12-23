@@ -1,10 +1,12 @@
 package com.picassos.mint.console.android.activities.helpCentre;
 
-import androidx.annotation.Nullable;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -49,9 +51,7 @@ public class SearchArticlesActivity extends AppCompatActivity {
     private ArticlesAdapter articlesAdapter;
     private EditText searchBar;
 
-    // REQUEST CODES
-    private final int REQUEST_CODE_TEXT_TO_SPEECH = 1;
-
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,7 +108,7 @@ public class SearchArticlesActivity extends AppCompatActivity {
             intent.putExtra(RecognizerIntent.EXTRA_PROMPT, getString(R.string.speak_articles));
 
             try {
-                startActivityForResult(intent, REQUEST_CODE_TEXT_TO_SPEECH);
+                startActivityForResult.launch(intent);
             } catch (Exception e) {
                 Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
             }
@@ -119,6 +119,7 @@ public class SearchArticlesActivity extends AppCompatActivity {
      * request search articles
      * @param query for term (query)
      */
+    @SuppressLint("NotifyDataSetChanged")
     private void requestArticles(String query) {
         findViewById(R.id.internet_connection).setVisibility(View.GONE);
         requestDialog.show();
@@ -164,19 +165,17 @@ public class SearchArticlesActivity extends AppCompatActivity {
         Volley.newRequestQueue(this).add(request);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_TEXT_TO_SPEECH) {
-            if (resultCode == RESULT_OK && null != data) {
-                ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                if (result != null) {
-                    searchBar.setText(result.get(0));
-                    requestArticles(searchBar.getText().toString());
-                    articlesList.clear();
-                    articlesAdapter.notifyDataSetChanged();
-                }
+    @SuppressLint("NotifyDataSetChanged")
+    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+        if (result != null && result.getResultCode() == RESULT_OK) {
+            ArrayList<String> callback = Objects.requireNonNull(result.getData()).getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            if (callback != null) {
+                searchBar.setText(callback.get(0));
+                requestArticles(searchBar.getText().toString());
+                articlesList.clear();
+                articlesAdapter.notifyDataSetChanged();
             }
         }
-    }
+    });
+
 }

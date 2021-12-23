@@ -1,5 +1,7 @@
 package com.picassos.mint.console.android.activities.store;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -58,8 +59,6 @@ public class ViewProductActivity extends AppCompatActivity implements
         ChooseCustomDarkmodePackageAppBottomSheetModal.OnSelectPackageListener,
         PaymentMethodBottomSheetModal.OnSelectListener, PurchasesUpdatedListener {
 
-    // REQUEST CODES
-    private static final int REQUEST_WRITE_REVIEW_CODE = 1;
     // Products & Reviews
     private final List<Product> productList = new ArrayList<>();
     private final List<StoreReview> reviewList = new ArrayList<>();
@@ -400,7 +399,7 @@ public class ViewProductActivity extends AppCompatActivity implements
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
-                                startActivityForResult(intent, REQUEST_WRITE_REVIEW_CODE);
+                                startActivityForResult.launch(intent);
                             });
                             // delete review
                             findViewById(R.id.delete_review).setOnClickListener(v -> {
@@ -417,7 +416,7 @@ public class ViewProductActivity extends AppCompatActivity implements
                                 Intent intent = new Intent(ViewProductActivity.this, WriteReviewActivity.class);
                                 intent.putExtra("action", "post");
                                 intent.putExtra("product_id", productId);
-                                startActivityForResult(intent, REQUEST_WRITE_REVIEW_CODE);
+                                startActivityForResult.launch(intent);
                             });
                         } else if (isReviewed == -1) {
                             findViewById(R.id.your_review_container).setVisibility(View.GONE);
@@ -573,13 +572,9 @@ public class ViewProductActivity extends AppCompatActivity implements
         }
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_WRITE_REVIEW_CODE) {
-            if (resultCode == Activity.RESULT_OK) {
-                requestReviews();
-            }
+    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+        if (result != null && result.getResultCode() == RESULT_OK) {
+            requestReviews();
         }
-    }
+    });
 }

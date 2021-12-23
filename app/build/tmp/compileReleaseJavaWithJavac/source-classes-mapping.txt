@@ -351,6 +351,8 @@ com/picassos/mint/console/android/models/TicketResponds.java
  com.picassos.mint.console.android.models.TicketResponds
 com/picassos/mint/console/android/utils/Toasto.java
  com.picassos.mint.console.android.utils.Toasto
+com/picassos/mint/console/android/interfaces/OnAuthorBadgeClickListener.java
+ com.picassos.mint.console.android.interfaces.OnAuthorBadgeClickListener
 com/picassos/mint/console/android/sheets/LearnMoreBottomSheetModal.java
  com.picassos.mint.console.android.sheets.LearnMoreBottomSheetModal
 com/picassos/mint/console/android/sheets/ManageAccountsBottomSheetModal.java
@@ -360,6 +362,7 @@ com/picassos/mint/console/android/fragments/StoreFragment.java
  com.picassos.mint.console.android.fragments.StoreFragment
  com.picassos.mint.console.android.fragments.StoreFragment$1
  com.picassos.mint.console.android.fragments.StoreFragment$2
+ com.picassos.mint.console.android.fragments.StoreFragment$3
 com/picassos/mint/console/android/interfaces/OnCommentLongClickListener.java
  com.picassos.mint.console.android.interfaces.OnCommentLongClickListener
 com/picassos/mint/console/android/BuildConfig.java
@@ -382,6 +385,8 @@ com/picassos/mint/console/android/libraries/showcaseview/GuideView.java
  com.picassos.mint.console.android.libraries.showcaseview.GuideView$4
  com.picassos.mint.console.android.libraries.showcaseview.GuideView$5
  com.picassos.mint.console.android.libraries.showcaseview.GuideView$Builder
+com/picassos/mint/console/android/models/AuthorBadges.java
+ com.picassos.mint.console.android.models.AuthorBadges
 com/picassos/mint/console/android/activities/WizardsActivity.java
  com.picassos.mint.console.android.activities.WizardsActivity
  com.picassos.mint.console.android.activities.WizardsActivity$1

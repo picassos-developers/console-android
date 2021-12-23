@@ -1,6 +1,6 @@
 package com.picassos.mint.console.android.adapter;
 
-import android.text.TextUtils;
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,64 +8,81 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.interfaces.OnNavigationClickListener;
-import com.picassos.mint.console.android.interfaces.OnNavigationLongClickListener;
+import com.picassos.mint.console.android.interfaces.OnNavigationStateListener;
 import com.picassos.mint.console.android.models.Navigations;
 
 import java.util.List;
 
 public class NavigationsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private final List<Navigations> navigationsList;
+    private final List<Navigations> navigations;
     private final OnNavigationClickListener listener;
-    private final OnNavigationLongClickListener longListener;
+    private final OnNavigationStateListener stateListener;
 
-    public NavigationsAdapter(List<Navigations> navigationsList, OnNavigationClickListener listener, OnNavigationLongClickListener longListener) {
-        this.navigationsList = navigationsList;
+    public NavigationsAdapter(List<Navigations> navigations, OnNavigationClickListener listener, OnNavigationStateListener stateListener) {
+        this.navigations = navigations;
         this.listener = listener;
-        this.longListener = longListener;
+        this.stateListener = stateListener;
     }
 
     static class NavigationsHolder extends RecyclerView.ViewHolder {
 
-        TextView title, link, icon, behavior, premium;
-        ImageView premiumIcon;
+        ImageView icon;
+        TextView label;
+        SwitchCompat action;
 
         NavigationsHolder(@NonNull View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.navigation_title);
-            link = itemView.findViewById(R.id.navigation_link);
-            icon = itemView.findViewById(R.id.navigation_icon);
-            behavior = itemView.findViewById(R.id.navigation_behavior);
-            premium = itemView.findViewById(R.id.navigation_premium);
-            premiumIcon = itemView.findViewById(R.id.premium);
+            icon = itemView.findViewById(R.id.provider_icon);
+            label = itemView.findViewById(R.id.provider_label);
+            action = itemView.findViewById(R.id.provider_action);
         }
 
+        @SuppressLint("SetTextI18n")
         public void setData(Navigations data) {
-            title.setText(data.getTitle());
-            link.setText(data.getLink());
-            icon.setText(data.getIcon());
-            behavior.setText(data.getBehavior());
-            premium.setText(data.getPremium());
-            if (data.getPremium().equals("false") || TextUtils.isEmpty(data.getPremium())) {
-                premiumIcon.setVisibility(View.GONE);
+            switch (data.getType()) {
+                case "webview":
+                    icon.setImageResource(R.drawable.icon_webview);
+                    break;
+                case "wordpress":
+                    icon.setImageResource(R.drawable.icon_wordpress);
+                    break;
+                case "youtube":
+                    icon.setImageResource(R.drawable.icon_youtube);
+                    break;
+                case "vimeo":
+                    icon.setImageResource(R.drawable.icon_vimeo);
+                    break;
+                case "facebook":
+                    icon.setImageResource(R.drawable.icon_facebook);
+                    break;
+                case "pinterest":
+                    icon.setImageResource(R.drawable.icon_pinterest);
+                    break;
+                case "imgur":
+                    icon.setImageResource(R.drawable.icon_imgur);
+                    break;
+                case "google_maps":
+                    icon.setImageResource(R.drawable.icon_maps);
+                    break;
             }
+            label.setText(data.getLabel());
+            if (data.getEnabled() == 1) { action.setChecked(true); } else if (data.getEnabled() == 0) { action.setChecked(false); }
         }
 
         void bind(final Navigations item, final OnNavigationClickListener listener) {
-            itemView.setOnClickListener(v -> listener.onItemClick(item));
+            icon.setOnClickListener(v -> listener.onItemClick(item));
+            label.setOnClickListener(v -> listener.onItemClick(item));
         }
 
-        void longBind(final Navigations item, final OnNavigationLongClickListener listener) {
-            itemView.setOnLongClickListener(v -> {
-                listener.onItemLongClick(item);
-                return true;
-            });
+        void bindState(final Navigations item, final OnNavigationStateListener stateListener) {
+            action.setOnCheckedChangeListener((compoundButton, b) -> stateListener.onItemClick(item));
         }
-
     }
 
     @NonNull
@@ -77,16 +94,16 @@ public class NavigationsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Navigations navigations = navigationsList.get(position);
+        Navigations Navigations = navigations.get(position);
         NavigationsHolder navigationsHolder = (NavigationsHolder) holder;
-        navigationsHolder.setData(navigations);
-        navigationsHolder.bind(navigationsList.get(position), listener);
-        navigationsHolder.longBind(navigationsList.get(position), longListener);
+        navigationsHolder.setData(Navigations);
+        navigationsHolder.bind(navigations.get(position), listener);
+        navigationsHolder.bindState(navigations.get(position), stateListener);
     }
 
     @Override
     public int getItemCount() {
-        return navigationsList.size();
+        return navigations.size();
     }
 
 }

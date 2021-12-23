@@ -407,6 +407,7 @@
     <attr format="color" name="navigationIconTint"/>
     <attr format="reference" name="navigationRailStyle"/>
     <attr format="reference" name="navigationViewStyle"/>
+    <attr format="reference" name="nestedScrollViewStyle"/>
     <attr format="enum" name="onStateTransition">
         <enum name="actionDown" value="1"/>
         <enum name="actionUp" value="2"/>
@@ -805,6 +806,7 @@
     <color name="mtrl_textinput_hovered_box_stroke_color">#DE000000</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
+    <color name="notification_material_background_media_default_color">#ff424242</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -1382,6 +1384,10 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <dimen name="subtitle_corner_radius">2dp</dimen>
+    <dimen name="subtitle_outline_width">2dp</dimen>
+    <dimen name="subtitle_shadow_offset">2dp</dimen>
+    <dimen name="subtitle_shadow_radius">2dp</dimen>
     <dimen name="test_dimen">2dp</dimen>
     <dimen name="test_mtrl_calendar_day_cornerSize">52dp</dimen>
     <dimen name="test_navigation_bar_active_item_max_width">168dp</dimen>
@@ -1473,6 +1479,7 @@
     <item name="article_title" type="id"/>
     <item name="author_image" type="id"/>
     <item name="author_name" type="id"/>
+    <item name="badge_thumbnail" type="id"/>
     <item name="barchart" type="id"/>
     <item name="base_url" type="id"/>
     <item name="beta_newsletter" type="id"/>
@@ -1497,6 +1504,7 @@
     <item name="close_preview" type="id"/>
     <item name="close_ticket" type="id"/>
     <item name="closed_tickets" type="id"/>
+    <item name="coil_request_manager" type="id"/>
     <item name="comment_author" type="id"/>
     <item name="comment_author_icon" type="id"/>
     <item name="comment_date" type="id"/>
@@ -1758,6 +1766,7 @@
     <item name="recycler_accounts" type="id"/>
     <item name="recycler_affiliate" type="id"/>
     <item name="recycler_articles" type="id"/>
+    <item name="recycler_badges" type="id"/>
     <item name="recycler_comments" type="id"/>
     <item name="recycler_force_update" type="id"/>
     <item name="recycler_navigations" type="id"/>
@@ -2060,7 +2069,7 @@
     <string name="choose_provider">Choose a default provider</string>
     <string name="claim_an_easy_free_gift">Claim an easy free gift!</string>
     <string name="claim_gift">Claim Gift</string>
-    <string name="claim_gift_steps">1. Write a review on your experience with Mint on Codecanyon. <a href="https://posimyththemes.ticksy.com/article/13844">How to write a review?</a>\n\n2. Upload a screenshot of the review and some essential files for the customization you need (i.e. splash screen logo) to Google Drive and copy the share link for said files.\n\n3. Fill the required fields (including the Google Drive link) and we\'ll do the rest for you! In no time, you\'ll have your customized app ready to go.</string>
+    <string name="claim_gift_steps">1. Write a review on your experience with Mint on Codecanyon. <a href="https://console.themintapp.com/hc/en-us/articles?ai=19876932&amp;s=63633709">How to write a review?</a>\n\n2. Upload a screenshot of the review and some essential files for the customization you need (i.e. splash screen logo) to Google Drive and copy the share link for said files.\n\n3. Fill the required fields (including the Google Drive link) and we\'ll do the rest for you! In no time, you\'ll have your customized app ready to go.</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="click_to_add_a_new_navigation">Click to add a new navigation tab.</string>
     <string name="close_preview">Close Preview</string>
@@ -2196,6 +2205,7 @@
     <string name="guide_three_title">Notification Tab</string>
     <string name="guide_two_description">Add navigation tabs to your app and integrate them with links</string>
     <string name="guide_two_title">Navigation Tabs</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="help_centre">Help Centre</string>
     <string name="here_you_can_enable_and_disable_your_app_s_login_providers_donut_log_in_is_configured_by_default">Here you can enable and Disable your app\'s login providers. Donut log-in is configured by default.</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
@@ -6171,12 +6181,17 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
+    <style name="TextAppearance.Compat.Notification.Info.Media"/>
     <style name="TextAppearance.Compat.Notification.Line2" parent="TextAppearance.Compat.Notification.Info"/>
+    <style name="TextAppearance.Compat.Notification.Line2.Media" parent="TextAppearance.Compat.Notification.Info.Media"/>
+    <style name="TextAppearance.Compat.Notification.Media"/>
     <style name="TextAppearance.Compat.Notification.Time">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
+    <style name="TextAppearance.Compat.Notification.Time.Media"/>
     <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title"/>
+    <style name="TextAppearance.Compat.Notification.Title.Media"/>
     <style name="TextAppearance.Design.CollapsingToolbar.Expanded" parent="TextAppearance.AppCompat.Display1">
     <item name="android:textColor">?android:attr/textColorPrimary</item>
   </style>
@@ -9763,6 +9778,13 @@
              enough space to lay them out side-by-side. -->
         <attr format="boolean" name="allowStacking"/>
     </declare-styleable>
+    <declare-styleable name="Capability">
+        <!-- Resource reference to the string array of query patterns for a custom capability. -->
+        <attr format="reference" name="queryPatterns"/>
+        <!-- Indicates whether a parameter in a capability template can only contain a matched
+             shortcut id and not an arbitrary string. -->
+        <attr format="boolean" name="shortcutMatchRequired"/>
+    </declare-styleable>
     <declare-styleable name="CardView">
         <!-- Background color for CardView. -->
         <attr format="color" name="cardBackgroundColor"/>
@@ -12441,6 +12463,7 @@
         <attr format="reference" name="fastScrollHorizontalThumbDrawable"/>
         <attr format="reference" name="fastScrollHorizontalTrackDrawable"/>
     </declare-styleable>
+    <declare-styleable name="SVGImageView"><attr format="reference|string" name="svg"/><attr format="string" name="css"/></declare-styleable>
     <declare-styleable name="ScrimInsetsFrameLayout">
     <attr format="color|reference" name="insetForeground"/>
   </declare-styleable>

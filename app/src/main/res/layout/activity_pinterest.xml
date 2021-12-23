@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,36 +32,115 @@
                 android:paddingEnd="15dp"
                 android:paddingBottom="10dp">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal"
+                    tools:ignore="RelativeOverlap,UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@id/go_back"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="5dp"
+                        android:src="@drawable/icon_back"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription,RtlSymmetry" />
+
+                    <TextView
+                        android:id="@id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="3dp"
+                        android:fontFamily="@font/pacifico_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/pinterest"
+                        android:textColor="?color_dark"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
                 <ImageView
-                    android:id="@id/go_back"
+                    android:id="@id/more_options"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:paddingTop="5dp"
-                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
                     android:paddingBottom="5dp"
-                    android:src="@drawable/icon_back"
+                    android:src="@drawable/icon_more_horizontal"
+                    android:layout_alignParentEnd="true"
                     app:tint="?color_dark"
                     tools:ignore="ContentDescription,RtlSymmetry" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="3dp"
-                    android:fontFamily="@font/pacifico_regular"
-                    android:gravity="center_vertical"
-                    android:text="@string/pinterest"
-                    android:textColor="?color_dark"
-                    android:textSize="14sp" />
+            </RelativeLayout>
 
-            </LinearLayout>
-
-            <RelativeLayout
+            <LinearLayout
                 android:id="@id/pinterest_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp">
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="15dp"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="@string/general"
+                        android:textAllCaps="true"
+                        android:textColor="?color_dark"
+                        android:textSize="12sp"
+                        tools:ignore="SmallSp" />
+
+                    <EditText
+                        android:id="@id/provider_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/input_rectangle_background"
+                        android:hint="@string/label"
+                        android:inputType="text"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="?color_dark"
+                        android:textColorHint="?color_dark"
+                        android:textDirection="locale"
+                        android:textSize="13sp"
+                        tools:ignore="Autofill,LabelFor" />
+
+                    <EditText
+                        android:id="@id/provider_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/input_rectangle_background"
+                        android:hint="@string/icon"
+                        android:inputType="text"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="?color_dark"
+                        android:textColorHint="?color_dark"
+                        android:textDirection="locale"
+                        android:textSize="13sp"
+                        tools:ignore="Autofill,LabelFor" />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -74,7 +153,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/opensans_bold"
-                        android:text="@string/pinterest"
+                        android:text="@string/details"
                         android:textAllCaps="true"
                         android:textColor="?color_dark"
                         android:textSize="12sp"
@@ -168,7 +247,7 @@
 
                 </LinearLayout>
 
-            </RelativeLayout>
+            </LinearLayout>
 
             <include
                 layout="@layout/include_internet_connection"

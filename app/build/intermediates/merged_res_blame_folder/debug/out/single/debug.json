@@ -12,12 +12,12 @@
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_paid.png.flat",
-        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/icon_paid.png"
-    },
-    {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_activity_product_purchased.xml.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/activity_product_purchased.xml"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_paid.png.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/icon_paid.png"
     },
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_toast_alert.xml.flat",
@@ -34,6 +34,10 @@
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_launch.png.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/icon_launch.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_choose_default_navigation_bottom_sheet_modal.xml.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/choose_default_navigation_bottom_sheet_modal.xml"
     },
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_user.png.flat",
@@ -70,6 +74,10 @@
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_item_ticket_type.xml.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/item_ticket_type.xml"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_activity_push_notifications.xml.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/activity_push_notifications.xml"
     },
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_start.png.flat",
@@ -120,6 +128,10 @@
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/activity_get_started.xml"
     },
     {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_vibration.png.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/icon_vibration.png"
+    },
+    {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_activity_set_facebook_network.xml.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/activity_set_facebook_network.xml"
     },
@@ -168,6 +180,10 @@
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/font/poppins_light.ttf"
     },
     {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_item_default_navigation_listitem.xml.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/item_default_navigation_listitem.xml"
+    },
+    {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_wordpress_post_style_six.png.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/wordpress_post_style_six.png"
     },
@@ -198,6 +214,10 @@
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_item_background_darker_selected.xml.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/item_background_darker_selected.xml"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/color_tickets_navigation_item.xml.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/color/tickets_navigation_item.xml"
     },
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
@@ -580,6 +600,10 @@
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/icon_menu.png"
     },
     {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_choose_provider_bottom_sheet_modal.xml.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/choose_provider_bottom_sheet_modal.xml"
+    },
+    {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_help_center_outline.png.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/icon_help_center_outline.png"
     },
@@ -734,6 +758,10 @@
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_wordpress_post_style_seven.png.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/wordpress_post_style_seven.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_apps.png.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/icon_apps.png"
     },
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_article_options_bottom_sheet_modal.xml.flat",
@@ -1116,6 +1144,10 @@
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/icon_loader.png"
     },
     {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_item_author_badge.xml.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/item_author_badge.xml"
+    },
+    {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_ads.png.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/drawable/icon_ads.png"
     },
@@ -1142,6 +1174,10 @@
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_learn_more_bottom_sheet_modal.xml.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/learn_more_bottom_sheet_modal.xml"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_provider_options_bottom_sheet_modal.xml.flat",
+        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/provider_options_bottom_sheet_modal.xml"
     },
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_item_server_status_listitem.xml.flat",
@@ -1262,10 +1298,6 @@
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_activity_about_console.xml.flat",
         "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/activity_about_console.xml"
-    },
-    {
-        "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_providers_bottom_sheet_modal.xml.flat",
-        "source": "/Users/noor/Desktop/Mint Console/app/src/main/res/layout/providers_bottom_sheet_modal.xml"
     },
     {
         "merged": "/Users/noor/Desktop/Mint Console/app/build/intermediates/merged_res/debug/layout_activity_notifications.xml.flat",

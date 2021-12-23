@@ -63,8 +63,7 @@ public final class DAO_Impl implements DAO {
         } else {
           stmt.bindString(4, value.email);
         }
-        final Integer _tmp;
-        _tmp = value.active == null ? null : (value.active ? 1 : 0);
+        final Integer _tmp = value.active == null ? null : (value.active ? 1 : 0);
         if (_tmp == null) {
           stmt.bindNull(5);
         } else {
@@ -100,8 +99,7 @@ public final class DAO_Impl implements DAO {
         } else {
           stmt.bindLong(4, value.obj_id);
         }
-        final Integer _tmp;
-        _tmp = value.read == null ? null : (value.read ? 1 : 0);
+        final Integer _tmp = value.read == null ? null : (value.read ? 1 : 0);
         if (_tmp == null) {
           stmt.bindNull(5);
         } else {

@@ -1,6 +1,5 @@
 package com.picassos.mint.console.android.activities;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
@@ -9,7 +8,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -28,14 +26,6 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.picassos.mint.console.android.App;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.activities.manageAds.ManageAdsActivity;
-import com.picassos.mint.console.android.activities.providers.FacebookActivity;
-import com.picassos.mint.console.android.activities.providers.ImgurActivity;
-import com.picassos.mint.console.android.activities.providers.MapsActivity;
-import com.picassos.mint.console.android.activities.providers.PinterestActivity;
-import com.picassos.mint.console.android.activities.providers.VimeoActivity;
-import com.picassos.mint.console.android.activities.providers.WebviewActivity;
-import com.picassos.mint.console.android.activities.providers.WordpressActivity;
-import com.picassos.mint.console.android.activities.providers.YoutubeActivity;
 import com.picassos.mint.console.android.bottomNavigation.BottomNavigationViewBehavior;
 import com.picassos.mint.console.android.constants.API;
 import com.picassos.mint.console.android.fragments.HelpCentreFragment;
@@ -79,8 +69,6 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
     BottomNavigationView bottomNavigationView;
     public DrawerLayout drawer;
     public NavigationView navigationView;
-
-    Boolean doubleBackExit = false;
 
     // fonts
     private Typeface title, content;
@@ -232,38 +220,6 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
             startActivity(new Intent(this, ManageAdsActivity.class));
             drawer.closeDrawer(GravityCompat.START);
         });
-        navigationView.findViewById(R.id.menu_webview).setOnClickListener(v -> {
-            startActivity(new Intent(this, WebviewActivity.class));
-            drawer.closeDrawer(GravityCompat.START);
-        });
-        navigationView.findViewById(R.id.menu_wordpress).setOnClickListener(v -> {
-            startActivity(new Intent(this, WordpressActivity.class));
-            drawer.closeDrawer(GravityCompat.START);
-        });
-        navigationView.findViewById(R.id.menu_youtube).setOnClickListener(v -> {
-            startActivity(new Intent(this, YoutubeActivity.class));
-            drawer.closeDrawer(GravityCompat.START);
-        });
-        navigationView.findViewById(R.id.menu_vimeo).setOnClickListener(v -> {
-            startActivity(new Intent(this, VimeoActivity.class));
-            drawer.closeDrawer(GravityCompat.START);
-        });
-        navigationView.findViewById(R.id.menu_facebook).setOnClickListener(v -> {
-            startActivity(new Intent(this, FacebookActivity.class));
-            drawer.closeDrawer(GravityCompat.START);
-        });
-        navigationView.findViewById(R.id.menu_pinterest).setOnClickListener(v -> {
-            startActivity(new Intent(this, PinterestActivity.class));
-            drawer.closeDrawer(GravityCompat.START);
-        });
-        navigationView.findViewById(R.id.menu_imgur).setOnClickListener(v -> {
-            startActivity(new Intent(this, ImgurActivity.class));
-            drawer.closeDrawer(GravityCompat.START);
-        });
-        navigationView.findViewById(R.id.menu_maps).setOnClickListener(v -> {
-            startActivity(new Intent(this, MapsActivity.class));
-            drawer.closeDrawer(GravityCompat.START);
-        });
         navigationView.findViewById(R.id.menu_custom_css).setOnClickListener(v -> {
             Intent customCSS = new Intent(this, ControllerActivity.class);
             customCSS.putExtra("request", "customcss");
@@ -296,11 +252,7 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
      */
     private void requestUpdateVisits() {
         StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_PROJECT_VISITS,
-                response -> {
-                    Log.e("TAG", "Project Visits Response Code: " + response);
-                }, error -> {
-            Log.e("TAG", "Couldn't update project visits");
-        }) {
+                response -> Log.e("TAG", "Project Visits Response Code: " + response), error -> Log.e("TAG", "Couldn't update project visits")) {
 
             @Override
             protected Map<String, String> getParams() {
@@ -331,18 +283,6 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
      */
     public void openNavigation() {
         drawer.openDrawer(GravityCompat.START);
-    }
-
-    public static final int REQUEST_EDIT_PROJECT = 2;
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_EDIT_PROJECT) {
-            if (resultCode == Activity.RESULT_OK) {
-                startActivity(new Intent(MainActivity.this, MainActivity.class));
-                finishAffinity();
-            }
-        }
     }
 
     /* guide start **/
@@ -438,6 +378,6 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
     public void onEditListener(boolean edited) {
         Toasto.show_toast(this, getString(R.string.project_data_updated), 1, 0);
         startActivity(new Intent(MainActivity.this, MainActivity.class));
+        finishAffinity();
     }
 }
-

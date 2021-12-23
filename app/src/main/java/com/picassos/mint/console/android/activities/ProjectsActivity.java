@@ -1,6 +1,7 @@
 package com.picassos.mint.console.android.activities;
 
-import androidx.annotation.Nullable;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,9 +42,6 @@ public class ProjectsActivity extends AppCompatActivity {
     // Projects
     private final List<Projects> projectsList = new ArrayList<>();
     private ProjectsAdapter projectsAdapter;
-
-    // REQUEST CODES
-    public static final int REQUEST_ADD_PROJECT_CODE = 1;
     
     @SuppressLint("NotifyDataSetChanged")
     @Override
@@ -65,7 +63,7 @@ public class ProjectsActivity extends AppCompatActivity {
         requestDialog = new RequestDialog(this);
 
         // add project
-        findViewById(R.id.add_project).setOnClickListener(v -> startActivityForResult(new Intent(ProjectsActivity.this, AddProjectActivity.class), REQUEST_ADD_PROJECT_CODE));
+        findViewById(R.id.add_project).setOnClickListener(v -> startActivityForResult.launch(new Intent(ProjectsActivity.this, AddProjectActivity.class)));
 
         // demo project
         findViewById(R.id.demo_project).setOnClickListener(v -> {
@@ -161,11 +159,9 @@ public class ProjectsActivity extends AppCompatActivity {
         Volley.newRequestQueue(this).add(request);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_ADD_PROJECT_CODE) {
+    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+        if (result != null && result.getResultCode() == RESULT_OK) {
             requestProjects();
         }
-    }
+    });
 }

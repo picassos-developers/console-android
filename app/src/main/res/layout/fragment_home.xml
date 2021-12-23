@@ -423,7 +423,7 @@
                     android:paddingTop="10dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="10dp"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
                     <ImageView
                         android:layout_width="35dp"
@@ -453,8 +453,58 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/congrats_you_have_an_exclusive_pass_to_have_your_mint_app_set_up_by_picassos_team_devs_claim_your_gift_now_and_have_mint_setup_in_no_time"
+                            android:text="@string/have_us_customize_your_app_for_free"
                             android:textColor="?color_dark"
+                            android:textSize="12sp"
+                            tools:ignore="SmallSp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/push_notifications_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/toolbar_background_dark"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/circle"
+                        android:padding="8dp"
+                        android:src="@drawable/icon_bell_outline"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/push_notifications"
+                            android:textColor="?color_light_separate"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/send_push_notifications_to_your_app_users"
+                            android:textColor="?color_light_separate"
                             android:textSize="12sp"
                             tools:ignore="SmallSp" />
 
@@ -512,439 +562,6 @@
                     </LinearLayout>
 
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@id/default_provider_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/toolbar_background"
-                    android:paddingStart="15dp"
-                    android:paddingTop="15dp"
-                    android:paddingEnd="15dp"
-                    android:paddingBottom="15dp">
-
-                    <ImageView
-                        android:id="@id/default_provider_icon"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:background="@drawable/circle_dark"
-                        android:padding="8dp"
-                        android:src="@drawable/icon_gear_outline"
-                        app:tint="?color_light_separate"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:id="@id/default_provider"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/default_provider"
-                        android:layout_marginTop="10dp"
-                        android:textColor="?color_dark"
-                        android:textStyle="bold"
-                        android:textSize="13sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/default_provider_description"
-                        android:textColor="?color_dark"
-                        android:textSize="12sp"
-                        tools:ignore="SmallSp" />
-
-                </LinearLayout>
-
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="15dp"
-                    android:scrollbars="none">
-
-                    <LinearLayout
-                        android:layout_width="350dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginEnd="15dp"
-                            android:background="@drawable/toolbar_background"
-                            android:padding="15dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/icon_webview"
-                                    android:paddingStart="0dp"
-                                    android:paddingEnd="0dp"
-                                    android:paddingTop="10dp"
-                                    android:paddingBottom="10dp"
-                                    android:background="@drawable/rectangle_secondary"
-                                    app:tint="?color_dark"
-                                    tools:ignore="ContentDescription" />
-
-                                <androidx.appcompat.widget.SwitchCompat
-                                    android:id="@id/webview_provider"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:layout_marginStart="25dp"
-                                    android:thumb="@drawable/switch_thumb_big"
-                                    app:track="@drawable/switch_track_big" />
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/webview"
-                                android:layout_marginTop="20dp"
-                                android:textColor="?color_dark"
-                                android:fontFamily="@font/poppins_regular"
-                                android:textSize="14sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginEnd="15dp"
-                            android:background="@drawable/toolbar_background"
-                            android:padding="15dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/icon_wordpress"
-                                    android:paddingStart="0dp"
-                                    android:paddingEnd="0dp"
-                                    android:paddingTop="10dp"
-                                    android:paddingBottom="10dp"
-                                    android:background="@drawable/rectangle_secondary"
-                                    app:tint="?color_dark"
-                                    tools:ignore="ContentDescription" />
-
-                                <androidx.appcompat.widget.SwitchCompat
-                                    android:id="@id/wordpress_provider"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:layout_marginStart="25dp"
-                                    android:thumb="@drawable/switch_thumb_big"
-                                    app:track="@drawable/switch_track_big" />
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/wordpress"
-                                android:layout_marginTop="20dp"
-                                android:textColor="?color_dark"
-                                android:fontFamily="@font/poppins_regular"
-                                android:textSize="14sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginEnd="15dp"
-                            android:background="@drawable/toolbar_background"
-                            android:padding="15dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/icon_youtube"
-                                    android:paddingStart="0dp"
-                                    android:paddingEnd="0dp"
-                                    android:paddingTop="10dp"
-                                    android:paddingBottom="10dp"
-                                    android:background="@drawable/rectangle_secondary"
-                                    app:tint="?color_dark"
-                                    tools:ignore="ContentDescription" />
-
-                                <androidx.appcompat.widget.SwitchCompat
-                                    android:id="@id/youtube_provider"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:layout_marginStart="25dp"
-                                    android:thumb="@drawable/switch_thumb_big"
-                                    app:track="@drawable/switch_track_big" />
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/youtube"
-                                android:layout_marginTop="20dp"
-                                android:textColor="?color_dark"
-                                android:fontFamily="@font/poppins_regular"
-                                android:textSize="14sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginEnd="15dp"
-                            android:background="@drawable/toolbar_background"
-                            android:padding="15dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                tools:ignore="TooManyViews">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/icon_vimeo"
-                                    android:paddingStart="0dp"
-                                    android:paddingEnd="0dp"
-                                    android:paddingTop="10dp"
-                                    android:paddingBottom="10dp"
-                                    android:background="@drawable/rectangle_secondary"
-                                    app:tint="?color_dark"
-                                    tools:ignore="ContentDescription" />
-
-                                <androidx.appcompat.widget.SwitchCompat
-                                    android:id="@id/vimeo_provider"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:layout_marginStart="25dp"
-                                    android:thumb="@drawable/switch_thumb_big"
-                                    app:track="@drawable/switch_track_big" />
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/vimeo"
-                                android:layout_marginTop="20dp"
-                                android:textColor="?color_dark"
-                                android:fontFamily="@font/poppins_regular"
-                                android:textSize="14sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginEnd="15dp"
-                            android:background="@drawable/toolbar_background"
-                            android:padding="15dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                tools:ignore="TooManyViews">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/icon_pinterest"
-                                    android:paddingStart="0dp"
-                                    android:paddingEnd="0dp"
-                                    android:paddingTop="10dp"
-                                    android:paddingBottom="10dp"
-                                    android:background="@drawable/rectangle_secondary"
-                                    app:tint="?color_dark"
-                                    tools:ignore="ContentDescription" />
-
-                                <androidx.appcompat.widget.SwitchCompat
-                                    android:id="@id/pinterest_provider"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:layout_marginStart="25dp"
-                                    android:thumb="@drawable/switch_thumb_big"
-                                    app:track="@drawable/switch_track_big" />
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/pinterest"
-                                android:layout_marginTop="20dp"
-                                android:textColor="?color_dark"
-                                android:fontFamily="@font/poppins_regular"
-                                android:textSize="14sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginEnd="15dp"
-                            android:background="@drawable/toolbar_background"
-                            android:padding="15dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                tools:ignore="TooManyViews">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/icon_facebook"
-                                    android:paddingStart="0dp"
-                                    android:paddingEnd="0dp"
-                                    android:paddingTop="10dp"
-                                    android:paddingBottom="10dp"
-                                    android:background="@drawable/rectangle_secondary"
-                                    app:tint="?color_dark"
-                                    tools:ignore="ContentDescription" />
-
-                                <androidx.appcompat.widget.SwitchCompat
-                                    android:id="@id/facebook_provider"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:layout_marginStart="25dp"
-                                    android:thumb="@drawable/switch_thumb_big"
-                                    app:track="@drawable/switch_track_big" />
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/facebook"
-                                android:layout_marginTop="20dp"
-                                android:textColor="?color_dark"
-                                android:fontFamily="@font/poppins_regular"
-                                android:textSize="14sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginEnd="15dp"
-                            android:background="@drawable/toolbar_background"
-                            android:padding="15dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                tools:ignore="TooManyViews">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/icon_imgur"
-                                    android:paddingStart="0dp"
-                                    android:paddingEnd="0dp"
-                                    android:paddingTop="10dp"
-                                    android:paddingBottom="10dp"
-                                    android:background="@drawable/rectangle_secondary"
-                                    app:tint="?color_dark"
-                                    tools:ignore="ContentDescription" />
-
-                                <androidx.appcompat.widget.SwitchCompat
-                                    android:id="@id/imgur_provider"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:layout_marginStart="25dp"
-                                    android:thumb="@drawable/switch_thumb_big"
-                                    app:track="@drawable/switch_track_big" />
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/imgur"
-                                android:layout_marginTop="20dp"
-                                android:textColor="?color_dark"
-                                android:fontFamily="@font/poppins_regular"
-                                android:textSize="14sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginEnd="15dp"
-                            android:background="@drawable/toolbar_background"
-                            android:padding="15dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                tools:ignore="TooManyViews">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/icon_maps"
-                                    android:paddingStart="0dp"
-                                    android:paddingEnd="0dp"
-                                    android:paddingTop="10dp"
-                                    android:paddingBottom="10dp"
-                                    android:background="@drawable/rectangle_secondary"
-                                    app:tint="?color_dark"
-                                    tools:ignore="ContentDescription" />
-
-                                <androidx.appcompat.widget.SwitchCompat
-                                    android:id="@id/maps_provider"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:layout_marginStart="25dp"
-                                    android:thumb="@drawable/switch_thumb_big"
-                                    app:track="@drawable/switch_track_big" />
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/maps"
-                                android:layout_marginTop="20dp"
-                                android:textColor="?color_dark"
-                                android:fontFamily="@font/poppins_regular"
-                                android:textSize="14sp" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </HorizontalScrollView>
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -1119,7 +736,7 @@
                                     android:paddingBottom="10dp"
                                     android:background="@drawable/rectangle_secondary"
                                     app:tint="?color_dark"
-                                    tools:ignore="ContentDescription" />
+                                    tools:ignore="ContentDescription,TooManyViews" />
 
                                 <androidx.appcompat.widget.SwitchCompat
                                     android:id="@id/get_started"
@@ -1127,7 +744,8 @@
                                     android:layout_height="40dp"
                                     android:layout_marginStart="25dp"
                                     android:thumb="@drawable/switch_thumb_big"
-                                    app:track="@drawable/switch_track_big" />
+                                    app:track="@drawable/switch_track_big"
+                                    tools:ignore="TooManyViews" />
 
                             </LinearLayout>
 
@@ -1191,50 +809,6 @@
                     </LinearLayout>
 
                 </HorizontalScrollView>
-
-                <LinearLayout
-                    android:id="@id/loading_spinner_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="25dp"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/toolbar_background"
-                    android:paddingStart="15dp"
-                    android:paddingTop="15dp"
-                    android:paddingEnd="15dp"
-                    android:paddingBottom="15dp">
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:background="@drawable/circle_dark"
-                        android:padding="8dp"
-                        android:src="@drawable/icon_loader"
-                        app:tint="?color_light_separate"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:id="@id/loading_spinner"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/loading_spinner"
-                        android:layout_marginTop="10dp"
-                        android:textColor="?color_dark"
-                        android:textStyle="bold"
-                        android:textSize="13sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/loading_spinner_description"
-                        android:textColor="?color_dark"
-                        android:textSize="12sp"
-                        tools:ignore="SmallSp" />
-
-                </LinearLayout>
 
             </LinearLayout>
 

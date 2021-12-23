@@ -7,7 +7,6 @@
     <string name="home">Home</string>
     <string name="notification">Notifications</string>
     <string name="navigation">Navigations</string>
-    <string name="configuration">Configuration</string>
     <string name="dashboard">Dashboard</string>
     <string name="database_size">Database Size</string>
     <string name="users_were_active">Users Were Active</string>
@@ -17,7 +16,7 @@
     <string name="screen_sleep">Screen Sleep mode</string>
     <string name="fullscreen_mode">Fullscreen mode</string>
     <string name="notification_sound">Notification sound</string>
-    <string name="notification_vibration">Notification vibration pattern</string>
+    <string name="notification_vibration">Notification vibration</string>
     <string name="download_via_wifi">Download Via Wi-Fi</string>
     <string name="get_started_page">Get Started Page</string>
     <string name="force_fullscreen">Force Fullscreen</string>
@@ -45,7 +44,6 @@
     <string name="forgot_your_password">Forgot your password?</string>
     <string name="don_t_have_an_account_register">Don\'t have an account? Sign Up.</string>
     <string name="email">Email Address</string>
-    <string name="please_wait">Please wait…</string>
     <string name="edit_navigation">Edit navigation</string>
     <string name="navigation_title_required">Navigation title can\'t be empty.</string>
     <string name="navigation_link_required">Navigation link can\'t be empty.</string>
@@ -82,14 +80,12 @@
     <string name="imgur_updated">Imgur data updated successfully.</string>
     <string name="pinterest_updated">Pinterest data updated successfully.</string>
     <string name="maps_updated">Google Maps data updated successfully.</string>
-    <string name="base_url_required">Base URL can\'t be empty.</string>
     <string name="no_users_found">We couldn\'t find any users associated with this email!</string>
     <string name="wrong_password">The password is incorrect. Try again.</string>
     <string name="delete_user">Delete user</string>
     <string name="all_fields_are_required">All fields are required.</string>
     <string name="access_token">Access Token</string>
     <string name="per_page">Per Page</string>
-    <string name="click_to_add_a_new_navigation">Click to add a new navigation tab.</string>
     <string name="you_don_t_have_any_opened_tickets_click_to_add_a_new_one">You don\'t have any opened tickets, \nClick to open a ticket.</string>
     <string name="policies_updated">Policies updated successfully.</string>
     <string name="board_name">Board Name</string>
@@ -233,7 +229,6 @@
     <string name="manage_ads_description">Mint Console supports your business with easy-to-integrate AD providers, with it\'s quick easy set-up, you\'ll be making profit in no time!</string>
     <string name="choose_ad_provider">Choose Ad Provider</string>
     <string name="responds">Responds</string>
-    <string name="login">Login</string>
     <string name="disable_ads">Remove Ads</string>
     <string name="ads_disabled">Ads disabled successfully!</string>
     <string name="check_updates">Check for updates</string>
@@ -308,9 +303,8 @@
     <string name="guide_next">Next</string>
     <string name="close_preview">Close Preview</string>
     <string name="wizards_empty">Please add at least one wizard to open preview.</string>
-    <string name="get_a_free_customization">Have us customize your app for free!</string>
+    <string name="get_a_free_customization">Claim a free gift!</string>
     <string name="claim_an_easy_free_gift">Claim an easy free gift!</string>
-    <string name="congrats_you_have_an_exclusive_pass_to_have_your_mint_app_set_up_by_picassos_team_devs_claim_your_gift_now_and_have_mint_setup_in_no_time">Congrats! You have an exclusive pass to have your Mint app set up by Picassos Team devs. Claim your gift now and have Mint setup in no time!</string>
     <string name="all_you_need_to_do_is_write_a_review_about_your_experience_with_mint_on_codecanyon_and_you_ll_be_gifted_a_free_card_to_have_picassos_team_customize_your_app_the_way_you_want_it_the_gift_includes_customizations_to">All you need to do is write a review about your experience with Mint on CodeCanyon, and you\'ll be gifted a free card to have Picassos Team customize your app the way you want it! The gift includes customizations to:</string>
     <string name="application_name">Application Name</string>
     <string name="splash_screen_app_icon">Splash Screen, App Icon</string>
@@ -436,5 +430,28 @@
     <string name="gift_card_successfully_redeemed">Gift card successfully redeemed!</string>
     <string name="view_product">View Product</string>
     <string name="merchant_id">11245554934034291677</string>
+    <string name="general">General</string>
+    <string name="label">Label</string>
+    <string name="details">Details</string>
+    <string name="icon">Icon</string>
+    <string name="remove_provider">Remove Provider</string>
+    <string name="qr_code_scanner">QR Code Scanner</string>
+    <string name="open_in_default_browser">Open in Default Browser</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="send_push_notifications_to_your_app_users">Send push notifications to your app users.</string>
+    <string name="file_a_ticket_and_we_will_get_back_to_you_as_soon_as_possible">File a ticket and we will get back to you as soon as possible.</string>
+    <string name="click_to_add_a_new_content_provider_as_a_navigation_tab">Click to add a new content provider as a navigation tab.</string>
+    <string name="total_tabs">Total Tabs</string>
+    <string name="navigation_tabs">Navigation Tabs</string>
+    <string name="show_posts_news_articles_and_more_in_your_app_using_wordpress_content_provider">Show posts, news, articles and more in your app using WordPress content provider.</string>
+    <string name="transform_your_website_webapp_webpage_into_an_application_using_webview_webkit">Transform your website, webapp, webpage into an application using WebView Webkit.</string>
+    <string name="show_your_youtube_channel_videos_livestreams_and_content_in_your_app_using_youtube_api">Show your YouTube channel videos, livestreams and content in your app using YouTube API.</string>
+    <string name="show_your_vimeo_channel_videos_playlists_and_content_in_your_app_using_the_new_vimeo_api">Show your Vimeo channel videos, playlists and content in your app using the new Vimeo API.</string>
+    <string name="integrate_facebook_content_provider_show_your_page_posts_and_videos_in_your_app">Integrate Facebook content provider, show your page posts and videos in your app.</string>
+    <string name="pinterest_is_an_image_sharing_and_social_media_service_show_your_pins_and_boards_inside_your_app_using_pinterest_content_provider">Pinterest is an image sharing and social media service. Show your pins and boards inside your app using Pinterest content provider.</string>
+    <string name="share_your_location_geolocation_in_your_app_with_google_maps_content_provider">Share your Location, Geolocation in your app with Google Maps content provider.</string>
+    <string name="imgur_is_an_image_hosting_and_sharing_site_share_your_content_in_your_app_with_imgur_content_provider">Imgur is an image hosting and sharing site. Share your content in your app with Imgur content provider.</string>
+    <string name="add_navigation_tab">Add Navigation Tab</string>
+    <string name="have_us_customize_your_app_for_free">Have us customize your app for free.</string>
 
 </resources>
