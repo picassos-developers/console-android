@@ -245,7 +245,7 @@
     <string name="update_firebase_access_key">Please update your firebase access key to send notifications!</string>
     <string name="write_your_css_code_here_to_customize_your_app">Write your CSS code here to customize your app…</string>
     <string name="place_your_policies_here">Place your policies here…</string>
-    <string name="couldn_t_load_content_maybe_your_internet_connection_down_pull_to_try_again">Couldn\'t load content, maybe your internet connection down? Pull to try again.</string>
+    <string name="couldn_t_load_content_maybe_your_internet_connection_down_pull_to_try_again">Couldn\'t load content, connect to the internet and try again.</string>
     <string name="guide_one_title">Your Home Screen</string>
     <string name="guide_one_description">Here you\'ll find all your Providers and configuration options</string>
     <string name="guide_two_title">Navigation Tabs</string>
