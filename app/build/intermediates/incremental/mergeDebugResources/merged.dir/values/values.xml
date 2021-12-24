@@ -2039,7 +2039,7 @@
     <string name="add_account">Add Account</string>
     <string name="add_navigation">Add Navigation</string>
     <string name="add_navigation_tab">Add Navigation Tab</string>
-    <string name="add_new_project_description">Let\'s start with a new mint console project</string>
+    <string name="add_new_project_description">Import a new project to your Mint Console</string>
     <string name="add_project">Add a new Project</string>
     <string name="add_wizard">Add Wizard</string>
     <string name="add_your_links_here">Add your links here…</string>
@@ -2069,7 +2069,7 @@
     <string name="bookmarks_page">Bookmarks Page</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string description="A description of an action that a user of an accessibility service can perform to expand a bottomsheet halfway to its full height. [CHAR LIMIT=25]" name="bottomsheet_action_expand_halfway">Expand halfway</string>
-    <string name="camera_permission_required">Permission to use the camera is required to scan the QR code.</string>
+    <string name="camera_permission_required">Console needs access to your camera to scan the QR code.</string>
     <string name="category_design">Category Design</string>
     <string name="category_design_four">Category Design 4</string>
     <string name="category_design_one">Category Design 1</string>
@@ -2086,7 +2086,7 @@
     <string name="checkout_using_google_pay">Checkout using Google Pay.</string>
     <string name="checkout_using_your_console_credits">Checkout using your Console Credits.</string>
     <string name="chip_text">Chip text</string>
-    <string name="choose_ad_provider">Choose Ad Provider</string>
+    <string name="choose_ad_provider">Enable an AD Provider</string>
     <string name="choose_design">Choose Design</string>
     <string name="choose_provider">Choose a default provider</string>
     <string name="claim_an_easy_free_gift">Claim an easy free gift!</string>
@@ -2098,20 +2098,19 @@
     <string name="close_ticket">Close ticket</string>
     <string name="closed_tickets">Closed Tickets</string>
     <string name="code_redeemed">This code has already been redeemed</string>
-    <string name="comment_added">Comment added successfully.</string>
+    <string name="comment_added">Comment Posted Successfully</string>
     <string name="comment_empty">Comment can\'t be empty.</string>
     <string name="comments">Comments</string>
     <string name="common_google_play_services_unknown_issue"><ns2:g id="app_name">%1$s</ns2:g> is having trouble with Google Play services. Please try again.</string>
     <string name="company_address">Address of Your Company</string>
     <string name="company_name">Company Name</string>
     <string name="configuration_data">Configuration Data</string>
-    <string name="confirm_password">Confirm Password</string>
-    <string name="congrats_you_have_an_exclusive_pass_to_have_your_mint_app_set_up_by_picassos_team_devs_claim_your_gift_now_and_have_mint_setup_in_no_time">Congrats! You have an exclusive pass to have your Mint app set up by Picassos Team devs. Claim your gift now and have Mint setup in no time!</string>
+    <string name="confirm_password">Confirm New Password</string>
     <string name="console_configuration">Console Configuration</string>
-    <string name="console_visits">Console Visits</string>
+    <string name="console_visits">Your Console Visits</string>
     <string name="continue_purchase">Continue</string>
     <string name="copy_token">Copy Token</string>
-    <string name="couldn_t_load_content_maybe_your_internet_connection_down_pull_to_try_again">Couldn\'t load content, maybe your internet connection down? Pull to try again.</string>
+    <string name="couldn_t_load_content_maybe_your_internet_connection_down_pull_to_try_again">Couldn\'t load content, connect to the internet and try again.</string>
     <string name="create_account">Create account</string>
     <string name="create_project">Create Project</string>
     <string name="creating_your_project">Creating your Project</string>
@@ -2125,8 +2124,8 @@
     <string name="customization_card_usually_cost_40_but_now_you_can_get_one_for_free_by_following_these_steps">Customization card usually cost 40$, but now you can get one for free by following these steps:</string>
     <string name="dark">Dark</string>
     <string name="dark_mode">Dark mode</string>
-    <string name="dark_mode_data_updated">Dark mode data updated</string>
-    <string name="darkmode_option">Dark mode option</string>
+    <string name="dark_mode_data_updated">Dark Mode Data Updated</string>
+    <string name="darkmode_option">Dark Mode Option</string>
     <string name="dashboard">Dashboard</string>
     <string name="data_updated">Data updates successfully.</string>
     <string name="database_size">Database Size</string>
@@ -2139,13 +2138,13 @@
     <string name="demo_project">You are opening a demo project, Please add a new console project to make changes.</string>
     <string name="describe_your_experience">Describe your experience…</string>
     <string name="details">Details</string>
-    <string name="did_not_get_email">Didn\'t get the email?</string>
+    <string name="did_not_get_email">Haven\'t received the email?</string>
     <string name="disable_ads">Remove Ads</string>
     <string name="don_t_have_an_account_register">Don\'t have an account? Sign Up.</string>
     <string name="dont_force_update">Don\'t Force Update</string>
     <string name="donut">Donut</string>
     <string name="download_data">Download Data</string>
-    <string name="download_via_wifi">Download Via Wi-Fi</string>
+    <string name="download_via_wifi">Download Via Wi-Fi only</string>
     <string name="download_your_data">Download your data</string>
     <string name="download_your_privacy_policy">Download Your Privacy Policy</string>
     <string name="download_your_terms_of_use">Download Your Terms of Use</string>
@@ -2163,7 +2162,7 @@
     <string name="email">Email Address</string>
     <string name="email_address">Email Address</string>
     <string name="email_empty">Email can\'t be empty.</string>
-    <string name="email_resent">Password reset email sent again</string>
+    <string name="email_resent">Password Reset Email has Been Re-sent</string>
     <string name="enable_premium_link">Enable premium link</string>
     <string name="enter_code">Enter Code</string>
     <string name="enter_the_specific_links_for_all_the_pages_you_want_modified_for_dark_mode_please_enter_a_link_in_each_line">Enter the specific links for all the pages you want modified for dark mode, please enter a link in each line.</string>
@@ -2175,10 +2174,10 @@
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
     <string name="facebook">Facebook</string>
-    <string name="facebook_interstitial_ad_id">Facebook interstitial ad id</string>
-    <string name="facebook_native_ad_id">Facebook native ad id</string>
+    <string name="facebook_interstitial_ad_id">Facebook interstitial AD id</string>
+    <string name="facebook_native_ad_id">Facebook native AD id</string>
     <string name="facebook_network">Facebook network</string>
-    <string name="facebook_updated">Facebook data updated successfully.</string>
+    <string name="facebook_updated">Facebook Data Updated Successfully</string>
     <string name="failed_to_download_file">Failed to download file. Please try again later.</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="file_a_ticket_and_we_will_get_back_to_you_as_soon_as_possible">File a ticket and we will get back to you as soon as possible.</string>
@@ -2200,7 +2199,7 @@
     <string name="gift_card_successfully_redeemed">Gift card successfully redeemed!</string>
     <string name="google">Google</string>
     <string name="google_admob">Google Admob</string>
-    <string name="google_admob_updated">Google AdMob updated successfully!</string>
+    <string name="google_admob_updated">Google AdMob Updated Successfully</string>
     <string name="google_api_key" translatable="false">AIzaSyA6wD_pz2NEszeL_x4AIq9LsinarVZ1egw</string>
     <string name="google_app_id" translatable="false">1:468765055023:android:d53098ab0230fbe6518eda</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA6wD_pz2NEszeL_x4AIq9LsinarVZ1egw</string>
@@ -2229,7 +2228,8 @@
     <string name="guide_three_title">Notification Tab</string>
     <string name="guide_two_description">Add navigation tabs to your app and integrate them with links</string>
     <string name="guide_two_title">Navigation Tabs</string>
-    <string name="help_centre">Help Centre</string>
+    <string name="have_us_customize_your_app_for_free">Have us customize your app for free.</string>
+    <string name="help_centre">Help Center</string>
     <string name="here_you_can_enable_and_disable_your_app_s_login_providers_donut_log_in_is_configured_by_default">Here you can enable and Disable your app\'s login providers. Donut log-in is configured by default.</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="home">Home</string>
@@ -2239,13 +2239,13 @@
     <string name="id">Id:</string>
     <string name="imgur">Imgur</string>
     <string name="imgur_is_an_image_hosting_and_sharing_site_share_your_content_in_your_app_with_imgur_content_provider">Imgur is an image hosting and sharing site. Share your content in your app with Imgur content provider.</string>
-    <string name="imgur_updated">Imgur data updated successfully.</string>
+    <string name="imgur_updated">Imgur Data Updated Successfully</string>
     <string name="in_trouble_exception">In trouble? Worry no more! Picassos Team got your back, open a ticket and our team will be in touch in minutes.</string>
     <string name="instead_of">Instead of</string>
     <string name="insufficient_credits_to_checkout">Insufficient credits to checkout</string>
     <string name="integrate_facebook_content_provider_show_your_page_posts_and_videos_in_your_app">Integrate Facebook content provider, show your page posts and videos in your app.</string>
     <string name="invalid_firebase_access_key">Invalid Firebase access key.</string>
-    <string name="invalid_package_name">We couldn\'t find any apps with this package name, Please add a valid application package name.</string>
+    <string name="invalid_package_name">No apps with this package name found, Please add a valid application package name.</string>
     <string name="it_seems_like_you_don_t_have_any_purchases_visit_our_power_store_so_you_don_t_miss_out_on_awesome_power_ups_amp_special_offers"><![CDATA[It seems like you don\'t have any purchases. Visit our Power Store so you don\'t miss out on awesome power-ups & special offers!]]></string>
     <string name="item_view_role_description">Tab</string>
     <string name="label">Label</string>
@@ -2287,7 +2287,7 @@
     <string name="m3_sys_typescale_title_medium_font" translatable="false">sans-serif-medium</string>
     <string name="m3_sys_typescale_title_small_font" translatable="false">sans-serif-medium</string>
     <string name="manage_account">Manage your Console Account</string>
-    <string name="manage_ads">Manage Ads</string>
+    <string name="manage_ads">Manage ADs</string>
     <string name="manage_ads_description">Mint Console supports your business with easy-to-integrate AD providers, with it\'s quick easy set-up, you\'ll be making profit in no time!</string>
     <string name="manage_credentials">Manage Credentials</string>
     <string name="manage_login">Login Providers</string>
@@ -2295,7 +2295,7 @@
     <string name="manage_users">Manage Users</string>
     <string name="map_style">Map Style</string>
     <string name="maps">Google Maps</string>
-    <string name="maps_updated">Google Maps data updated successfully.</string>
+    <string name="maps_updated">Google Maps Data Updated Successfully</string>
     <string name="material_clock_display_divider" translatable="false">:</string>
     <string description="Description for the toggle to choose between AM and PM [CHAR_LIMIT=NONE] " name="material_clock_toggle_content_description">Select AM or PM</string>
     <string description="Description for button to switch to select the hour [CHAR_LIMIT=NONE]" name="material_hour_selection">Select hour</string>
@@ -2367,14 +2367,14 @@
     <string name="navigation_title">Navigation title</string>
     <string name="navigation_title_required">Navigation title can\'t be empty.</string>
     <string name="navigations_data">Navigations Data</string>
-    <string name="new_confirm_password_empty">Confirm &amp; new password cannot be empty.</string>
+    <string name="new_confirm_password_empty">Confirm &amp; new password can\'t be empty.</string>
     <string name="new_confirm_password_not_same">Confirm &amp; new password must match.</string>
     <string name="new_password">New Password</string>
     <string name="newsletter">Newsletter</string>
     <string name="no_internet_connection">No internet connection.</string>
     <string name="no_projects">You don\'t have any projects yet.</string>
     <string name="no_responds">You don\'t have any responds yet.</string>
-    <string name="no_results">We couldn\'t find any results!</string>
+    <string name="no_results">We couldn\'t find any results.</string>
     <string name="no_users_found">We couldn\'t find any users associated with this email!</string>
     <string name="notification">Notifications</string>
     <string name="notification_body">Notification Body</string>
@@ -2382,36 +2382,36 @@
     <string name="notification_channel_server">channel</string>
     <string name="notification_icon_name">Notification Icon Name</string>
     <string name="notification_image_url">Notification Image Url</string>
-    <string name="notification_preferences_updated">Notification preferences updated</string>
-    <string name="notification_send">Notifications sent successfully!</string>
-    <string name="notification_sound">Notification sound</string>
+    <string name="notification_preferences_updated">Notification Preferences Updated</string>
+    <string name="notification_send">Notifications Sent Successfully!</string>
+    <string name="notification_sound">Notification Sound</string>
     <string name="notification_target">Notification Target</string>
     <string name="notification_target_empty">Notification target can\'t be empty, type global to target all your users.</string>
     <string name="notification_title">Notification Title</string>
     <string name="notification_title_required">Notification title can\'t be empty.</string>
-    <string name="notification_vibration">Notification vibration</string>
+    <string name="notification_vibration">Notification Vibration</string>
     <string name="notifications">Notifications</string>
     <string name="notifications_preferences">Notification Preferences</string>
     <string name="oh_no_a_bad_review_maybe_we_can_help_improve_your_experience_with_mint_contact_us_whenever_you_need_and_we_ll_be_there_for_the_rescue">Oh no, a bad review, maybe we can help improve your experience with Mint Console! contact us whenever you need and we\'ll be there for the rescue :)</string>
     <string name="open_in_default_browser">Open in Default Browser</string>
     <string name="open_outside_app">Open outside app</string>
     <string name="open_ticket">Open a Ticket</string>
-    <string name="opened_tickets">Opened Tickets</string>
+    <string name="opened_tickets">Open Tickets</string>
     <string name="or_explore_a_demo_project">Or Explore a Demo Project</string>
     <string name="overall_down">Overall Down</string>
     <string name="overall_uptime">Overall Uptime</string>
     <string name="package_name">Package Name</string>
     <string name="package_name_empty">Package name can\'t be empty.</string>
-    <string name="package_name_saved_successfully">Package name saved successfully.</string>
+    <string name="package_name_saved_successfully">Package Name Updated Successfully</string>
     <string name="page_package">Page Package</string>
     <string name="pages_package">Pages Package</string>
     <string name="password">Password</string>
     <string name="password_empty">Password can\'t be empty</string>
-    <string name="password_reset_email_send">Password reset email sent</string>
+    <string name="password_reset_email_send">Password Reset Email Sent</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="password_updated_successfully">Password changed successfully.</string>
     <string name="passwords_empty">Password and Confirm Password can\'t be empty</string>
-    <string name="passwords_not_match">Password and Confirm Password must be the same!</string>
+    <string name="passwords_not_match">Password and Confirm Password must match!</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
@@ -2423,14 +2423,14 @@
     <string name="picassos_products">Picassos’ Products</string>
     <string name="pinterest">Pinterest</string>
     <string name="pinterest_is_an_image_sharing_and_social_media_service_show_your_pins_and_boards_inside_your_app_using_pinterest_content_provider">Pinterest is an image sharing and social media service. Show your pins and boards inside your app using Pinterest content provider.</string>
-    <string name="pinterest_updated">Pinterest data updated successfully.</string>
+    <string name="pinterest_updated">Pinterest Data Updated Successfully</string>
     <string name="place_your_policies_here">Place your policies here…</string>
     <string name="play_console_license" ns1:ignore="Typos">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgnGbet+lYyHJwbxB3JURnrnFnyeUqdyIsqOeMVBZI5+yjMutbyr7p1JmQ5jvkotbu/3Set25aKMCW4bDjx/J+6/J/EEoyU8osPweMaAr0x9dgSN86usUJqQ26H/qEDViqIyok58jwP7RzdX6i5iXHkIzFW11MEv6WT3vSD6XxG7J2jjQDHwpm07sslimAtKkVFa/sGXwyFgJxGfqpUPI7ECTc7xKyx1thyuwWWEhuYD2PtGwBcX1vkfufj0bhUuJUp0A0M9W0+ygyd32eUyuUMl9k69He5boZ3eTf7VUA0Qx90Nho+lcDtrlTUZuAFhu5XPvPILid5zLZJkt8FxUbQIDAQAB</string>
     <string name="please_read_our_terms_of_use_for_details_about_our_customization_card_system">Please read our <a href="https://console.themintapp.com/policies/terms">Terms of Use</a> for details about our Customization Card system.</string>
     <string name="policies">Policies</string>
     <string name="policies_learnmore_description">By the way, you don\'t need to enter any details about your app (i.e. content providers enabled or Advertisement provider), your app\'s privacy policy is created by getting the app info from your app configuration and processing it to make the perfect privacy policy for it.</string>
     <string name="policies_learnmore_title">How do we deal with Policies?</string>
-    <string name="policies_updated">Policies updated successfully.</string>
+    <string name="policies_updated">Policies Updated Successfully</string>
     <string name="policy_effective_date">Policy Effective Date:</string>
     <string name="popup_confirm">Confirm</string>
     <string name="post_design">Post Design</string>
@@ -2473,11 +2473,11 @@
     <string name="review_posted_successfully">Your review posted successfully, thank you.</string>
     <string name="reviews">Reviews</string>
     <string name="reviews_are_public_and_include_your_account_name_username">Reviews are public and include\nyour account name, username. <a href="https://console.themintapp.com/policies/privacy">Learn more</a></string>
-    <string name="sak_copied">Secret API Key copied successfully!</string>
+    <string name="sak_copied">Secret API Key Copied to Clipboard</string>
     <string name="sak_notice">Secret API Key (SAK) is the code to identify each of your projects and link them to your account. Make sure the Secret API Key of your projects stays a secret please.</string>
     <string name="save">Save</string>
     <string name="scan_qr_code">Scan QR Code</string>
-    <string name="scan_qr_code_description">Scan the code below using Mint Console app to log into your console account.</string>
+    <string name="scan_qr_code_description">Scan the code below using the Mint Console app to log into your Console account.</string>
     <string name="screen_sleep">Screen Sleep mode</string>
     <string name="search">Search</string>
     <string name="search_accounts">Search Accounts</string>
@@ -2485,7 +2485,7 @@
     <string name="search_empty">Search can\'t be empty.</string>
     <string name="search_menu_title">Search</string>
     <string name="select_account">Select Account</string>
-    <string name="select_project">Select a Project</string>
+    <string name="select_project">Open a Project</string>
     <string name="send">Send</string>
     <string name="send_notification">Send Notification</string>
     <string name="send_push_notifications_to_your_app_users">Send push notifications to your app users.</string>
@@ -2512,7 +2512,7 @@
     <string name="switch_project">Switch Project</string>
     <string name="switch_project_description">Switch your current project</string>
     <string name="system_default">System Default</string>
-    <string name="tap_here_to_resend_it">Tap here to resent it.</string>
+    <string name="tap_here_to_resend_it">Click here to re-send email</string>
     <string name="tap_to_download_all_your_project_data">Tap to download all your project data</string>
     <string name="tap_to_show_qr_code">Tap to Show QR Code</string>
     <string name="terms_of_use">Terms of Use</string>
@@ -2520,17 +2520,17 @@
     <string name="the_power_up_is_all_yours_check_it_out_and_start_leveling_up_your_application_now">The power-up is all yours. Check it out and start leveling up your application now!</string>
     <string name="the_purchase_code_is_acquired_when_you_purchase_mint_haven_t_purchased_get_mint_here">The purchase code is acquired when you purchase Mint, Haven\'t purchased? <a href="https://codecanyon.net/item/mint-full-fresh-android-webview-app/24821012">Get Mint!</a></string>
     <string name="there_is_no_reviews_found_for_this_power_up_yet">There is no reviews found for this power-up yet</string>
-    <string name="ticket_closed">Ticket closed</string>
-    <string name="ticket_description">Please describe your issue in detail, so we\'ll be able to resolve it as soon as possible.</string>
+    <string name="ticket_closed">Ticket Closed</string>
+    <string name="ticket_description">Please describe your issue in detail, so we can help you resolve it as soon as possible.</string>
     <string name="ticket_id">Ticket Id</string>
     <string name="ticket_opened">Ticket opened</string>
     <string name="ticket_type">Ticket Type</string>
     <string name="ticket_updated">Ticket Updated</string>
-    <string name="token_copied">Token copied successfully!</string>
-    <string name="total_notifications">Total Notifications</string>
+    <string name="token_copied">Token Copied to Clipboard</string>
+    <string name="total_notifications">Notifications Sent</string>
     <string name="total_spent">Total Spent</string>
     <string name="total_tabs">Total Tabs</string>
-    <string name="track_tickets">You can track your opened tickets in your profile</string>
+    <string name="track_tickets">You can track your open tickets in your profile</string>
     <string name="transform_your_website_webapp_webpage_into_an_application_using_webview_webkit">Transform your website, webapp, webpage into an application using WebView Webkit.</string>
     <string name="try_again">Try again</string>
     <string name="two_factor_auth">Two Factor Authentication</string>
@@ -2543,13 +2543,13 @@
     <string name="update_project">Update Project</string>
     <string name="update_ticket">Update ticket</string>
     <string name="update_wizard">Update Wizard</string>
-    <string name="upvotes">Upvotes</string>
+    <string name="upvotes">UpVotes</string>
     <string name="user_details">User Details</string>
     <string name="user_exists">User already exists</string>
     <string name="username">Username</string>
     <string name="username_empty">Username can\'t be empty</string>
     <string name="users">Users</string>
-    <string name="users_were_active">Users Were Active</string>
+    <string name="users_were_active">Total Active Users</string>
     <string name="using_latest_update">You are already using the latest Console Mobile version!</string>
     <string name="verification_code">Verification Code</string>
     <string name="verification_code_empty">Verification code can\'t be empty</string>
@@ -2561,34 +2561,34 @@
     <string name="view_product">View Product</string>
     <string name="view_ticket">View ticket</string>
     <string name="vimeo">Vimeo</string>
-    <string name="vimeo_updated">Vimeo data updated successfully.</string>
+    <string name="vimeo_updated">Vimeo Data Updated Successfully</string>
     <string name="visit_power_store">Visit Power Store</string>
     <string name="we_are_setting_up_your_project">We are setting up your project…</string>
     <string name="we_have_successfully_applied_your_privacy_policy_and_terms_of_use_you_can_update_them_anytime_or_generate_new_policies">We have successfully applied your Privacy Policy and Terms of Use. You can update them anytime or generate new policies.</string>
-    <string name="we_sent_verification_code_to">We sent verification code to</string>
+    <string name="we_sent_verification_code_to">Verification code to</string>
     <string name="we_will_send_the_customized_code_to">We will send the customized sourcecode to</string>
     <string name="webview">WebView</string>
-    <string name="webview_updated">WebView data updated successfully.</string>
+    <string name="webview_updated">WebView Data Updated Successfully</string>
     <string name="welcome_to_mint_console">Welcome to Mint Console! 👋</string>
     <string name="what_is_policy_effective_date">What is policy effective date?</string>
-    <string name="wizard_added">Wizard added successfully</string>
-    <string name="wizard_deleted">Wizard deleted successfully.</string>
+    <string name="wizard_added">Wizard Added Successfully</string>
+    <string name="wizard_deleted">Wizard Deleted</string>
     <string name="wizard_description">Wizard description</string>
-    <string name="wizard_edited">Wizard edited successfully.</string>
+    <string name="wizard_edited">Wizard Updated</string>
     <string name="wizard_thumbnail">Wizard thumbnail</string>
     <string name="wizard_title">Wizard title</string>
     <string name="wizards">Wizards</string>
     <string name="wizards_empty">Please add at least one wizard to open preview.</string>
     <string name="wordpress">WordPress</string>
-    <string name="wordpress_updated">WordPress updated successfully.</string>
+    <string name="wordpress_updated">WordPress Updated Successfully</string>
     <string name="write_a_review">Write a Review</string>
     <string name="write_comment">Post a Comment…</string>
-    <string name="write_external_storage_permission_required">Write external storage permission is required to download project data.</string>
+    <string name="write_external_storage_permission_required">Console needs access to your files to download project data.</string>
     <string name="write_your_css_code_here_to_customize_your_app">Write your CSS code here to customize your app…</string>
-    <string name="wrong_password">The password is incorrect. Try again.</string>
-    <string name="you_don_t_have_any_opened_tickets_click_to_add_a_new_one">You don\'t have any opened tickets, \nClick to open a ticket.</string>
+    <string name="wrong_password">The password entered is incorrect. Try again.</string>
+    <string name="you_don_t_have_any_opened_tickets_click_to_add_a_new_one">No open tickets found. \nClick here to open a ticket.</string>
     <string name="you_don_t_have_any_users_yet">You don\'t have any users yet.</string>
-    <string name="you_don_t_have_any_wizards_yet">You don\'t have any wizards yet. Click to add a new wizard.</string>
+    <string name="you_don_t_have_any_wizards_yet">You don\'t have any wizards. Click to add a new wizard.</string>
     <string name="you_dont_have_any_notifications_yet">You don\'t have any notifications yet</string>
     <string name="your_available_balance">Your available balance:</string>
     <string name="your_country">Your Country</string>
@@ -2596,7 +2596,7 @@
     <string name="your_links">Your Links</string>
     <string name="your_review">Your Review</string>
     <string name="youtube">YouTube</string>
-    <string name="youtube_updated">Youtube data updated successfully.</string>
+    <string name="youtube_updated">Youtube Data Updated Successfully</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="AndroidThemeColorAccentYellow" ns1:ignore="NewApi">

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/noor/Desktop/Mint Console/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "C:\\Users\\Lenovo\\StudioProjects\\console-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/noor/.gradle/caches/transforms-3/d86269eebce7dcbb0d3600c3bf4c7b4f/transformed/appcompat-1.4.0/res/values-night-v8/values-night-v8.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\d86269eebce7dcbb0d3600c3bf4c7b4f\\transformed\\appcompat-1.4.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/noor/.gradle/caches/transforms-3/e12b1fa61ad0713a4a78618423193cfa/transformed/material-1.6.0-alpha01/res/values-night-v8/values-night-v8.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\e12b1fa61ad0713a4a78618423193cfa\\transformed\\material-1.6.0-alpha01\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

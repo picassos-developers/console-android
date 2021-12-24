@@ -25,10 +25,11 @@ com/picassos/mint/console/android/sheets/ArticleOptionsBottomSheetModal.java
 com/picassos/mint/console/android/adapter/SectionsAdapter.java
  com.picassos.mint.console.android.adapter.SectionsAdapter
  com.picassos.mint.console.android.adapter.SectionsAdapter$SectionsHolder
-com/picassos/mint/console/android/activities/DownloadsActivity.java
- com.picassos.mint.console.android.activities.DownloadsActivity
- com.picassos.mint.console.android.activities.DownloadsActivity$1
- com.picassos.mint.console.android.activities.DownloadsActivity$2
+com/picassos/mint/console/android/fragments/NavigationFragment.java
+ com.picassos.mint.console.android.fragments.NavigationFragment
+ com.picassos.mint.console.android.fragments.NavigationFragment$1
+ com.picassos.mint.console.android.fragments.NavigationFragment$2
+ com.picassos.mint.console.android.fragments.NavigationFragment$3
 com/picassos/mint/console/android/sheets/PaymentMethodBottomSheetModal.java
  com.picassos.mint.console.android.sheets.PaymentMethodBottomSheetModal
  com.picassos.mint.console.android.sheets.PaymentMethodBottomSheetModal$OnSelectListener
@@ -156,8 +157,6 @@ com/picassos/mint/console/android/activities/about/ManageAccountActivity.java
  com.picassos.mint.console.android.activities.about.ManageAccountActivity
  com.picassos.mint.console.android.activities.about.ManageAccountActivity$1
  com.picassos.mint.console.android.activities.about.ManageAccountActivity$2
-com/picassos/mint/console/android/constants/TODOS.java
- com.picassos.mint.console.android.constants.TODOS
 com/picassos/mint/console/android/models/Tickets.java
  com.picassos.mint.console.android.models.Tickets
 com/picassos/mint/console/android/models/ProductAffiliate.java
@@ -481,8 +480,9 @@ com/picassos/mint/console/android/activities/store/WriteReviewActivity.java
  com.picassos.mint.console.android.activities.store.WriteReviewActivity
  com.picassos.mint.console.android.activities.store.WriteReviewActivity$1
  com.picassos.mint.console.android.activities.store.WriteReviewActivity$2
-com/picassos/mint/console/android/firebase/MyFirebaseMessagingService.java
- com.picassos.mint.console.android.firebase.MyFirebaseMessagingService
+com/picassos/mint/console/android/activities/MainActivity.java
+ com.picassos.mint.console.android.activities.MainActivity
+ com.picassos.mint.console.android.activities.MainActivity$1
 com/picassos/mint/console/android/activities/store/ProductPurchasedActivity.java
  com.picassos.mint.console.android.activities.store.ProductPurchasedActivity
 com/picassos/mint/console/android/libraries/showcaseview/listener/GuideListener.java
@@ -564,11 +564,9 @@ com/picassos/mint/console/android/libraries/showcaseview/config/Gravity.java
 com/picassos/mint/console/android/adapter/StoreReviewAdapter.java
  com.picassos.mint.console.android.adapter.StoreReviewAdapter
  com.picassos.mint.console.android.adapter.StoreReviewAdapter$StoreReviewsHolder
-com/picassos/mint/console/android/activities/MainActivity.java
- com.picassos.mint.console.android.activities.MainActivity
- com.picassos.mint.console.android.activities.MainActivity$1
-com/picassos/mint/console/android/fragments/NavigationFragment.java
- com.picassos.mint.console.android.fragments.NavigationFragment
- com.picassos.mint.console.android.fragments.NavigationFragment$1
- com.picassos.mint.console.android.fragments.NavigationFragment$2
- com.picassos.mint.console.android.fragments.NavigationFragment$3
+com/picassos/mint/console/android/activities/DownloadsActivity.java
+ com.picassos.mint.console.android.activities.DownloadsActivity
+ com.picassos.mint.console.android.activities.DownloadsActivity$1
+ com.picassos.mint.console.android.activities.DownloadsActivity$2
+com/picassos/mint/console/android/firebase/MyFirebaseMessagingService.java
+ com.picassos.mint.console.android.firebase.MyFirebaseMessagingService
