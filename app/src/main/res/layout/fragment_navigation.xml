@@ -79,92 +79,10 @@
                     android:orientation="vertical"
                     tools:ignore="UselessParent">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:fontFamily="@font/opensans_bold"
-                        android:text="@string/navigation"
-                        android:textAllCaps="true"
-                        android:textColor="?color_dark"
-                        android:textSize="12sp"
-                        tools:ignore="SmallSp" />
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="20dp"
-                        android:background="@drawable/item_background"
-                        android:baselineAligned="false"
-                        android:orientation="horizontal"
-                        android:padding="20dp">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".5"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_bold"
-                                android:text="@string/navigation_tabs"
-                                android:textAllCaps="true"
-                                android:textColor="?color_dark"
-                                android:textSize="10sp"
-                                tools:ignore="SmallSp" />
-
-                            <TextView
-                                android:id="@id/total_tabs"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textColor="?color_dark"
-                                android:textSize="19sp"
-                                tools:ignore="HardcodedText" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".5"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_bold"
-                                android:text="@string/credits"
-                                android:textAllCaps="true"
-                                android:textColor="?color_dark"
-                                android:textSize="10sp"
-                                tools:ignore="SmallSp" />
-
-                            <TextView
-                                android:id="@id/total_credits"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$0"
-                                android:textColor="?color_dark"
-                                android:textSize="19sp"
-                                tools:ignore="HardcodedText" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="10dp"
                         android:layout_marginEnd="20dp"
                         android:orientation="horizontal"
                         android:baselineAligned="false">

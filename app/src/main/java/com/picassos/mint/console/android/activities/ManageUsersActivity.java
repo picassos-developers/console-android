@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -42,6 +44,7 @@ public class ManageUsersActivity extends AppCompatActivity implements UserDetail
     private final List<Users> usersList = new ArrayList<>();
     private UsersAdapter usersAdapter;
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +64,9 @@ public class ManageUsersActivity extends AppCompatActivity implements UserDetail
 
         // close activity
         findViewById(R.id.go_back).setOnClickListener(v -> finish());
+
+        // manage login providers
+        findViewById(R.id.manage_login_providers).setOnClickListener(v -> startActivity(new Intent(this, LoginProvidersActivity.class)));
 
         // Initialize users recyclerview
         RecyclerView usersRecyclerview = findViewById(R.id.recycler_users);
@@ -142,6 +148,7 @@ public class ManageUsersActivity extends AppCompatActivity implements UserDetail
     }
 
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onDeleteListener(int requestCode) {
         if (requestCode == UserDetailsBottomSheetModal.REQUEST_DELETE_USER_CODE) {

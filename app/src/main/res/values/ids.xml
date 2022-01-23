@@ -15,6 +15,7 @@
     <item name="gift_steps" type="id" />
     <item name="demo_project" type="id" />
     <item name="darkmode_container" type="id" />
+
     <item name="review_field" type="id" />
     <item name="my_power_ups" type="id" />
     <item name="length" type="id" />
@@ -23,7 +24,7 @@
     <item name="configuration_data" type="id" />
     <item name="navigations_data" type="id" />
     <item name="rating_callback" type="id" />
-    <item name="wizards_data" type="id" />
+    <item name="walkthrough_data" type="id" />
     <item name="total_spent" type="id" />
     <item name="controller_data" type="id" />
     <item name="dashboard_container" type="id" />
@@ -36,6 +37,7 @@
     <item name="dark_mode" type="id" />
     <item name="overall_uptime" type="id" />
     <item name="overall_down" type="id" />
+    <item name="walkthrough_option" type="id" />
     <item name="purchases_list" type="id" />
     <item name="barchart" type="id" />
     <item name="controller_title" type="id" />
@@ -47,6 +49,7 @@
     <item name="email_address" type="id" />
     <item name="email_address_container" type="id" />
     <item name="get_started" type="id" />
+    <item name="manage_login_providers" type="id" />
     <item name="download_via_wifi" type="id" />
     <item name="push_notifications_container" type="id" />
     <item name="status_container" type="id" />
@@ -69,12 +72,12 @@
     <item name="navigation_behavior_switch" type="id" />
     <item name="navigation_premium_switch" type="id" />
     <item name="update_navigation" type="id" />
-    <item name="wizard_title_input" type="id" />
+    <item name="walkthrough_title_input" type="id" />
     <item name="policy_effective_date" type="id" />
-    <item name="wizard_description_input" type="id" />
-    <item name="wizard_thumbnail_input" type="id" />
+    <item name="walkthrough_description_input" type="id" />
+    <item name="walkthrough_thumbnail_input" type="id" />
     <item name="generate_policies" type="id" />
-    <item name="update_wizard" type="id" />
+    <item name="update_walkthrough" type="id" />
     <item name="username_profile" type="id" />
     <item name="username" type="id" />
     <item name="setup_custom_darkmode" type="id" />
@@ -119,6 +122,7 @@
     <item name="map_style_chooser" type="id" />
     <item name="update_facebook" type="id" />
     <item name="controller_container" type="id" />
+    <item name="walkthrough_container" type="id" />
     <item name="facebook_container" type="id" />
     <item name="imgur_container" type="id" />
     <item name="pinterest_container" type="id" />
@@ -166,6 +170,7 @@
     <item name="recycler_spinners" type="id" />
     <item name="recycler_force_update" type="id" />
     <item name="notification_title" type="id" />
+    <item name="setup_policies" type="id" />
     <item name="notification_description" type="id" />
     <item name="confirm_allow" type="id" />
     <item name="switch_project" type="id" />
@@ -191,11 +196,11 @@
     <item name="instagram_link" type="id" />
     <item name="youtube_link" type="id" />
     <item name="copy_link" type="id" />
-    <item name="wizard_title" type="id" />
+    <item name="walkthrough_title" type="id" />
     <item name="remove_provider" type="id" />
-    <item name="wizard_description" type="id" />
-    <item name="wizard_thumbnail" type="id" />
-    <item name="add_wizard_button" type="id" />
+    <item name="walkthrough_description" type="id" />
+    <item name="walkthrough_thumbnail" type="id" />
+    <item name="add_walkthrough_button" type="id" />
     <item name="try_again" type="id" />
     <item name="internet_connection" type="id" />
     <item name="recycler_tickets" type="id" />
@@ -241,7 +246,7 @@
     <item name="delete_review" type="id" />
     <item name="appearance" type="id" />
     <item name="recycler_sections" type="id" />
-    <item name="wizard_icon" type="id" />
+    <item name="walkthrough_icon" type="id" />
     <item name="recycler_projects" type="id" />
     <item name="download" type="id" />
     <item name="claim_gift" type="id" />
@@ -262,10 +267,10 @@
     <item name="account_status" type="id" />
     <item name="project_firebase_access_key" type="id" />
     <item name="update_project" type="id" />
-    <item name="edit_wizard" type="id" />
+    <item name="edit_walkthrough" type="id" />
     <item name="learnmore_title" type="id" />
     <item name="learnmore_description" type="id" />
-    <item name="delete_wizard" type="id" />
+    <item name="delete_walkthrough" type="id" />
     <item name="agree" type="id" />
     <item name="button_learnmore" type="id" />
     <item name="button_dismiss" type="id" />
@@ -316,11 +321,11 @@
     <item name="update_vimeo" type="id" />
     <item name="promotion_image" type="id" />
     <item name="channel_id" type="id" />
-    <item name="add_wizard" type="id" />
-    <item name="preview_wizards" type="id" />
+    <item name="add_walkthrough" type="id" />
+    <item name="preview_walkthrough" type="id" />
     <item name="update_youtube" type="id" />
     <item name="promotion_container" type="id" />
-    <item name="recycler_wizards" type="id" />
+    <item name="recycler_walkthrough" type="id" />
     <item name="add_navigation_button" type="id" />
     <item name="comment_author_icon" type="id" />
     <item name="comment_author" type="id" />
@@ -348,9 +353,10 @@
     <item name="facebook_network" type="id" />
     <item name="menu_manage_users" type="id" />
     <item name="menu_manage_login_providers" type="id" />
-    <item name="menu_wizards" type="id" />
+    <item name="menu_walkthrough" type="id" />
     <item name="menu_manage_updates" type="id" />
     <item name="menu_manage_ads" type="id" />
+    <item name="menu_manage_login" type="id" />
     <item name="disable_ads" type="id" />
     <item name="menu_webview" type="id" />
     <item name="menu_wordpress" type="id" />
@@ -358,6 +364,7 @@
     <item name="menu_youtube" type="id" />
     <item name="menu_vimeo" type="id" />
     <item name="menu_facebook" type="id" />
+    <item name="menu_theme_style" type="id" />
     <item name="menu_pinterest" type="id" />
     <item name="menu_imgur" type="id" />
     <item name="menu_maps" type="id" />

@@ -221,16 +221,17 @@
 
         <LinearLayout
             android:id="@id/learn_more"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:orientation="horizontal"
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:padding="5dp"
+                android:background="@drawable/toolbar_background"
                 android:src="@drawable/icon_info_outline"
                 app:tint="?color_dark"
                 tools:ignore="ContentDescription,RtlSymmetry" />
@@ -242,7 +243,7 @@
                 android:fontFamily="@font/opensans_bold"
                 android:text="@string/policy_effective_date"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="9dp"
                 android:textAllCaps="true"
                 android:textColor="?color_dark"
                 android:textSize="11sp"

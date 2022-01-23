@@ -36,7 +36,6 @@ import com.picassos.mint.console.android.libraries.showcaseview.config.Gravity;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.fragments.HomeFragment;
 import com.picassos.mint.console.android.fragments.NavigationFragment;
-import com.picassos.mint.console.android.fragments.NotificationsFragment;
 import com.picassos.mint.console.android.sheets.ProjectOptionsBottomSheetModal;
 import com.picassos.mint.console.android.utils.Helper;
 import com.picassos.mint.console.android.utils.Toasto;
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
 
     final Fragment homeFragment = new HomeFragment();
     final Fragment navigationsFragment = new NavigationFragment();
-    final Fragment notificationsFragment = new NotificationsFragment();
     final Fragment powerStoreFragment = new StoreFragment();
     final Fragment helpCentreFragment = new HelpCentreFragment();
 
@@ -113,9 +111,8 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
         fragmentManager = getSupportFragmentManager();
 
         // fragment manager
-        fragmentManager.beginTransaction().add(R.id.fragment_container, helpCentreFragment, "5").hide(helpCentreFragment).commit();
-        fragmentManager.beginTransaction().add(R.id.fragment_container, powerStoreFragment, "4").hide(powerStoreFragment).commit();
-        fragmentManager.beginTransaction().add(R.id.fragment_container, notificationsFragment, "3").hide(notificationsFragment).commit();
+        fragmentManager.beginTransaction().add(R.id.fragment_container, helpCentreFragment, "4").hide(helpCentreFragment).commit();
+        fragmentManager.beginTransaction().add(R.id.fragment_container, powerStoreFragment, "3").hide(powerStoreFragment).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, navigationsFragment, "2").hide(navigationsFragment).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, homeFragment, "1").commit();
 
@@ -130,10 +127,6 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
                     fragmentManager.beginTransaction().hide(active).show(navigationsFragment).commit();
                     active = navigationsFragment;
                     return true;
-                case R.id.notification:
-                    fragmentManager.beginTransaction().hide(active).show(notificationsFragment).commit();
-                    active = notificationsFragment;
-                    return true;
                 case R.id.power_store:
                     fragmentManager.beginTransaction().hide(active).show(powerStoreFragment).commit();
                     if (!consolePreferences.loadStoreGuide()) {
@@ -142,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
                         findViewById(R.id.explore_store).setOnClickListener(v -> {
                             findViewById(R.id.skip_store_tour_container).setVisibility(View.GONE);
                             FragmentManager fragmentManager = getSupportFragmentManager();
-                            StoreFragment storeFragment = (StoreFragment) fragmentManager.findFragmentByTag("4");
+                            StoreFragment storeFragment = (StoreFragment) fragmentManager.findFragmentByTag("3");
                             Objects.requireNonNull(storeFragment).requestStoreGuideOne();
                         });
                     }
@@ -204,12 +197,8 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
             startActivity(new Intent(this, ManageUsersActivity.class));
             drawer.closeDrawer(GravityCompat.START);
         });
-        navigationView.findViewById(R.id.menu_manage_login_providers).setOnClickListener(v -> {
-            startActivity(new Intent(this, LoginProvidersActivity.class));
-            drawer.closeDrawer(GravityCompat.START);
-        });
-        navigationView.findViewById(R.id.menu_wizards).setOnClickListener(v -> {
-            startActivity(new Intent(this, WizardsActivity.class));
+        navigationView.findViewById(R.id.menu_walkthrough).setOnClickListener(v -> {
+            startActivity(new Intent(this, WalkthroughActivity.class));
             drawer.closeDrawer(GravityCompat.START);
         });
         navigationView.findViewById(R.id.menu_manage_updates).setOnClickListener(v -> {
@@ -218,6 +207,10 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
         });
         navigationView.findViewById(R.id.menu_manage_ads).setOnClickListener(v -> {
             startActivity(new Intent(this, ManageAdsActivity.class));
+            drawer.closeDrawer(GravityCompat.START);
+        });
+        navigationView.findViewById(R.id.menu_theme_style).setOnClickListener(v -> {
+            startActivity(new Intent(this, ThemeStyleActivity.class));
             drawer.closeDrawer(GravityCompat.START);
         });
         navigationView.findViewById(R.id.menu_custom_css).setOnClickListener(v -> {
@@ -320,23 +313,6 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
     }
 
     private void requestGuideThree() {
-        switchFragment(notificationsFragment);
-        new GuideView.Builder(this)
-                .setTitle(getString(R.string.guide_three_title))
-                .setContentText(getString(R.string.guide_three_description))
-                .setGravity(Gravity.auto)
-                .setDismissType(DismissType.anywhere)
-                .setTargetView(findViewById(R.id.notification))
-                .setTitleTypeFace(title)
-                .setContentTypeFace(content)
-                .setContentTextSize(12)
-                .setTitleTextSize(13)
-                .setGuideListener(view -> requestGuideFive())
-                .build()
-                .show();
-    }
-
-    private void requestGuideFive() {
         switchFragment(helpCentreFragment);
         FragmentManager fragmentManager = getSupportFragmentManager();
         HomeFragment homeFragment = (HomeFragment) fragmentManager.findFragmentByTag("1");
@@ -366,8 +342,6 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
             bottomNavigationView.setSelectedItemId(R.id.home);
         } else if (navigationsFragment.equals(fragment)) {
             bottomNavigationView.setSelectedItemId(R.id.navigation);
-        } else if (notificationsFragment.equals(fragment)) {
-            bottomNavigationView.setSelectedItemId(R.id.notification);
         } else if (helpCentreFragment.equals(fragment)) {
             bottomNavigationView.setSelectedItemId(R.id.help_centre);
         }

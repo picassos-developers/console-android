@@ -30,6 +30,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.picassos.mint.console.android.activities.ThemeStyleActivity"
+            android:exported="false" />
+        <activity
             android:name="com.picassos.mint.console.android.activities.PushNotificationsActivity"
             android:exported="false" />
         <activity
@@ -58,7 +61,7 @@
             android:name="com.picassos.mint.console.android.activities.GiftActivity"
             android:exported="true" />
         <activity
-            android:name="com.picassos.mint.console.android.activities.PreviewWizardsActivity"
+            android:name="com.picassos.mint.console.android.activities.PreviewWalkthroughActivity"
             android:exported="true" />
         <activity
             android:name="com.picassos.mint.console.android.activities.LoginProvidersActivity"
@@ -102,10 +105,10 @@
         <activity android:name="com.picassos.mint.console.android.activities.about.ManageAccountActivity" />
         <activity android:name="com.picassos.mint.console.android.activities.about.GenerateAuthLoginActivity" />
         <activity android:name="com.picassos.mint.console.android.activities.QrLoginActivity" />
-        <activity android:name="com.picassos.mint.console.android.activities.EditWizardActivity" />
+        <activity android:name="com.picassos.mint.console.android.activities.EditWalkthroughActivity" />
         <activity android:name="com.picassos.mint.console.android.activities.manageAds.ManageAdsActivity" />
         <activity android:name="com.picassos.mint.console.android.activities.providers.WordpressActivity" />
-        <activity android:name="com.picassos.mint.console.android.activities.WizardsActivity" />
+        <activity android:name="com.picassos.mint.console.android.activities.WalkthroughActivity" />
         <activity android:name="com.picassos.mint.console.android.activities.providers.VimeoActivity" />
         <activity android:name="com.picassos.mint.console.android.activities.providers.YoutubeActivity" />
         <activity android:name="com.picassos.mint.console.android.activities.providers.MapsActivity" />

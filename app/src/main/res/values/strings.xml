@@ -61,7 +61,7 @@
     <string name="notification_preferences_updated">Notification Preferences Updated</string>
     <string name="users">Users</string>
     <string name="user_details">User Details</string>
-    <string name="wizards">Wizards</string>
+    <string name="walkthrough">walkthrough</string>
     <string name="webview">WebView</string>
     <string name="wordpress">WordPress</string>
     <string name="youtube">YouTube</string>
@@ -100,16 +100,16 @@
     <string name="category_design_three">Category Design 3</string>
     <string name="category_design_four">Category Design 4</string>
     <string name="wordpress_updated">WordPress Updated Successfully</string>
-    <string name="wizard_title">Wizard title</string>
-    <string name="wizard_description">Wizard description</string>
-    <string name="wizard_thumbnail">Wizard thumbnail</string>
-    <string name="add_wizard">Add Wizard</string>
-    <string name="wizard_added">Wizard Added Successfully</string>
-    <string name="edit_wizard">Edit Wizard</string>
-    <string name="delete_wizard">Delete Wizard</string>
-    <string name="update_wizard">Update Wizard</string>
-    <string name="wizard_deleted">Wizard Deleted</string>
-    <string name="wizard_edited">Wizard Updated</string>
+    <string name="walkthrough_title">Walkthrough title</string>
+    <string name="walkthrough_description">Walkthrough description</string>
+    <string name="walkthrough_thumbnail">Walkthrough thumbnail</string>
+    <string name="add_walkthrough">Add Walkthrough</string>
+    <string name="walkthrough_added">Walkthrough Added Successfully</string>
+    <string name="edit_walkthrough">Edit Walkthrough</string>
+    <string name="delete_walkthrough">Delete Walkthrough</string>
+    <string name="update_walkthrough">Update Walkthrough</string>
+    <string name="walkthrough_deleted">Walkthrough Deleted</string>
+    <string name="walkthrough_edited">Walkthrough Updated</string>
     <string name="manage_ads">Manage ADs</string>
     <string name="choose_provider">Choose a default provider</string>
     <string name="about_console">About Console</string>
@@ -192,7 +192,7 @@
     <string name="invalid_firebase_access_key">Invalid Firebase access key.</string>
     <string name="scan_qr_code_description">Scan the code below using the Mint Console app to log into your Console account.</string>
     <string name="you_don_t_have_any_users_yet">You don\'t have any users yet.</string>
-    <string name="you_don_t_have_any_wizards_yet">You don\'t have any wizards. Click to add a new wizard.</string>
+    <string name="you_don_t_have_any_walkthrough_yet">You don\'t have any walkthrough. Click to add a new walkthrough.</string>
     <string name="select_project">Open a Project</string>
     <string name="add_project">Add a new Project</string>
     <string name="password_reset_email_send">Password Reset Email Sent</string>
@@ -299,10 +299,10 @@
     <string name="demo_project">This is a demo project, Please add a new console project to make changes.</string>
     <string name="you_dont_have_any_notifications_yet">You don\'t have any notifications yet</string>
     <string name="agreement_notice">By signing up you agree to Mint Console\'s <a href="https://console.themintapp.com/policies/terms">Terms of Use</a>, and you acknowledge that you have read our <a href="https://console.themintapp.com/policies/privacy">Privacy Policy</a>.</string>
-    <string name="preview_wizards">Preview Wizards</string>
+    <string name="preview_walkthrough">Preview Walkthrough</string>
     <string name="guide_next">Next</string>
     <string name="close_preview">Close Preview</string>
-    <string name="wizards_empty">Please add at least one wizard to open preview.</string>
+    <string name="walkthrough_empty">Please add at least one walkthrough to open preview.</string>
     <string name="get_a_free_customization">Claim your free gift!</string>
     <string name="claim_an_easy_free_gift">Claim a free card!</string>
     <string name="all_you_need_to_do_is_write_a_review_about_your_experience_with_mint_on_codecanyon_and_you_ll_be_gifted_a_free_card_to_have_picassos_team_customize_your_app_the_way_you_want_it_the_gift_includes_customizations_to">All you need to do is write a review about your experience with Mint on CodeCanyon, and you\'ll be gifted a free customization card to have Picassos Team customize your app the way you want it! The gift includes customizations to:</string>
@@ -333,7 +333,6 @@
     <string name="guide_store_description_two">Save your time and upgrade your app with the variety of power-ups hand picked by Picassos\' developers</string>
     <string name="enter_valid_drive_link">Please enter a valid Google Drive link.</string>
     <string name="please_read_our_terms_of_use_for_details_about_our_customization_card_system">Please read our <a href="https://console.themintapp.com/policies/terms">Terms of Use</a> for details about our Customization Card system.</string>
-    <string name="here_you_can_enable_and_disable_your_app_s_login_providers_donut_log_in_is_configured_by_default">Here you can enable and Disable your app\'s login providers. Donut log-in is configured by default.</string>
     <string name="verified_by_picassos_developers">Verified by Picassos Developers</string>
     <string name="continue_purchase">Continue</string>
     <string name="process">Process: </string>
@@ -453,4 +452,10 @@
     <string name="imgur_is_an_image_hosting_and_sharing_site_share_your_content_in_your_app_with_imgur_content_provider">Imgur is an image hosting and sharing site. Share your content in your app with Imgur content provider.</string>
     <string name="add_navigation_tab">Add Navigation Tab</string>
     <string name="have_us_customize_your_app_for_free">Have us customize your app for free.</string>
+    <string name="users_and_login">Users and Login</string>
+    <string name="walkthrough_page">Walkthrough Page</string>
+    <string name="enable_walkthrough_page">Enable Walkthrough Page</string>
+    <string name="manage_your_app_s_log_in_system_and_providers">Manage your App\'s log-in system and providers.</string>
+    <string name="theme_style">Theme Style</string>
+    <string name="preset_themes">Preset Themes</string>
 </resources>

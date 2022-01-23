@@ -198,10 +198,6 @@ public class NavigationFragment extends Fragment {
                         JSONObject root = obj.getJSONObject("navigations");
                         JSONArray array = root.getJSONArray("data");
 
-                        // navigations
-                        TextView navigationTabs = view.findViewById(R.id.total_tabs);
-                        navigationTabs.setText(String.valueOf(root.getInt("total_navigation_tabs")));
-
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
                             Navigations menus = new Navigations(object.getInt("id"), object.getInt("identifier"), object.getInt("enabled"), object.getString("type"),  object.getString("label"), object.getString("icon"));

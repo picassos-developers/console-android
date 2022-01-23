@@ -69,12 +69,52 @@
                     android:orientation="vertical"
                     tools:ignore="UselessParent">
 
+                    <LinearLayout
+                        android:id="@id/manage_login_providers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/toolbar_background"
+                        android:paddingStart="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/circle_dark"
+                            android:padding="8dp"
+                            android:src="@drawable/icon_login"
+                            app:tint="?color_light_separate"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/manage_login"
+                            android:layout_marginTop="10dp"
+                            android:textColor="?color_dark"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/manage_your_app_s_log_in_system_and_providers"
+                            android:textColor="?color_dark"
+                            android:textSize="12sp"
+                            tools:ignore="SmallSp" />
+
+                    </LinearLayout>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/opensans_bold"
                         android:text="@string/users"
+                        android:layout_marginTop="15dp"
                         android:textAllCaps="true"
                         android:textColor="?color_dark"
                         android:textSize="12sp"

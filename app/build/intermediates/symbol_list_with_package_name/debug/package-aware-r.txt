@@ -382,7 +382,6 @@ attr counterOverflowTextColor
 attr counterTextAppearance
 attr counterTextColor
 attr crossfade
-attr css
 attr currentState
 attr curveFit
 attr customBoolean
@@ -1040,7 +1039,6 @@ attr suffixText
 attr suffixTextAppearance
 attr suffixTextColor
 attr suggestionRowLayout
-attr svg
 attr swipeRefreshLayoutProgressSpinnerBackgroundColor
 attr switchMinWidth
 attr switchPadding
@@ -2645,6 +2643,7 @@ drawable icon_new_ticket
 drawable icon_opened_tickets_filled
 drawable icon_opened_tickets_outline
 drawable icon_paid
+drawable icon_paint
 drawable icon_pinterest
 drawable icon_plus
 drawable icon_privacy
@@ -2893,8 +2892,8 @@ id add_navigation
 id add_navigation_button
 id add_project
 id add_provider_menu
-id add_wizard
-id add_wizard_button
+id add_walkthrough
+id add_walkthrough_button
 id admob_app_id
 id admob_interstitial_unit_id
 id admob_native_unit_id
@@ -2991,7 +2990,6 @@ id close_preview
 id close_ticket
 id closed_tickets
 id closest
-id coil_request_manager
 id collapseActionView
 id comment_author
 id comment_author_icon
@@ -3046,7 +3044,7 @@ id delete_all_notifications
 id delete_navigation
 id delete_review
 id delete_user
-id delete_wizard
+id delete_walkthrough
 id deltaRelative
 id demo_project
 id dependency_ordering
@@ -3092,7 +3090,7 @@ id edit_comment
 id edit_navigation
 id edit_query
 id edit_review
-id edit_wizard
+id edit_walkthrough
 id elastic
 id email
 id email_address
@@ -3224,6 +3222,7 @@ id lottie_layer_name
 id manage_account
 id manage_ads
 id manage_credentials
+id manage_login_providers
 id map_style
 id map_style_chooser
 id maps_container
@@ -3256,6 +3255,7 @@ id menu_dark_mode
 id menu_facebook
 id menu_imgur
 id menu_manage_ads
+id menu_manage_login
 id menu_manage_login_providers
 id menu_manage_updates
 id menu_manage_users
@@ -3263,9 +3263,10 @@ id menu_maps
 id menu_pinterest
 id menu_privacy_policy
 id menu_terms_of_use
+id menu_theme_style
 id menu_vimeo
+id menu_walkthrough
 id menu_webview
-id menu_wizards
 id menu_wordpress
 id menu_youtube
 id message
@@ -3411,7 +3412,7 @@ id power_store
 id power_store_container
 id premium
 id preview_notification
-id preview_wizards
+id preview_walkthrough
 id privacy_policy
 id product_container
 id product_description
@@ -3475,7 +3476,7 @@ id recycler_ticket_responds
 id recycler_tickets
 id recycler_types
 id recycler_users
-id recycler_wizards
+id recycler_walkthrough
 id redeem
 id redeem_card
 id redeem_code
@@ -3673,8 +3674,8 @@ id update_project
 id update_provider
 id update_ticket
 id update_vimeo
+id update_walkthrough
 id update_webview
-id update_wizard
 id update_wordpress
 id update_youtube
 id useLogo
@@ -3701,19 +3702,21 @@ id visible_removing_fragment_view_tag
 id visit_product
 id visits
 id voice_search
+id walkthrough_container
+id walkthrough_data
+id walkthrough_description
+id walkthrough_description_input
+id walkthrough_icon
+id walkthrough_option
+id walkthrough_thumbnail
+id walkthrough_thumbnail_input
+id walkthrough_title
+id walkthrough_title_input
 id webview_container
 id webview_provider
 id west
 id withText
 id withinBounds
-id wizard_description
-id wizard_description_input
-id wizard_icon
-id wizard_thumbnail
-id wizard_thumbnail_input
-id wizard_title
-id wizard_title_input
-id wizards_data
 id wordpress_container
 id wordpress_provider
 id wrap
@@ -3827,7 +3830,7 @@ layout activity_downloads
 layout activity_edit_comment
 layout activity_edit_navigation
 layout activity_edit_project
-layout activity_edit_wizard
+layout activity_edit_walkthrough
 layout activity_enter_verification
 layout activity_facebook
 layout activity_finish_policies_setup
@@ -3848,7 +3851,7 @@ layout activity_notification_preview
 layout activity_notifications
 layout activity_pinterest
 layout activity_policies
-layout activity_preview_wizards
+layout activity_preview_walkthrough
 layout activity_product_purchased
 layout activity_projects
 layout activity_purchases
@@ -3863,19 +3866,20 @@ layout activity_setup_custom_dark_mode
 layout activity_setup_policies
 layout activity_splash
 layout activity_submit_ticket
+layout activity_theme_style
 layout activity_update_password
 layout activity_update_ticket
 layout activity_view_article
 layout activity_view_product
 layout activity_view_ticket
 layout activity_vimeo
+layout activity_walkthrough
 layout activity_webview
-layout activity_wizards
 layout activity_wordpress
 layout activity_write_review
 layout activity_youtube
 layout add_navigation_bottom_sheet_modal
-layout add_wizard_bottom_sheet_modal
+layout add_walkthrough_bottom_sheet_modal
 layout affiliate_product_details_sheet_modal
 layout article_options_bottom_sheet_modal
 layout choose_custom_darkmode_package_bottom_sheet_modal
@@ -3917,7 +3921,6 @@ layout fragment_closed_tickets
 layout fragment_help_centre
 layout fragment_home
 layout fragment_navigation
-layout fragment_notifications
 layout fragment_opened_tickets
 layout fragment_store
 layout include_drawer_menu
@@ -3952,8 +3955,8 @@ layout item_ticket_listitem
 layout item_ticket_type
 layout item_user_listitem
 layout item_video_design
-layout item_wizard_listitem
-layout item_wizard_preview
+layout item_walkthrough_listitem
+layout item_walkthrough_preview
 layout launch_app_bottom_sheet_modal
 layout learn_more_bottom_sheet_modal
 layout m3_alert_dialog
@@ -4051,7 +4054,7 @@ layout toast_layout_primary
 layout toast_layout_warning
 layout two_factor_auth_bottom_sheet_modal
 layout user_details_bottom_sheet_modal
-layout wizard_options_bottom_sheet_modal
+layout walkthrough_options_bottom_sheet_modal
 menu bottom_navigation
 menu example_menu
 menu example_menu2
@@ -4104,7 +4107,7 @@ string add_navigation
 string add_navigation_tab
 string add_new_project_description
 string add_project
-string add_wizard
+string add_walkthrough
 string add_your_links_here
 string admob_app_id
 string admob_interstitial_unit_ad
@@ -4197,7 +4200,7 @@ string default_provider_description
 string default_web_client_id
 string delete_navigation
 string delete_user
-string delete_wizard
+string delete_walkthrough
 string demo_project
 string describe_your_experience
 string details
@@ -4220,13 +4223,14 @@ string drive_link
 string edit_comment
 string edit_navigation
 string edit_review
-string edit_wizard
+string edit_walkthrough
 string effective_date_description
 string email
 string email_address
 string email_empty
 string email_resent
 string enable_premium_link
+string enable_walkthrough_page
 string enter_code
 string enter_the_specific_links_for_all_the_pages_you_want_modified_for_dark_mode_please_enter_a_link_in_each_line
 string enter_valid_drive_link
@@ -4293,7 +4297,6 @@ string guide_two_description
 string guide_two_title
 string have_us_customize_your_app_for_free
 string help_centre
-string here_you_can_enable_and_disable_your_app_s_login_providers_donut_log_in_is_configured_by_default
 string hide_bottom_view_on_scroll_behavior
 string home
 string how_to_claim_your_customization_gift
@@ -4356,6 +4359,7 @@ string manage_credentials
 string manage_login
 string manage_updates
 string manage_users
+string manage_your_app_s_log_in_system_and_providers
 string map_style
 string maps
 string maps_updated
@@ -4501,7 +4505,7 @@ string post_review
 string posted_by
 string power_store
 string preview
-string preview_wizards
+string preview_walkthrough
 string privacy_policy
 string process
 string project_added_successfully
@@ -4582,6 +4586,7 @@ string terms_of_use
 string tfa
 string the_power_up_is_all_yours_check_it_out_and_start_leveling_up_your_application_now
 string the_purchase_code_is_acquired_when_you_purchase_mint_haven_t_purchased_get_mint_here
+string theme_style
 string there_is_no_reviews_found_for_this_power_up_yet
 string ticket_closed
 string ticket_description
@@ -4605,13 +4610,14 @@ string update_navigation
 string update_password
 string update_project
 string update_ticket
-string update_wizard
+string update_walkthrough
 string upvotes
 string user_details
 string user_exists
 string username
 string username_empty
 string users
+string users_and_login
 string users_were_active
 string using_latest_update
 string verification_code
@@ -4626,6 +4632,15 @@ string view_ticket
 string vimeo
 string vimeo_updated
 string visit_power_store
+string walkthrough
+string walkthrough_added
+string walkthrough_deleted
+string walkthrough_description
+string walkthrough_edited
+string walkthrough_empty
+string walkthrough_page
+string walkthrough_thumbnail
+string walkthrough_title
 string we_are_setting_up_your_project
 string we_have_successfully_applied_your_privacy_policy_and_terms_of_use_you_can_update_them_anytime_or_generate_new_policies
 string we_sent_verification_code_to
@@ -4634,14 +4649,6 @@ string webview
 string webview_updated
 string welcome_to_mint_console
 string what_is_policy_effective_date
-string wizard_added
-string wizard_deleted
-string wizard_description
-string wizard_edited
-string wizard_thumbnail
-string wizard_title
-string wizards
-string wizards_empty
 string wordpress
 string wordpress_updated
 string write_a_review
@@ -4651,7 +4658,7 @@ string write_your_css_code_here_to_customize_your_app
 string wrong_password
 string you_don_t_have_any_opened_tickets_click_to_add_a_new_one
 string you_don_t_have_any_users_yet
-string you_don_t_have_any_wizards_yet
+string you_don_t_have_any_walkthrough_yet
 string you_dont_have_any_notifications_yet
 string your_available_balance
 string your_country
@@ -5807,7 +5814,6 @@ styleable RadialViewGroup materialCircleRadius
 styleable RangeSlider minSeparation values
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
-styleable SVGImageView css svg
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon

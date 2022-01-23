@@ -70,6 +70,56 @@
                     android:orientation="vertical"
                     tools:ignore="UselessParent">
 
+                    <LinearLayout
+                        android:id="@id/setup_policies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/card_background"
+                        android:paddingStart="15dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/circle_blue"
+                            android:padding="8dp"
+                            android:src="@drawable/icon_gift"
+                            android:layout_gravity="center_vertical"
+                            app:tint="@color/color_white"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Regenerate Policies"
+                                android:textColor="?color_dark"
+                                android:textStyle="bold"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/have_us_customize_your_app_for_free"
+                                android:textColor="?color_dark"
+                                android:textSize="12sp"
+                                tools:ignore="SmallSp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                     <TextView
                         android:id="@id/policies_title"
                         android:layout_width="wrap_content"

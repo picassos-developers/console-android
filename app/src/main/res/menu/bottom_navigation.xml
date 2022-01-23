@@ -11,11 +11,6 @@
         android:icon="@drawable/navigation_menus"/>
 
     <item
-        android:id="@id/notification"
-        android:title="@string/notification"
-        android:icon="@drawable/navigation_notifications"/>
-
-    <item
         android:id="@id/power_store"
         android:title="@string/power_store"
         android:icon="@drawable/navigation_store"/>

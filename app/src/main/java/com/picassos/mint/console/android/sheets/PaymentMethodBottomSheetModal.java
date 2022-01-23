@@ -46,6 +46,11 @@ public class PaymentMethodBottomSheetModal extends BottomSheetDialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.payment_method_bottom_sheet_modal, container, false);
 
+        // check if credits are allowed
+        if (!requireArguments().getBoolean("isCredits", true)) {
+            view.findViewById(R.id.console_credits).setVisibility(View.GONE);
+        }
+
         // console credits
         TextView totalCredits = view.findViewById(R.id.total_credits);
         totalCredits.setText(getString(R.string.your_available_balance) + " $" + requireArguments().getInt("credits"));

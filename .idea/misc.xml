@@ -57,6 +57,7 @@
         <entry key="app/src/main/res/layout/activity_edit_comment.xml" value="0.2677083333333333" />
         <entry key="app/src/main/res/layout/activity_edit_navigation.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_edit_project.xml" value="0.2677083333333333" />
+        <entry key="app/src/main/res/layout/activity_edit_wizard.xml" value="0.13385416666666666" />
         <entry key="app/src/main/res/layout/activity_enter_verification.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_facebook.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/activity_finish_policies_setup.xml" value="0.33" />
@@ -71,13 +72,14 @@
         <entry key="app/src/main/res/layout/activity_manage_account.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_manage_ads.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/activity_manage_updates.xml" value="0.26979166666666665" />
-        <entry key="app/src/main/res/layout/activity_manage_users.xml" value="0.2677083333333333" />
+        <entry key="app/src/main/res/layout/activity_manage_users.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/activity_my_tickets.xml" value="0.2484375" />
         <entry key="app/src/main/res/layout/activity_notification_preview.xml" value="0.2484375" />
         <entry key="app/src/main/res/layout/activity_notifications.xml" value="0.4046875" />
         <entry key="app/src/main/res/layout/activity_pinterest.xml" value="0.253125" />
-        <entry key="app/src/main/res/layout/activity_policies.xml" value="0.2677083333333333" />
+        <entry key="app/src/main/res/layout/activity_policies.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_preview_walkthrough.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_preview_wizards.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/activity_product_purchased.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_projects.xml" value="0.2677083333333333" />
@@ -90,20 +92,23 @@
         <entry key="app/src/main/res/layout/activity_set_facebook_network.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/activity_set_package_name.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_setup_custom_dark_mode.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_setup_policies.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_setup_policies.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_submit_ticket.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_theme_style.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_update_password.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_view_article.xml" value="0.2484375" />
         <entry key="app/src/main/res/layout/activity_view_product.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_view_ticket.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_vimeo.xml" value="0.2484375" />
+        <entry key="app/src/main/res/layout/activity_walkthrough.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_webview.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_wizards.xml" value="0.2677083333333333" />
+        <entry key="app/src/main/res/layout/activity_wizards.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_wordpress.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/activity_write_review.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_youtube.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/add_navigation_bottom_sheet_modal.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/add_wizard_bottom_sheet_modal.xml" value="0.13385416666666666" />
         <entry key="app/src/main/res/layout/affiliate_product_details_sheet_modal.xml" value="0.5" />
         <entry key="app/src/main/res/layout/article_options_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/choose_custom_darkmode_package_bottom_sheet_modal.xml" value="0.25" />
@@ -128,7 +133,7 @@
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.2390625" />
         <entry key="app/src/main/res/layout/fragment_help_centre.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_navigation.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_navigation.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_opened_tickets.xml" value="0.2484375" />
         <entry key="app/src/main/res/layout/fragment_store.xml" value="0.33" />
@@ -163,6 +168,7 @@
         <entry key="app/src/main/res/layout/item_server_status_listitem.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/item_step_account.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_ticket_listitem.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/layout/item_wizard_listitem.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/item_wizard_preview.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/launch_app_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/learn_more_bottom_sheet_modal.xml" value="0.33" />

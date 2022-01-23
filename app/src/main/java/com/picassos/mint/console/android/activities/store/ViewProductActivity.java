@@ -498,6 +498,7 @@ public class ViewProductActivity extends AppCompatActivity implements
         connectPlayBilling();
         bundle.putInt("credits", credits);
         bundle.putInt("price", price);
+        bundle.putBoolean("isCredits", false);
         PaymentMethodBottomSheetModal paymentMethodBottomSheetModal = new PaymentMethodBottomSheetModal();
         paymentMethodBottomSheetModal.setArguments(bundle);
         paymentMethodBottomSheetModal.show(getSupportFragmentManager(), "TAG");

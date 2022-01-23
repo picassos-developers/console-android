@@ -19,6 +19,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.ThemeStyleActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.PushNotificationsActivity"
             android:exported="false" />
         <activity
@@ -47,7 +50,7 @@
             android:name=".activities.GiftActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.PreviewWizardsActivity"
+            android:name=".activities.PreviewWalkthroughActivity"
             android:exported="true" />
         <activity
             android:name=".activities.LoginProvidersActivity"
@@ -91,10 +94,10 @@
         <activity android:name=".activities.about.ManageAccountActivity" />
         <activity android:name=".activities.about.GenerateAuthLoginActivity" />
         <activity android:name=".activities.QrLoginActivity" />
-        <activity android:name=".activities.EditWizardActivity" />
+        <activity android:name=".activities.EditWalkthroughActivity" />
         <activity android:name=".activities.manageAds.ManageAdsActivity" />
         <activity android:name=".activities.providers.WordpressActivity" />
-        <activity android:name=".activities.WizardsActivity" />
+        <activity android:name=".activities.WalkthroughActivity" />
         <activity android:name=".activities.providers.VimeoActivity" />
         <activity android:name=".activities.providers.YoutubeActivity" />
         <activity android:name=".activities.providers.MapsActivity" />

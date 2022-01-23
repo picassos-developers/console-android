@@ -107,7 +107,7 @@
 55-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:42:13-36
 56        <activity
 56-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:43:9-45:39
-57            android:name="com.picassos.mint.console.android.activities.PreviewWizardsActivity"
+57            android:name="com.picassos.mint.console.android.activities.PreviewWalkthroughActivity"
 57-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:44:13-62
 58            android:exported="true" />
 58-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:45:13-36
@@ -216,7 +216,7 @@
 100        <activity android:name="com.picassos.mint.console.android.activities.QrLoginActivity" />
 100-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:87:9-64
 100-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:87:19-61
-101        <activity android:name="com.picassos.mint.console.android.activities.EditWizardActivity" />
+101        <activity android:name="com.picassos.mint.console.android.activities.EditWalkthroughActivity" />
 101-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:88:9-67
 101-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:88:19-64
 102        <activity android:name="com.picassos.mint.console.android.activities.manageAds.ManageAdsActivity" />
@@ -225,7 +225,7 @@
 103        <activity android:name="com.picassos.mint.console.android.activities.providers.WordpressActivity" />
 103-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:90:9-76
 103-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:90:19-73
-104        <activity android:name="com.picassos.mint.console.android.activities.WizardsActivity" />
+104        <activity android:name="com.picassos.mint.console.android.activities.WalkthroughActivity" />
 104-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:91:9-64
 104-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:91:19-61
 105        <activity android:name="com.picassos.mint.console.android.activities.providers.VimeoActivity" />

@@ -134,7 +134,7 @@
                 android:id="@id/menu_manage_users"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 tools:ignore="UseCompoundDrawables">
@@ -153,43 +153,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/manage_users"
+                    android:text="@string/users_and_login"
                     android:layout_marginStart="6dp"
                     android:textColor="?color_dark"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@id/menu_manage_login_providers"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                tools:ignore="UseCompoundDrawables">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:paddingEnd="5dp"
-                    android:paddingStart="0dp"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:src="@drawable/icon_login"
-                    app:tint="?color_dark"
-                    tools:ignore="ContentDescription" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/manage_login"
-                    android:layout_marginStart="6dp"
-                    android:textColor="?color_dark"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@id/menu_wizards"
+                android:id="@id/menu_walkthrough"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -211,7 +182,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/wizards"
+                    android:text="@string/walkthrough_page"
                     android:layout_marginStart="6dp"
                     android:textColor="?color_dark"/>
 
@@ -241,6 +212,35 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/manage_updates"
+                    android:layout_marginStart="6dp"
+                    android:textColor="?color_dark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/menu_theme_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/icon_paint"
+                    app:tint="?color_dark"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/theme_style"
                     android:layout_marginStart="6dp"
                     android:textColor="?color_dark"/>
 
