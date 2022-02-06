@@ -68,7 +68,7 @@
                     android:layout_marginStart="5dp"
                     android:text="@string/notification_sound"
                     android:textColor="?color_dark"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/input_text_size" />
 
             </LinearLayout>
 
@@ -121,7 +121,7 @@
                     android:layout_marginStart="5dp"
                     android:text="@string/notification_vibration"
                     android:textColor="?color_dark"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/input_text_size" />
 
             </LinearLayout>
 

@@ -3,15 +3,12 @@ package com.picassos.mint.console.android.activities;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
-import android.view.View;
+import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,13 +17,8 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.picassos.mint.console.android.R;
-import com.picassos.mint.console.android.adapter.StepAccountsAdapter;
 import com.picassos.mint.console.android.constants.API;
-import com.picassos.mint.console.android.entities.AccountEntity;
-import com.picassos.mint.console.android.room.APP_DATABASE;
-import com.picassos.mint.console.android.room.DAO;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
-import com.picassos.mint.console.android.sheets.ManageAccountsBottomSheetModal;
 import com.picassos.mint.console.android.sheets.ResetPasswordEmailBottomSheetModal;
 import com.picassos.mint.console.android.sheets.TwoFactorAuthBottomSheetModal;
 import com.picassos.mint.console.android.utils.Helper;
@@ -36,9 +28,7 @@ import com.picassos.mint.console.android.utils.Toasto;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -52,13 +42,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText email;
     private EditText password;
 
-    private String email_value;
-    private String password_value;
-
-    // adapter & accounts model
-    private RecyclerView recyclerView;
-    private StepAccountsAdapter adapter;
-    private List<AccountEntity> accounts;
+    private Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,42 +73,23 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
 
+        // email
         email = findViewById(R.id.email);
+        email.addTextChangedListener(validateLogin);
+
+        // password
         password = findViewById(R.id.password);
+        password.addTextChangedListener(validateLogin);
 
-        final Button login = findViewById(R.id.login);
 
+        // login
+        login = findViewById(R.id.login);
         login.setOnClickListener(v -> {
-
-            email_value = email.getText().toString();
-            password_value = password.getText().toString();
-
-            if (TextUtils.isEmpty(email_value)) {
-                email.setError(getString(R.string.email_empty));
-                email.requestFocus();
-                login.setEnabled(true);
-                return;
-            }
-
-            if (TextUtils.isEmpty(password_value)) {
-                password.setError(getString(R.string.password_empty));
-                password.requestFocus();
-                login.setEnabled(true);
-                return;
-            }
-
-            // checking if password length is smaller than 8 chars
-            if (password_value.length() <= 8) {
-                password.setError(getString(R.string.short_password));
-                password.requestFocus();
-                login.setEnabled(true);
-                return;
-            }
-
-            if (!TextUtils.isEmpty(email_value) || !TextUtils.isEmpty(password_value)) {
+            if (!TextUtils.isEmpty(email.getText().toString()) && !TextUtils.isEmpty(password.getText().toString())) {
                 requestLogin();
+            } else {
+                Toasto.show_toast(this, getString(R.string.all_fields_are_required), 0, 2);
             }
-
         });
 
         // Login with QR
@@ -142,30 +107,6 @@ public class LoginActivity extends AppCompatActivity {
                 Toasto.show_toast(this, getString(R.string.email_empty), 1, 1);
             }
         });
-
-        // Register Button
-        TextView register = findViewById(R.id.register);
-        register.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
-        register.setOnLongClickListener(v -> {
-            ManageAccountsBottomSheetModal manageAccountsBottomSheetModal = new ManageAccountsBottomSheetModal();
-            manageAccountsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
-            return true;
-        });
-
-        // accounts list initialize
-        recyclerView = findViewById(R.id.recycler_accounts);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
-        // accounts list, adapter
-        accounts = new ArrayList<>();
-        adapter = new StepAccountsAdapter(accounts, item -> {
-            if (!item.token.equals(consolePreferences.loadToken())) {
-
-            }
-        });
-        recyclerView.setAdapter(adapter);
-
-        requestAccounts();
     }
 
     /**
@@ -221,15 +162,6 @@ public class LoginActivity extends AppCompatActivity {
 
                         switch (responseCode.getInt("code")) {
                             case 200:
-                                // save account details on accounts center
-                                DAO dao = APP_DATABASE.requestDatabase(this).requestDAO();
-                                AccountEntity account = new AccountEntity();
-                                if (dao.requestAccountsExists(details.getString("token")) == 0) {
-                                    account.token = details.getString("token");
-                                    account.username = details.getString("username");
-                                    account.email = details.getString("email_address");
-                                    dao.requestInsertAccount(account);
-                                }
                                 // save account details
                                 consolePreferences.setSecretAPIKey("exception:error?sak");
                                 consolePreferences.setToken(details.getString("token"));
@@ -263,8 +195,8 @@ public class LoginActivity extends AppCompatActivity {
           @Override
           protected Map<String, String> getParams() {
               Map<String, String> params = new HashMap<>();
-              params.put("email", email_value);
-              params.put("password", password_value);
+              params.put("email", email.getText().toString());
+              params.put("password", password.getText().toString());
               return params;
           }
         };
@@ -320,35 +252,22 @@ public class LoginActivity extends AppCompatActivity {
         Volley.newRequestQueue(this).add(request);
     }
 
-    /**
-     * request accounts from
-     * DAO, accounts entity
-     */
-    private void requestAccounts() {
-        if (APP_DATABASE.requestDatabase(getApplicationContext()).requestDAO().requestAccountsCount() != 0) {
-            recyclerView.setVisibility(View.VISIBLE);
-        } else {
-            recyclerView.setVisibility(View.GONE);
-        }
-
-        @SuppressLint("StaticFieldLeak")
-        class GetAccountsTask extends AsyncTask<Void, Void, List<AccountEntity>> {
-            @Override
-            protected List<AccountEntity> doInBackground(Void... voids) {
-                return APP_DATABASE.requestDatabase(getApplicationContext()).requestDAO().requestAllAccounts();
-            }
-
-            @SuppressLint("NotifyDataSetChanged")
-            @Override
-            protected void onPostExecute(List<AccountEntity> accounts_inline) {
-                super.onPostExecute(accounts_inline);
-                accounts.addAll(accounts_inline);
-                adapter.notifyDataSetChanged();
-            }
+    private TextWatcher validateLogin = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
         }
-        new GetAccountsTask().execute();
-    }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            login.setEnabled(!email.getText().toString().equals("") && !password.getText().toString().equals(""));
+        }
+    };
 
     ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
         if (result != null && result.getResultCode() == RESULT_OK) {

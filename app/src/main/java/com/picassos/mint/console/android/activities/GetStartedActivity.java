@@ -27,7 +27,6 @@ public class GetStartedActivity extends AppCompatActivity {
 
     GetStartedAdapter getStartedAdapter;
     TabLayout tabIndicator;
-    Button btnGetStarted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +44,6 @@ public class GetStartedActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_get_started);
 
-        btnGetStarted = findViewById(R.id.btn_get_started);
         tabIndicator = findViewById(R.id.tab_indicator);
         // fill list screen
 
@@ -98,7 +96,7 @@ public class GetStartedActivity extends AppCompatActivity {
         });
 
         // Get Started button click listener
-        btnGetStarted.setOnClickListener(v -> {
+        findViewById(R.id.get_started).setOnClickListener(v -> {
             savePrefsData();
 
             startActivity(new Intent(GetStartedActivity.this, LoginActivity.class));

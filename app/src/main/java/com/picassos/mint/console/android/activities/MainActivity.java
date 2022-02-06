@@ -193,8 +193,8 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
         // check status
         navigationView.findViewById(R.id.check_status).setOnClickListener(v -> startActivity(new Intent(this, CheckStatusActivity.class)));
         // navigation tabs
-        navigationView.findViewById(R.id.menu_manage_users).setOnClickListener(v -> {
-            startActivity(new Intent(this, ManageUsersActivity.class));
+        navigationView.findViewById(R.id.menu_members).setOnClickListener(v -> {
+            startActivity(new Intent(this, MembersActivity.class));
             drawer.closeDrawer(GravityCompat.START);
         });
         navigationView.findViewById(R.id.menu_walkthrough).setOnClickListener(v -> {

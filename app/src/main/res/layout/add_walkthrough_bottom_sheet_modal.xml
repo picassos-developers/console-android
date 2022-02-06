@@ -30,58 +30,58 @@
             <EditText
                 android:id="@id/walkthrough_title"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/input_background_alternative"
+                android:layout_height="38dp"
+                android:background="@drawable/input_rectangle_background_sheet"
                 android:hint="@string/walkthrough_title"
                 android:inputType="text"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:textColor="?color_dark"
                 android:textColorHint="?color_dark"
-                android:textSize="14sp"
+                android:textSize="@dimen/input_text_size"
                 tools:ignore="Autofill" />
 
             <EditText
                 android:id="@id/walkthrough_description"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="38dp"
                 android:layout_marginTop="12dp"
-                android:background="@drawable/input_background_alternative"
+                android:background="@drawable/input_rectangle_background_sheet"
                 android:hint="@string/walkthrough_description"
                 android:inputType="textUri"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:textColor="?color_dark"
                 android:textColorHint="?color_dark"
-                android:textSize="14sp"
+                android:textSize="@dimen/input_text_size"
                 tools:ignore="Autofill" />
 
             <EditText
                 android:id="@id/walkthrough_thumbnail"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="38dp"
                 android:layout_marginTop="12dp"
-                android:background="@drawable/input_background_alternative"
+                android:background="@drawable/input_rectangle_background_sheet"
                 android:hint="@string/walkthrough_thumbnail"
                 android:inputType="text"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:textColor="?color_dark"
                 android:textColorHint="?color_dark"
-                android:textSize="14sp"
+                android:textSize="@dimen/input_text_size"
                 tools:ignore="Autofill" />
 
             <Button
                 android:id="@id/add_walkthrough_button"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="38dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/input_background_alternative"
+                android:background="@drawable/button_primary"
                 android:text="@string/add_walkthrough"
                 android:textAllCaps="false"
-                android:textSize="14sp"
-                android:textColor="?color_dark" />
+                android:textSize="@dimen/input_text_size"
+                android:textColor="@color/color_white" />
 
         </LinearLayout>
 

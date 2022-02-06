@@ -62,7 +62,7 @@
                         android:inputType="text"
                         android:textColor="?color_dark"
                         android:textColorHint="?color_dark"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/input_text_size"
                         tools:ignore="Autofill" />
 
                     <ImageView

@@ -81,7 +81,7 @@
                         android:layout_marginBottom="15dp"
                         android:paddingEnd="15dp"
                         android:paddingBottom="10dp"
-                        android:visibility="gone">
+                        android:visibility="visible">
 
                         <ImageView
                             android:layout_width="35dp"
@@ -103,7 +103,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Regenerate Policies"
+                                android:text="@string/use_your_card"
                                 android:textColor="?color_dark"
                                 android:textStyle="bold"
                                 android:textSize="13sp" />
@@ -111,7 +111,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/have_us_customize_your_app_for_free"
+                                android:text="Generate your App's privacy policy automatically"
                                 android:textColor="?color_dark"
                                 android:textSize="12sp"
                                 tools:ignore="SmallSp" />
@@ -149,7 +149,7 @@
                         android:textColor="?color_dark"
                         android:textColorHint="?color_dark"
                         android:textDirection="locale"
-                        android:textSize="13sp"
+                        android:textSize="@dimen/input_text_size"
                         tools:ignore="Autofill,LabelFor" />
 
                     <Button
@@ -164,7 +164,7 @@
                         android:text="@string/update"
                         android:textAllCaps="false"
                         android:textColor="?color_light_separate"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/input_text_size" />
 
                 </LinearLayout>
 

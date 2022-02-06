@@ -32,11 +32,13 @@ public class ArticleOptionsBottomSheetModal extends BottomSheetDialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.article_options_bottom_sheet_modal, container, false);
 
-        // article details
+        // article title
         TextView articleTitle = view.findViewById(R.id.article_title);
-        TextView articleAuthor = view.findViewById(R.id.article_author);
         articleTitle.setText(requireArguments().getString("article_title"));
-        articleAuthor.setText(getString(R.string.posted_by) + " " + getArguments().getString("article_author"));
+
+        // article author
+        TextView articleAuthor = view.findViewById(R.id.article_author);
+        articleAuthor.setText(getString(R.string.posted_by) + " " + requireArguments().getString("article_author"));
 
         // facebook link
         view.findViewById(R.id.facebook_link).setOnClickListener(v -> IntentHandler.handleWeb(requireContext(), "https://facebook.com/PicassosTeam"));
@@ -49,7 +51,7 @@ public class ArticleOptionsBottomSheetModal extends BottomSheetDialogFragment {
 
         // copy link
         view.findViewById(R.id.copy_link).setOnClickListener(v -> {
-            String articleUrl = "https://console.themintapp.com/hc/en-us/articles?ai=" + getArguments().getInt("article_id") + "&s=" + getArguments().getString("article_title");
+            String articleUrl = "https://console.themintapp.com/hc/en-us/articles?ai=" + requireArguments().getInt("article_id") + "&s=" + requireArguments().getString("article_title");
             ClipboardManager clipboardManager = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData data = ClipData.newPlainText(requireArguments().getString("article_title"), articleUrl);
             clipboardManager.setPrimaryClip(data);

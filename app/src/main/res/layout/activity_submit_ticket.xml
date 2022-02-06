@@ -89,7 +89,7 @@
                     android:textColor="?color_dark"
                     android:textColorHint="?color_dark"
                     android:textDirection="locale"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/input_text_size"
                     tools:ignore="Autofill,LabelFor" />
 
                 <androidx.cardview.widget.CardView
@@ -110,7 +110,7 @@
                         android:paddingEnd="20dp"
                         android:text="@string/ticket_type"
                         android:textColor="?color_dark"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/input_text_size" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -131,7 +131,7 @@
                     android:textColor="?color_dark"
                     android:textColorHint="?color_dark"
                     android:textDirection="locale"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/input_text_size"
                     tools:ignore="Autofill,LabelFor" />
 
                 <Button
@@ -145,7 +145,7 @@
                     android:text="@string/open_ticket"
                     android:textAllCaps="false"
                     android:textColor="?color_light_separate"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/input_text_size" />
 
                 <TextView
                     android:id="@id/agreement_notice"
@@ -155,10 +155,9 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="20dp"
                     android:textColorLink="?color_dark"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/check_out_our_help_center_before_submitting_a_ticket_your_issue_has_probably_been_addressed_there_already"
                     android:textColor="?color_dark"
-                    android:textSize="11sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 

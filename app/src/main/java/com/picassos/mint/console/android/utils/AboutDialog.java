@@ -3,7 +3,6 @@ package com.picassos.mint.console.android.utils;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.FragmentManager;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -19,7 +18,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.picassos.mint.console.android.Config;
 import com.picassos.mint.console.android.R;
@@ -31,11 +29,7 @@ import com.picassos.mint.console.android.activities.LoginActivity;
 import com.picassos.mint.console.android.activities.about.AboutConsoleActivity;
 import com.picassos.mint.console.android.activities.about.ManageAccountActivity;
 import com.picassos.mint.console.android.activities.about.MyTicketsActivity;
-import com.picassos.mint.console.android.fragments.HomeFragment;
-import com.picassos.mint.console.android.room.APP_DATABASE;
-import com.picassos.mint.console.android.room.DAO;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
-import com.picassos.mint.console.android.sheets.ManageAccountsBottomSheetModal;
 
 public class AboutDialog extends Dialog {
     private final Activity activity;
@@ -57,8 +51,7 @@ public class AboutDialog extends Dialog {
         setCanceledOnTouchOutside(true);
 
         // dialog close
-        ImageView dialogClose = findViewById(R.id.dialog_close);
-        dialogClose.setOnClickListener(v -> dismiss());
+        findViewById(R.id.dialog_close).setOnClickListener(v -> dismiss());
 
         // username icon
         TextView usernameIcon = findViewById(R.id.username_profile);
@@ -70,10 +63,6 @@ public class AboutDialog extends Dialog {
 
         // manage account
         findViewById(R.id.manage_account).setOnClickListener(v -> getContext().startActivity(new Intent(getContext(), ManageAccountActivity.class)));
-        // switch account
-        findViewById(R.id.switch_account).setOnClickListener(v -> {
-            HomeFragment.getInstance().switchAccount();
-        });
 
         // switch project
         RelativeLayout switchProject = findViewById(R.id.switch_project);
@@ -140,9 +129,6 @@ public class AboutDialog extends Dialog {
 
         // sign out from account
         findViewById(R.id.logout).setOnClickListener(v -> {
-            DAO dao = APP_DATABASE.requestDatabase(getContext()).requestDAO();
-            dao.requestDeleteAccount(consolePreferences.loadToken());
-
             consolePreferences.setUsername("exception:error?username");
             consolePreferences.setEmail("exception:error?email");
             consolePreferences.setPackageName("exception:error?package_name");

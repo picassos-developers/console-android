@@ -1,6 +1,5 @@
 package com.picassos.mint.console.android.activities;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,6 +13,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.constants.RequestCodes;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.utils.Helper;
 import com.picassos.mint.console.android.utils.RequestDialog;
@@ -90,8 +90,7 @@ public class EditWalkthroughActivity extends AppCompatActivity {
                     response -> {
                         if (response.contains("walkthrough:callback?success")) {
                             Intent intent = new Intent();
-                            intent.putExtra("request", "update");
-                            setResult(Activity.RESULT_OK, intent);
+                            setResult(RequestCodes.REQUEST_UPDATE_WALKTRHOUGH_CODE, intent);
                             finish();
                         } else {
                             Toasto.show_toast(this, getString(R.string.unknown_issue), 0, 2);

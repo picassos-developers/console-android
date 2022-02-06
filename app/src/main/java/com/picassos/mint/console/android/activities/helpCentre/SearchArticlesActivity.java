@@ -44,11 +44,13 @@ import java.util.Objects;
 
 public class SearchArticlesActivity extends AppCompatActivity {
 
-    // Articles
-    private final List<Articles> articlesList = new ArrayList<>();
     // request dialog
     RequestDialog requestDialog;
+
+    // articles
+    private final List<Articles> articlesList = new ArrayList<>();
     private ArticlesAdapter articlesAdapter;
+
     private EditText searchBar;
 
     @SuppressLint("NotifyDataSetChanged")
@@ -89,7 +91,6 @@ public class SearchArticlesActivity extends AppCompatActivity {
                     articlesList.clear();
                     articlesAdapter.notifyDataSetChanged();
                     requestArticles(searchBar.getText().toString());
-
                 } else {
                     Toasto.show_toast(this, getString(R.string.search_empty), 0, 2);
                 }
@@ -106,7 +107,6 @@ public class SearchArticlesActivity extends AppCompatActivity {
             intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
             intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
             intent.putExtra(RecognizerIntent.EXTRA_PROMPT, getString(R.string.speak_articles));
-
             try {
                 startActivityForResult.launch(intent);
             } catch (Exception e) {
@@ -131,7 +131,7 @@ public class SearchArticlesActivity extends AppCompatActivity {
 
                         JSONArray array = obj.getJSONArray("articles");
 
-                        // Check if data are empty
+                        // check if articles are empty
                         if (array.length() == 0) {
                             findViewById(R.id.no_items).setVisibility(View.VISIBLE);
                         } else {
@@ -144,7 +144,6 @@ public class SearchArticlesActivity extends AppCompatActivity {
                             articlesList.add(articles);
                             articlesAdapter.notifyDataSetChanged();
                         }
-
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

@@ -5,10 +5,9 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import android.content.Context;
 
-import com.picassos.mint.console.android.entities.AccountEntity;
 import com.picassos.mint.console.android.entities.NotificationEntity;
 
-@Database(entities = {NotificationEntity.class, AccountEntity.class}, version = 1, exportSchema = false)
+@Database(entities = {NotificationEntity.class}, version = 1, exportSchema = false)
 public abstract class APP_DATABASE extends RoomDatabase {
     public abstract DAO requestDAO();
 

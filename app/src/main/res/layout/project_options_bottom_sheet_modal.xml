@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="12dp"
-            android:textSize="16sp"
+            android:textSize="@dimen/input_text_size"
             android:textColor="?color_dark"
             android:text="@string/project_options"/>
 
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="12dp"
-            android:textSize="16sp"
+            android:textSize="@dimen/input_text_size"
             android:textColor="?color_dark"
             android:text="@string/manage_credentials"/>
 

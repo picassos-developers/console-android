@@ -12,6 +12,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.picassos.mint.console.android.R;
@@ -23,10 +24,13 @@ import com.picassos.mint.console.android.activities.providers.VimeoActivity;
 import com.picassos.mint.console.android.activities.providers.WebviewActivity;
 import com.picassos.mint.console.android.activities.providers.WordpressActivity;
 import com.picassos.mint.console.android.activities.providers.YoutubeActivity;
+import com.picassos.mint.console.android.constants.RequestCodes;
+import com.picassos.mint.console.android.models.viewModel.SharedViewModel;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.utils.RequestDialog;
 
 public class ChooseProviderBottomSheetModal extends BottomSheetDialogFragment {
+    SharedViewModel sharedViewModel;
 
     View view;
     RequestDialog requestDialog;
@@ -102,9 +106,17 @@ public class ChooseProviderBottomSheetModal extends BottomSheetDialogFragment {
         }
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+    }
+
     ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
         if (result != null && result.getResultCode() == Activity.RESULT_OK) {
-
+            sharedViewModel.setRequestCode(RequestCodes.REQUEST_UPDATE_NAVIGATIONS);
+            dismiss();
         }
     });
 }

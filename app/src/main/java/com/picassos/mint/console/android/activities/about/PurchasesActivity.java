@@ -35,7 +35,7 @@ public class PurchasesActivity extends AppCompatActivity implements RedeemCodeBo
     private ConsolePreferences consolePreferences;
     private RequestDialog requestDialog;
 
-    // Purchases
+    // purchases
     private final List<Purchase> purchaseList = new ArrayList<>();
     private PurchasesAdapter purchasesAdapter;
 

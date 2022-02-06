@@ -6,15 +6,21 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
+import android.view.View;
 
 import com.picassos.mint.console.android.BuildConfig;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 
+import java.text.Normalizer;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
+import java.util.regex.Pattern;
 
 public class Helper {
     /**
@@ -94,5 +100,50 @@ public class Helper {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * set gradient background for view
+     * @param view for view
+     * @param color_start for color gradient start
+     * @param color_end for color gradient end
+     */
+    public static void setGradientBackground(View view, String color_start, String color_end) {
+        GradientDrawable gradientDrawable = new GradientDrawable(
+                GradientDrawable.Orientation.LEFT_RIGHT,
+                new int[] {Color.parseColor(color_start), Color.parseColor(color_end)});
+        gradientDrawable.setCornerRadius(0f);
+        view.setBackground(gradientDrawable);
+    }
+
+    /**
+     *
+     * @param context for context
+     * @param image_name for name of image in string format
+     * @return drawable
+     */
+    public static int getDrawableByName(Context context, String image_name) {
+        return context.getResources().getIdentifier(image_name, "drawable", context.getPackageName());
+    }
+
+    /**
+     * convert text to packagename format
+     * @param package_name for package name
+     * @return converted app package name
+     */
+    public static String toPackagenameFormat(String package_name) {
+        String nonWhiteSpace = Pattern.compile("[\\s]").matcher(package_name).replaceAll("_");
+        String normalized = Normalizer.normalize(nonWhiteSpace, Normalizer.Form.NFD);
+        String slug = Pattern.compile("[^\\w-]").matcher(normalized).replaceAll("");
+        return slug.toLowerCase(Locale.ENGLISH);
+    }
+
+    /**
+     * check if package name is valid
+     * @param package_name for package name
+     * @return validated package name
+     */
+    public static boolean validatePackagename(String package_name) {
+        return package_name.matches("^([A-Za-z]{1}[A-Za-z\\d_]*\\.)+[A-Za-z][A-Za-z\\d_]*$");
     }
 }

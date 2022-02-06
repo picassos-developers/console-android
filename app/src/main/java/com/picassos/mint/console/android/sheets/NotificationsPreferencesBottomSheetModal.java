@@ -27,8 +27,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class NotificationsPreferencesBottomSheetModal extends BottomSheetDialogFragment {
-
     View view;
+
     RequestDialog requestDialog;
     private ConsolePreferences consolePreferences;
 

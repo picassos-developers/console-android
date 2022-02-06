@@ -26,10 +26,10 @@ public class ResetPasswordActivity extends AppCompatActivity {
     // console preferences
     ConsolePreferences consolePreferences;
 
-    // Request Dialog
+    // request dialog
     private RequestDialog requestDialog;
 
-    // Fields
+    // fields
     private EditText newPassword;
     private EditText confirmPassword;
 

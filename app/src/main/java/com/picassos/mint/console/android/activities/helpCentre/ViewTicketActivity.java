@@ -33,7 +33,6 @@ import java.util.List;
 import java.util.Map;
 
 public class ViewTicketActivity extends AppCompatActivity {
-
     private RequestDialog requestDialog;
 
     // ticket details
@@ -83,7 +82,6 @@ public class ViewTicketActivity extends AppCompatActivity {
             if (refresh.isRefreshing()) {
                 refresh.setRefreshing(false);
             }
-
             requestTicket(ticketId);
             requestResponds();
         });
@@ -120,7 +118,6 @@ public class ViewTicketActivity extends AppCompatActivity {
                             ticketDetails.setText(getString(R.string.ticket_id) + " [" + object.getInt("ticket_id") + "] • " + object.getString("ticket_date"));
                             ticketDescription.setText(object.getString("ticket_message"));
                         }
-
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

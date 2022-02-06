@@ -77,36 +77,36 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/opened_tickets"
                             android:layout_marginStart="10dp"
                             android:fontFamily="@font/opensans_bold"
-                            android:textSize="12sp"
-                            android:textColor="?color_dark"
+                            android:text="@string/opened_tickets"
                             android:textAllCaps="true"
+                            android:textColor="?color_dark"
+                            android:textSize="12sp"
                             tools:ignore="SmallSp" />
 
                         <include
+                            layout="@layout/include_internet_connection"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            layout="@layout/include_internet_connection" />
+                            android:layout_marginTop="10dp" />
 
                         <androidx.cardview.widget.CardView
                             android:id="@id/no_items"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
                             app:cardBackgroundColor="?color_light_separate"
                             app:cardCornerRadius="15dp"
-                            app:cardElevation="0dp"
-                            android:layout_marginTop="10dp"
-                            android:visibility="gone">
+                            app:cardElevation="0dp">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="20dp"
-                                android:textAlignment="center"
                                 android:text="@string/you_don_t_have_any_opened_tickets_click_to_add_a_new_one"
+                                android:textAlignment="center"
                                 android:textColor="?color_dark" />
 
                         </androidx.cardview.widget.CardView>
@@ -116,8 +116,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginBottom="20dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
                             android:visibility="visible" />
 
                     </LinearLayout>

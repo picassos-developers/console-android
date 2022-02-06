@@ -19,20 +19,15 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.picassos.mint.console.android.Config;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.activities.store.ViewProductActivity;
-import com.picassos.mint.console.android.adapter.AffiliateProductsAdapter;
 import com.picassos.mint.console.android.adapter.ProductsAdapter;
 import com.picassos.mint.console.android.constants.API;
 import com.picassos.mint.console.android.libraries.showcaseview.GuideView;
 import com.picassos.mint.console.android.libraries.showcaseview.config.DismissType;
 import com.picassos.mint.console.android.libraries.showcaseview.config.Gravity;
 import com.picassos.mint.console.android.models.Product;
-import com.picassos.mint.console.android.models.ProductAffiliate;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
-import com.picassos.mint.console.android.sheets.AffiliateProductDetailsBottomSheetModal;
-import com.picassos.mint.console.android.sheets.ManageAccountsBottomSheetModal;
 import com.picassos.mint.console.android.utils.AboutDialog;
 import com.picassos.mint.console.android.utils.RequestDialog;
 
@@ -56,10 +51,6 @@ public class StoreFragment extends Fragment {
     // Product
     private final List<Product> productList = new ArrayList<>();
     private ProductsAdapter productsAdapter;
-
-    // Affiliate Product
-    private final List<ProductAffiliate> productAffiliateList = new ArrayList<>();
-    private AffiliateProductsAdapter affiliateProductsAdapter;
 
     // fonts
     private Typeface title, content;
@@ -96,11 +87,6 @@ public class StoreFragment extends Fragment {
             AboutDialog aboutDialog = new AboutDialog(requireContext(), getActivity());
             aboutDialog.show();
         });
-        view.findViewById(R.id.open_profile).setOnLongClickListener(v -> {
-            ManageAccountsBottomSheetModal manageAccountsBottomSheetModal = new ManageAccountsBottomSheetModal();
-            manageAccountsBottomSheetModal.show(getChildFragmentManager(), "TAG");
-            return true;
-        });
 
         // Initialize store recyclerview
         RecyclerView storeRecyclerview = view.findViewById(R.id.recycler_store);
@@ -117,26 +103,6 @@ public class StoreFragment extends Fragment {
         // request products
         requestProducts();
 
-        // Initialize affiliate recyclerview
-        RecyclerView affiliateRecyclerview = view.findViewById(R.id.recycler_affiliate);
-
-        affiliateProductsAdapter = new AffiliateProductsAdapter(productAffiliateList, click -> {
-            bundle.putString("thumbnail", click.getImage_preview());
-            bundle.putString("title", click.getTitle());
-            bundle.putFloat("rating", click.getRating());
-            bundle.putInt("price", click.getPrice() / 100);
-            bundle.putString("url", click.getUrl());
-            AffiliateProductDetailsBottomSheetModal affiliateProductDetailsBottomSheetModal = new AffiliateProductDetailsBottomSheetModal();
-            affiliateProductDetailsBottomSheetModal.setArguments(bundle);
-            affiliateProductDetailsBottomSheetModal.show(getChildFragmentManager(), "TAG");
-        });
-
-        affiliateRecyclerview.setAdapter(affiliateProductsAdapter);
-        affiliateRecyclerview.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
-
-        // request affiliate products
-        requestAffiliateProducts();
-
         // Refresh Layout
         SwipeRefreshLayout refresh = view.findViewById(R.id.refresh_layout);
         refresh.setOnRefreshListener(() -> {
@@ -144,55 +110,7 @@ public class StoreFragment extends Fragment {
                 refresh.setRefreshing(false);
             }
             requestProducts();
-            requestAffiliateProducts();
         });
-    }
-
-    /**
-     * request affiliate products
-     */
-    @SuppressLint("NotifyDataSetChanged")
-    private void requestAffiliateProducts() {
-        productAffiliateList.clear();
-        affiliateProductsAdapter.notifyDataSetChanged();
-        requestDialog.show();
-        view.findViewById(R.id.store_container).setVisibility(View.VISIBLE);
-        view.findViewById(R.id.internet_connection).setVisibility(View.GONE);
-        StringRequest request = new StringRequest(Request.Method.GET, "https://api.envato.com/v3/market/user/collection?id=" + Config.ENVATO_COLLECTION_ID,
-                response -> {
-                    try {
-                        JSONObject obj = new JSONObject(response);
-                        JSONArray array = obj.getJSONArray("items");
-
-                        for (int i = 0; i < array.length(); i++) {
-                            JSONObject object = array.getJSONObject(i);
-
-                            ProductAffiliate productAffiliate = new ProductAffiliate(object.getInt("id"), object.getString("name"), object.getInt("number_of_sales"), object.getString("url"), object.getString("updated_at"), object.getString("description"), object.getInt("price_cents"), (float) object.getDouble("rating"), object.getInt("rating_count"), object.getString("published_at"), object.getJSONObject("previews").getJSONObject("landscape_preview").getString("landscape_url"));
-                            productAffiliateList.add(productAffiliate);
-                            affiliateProductsAdapter.notifyDataSetChanged();
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    requestDialog.dismiss();
-                }, error -> {
-            requestDialog.dismiss();
-            view.findViewById(R.id.store_container).setVisibility(View.GONE);
-            view.findViewById(R.id.internet_connection).setVisibility(View.VISIBLE);
-            view.findViewById(R.id.try_again).setOnClickListener(v -> {
-                requestProducts();
-                requestAffiliateProducts();
-            });
-        }) {
-            @Override
-            public Map<String, String> getHeaders() {
-                HashMap<String, String> headers = new HashMap<>();
-                headers.put("Authorization", "Bearer " + Config.ENVATO_PERSONAL_TOKEN);
-                return headers;
-            }
-        };
-
-        Volley.newRequestQueue(requireActivity().getApplicationContext()).add(request);
     }
 
     /**
@@ -227,10 +145,7 @@ public class StoreFragment extends Fragment {
                 requestDialog.dismiss();
                 view.findViewById(R.id.store_container).setVisibility(View.GONE);
                 view.findViewById(R.id.internet_connection).setVisibility(View.VISIBLE);
-                view.findViewById(R.id.try_again).setOnClickListener(v -> {
-                    requestProducts();
-                    requestAffiliateProducts();
-                });
+                view.findViewById(R.id.try_again).setOnClickListener(v -> requestProducts());
         }) {
             @Override
             protected Map<String, String> getParams() {

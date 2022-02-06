@@ -1,7 +1,6 @@
 package com.picassos.mint.console.android.sheets;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +20,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.activities.helpCentre.EditCommentActivity;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.constants.RequestCodes;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.utils.RequestDialog;
 import com.picassos.mint.console.android.utils.Toasto;
@@ -44,9 +44,6 @@ public class CommentOptionsBottomSheetModal extends BottomSheetDialogFragment {
 
     OnRemoveListener onRemoveListener;
     OnUpdateListener onUpdateListener;
-
-    public static final int REQUEST_REMOVE_COMMENT_CODE = 1;
-    public static final int REQUEST_UPDATE_COMMENT_CODE = 2;
 
     public CommentOptionsBottomSheetModal() {
 
@@ -115,7 +112,7 @@ public class CommentOptionsBottomSheetModal extends BottomSheetDialogFragment {
         StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_REMOVE_COMMENT,
                 response -> {
                     if (response.equals("200")) {
-                        onRemoveListener.onRemoveListener(REQUEST_REMOVE_COMMENT_CODE);
+                        onRemoveListener.onRemoveListener(RequestCodes.REQUEST_REMOVE_COMMENT_CODE);
                         dismiss();
                     } else {
                         Toasto.show_toast(requireActivity().getApplicationContext(), requireActivity().getString(R.string.unknown_issue), 1, 2);
@@ -138,9 +135,11 @@ public class CommentOptionsBottomSheetModal extends BottomSheetDialogFragment {
     }
 
     ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
-        if (result != null && result.getResultCode() == Activity.RESULT_OK) {
-            onUpdateListener.onUpdateListener(REQUEST_UPDATE_COMMENT_CODE);
-            dismiss();
+        if (result != null) {
+            if (result.getResultCode() == RequestCodes.REQUEST_UPDATE_COMMENT_CODE) {
+                onUpdateListener.onUpdateListener(RequestCodes.REQUEST_UPDATE_COMMENT_CODE);
+                dismiss();
+            }
         }
     });
 }

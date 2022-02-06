@@ -1,136 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
     android:background="?color_background">
 
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:padding="30dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@id/go_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rectangle"
+            android:padding="11dp"
+            android:src="@drawable/icon_back"
+            app:tint="?color_dark"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="30dp"
+            android:layout_below="@id/go_back"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:src="?header_logo"
-                tools:ignore="ContentDescription" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/welcome_back"
+                android:textColor="?color_dark"
+                android:textSize="20sp" />
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/sign_into_your_mynta_account_to_continue"
+                android:textColor="?color_dark"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@id/email"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="bottom"
-                android:orientation="vertical">
+                android:layout_height="45dp"
+                android:background="@drawable/input_rectangle_background"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:layoutDirection="ltr"
+                android:maxLines="1"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textSize="@dimen/input_text_size"
+                tools:ignore="Autofill,RtlSymmetry,SmallSp,TextFields" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:fontFamily="@font/poppins_bold"
-                    android:text="@string/signin"
-                    android:textColor="?color_dark"
-                    android:textSize="17sp" />
+            <EditText
+                android:id="@id/password"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_rectangle_background"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:layoutDirection="ltr"
+                android:maxLines="1"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textSize="@dimen/input_text_size"
+                tools:ignore="Autofill,RtlSymmetry,SmallSp,TextFields" />
 
-                <EditText
-                    android:id="@id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/input_rectangle_background"
-                    android:hint="@string/email"
-                    android:inputType="textEmailAddress"
-                    android:layoutDirection="ltr"
-                    android:maxLines="1"
-                    android:paddingStart="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:textColor="?color_dark"
-                    android:textColorHint="?color_dark"
-                    android:textSize="14sp"
-                    tools:ignore="Autofill,RtlSymmetry,SmallSp,TextFields" />
+            <Button
+                android:id="@id/login"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/button_primary"
+                android:text="@string/signin"
+                android:layout_marginTop="15dp"
+                android:textAllCaps="false"
+                android:enabled="false"
+                android:textColor="?color_light_separate"
+                android:textSize="@dimen/input_text_size" />
 
-                <EditText
-                    android:id="@id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/input_rectangle_background"
-                    android:hint="@string/password"
-                    android:inputType="textPassword"
-                    android:layoutDirection="ltr"
-                    android:maxLines="1"
-                    android:paddingStart="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:textColor="?color_dark"
-                    android:textColorHint="?color_dark"
-                    android:textSize="14sp"
-                    tools:ignore="Autofill,RtlSymmetry,SmallSp,TextFields" />
+            <Button
+                android:id="@id/qr_login"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/input_background_primary"
+                android:text="@string/signin_with_qr"
+                android:textAllCaps="false"
+                android:textColor="?color_light_separate"
+                android:textSize="@dimen/input_text_size" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@id/recycler_accounts"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp" />
-
-                <Button
-                    android:id="@id/login"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/input_background_primary"
-                    android:text="@string/signin"
-                    android:textAllCaps="false"
-                    android:textColor="?color_light_separate"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@id/qr_login"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/input_background_primary"
-                    android:text="@string/signin_with_qr"
-                    android:textAllCaps="false"
-                    android:textColor="?color_light_separate"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@id/forgot_password"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/forgot_your_password"
-                    android:textColor="?color_dark"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@id/register"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/don_t_have_an_account_register"
-                    android:textColor="?color_dark"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
+            <TextView
+                android:id="@id/forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="end"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/forgot_your_password"
+                android:textColor="?color_dark"
+                android:textSize="13sp" />
 
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
 
-</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

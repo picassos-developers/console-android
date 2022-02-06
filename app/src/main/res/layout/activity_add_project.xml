@@ -1,124 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?color_background">
 
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingTop="20dp">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@id/go_back"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    app:cardBackgroundColor="?color_grey"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="6dp"
+                        android:src="@drawable/icon_back"
+                        app:tint="?color_dark"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.shuhart.stepview.StepView
+                    android:id="@+id/step_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:sv_animationType="All"
+                    app:sv_doneCircleColor="@color/color_blue"
+                    app:sv_doneCircleRadius="12dp"
+                    app:sv_doneStepLineColor="@color/color_blue"
+                    app:sv_doneStepMarkColor="@color/color_white"
+                    app:sv_nextStepLineColor="?color_grey"
+                    app:sv_nextTextColor="@color/color_white"
+                    app:sv_selectedCircleColor="?color_grey"
+                    app:sv_selectedCircleRadius="12dp"
+                    app:sv_selectedStepNumberColor="?color_dark"
+                    app:sv_stepLineWidth="1dp"
+                    app:sv_stepNumberTextSize="12sp"
+                    app:sv_stepPadding="4dp"
+                    app:sv_stepViewStyle="@style/StepView" />
+
+            </LinearLayout>
 
             <TextView
+                android:id="@id/current_step"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/add_project"
+                android:layout_margin="7dp"
+                android:alpha=".7"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Step 1 of 5"
                 android:textColor="?color_dark"
-                android:textSize="19sp" />
-
-            <EditText
-                android:id="@id/project_name"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/input_rectangle_background"
-                android:hint="@string/project_name"
-                android:inputType="text"
-                android:layoutDirection="ltr"
-                android:maxLines="1"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textColor="?color_dark"
-                android:textColorHint="?color_dark"
-                android:textSize="14sp"
-                tools:ignore="Autofill,TextFields" />
-
-            <EditText
-                android:id="@id/project_purchasecode"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/input_rectangle_background"
-                android:hint="@string/project_purchasecode"
-                android:inputType="text"
-                android:paddingEnd="20dp"
-                android:layoutDirection="ltr"
-                android:maxLines="1"
-                android:paddingStart="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textColor="?color_dark"
-                android:textColorHint="?color_dark"
-                android:textSize="14sp"
-                tools:ignore="Autofill,SmallSp,TextFields" />
-
-            <EditText
-                android:id="@id/project_packagename"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/input_rectangle_background"
-                android:hint="@string/project_packagename"
-                android:inputType="text"
-                android:paddingEnd="20dp"
-                android:layoutDirection="ltr"
-                android:maxLines="1"
-                android:paddingStart="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textColor="?color_dark"
-                android:textColorHint="?color_dark"
-                android:textSize="14sp"
-                tools:ignore="Autofill,SmallSp,TextFields" />
-
-            <Button
-                android:id="@id/add_project"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/input_background_primary"
-                android:text="@string/create_project"
-                android:textAllCaps="false"
-                android:textColor="?color_light_separate"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@id/visit_product"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/the_purchase_code_is_acquired_when_you_purchase_mint_haven_t_purchased_get_mint_here"
-                android:layout_marginStart="30dp"
-                android:textColorLink="@color/color_blue"
-                android:layout_marginEnd="30dp"
-                android:textAlignment="center"
-                android:textColor="?color_dark"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
+        <FrameLayout
+            android:id="@id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-</RelativeLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

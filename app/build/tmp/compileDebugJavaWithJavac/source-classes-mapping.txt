@@ -6,6 +6,9 @@ com/picassos/mint/console/android/interfaces/OnSectionClickListener.java
 com/picassos/mint/console/android/activities/ProjectsActivity.java
  com.picassos.mint.console.android.activities.ProjectsActivity
  com.picassos.mint.console.android.activities.ProjectsActivity$1
+com/picassos/mint/console/android/activities/MembersActivity.java
+ com.picassos.mint.console.android.activities.MembersActivity
+ com.picassos.mint.console.android.activities.MembersActivity$1
 com/picassos/mint/console/android/activities/RegisterActivity.java
  com.picassos.mint.console.android.activities.RegisterActivity
  com.picassos.mint.console.android.activities.RegisterActivity$1
@@ -31,7 +34,6 @@ com/picassos/mint/console/android/fragments/NavigationFragment.java
  com.picassos.mint.console.android.fragments.NavigationFragment
  com.picassos.mint.console.android.fragments.NavigationFragment$1
  com.picassos.mint.console.android.fragments.NavigationFragment$2
- com.picassos.mint.console.android.fragments.NavigationFragment$3
 com/picassos/mint/console/android/sheets/PaymentMethodBottomSheetModal.java
  com.picassos.mint.console.android.sheets.PaymentMethodBottomSheetModal
  com.picassos.mint.console.android.sheets.PaymentMethodBottomSheetModal$OnSelectListener
@@ -49,25 +51,24 @@ com/picassos/mint/console/android/activities/LoginProvidersActivity.java
  com.picassos.mint.console.android.activities.LoginProvidersActivity
  com.picassos.mint.console.android.activities.LoginProvidersActivity$1
  com.picassos.mint.console.android.activities.LoginProvidersActivity$2
+com/picassos/mint/console/android/models/ThemeStyles.java
+ com.picassos.mint.console.android.models.ThemeStyles
 com/picassos/mint/console/android/activities/NotificationsActivity.java
  com.picassos.mint.console.android.activities.NotificationsActivity
  com.picassos.mint.console.android.activities.NotificationsActivity$1GetNotificationsTask
+com/picassos/mint/console/android/sheets/MemberDetailsBottomSheetModal.java
+ com.picassos.mint.console.android.sheets.MemberDetailsBottomSheetModal
+ com.picassos.mint.console.android.sheets.MemberDetailsBottomSheetModal$1
+ com.picassos.mint.console.android.sheets.MemberDetailsBottomSheetModal$2
+ com.picassos.mint.console.android.sheets.MemberDetailsBottomSheetModal$OnDeleteListener
 com/picassos/mint/console/android/interfaces/OnWizardLongClickListener.java
  com.picassos.mint.console.android.interfaces.OnWizardLongClickListener
 com/picassos/mint/console/android/interfaces/OnTicketTypeClickListener.java
  com.picassos.mint.console.android.interfaces.OnTicketTypeClickListener
-com/picassos/mint/console/android/sheets/UserDetailsBottomSheetModal.java
- com.picassos.mint.console.android.sheets.UserDetailsBottomSheetModal
- com.picassos.mint.console.android.sheets.UserDetailsBottomSheetModal$1
- com.picassos.mint.console.android.sheets.UserDetailsBottomSheetModal$2
- com.picassos.mint.console.android.sheets.UserDetailsBottomSheetModal$OnDeleteListener
 com/picassos/mint/console/android/models/TicketType.java
  com.picassos.mint.console.android.models.TicketType
 com/picassos/mint/console/android/bottomNavigation/BottomNavigationViewBehavior.java
  com.picassos.mint.console.android.bottomNavigation.BottomNavigationViewBehavior
-com/picassos/mint/console/android/adapter/StepAccountsAdapter.java
- com.picassos.mint.console.android.adapter.StepAccountsAdapter
- com.picassos.mint.console.android.adapter.StepAccountsAdapter$AccountsHolder
 com/picassos/mint/console/android/fragments/HelpCentreFragment.java
  com.picassos.mint.console.android.fragments.HelpCentreFragment
  com.picassos.mint.console.android.fragments.HelpCentreFragment$1
@@ -83,9 +84,11 @@ com/picassos/mint/console/android/sheets/AddWalkthroughBottomSheetModal.java
  com.picassos.mint.console.android.sheets.AddWalkthroughBottomSheetModal
  com.picassos.mint.console.android.sheets.AddWalkthroughBottomSheetModal$1
  com.picassos.mint.console.android.sheets.AddWalkthroughBottomSheetModal$OnAddListener
-com/picassos/mint/console/android/activities/ManageUsersActivity.java
- com.picassos.mint.console.android.activities.ManageUsersActivity
- com.picassos.mint.console.android.activities.ManageUsersActivity$1
+com/picassos/mint/console/android/interfaces/OnThemeStyleClickListener.java
+ com.picassos.mint.console.android.interfaces.OnThemeStyleClickListener
+com/picassos/mint/console/android/sheets/CustomThemeBottomSheetModal.java
+ com.picassos.mint.console.android.sheets.CustomThemeBottomSheetModal
+ com.picassos.mint.console.android.sheets.CustomThemeBottomSheetModal$OnChooseThemeListener
 com/picassos/mint/console/android/utils/IntentHandler.java
  com.picassos.mint.console.android.utils.IntentHandler
 com/picassos/mint/console/android/interfaces/OnNavigationStateListener.java
@@ -93,6 +96,9 @@ com/picassos/mint/console/android/interfaces/OnNavigationStateListener.java
 com/picassos/mint/console/android/activities/ClaimGiftActivity.java
  com.picassos.mint.console.android.activities.ClaimGiftActivity
  com.picassos.mint.console.android.activities.ClaimGiftActivity$1
+com/picassos/mint/console/android/sheets/EditPackageNameCodeBottomSheetModal.java
+ com.picassos.mint.console.android.sheets.EditPackageNameCodeBottomSheetModal
+ com.picassos.mint.console.android.sheets.EditPackageNameCodeBottomSheetModal$1
 com/picassos/mint/console/android/activities/providers/VimeoActivity.java
  com.picassos.mint.console.android.activities.providers.VimeoActivity
  com.picassos.mint.console.android.activities.providers.VimeoActivity$1
@@ -108,6 +114,11 @@ com/picassos/mint/console/android/activities/providers/YoutubeActivity.java
  com.picassos.mint.console.android.activities.providers.YoutubeActivity$1
  com.picassos.mint.console.android.activities.providers.YoutubeActivity$2
  com.picassos.mint.console.android.activities.providers.YoutubeActivity$3
+com/picassos/mint/console/android/activities/addProject/fragments/Fragment4.java
+ com.picassos.mint.console.android.activities.addProject.fragments.Fragment4
+com/picassos/mint/console/android/adapter/MembersAdapter.java
+ com.picassos.mint.console.android.adapter.MembersAdapter
+ com.picassos.mint.console.android.adapter.MembersAdapter$MembersHolder
 com/picassos/mint/console/android/activities/helpCentre/SearchArticlesActivity.java
  com.picassos.mint.console.android.activities.helpCentre.SearchArticlesActivity
  com.picassos.mint.console.android.activities.helpCentre.SearchArticlesActivity$1
@@ -116,7 +127,6 @@ com/picassos/mint/console/android/activities/GetStartedActivity.java
  com.picassos.mint.console.android.activities.GetStartedActivity$1
 com/picassos/mint/console/android/activities/AddProjectActivity.java
  com.picassos.mint.console.android.activities.AddProjectActivity
- com.picassos.mint.console.android.activities.AddProjectActivity$1
 com/picassos/mint/console/android/room/APP_DATABASE.java
  com.picassos.mint.console.android.room.APP_DATABASE
 com/picassos/mint/console/android/adapter/TicketsAdapter.java
@@ -131,17 +141,14 @@ com/picassos/mint/console/android/fragments/HomeFragment.java
  com.picassos.mint.console.android.fragments.HomeFragment
  com.picassos.mint.console.android.fragments.HomeFragment$1
  com.picassos.mint.console.android.fragments.HomeFragment$2
- com.picassos.mint.console.android.fragments.HomeFragment$3
 com/picassos/mint/console/android/models/LoadingSpinners.java
  com.picassos.mint.console.android.models.LoadingSpinners
 com/picassos/mint/console/android/activities/LoginActivity.java
  com.picassos.mint.console.android.activities.LoginActivity
  com.picassos.mint.console.android.activities.LoginActivity$1
- com.picassos.mint.console.android.activities.LoginActivity$1GetAccountsTask
  com.picassos.mint.console.android.activities.LoginActivity$2
  com.picassos.mint.console.android.activities.LoginActivity$3
-com/picassos/mint/console/android/interfaces/OnUserClickListener.java
- com.picassos.mint.console.android.interfaces.OnUserClickListener
+ com.picassos.mint.console.android.activities.LoginActivity$4
 com/picassos/mint/console/android/sheets/ProviderOptionsBottomSheetModal.java
  com.picassos.mint.console.android.sheets.ProviderOptionsBottomSheetModal
  com.picassos.mint.console.android.sheets.ProviderOptionsBottomSheetModal$1
@@ -160,19 +167,12 @@ com/picassos/mint/console/android/activities/about/ManageAccountActivity.java
  com.picassos.mint.console.android.activities.about.ManageAccountActivity$2
 com/picassos/mint/console/android/models/Tickets.java
  com.picassos.mint.console.android.models.Tickets
-com/picassos/mint/console/android/models/ProductAffiliate.java
- com.picassos.mint.console.android.models.ProductAffiliate
 com/picassos/mint/console/android/constants/API.java
  com.picassos.mint.console.android.constants.API
 com/picassos/mint/console/android/adapter/GetStartedAdapter.java
  com.picassos.mint.console.android.adapter.GetStartedAdapter
 com/picassos/mint/console/android/sheets/ChooseProviderBottomSheetModal.java
  com.picassos.mint.console.android.sheets.ChooseProviderBottomSheetModal
-com/picassos/mint/console/android/sheets/NavigationOptionsBottomSheetModal.java
- com.picassos.mint.console.android.sheets.NavigationOptionsBottomSheetModal
- com.picassos.mint.console.android.sheets.NavigationOptionsBottomSheetModal$1
-com/picassos/mint/console/android/models/Accounts.java
- com.picassos.mint.console.android.models.Accounts
 com/picassos/mint/console/android/interfaces/OnProductClickListener.java
  com.picassos.mint.console.android.interfaces.OnProductClickListener
 com/picassos/mint/console/android/activities/about/UpdatePasswordActivity.java
@@ -205,14 +205,13 @@ com/picassos/mint/console/android/activities/EditProjectActivity.java
  com.picassos.mint.console.android.activities.EditProjectActivity$1
 com/picassos/mint/console/android/interfaces/OnProviderClickListener.java
  com.picassos.mint.console.android.interfaces.OnProviderClickListener
-com/picassos/mint/console/android/sheets/AddNavigationBottomSheetModal.java
- com.picassos.mint.console.android.sheets.AddNavigationBottomSheetModal
- com.picassos.mint.console.android.sheets.AddNavigationBottomSheetModal$1
 com/picassos/mint/console/android/adapter/MapStylesAdapter.java
  com.picassos.mint.console.android.adapter.MapStylesAdapter
  com.picassos.mint.console.android.adapter.MapStylesAdapter$MapsHolder
 com/picassos/mint/console/android/models/Packages.java
  com.picassos.mint.console.android.models.Packages
+com/picassos/mint/console/android/models/Members.java
+ com.picassos.mint.console.android.models.Members
 com/picassos/mint/console/android/activities/about/fragments/OpenedTicketsFragment.java
  com.picassos.mint.console.android.activities.about.fragments.OpenedTicketsFragment
  com.picassos.mint.console.android.activities.about.fragments.OpenedTicketsFragment$1
@@ -226,8 +225,6 @@ com/picassos/mint/console/android/adapter/ProvidersAdapter.java
  com.picassos.mint.console.android.adapter.ProvidersAdapter$ProvidersHolder
 com/picassos/mint/console/android/activities/manageAds/ManageAdsActivity.java
  com.picassos.mint.console.android.activities.manageAds.ManageAdsActivity
-com/picassos/mint/console/android/interfaces/OnAccountClickListener.java
- com.picassos.mint.console.android.interfaces.OnAccountClickListener
 com/picassos/mint/console/android/models/NotificationTarget.java
  com.picassos.mint.console.android.models.NotificationTarget
 com/picassos/mint/console/android/activities/about/PurchasesActivity.java
@@ -239,8 +236,6 @@ com/picassos/mint/console/android/models/ServerStatus.java
  com.picassos.mint.console.android.models.ServerStatus
 com/picassos/mint/console/android/libraries/passwordstrength/PasswordStrength.java
  com.picassos.mint.console.android.libraries.passwordstrength.PasswordStrength
-com/picassos/mint/console/android/models/Users.java
- com.picassos.mint.console.android.models.Users
 com/picassos/mint/console/android/models/Product.java
  com.picassos.mint.console.android.models.Product
 com/picassos/mint/console/android/activities/SplashActivity.java
@@ -270,6 +265,8 @@ com/picassos/mint/console/android/activities/providers/WordpressActivity.java
  com.picassos.mint.console.android.activities.providers.WordpressActivity$1
  com.picassos.mint.console.android.activities.providers.WordpressActivity$2
  com.picassos.mint.console.android.activities.providers.WordpressActivity$3
+com/picassos/mint/console/android/activities/addProject/fragments/AddFirstContentProviderFragment.java
+ com.picassos.mint.console.android.activities.addProject.fragments.AddFirstContentProviderFragment
 com/picassos/mint/console/android/sheets/RedeemCodeBottomSheetModal.java
  com.picassos.mint.console.android.sheets.RedeemCodeBottomSheetModal
  com.picassos.mint.console.android.sheets.RedeemCodeBottomSheetModal$1
@@ -285,9 +282,6 @@ com/picassos/mint/console/android/sheets/NotificationsPreferencesBottomSheetModa
 com/picassos/mint/console/android/activities/store/powerups/customdarkmode/SetupCustomDarkModeActivity.java
  com.picassos.mint.console.android.activities.store.powerups.customdarkmode.SetupCustomDarkModeActivity
  com.picassos.mint.console.android.activities.store.powerups.customdarkmode.SetupCustomDarkModeActivity$1
-com/picassos/mint/console/android/adapter/AccountsAdapter.java
- com.picassos.mint.console.android.adapter.AccountsAdapter
- com.picassos.mint.console.android.adapter.AccountsAdapter$AccountsHolder
 com/picassos/mint/console/android/models/wordpress/PostDesigns.java
  com.picassos.mint.console.android.models.wordpress.PostDesigns
 com/picassos/mint/console/android/models/Sections.java
@@ -299,6 +293,8 @@ com/picassos/mint/console/android/interfaces/OnArticleClickListener.java
 com/picassos/mint/console/android/activities/manageAds/SetGoogleAdmobActivity.java
  com.picassos.mint.console.android.activities.manageAds.SetGoogleAdmobActivity
  com.picassos.mint.console.android.activities.manageAds.SetGoogleAdmobActivity$1
+com/picassos/mint/console/android/interfaces/OnAppCategoryClickListener.java
+ com.picassos.mint.console.android.interfaces.OnAppCategoryClickListener
 com/picassos/mint/console/android/activities/CheckStatusActivity.java
  com.picassos.mint.console.android.activities.CheckStatusActivity
  com.picassos.mint.console.android.activities.CheckStatusActivity$1
@@ -309,6 +305,10 @@ com/picassos/mint/console/android/interfaces/OnWordPressCategoryClickListener.ja
  com.picassos.mint.console.android.interfaces.OnWordPressCategoryClickListener
 com/picassos/mint/console/android/activities/ThemeStyleActivity.java
  com.picassos.mint.console.android.activities.ThemeStyleActivity
+ com.picassos.mint.console.android.activities.ThemeStyleActivity$1
+ com.picassos.mint.console.android.activities.ThemeStyleActivity$2
+ com.picassos.mint.console.android.activities.ThemeStyleActivity$3
+ com.picassos.mint.console.android.activities.ThemeStyleActivity$4
 com/picassos/mint/console/android/models/Notification.java
  com.picassos.mint.console.android.models.Notification
 com/picassos/mint/console/android/activities/about/fragments/ClosedTicketsFragment.java
@@ -338,6 +338,8 @@ com/picassos/mint/console/android/sheets/CommentOptionsBottomSheetModal.java
  com.picassos.mint.console.android.sheets.CommentOptionsBottomSheetModal$1
  com.picassos.mint.console.android.sheets.CommentOptionsBottomSheetModal$OnRemoveListener
  com.picassos.mint.console.android.sheets.CommentOptionsBottomSheetModal$OnUpdateListener
+com/picassos/mint/console/android/models/AppCategory.java
+ com.picassos.mint.console.android.models.AppCategory
 com/picassos/mint/console/android/activities/helpCentre/ViewArticleActivity.java
  com.picassos.mint.console.android.activities.helpCentre.ViewArticleActivity
  com.picassos.mint.console.android.activities.helpCentre.ViewArticleActivity$1
@@ -352,8 +354,6 @@ com/picassos/mint/console/android/activities/PoliciesActivity.java
  com.picassos.mint.console.android.activities.PoliciesActivity
  com.picassos.mint.console.android.activities.PoliciesActivity$1
  com.picassos.mint.console.android.activities.PoliciesActivity$2
-com/picassos/mint/console/android/entities/AccountEntity.java
- com.picassos.mint.console.android.entities.AccountEntity
 com/picassos/mint/console/android/activities/ControllerActivity.java
  com.picassos.mint.console.android.activities.ControllerActivity
  com.picassos.mint.console.android.activities.ControllerActivity$1
@@ -368,27 +368,20 @@ com/picassos/mint/console/android/utils/Toasto.java
  com.picassos.mint.console.android.utils.Toasto
 com/picassos/mint/console/android/sheets/LearnMoreBottomSheetModal.java
  com.picassos.mint.console.android.sheets.LearnMoreBottomSheetModal
-com/picassos/mint/console/android/sheets/ManageAccountsBottomSheetModal.java
- com.picassos.mint.console.android.sheets.ManageAccountsBottomSheetModal
- com.picassos.mint.console.android.sheets.ManageAccountsBottomSheetModal$1GetAccountsTask
+com/picassos/mint/console/android/models/viewModel/SharedViewModel.java
+ com.picassos.mint.console.android.models.viewModel.SharedViewModel
 com/picassos/mint/console/android/fragments/StoreFragment.java
  com.picassos.mint.console.android.fragments.StoreFragment
  com.picassos.mint.console.android.fragments.StoreFragment$1
- com.picassos.mint.console.android.fragments.StoreFragment$2
 com/picassos/mint/console/android/interfaces/OnCommentLongClickListener.java
  com.picassos.mint.console.android.interfaces.OnCommentLongClickListener
 com/picassos/mint/console/android/BuildConfig.java
  com.picassos.mint.console.android.BuildConfig
-com/picassos/mint/console/android/sheets/AffiliateProductDetailsBottomSheetModal.java
- com.picassos.mint.console.android.sheets.AffiliateProductDetailsBottomSheetModal
 com/picassos/mint/console/android/libraries/showcaseview/config/DismissType.java
  com.picassos.mint.console.android.libraries.showcaseview.config.DismissType
 com/picassos/mint/console/android/adapter/wordpress/CategoryStylesAdapter.java
  com.picassos.mint.console.android.adapter.wordpress.CategoryStylesAdapter
  com.picassos.mint.console.android.adapter.wordpress.CategoryStylesAdapter$CategoryDesignsHolder
-com/picassos/mint/console/android/adapter/AffiliateProductsAdapter.java
- com.picassos.mint.console.android.adapter.AffiliateProductsAdapter
- com.picassos.mint.console.android.adapter.AffiliateProductsAdapter$ProductHolder
 com/picassos/mint/console/android/libraries/showcaseview/GuideView.java
  com.picassos.mint.console.android.libraries.showcaseview.GuideView
  com.picassos.mint.console.android.libraries.showcaseview.GuideView$1
@@ -410,9 +403,11 @@ com/picassos/mint/console/android/adapter/PurchasesAdapter.java
  com.picassos.mint.console.android.adapter.PurchasesAdapter$PurchaseHolder
 com/picassos/mint/console/android/models/Articles.java
  com.picassos.mint.console.android.models.Articles
-com/picassos/mint/console/android/adapter/UsersAdapter.java
- com.picassos.mint.console.android.adapter.UsersAdapter
- com.picassos.mint.console.android.adapter.UsersAdapter$UsersHolder
+com/picassos/mint/console/android/libraries/smartcolorpicker/ColorPickerDialog.java
+ com.picassos.mint.console.android.libraries.smartcolorpicker.ColorPickerDialog
+ com.picassos.mint.console.android.libraries.smartcolorpicker.ColorPickerDialog$1
+ com.picassos.mint.console.android.libraries.smartcolorpicker.ColorPickerDialog$2
+ com.picassos.mint.console.android.libraries.smartcolorpicker.ColorPickerDialog$OnColorPickerListener
 com/picassos/mint/console/android/interfaces/OnWizardClickListener.java
  com.picassos.mint.console.android.interfaces.OnWizardClickListener
 com/picassos/mint/console/android/activities/store/ViewProductActivity.java
@@ -445,6 +440,9 @@ com/picassos/mint/console/android/activities/helpCentre/UpdateTicketActivity.jav
 com/picassos/mint/console/android/adapter/ForceUpdatesAdapter.java
  com.picassos.mint.console.android.adapter.ForceUpdatesAdapter
  com.picassos.mint.console.android.adapter.ForceUpdatesAdapter$ForceUpdatesHolder
+com/picassos/mint/console/android/adapter/AppCategoryAdapter.java
+ com.picassos.mint.console.android.adapter.AppCategoryAdapter
+ com.picassos.mint.console.android.adapter.AppCategoryAdapter$AppCategoryHolder
 com/picassos/mint/console/android/activities/PreviewWalkthroughActivity.java
  com.picassos.mint.console.android.activities.PreviewWalkthroughActivity
 com/picassos/mint/console/android/adapter/LoadingSpinnerAdapter.java
@@ -455,6 +453,11 @@ com/picassos/mint/console/android/interfaces/OnProjectClickListener.java
 com/picassos/mint/console/android/activities/QrLoginActivity.java
  com.picassos.mint.console.android.activities.QrLoginActivity
  com.picassos.mint.console.android.activities.QrLoginActivity$1
+com/picassos/mint/console/android/constants/RequestCodes.java
+ com.picassos.mint.console.android.constants.RequestCodes
+com/picassos/mint/console/android/activities/addProject/fragments/NameAppFragment.java
+ com.picassos.mint.console.android.activities.addProject.fragments.NameAppFragment
+ com.picassos.mint.console.android.activities.addProject.fragments.NameAppFragment$1
 com/picassos/mint/console/android/adapter/ProductsAdapter.java
  com.picassos.mint.console.android.adapter.ProductsAdapter
  com.picassos.mint.console.android.adapter.ProductsAdapter$ProductHolder
@@ -499,6 +502,8 @@ com/picassos/mint/console/android/activities/GiftActivity.java
  com.picassos.mint.console.android.activities.GiftActivity
 com/picassos/mint/console/android/interfaces/OnNotificationTargetClickListener.java
  com.picassos.mint.console.android.interfaces.OnNotificationTargetClickListener
+com/picassos/mint/console/android/activities/addProject/fragments/Fragment5.java
+ com.picassos.mint.console.android.activities.addProject.fragments.Fragment5
 com/picassos/mint/console/android/models/Walkthrough.java
  com.picassos.mint.console.android.models.Walkthrough
 com/picassos/mint/console/android/activities/NotificationPreviewActivity.java
@@ -511,8 +516,6 @@ com/picassos/mint/console/android/libraries/showcaseview/config/PointerType.java
 com/picassos/mint/console/android/adapter/TicketRespondsAdapter.java
  com.picassos.mint.console.android.adapter.TicketRespondsAdapter
  com.picassos.mint.console.android.adapter.TicketRespondsAdapter$TicketRespondsHolder
-com/picassos/mint/console/android/interfaces/OnAffiliateProductClickListener.java
- com.picassos.mint.console.android.interfaces.OnAffiliateProductClickListener
 com/picassos/mint/console/android/adapter/WalkthroughAdapter.java
  com.picassos.mint.console.android.adapter.WalkthroughAdapter
  com.picassos.mint.console.android.adapter.WalkthroughAdapter$WizardHolder
@@ -531,6 +534,9 @@ com/picassos/mint/console/android/models/StoreReview.java
  com.picassos.mint.console.android.models.StoreReview
 com/picassos/mint/console/android/models/Guide.java
  com.picassos.mint.console.android.models.Guide
+com/picassos/mint/console/android/adapter/ThemeStylesAdapter.java
+ com.picassos.mint.console.android.adapter.ThemeStylesAdapter
+ com.picassos.mint.console.android.adapter.ThemeStylesAdapter$ThemeHolder
 com/picassos/mint/console/android/adapter/VideoStylesAdapter.java
  com.picassos.mint.console.android.adapter.VideoStylesAdapter
  com.picassos.mint.console.android.adapter.VideoStylesAdapter$VideoDesignsHolder
@@ -550,14 +556,15 @@ com/picassos/mint/console/android/adapter/NotificationsAdapter.java
  com.picassos.mint.console.android.adapter.NotificationsAdapter$NotificationsHolder
 com/picassos/mint/console/android/models/Maps.java
  com.picassos.mint.console.android.models.Maps
-com/picassos/mint/console/android/activities/EditNavigationActivity.java
- com.picassos.mint.console.android.activities.EditNavigationActivity
- com.picassos.mint.console.android.activities.EditNavigationActivity$1
 com/picassos/mint/console/android/libraries/showcaseview/config/Gravity.java
  com.picassos.mint.console.android.libraries.showcaseview.config.Gravity
+com/picassos/mint/console/android/interfaces/OnMemberClickListener.java
+ com.picassos.mint.console.android.interfaces.OnMemberClickListener
 com/picassos/mint/console/android/adapter/StoreReviewAdapter.java
  com.picassos.mint.console.android.adapter.StoreReviewAdapter
  com.picassos.mint.console.android.adapter.StoreReviewAdapter$StoreReviewsHolder
+com/picassos/mint/console/android/activities/addProject/fragments/ChooseAppCategoryFragment.java
+ com.picassos.mint.console.android.activities.addProject.fragments.ChooseAppCategoryFragment
 com/picassos/mint/console/android/activities/DownloadsActivity.java
  com.picassos.mint.console.android.activities.DownloadsActivity
  com.picassos.mint.console.android.activities.DownloadsActivity$1

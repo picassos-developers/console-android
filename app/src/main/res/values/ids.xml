@@ -15,7 +15,6 @@
     <item name="gift_steps" type="id" />
     <item name="demo_project" type="id" />
     <item name="darkmode_container" type="id" />
-
     <item name="review_field" type="id" />
     <item name="my_power_ups" type="id" />
     <item name="length" type="id" />
@@ -29,6 +28,7 @@
     <item name="controller_data" type="id" />
     <item name="dashboard_container" type="id" />
     <item name="delete_all_notifications" type="id" />
+    <item name="current_step" type="id" />
     <item name="notifications_list" type="id" />
     <item name="board_name" type="id" />
     <item name="total_tabs" type="id" />
@@ -110,7 +110,7 @@
     <item name="register" type="id" />
     <item name="fragment_container" type="id" />
     <item name="bottom_navigation" type="id" />
-    <item name="user_username" type="id" />
+    <item name="member_username" type="id" />
     <item name="change_password" type="id" />
     <item name="mint_console_newsletter" type="id" />
     <item name="beta_newsletter" type="id" />
@@ -118,7 +118,7 @@
     <item name="two_factor_auth" type="id" />
     <item name="save" type="id" />
     <item name="manage_ads" type="id" />
-    <item name="recycler_users" type="id" />
+    <item name="recycler_members" type="id" />
     <item name="map_style_chooser" type="id" />
     <item name="update_facebook" type="id" />
     <item name="controller_container" type="id" />
@@ -128,7 +128,11 @@
     <item name="pinterest_container" type="id" />
     <item name="vimeo_container" type="id" />
     <item name="youtube_container" type="id" />
+    <item name="theme_style_container" type="id" />
+    <item name="tickets_container" type="id" />
+    <item name="members_container" type="id" />
     <item name="maps_container" type="id" />
+    <item name="view_all_members" type="id" />
     <item name="webview_container" type="id" />
     <item name="wordpress_container" type="id" />
     <item name="force_update_container" type="id" />
@@ -155,6 +159,7 @@
     <item name="policies_learnmore" type="id" />
     <item name="agreement_notice" type="id" />
     <item name="open_ticket" type="id" />
+    <item name="update_packagename" type="id" />
     <item name="package_name" type="id" />
     <item name="drive_link" type="id" />
     <item name="search_bar" type="id" />
@@ -191,6 +196,8 @@
     <item name="edit_comment" type="id" />
     <item name="remove_comment" type="id" />
     <item name="article_title" type="id" />
+    <item name="app_category_title" type="id" />
+    <item name="app_category_thumbnail" type="id" />
     <item name="article_author" type="id" />
     <item name="facebook_link" type="id" />
     <item name="instagram_link" type="id" />
@@ -199,6 +206,8 @@
     <item name="walkthrough_title" type="id" />
     <item name="remove_provider" type="id" />
     <item name="walkthrough_description" type="id" />
+    <item name="theme_title" type="id" />
+    <item name="theme_thumbnail" type="id" />
     <item name="walkthrough_thumbnail" type="id" />
     <item name="add_walkthrough_button" type="id" />
     <item name="try_again" type="id" />
@@ -218,6 +227,7 @@
     <item name="open_navigation" type="id" />
     <item name="recycler_store" type="id" />
     <item name="recycler_affiliate" type="id" />
+    <item name="custom_theme" type="id" />
     <item name="database_size" type="id" />
     <item name="total_users" type="id" />
     <item name="visits" type="id" />
@@ -233,7 +243,6 @@
     <item name="response" type="id" />
     <item name="search_articles" type="id" />
     <item name="redeem_code" type="id" />
-    <item name="submit_ticket_widget" type="id" />
     <item name="power_store_container" type="id" />
     <item name="add_project" type="id" />
     <item name="recycler_providers" type="id" />
@@ -251,8 +260,8 @@
     <item name="download" type="id" />
     <item name="claim_gift" type="id" />
     <item name="design" type="id" />
-    <item name="user_icon" type="id" />
-    <item name="user_email" type="id" />
+    <item name="member_icon" type="id" />
+    <item name="member_email" type="id" />
     <item name="ticket_title" type="id" />
     <item name="ticket_details" type="id" />
     <item name="ticket_container" type="id" />
@@ -272,9 +281,10 @@
     <item name="learnmore_description" type="id" />
     <item name="delete_walkthrough" type="id" />
     <item name="agree" type="id" />
+    <item name="edit_packagename" type="id" />
     <item name="button_learnmore" type="id" />
     <item name="button_dismiss" type="id" />
-    <item name="delete_user" type="id" />
+    <item name="delete_member" type="id" />
     <item name="progress_bar" type="id" />
     <item name="toast_text" type="id" />
     <item name="close_ticket" type="id" />
@@ -289,6 +299,8 @@
     <item name="normal_process" type="id" />
     <item name="facebook_provider" type="id" />
     <item name="vimeo_provider" type="id" />
+    <item name="gradient_theme" type="id" />
+    <item name="solid_theme" type="id" />
     <item name="provider_action" type="id" />
     <item name="pinterest_provider" type="id" />
     <item name="imgur_provider" type="id" />
@@ -326,6 +338,7 @@
     <item name="update_youtube" type="id" />
     <item name="promotion_container" type="id" />
     <item name="recycler_walkthrough" type="id" />
+    <item name="recycler_themes" type="id" />
     <item name="add_navigation_button" type="id" />
     <item name="comment_author_icon" type="id" />
     <item name="comment_author" type="id" />
@@ -338,6 +351,7 @@
     <item name="navigation_link" type="id" />
     <item name="premium" type="id" />
     <item name="navigation_premium" type="id" />
+    <item name="recycler_app_category" type="id" />
     <item name="navigation_icon" type="id" />
     <item name="comment_votes" type="id" />
     <item name="verify" type="id" />
@@ -351,7 +365,7 @@
     <item name="notification" type="id" />
     <item name="google_admob" type="id" />
     <item name="facebook_network" type="id" />
-    <item name="menu_manage_users" type="id" />
+    <item name="menu_members" type="id" />
     <item name="menu_manage_login_providers" type="id" />
     <item name="menu_walkthrough" type="id" />
     <item name="menu_manage_updates" type="id" />

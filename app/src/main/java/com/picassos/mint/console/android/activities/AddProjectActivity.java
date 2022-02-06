@@ -1,46 +1,51 @@
 package com.picassos.mint.console.android.activities;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.os.Handler;
-import android.text.TextUtils;
-import android.text.method.LinkMovementMethod;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
-import com.android.volley.Request;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.picassos.mint.console.android.R;
-import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.activities.addProject.fragments.ChooseAppCategoryFragment;
+import com.picassos.mint.console.android.activities.addProject.fragments.NameAppFragment;
+import com.picassos.mint.console.android.activities.addProject.fragments.AddFirstContentProviderFragment;
+import com.picassos.mint.console.android.activities.addProject.fragments.Fragment4;
+import com.picassos.mint.console.android.activities.addProject.fragments.Fragment5;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.utils.Helper;
-import com.picassos.mint.console.android.utils.RequestDialog;
-import com.picassos.mint.console.android.utils.Toasto;
+import com.shuhart.stepview.StepView;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Objects;
 
 public class AddProjectActivity extends AppCompatActivity {
+    StepView stepView;
+
+    private int currentStep = 0;
+    private int step = 1;
 
     // console preferences
     ConsolePreferences consolePreferences;
 
-    // Request Dialog
-    private RequestDialog requestDialog;
+    // fragment manager
+    FragmentManager fragmentManager;
 
-    private EditText projectName;
-    private EditText projectPurchaseCode;
-    private EditText projectPackageName;
+    final Fragment fragment1 = new ChooseAppCategoryFragment();
+    final Fragment fragment2 = new NameAppFragment();
+    final Fragment fragment3 = new AddFirstContentProviderFragment();
+    final Fragment fragment4 = new Fragment4();
+    final Fragment fragment5 = new Fragment5();
 
+    TextView steptext;
+
+    // project details
+    public String appCategory;
+    public String applicationName;
+    public String packageName;
+
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,101 +57,66 @@ public class AddProjectActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_add_project);
 
-        // initialize request dialog
-        requestDialog = new RequestDialog(this);
+        stepView = findViewById(R.id.step_view);
+        stepView.getState()
+                .animationType(StepView.ANIMATION_ALL)
+                .stepsNumber(5)
+                .commit();
 
-        // initialize fields
-        projectName = findViewById(R.id.project_name);
-        projectPurchaseCode = findViewById(R.id.project_purchasecode);
-        projectPackageName = findViewById(R.id.project_packagename);
+        steptext = findViewById(R.id.current_step);
+        steptext.setText(getString(R.string.step) + " 1 " + getString(R.string.of_five));
 
-        // add project
-        findViewById(R.id.add_project).setOnClickListener(v -> {
-            if (!TextUtils.isEmpty(projectName.getText().toString())
-                    && !TextUtils.isEmpty(projectPurchaseCode.getText().toString())
-                    && !TextUtils.isEmpty(projectPackageName.getText().toString())) {
-                requestAddProject();
-            } else {
-                Toasto.show_toast(this, getString(R.string.all_fields_are_required), 1, 2);
-            }
-        });
+        fragmentManager = getSupportFragmentManager();
 
-        // visit product
-        TextView visitProduct = findViewById(R.id.visit_product);
-        visitProduct.setMovementMethod(LinkMovementMethod.getInstance());
+        // add fragments
+        fragmentManager.beginTransaction().add(R.id.fragment_container, fragment5, "4").hide(fragment5).commit();
+        fragmentManager.beginTransaction().add(R.id.fragment_container, fragment4, "3").hide(fragment4).commit();
+        fragmentManager.beginTransaction().add(R.id.fragment_container, fragment3, "2").hide(fragment3).commit();
+        fragmentManager.beginTransaction().add(R.id.fragment_container, fragment2, "1").hide(fragment2).commit();
+        fragmentManager.beginTransaction().add(R.id.fragment_container, fragment1, "0").commit();
+
+        findViewById(R.id.go_back).setOnClickListener(v -> goBack());
     }
 
-    /**
-     * request add project
-     */
-    private void requestAddProject() {
-        requestDialog.show();
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_ADD_PROJECT,
-                response -> {
-                    switch (response) {
-                        case "exception:configuration?success":
-                            showProgress();
-                            break;
-                        case "exception:error?already_exists":
-                            Toasto.show_toast(this, getString(R.string.project_exists), 1, 2);
-                            break;
-                        case "exception:error?purchasecode_not_valid":
-                            Toasto.show_toast(this, getString(R.string.purchase_code_not_valid), 1, 1);
-                            break;
-                    }
-                    requestDialog.dismiss();
-                }, error -> {
-            requestDialog.dismiss();
-            Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);
-        }){
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("token", consolePreferences.loadToken());
-                params.put("name", projectName.getText().toString().trim());
-                params.put("purchasecode", projectPurchaseCode.getText().toString().trim());
-                params.put("packagename", projectPackageName.getText().toString().trim());
-                return params;
-            }
-        };
+    @SuppressLint("SetTextI18n")
+    public void goForward() {
+        if (currentStep < stepView.getStepCount() - 1) {
+            currentStep++;
+            step++;
+            stepView.go(currentStep, true);
 
-        Volley.newRequestQueue(this).add(request);
-    }
+            Fragment activeFragment = getSupportFragmentManager().findFragmentByTag(String.valueOf(stepView.getCurrentStep()));
+            Fragment nextFragment = getSupportFragmentManager().findFragmentByTag(String.valueOf(currentStep));
+            fragmentManager.beginTransaction().hide(Objects.requireNonNull(activeFragment)).show(Objects.requireNonNull(nextFragment)).commit();
+        } else {
+            stepView.done(true);
 
-    /**
-     * request show progress dialog
-     * for creating project.
-     */
-    private void showProgress() {
-        Dialog designsDialog = new Dialog(this);
-
-        designsDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        designsDialog.setContentView(R.layout.dialog_loading_bar);
-
-        // set cancelable
-        designsDialog.setCancelable(false);
-        designsDialog.setCanceledOnTouchOutside(false);
-
-        TextView loadingTitle = designsDialog.findViewById(R.id.loading_title);
-        loadingTitle.setText(getString(R.string.creating_your_project));
-
-        TextView loadingDescription = designsDialog.findViewById(R.id.loading_description);
-        loadingDescription.setText(getString(R.string.we_are_setting_up_your_project));
-
-        new Handler().postDelayed(() -> {
-            designsDialog.dismiss();
-            Intent intent = new Intent();
-            intent.putExtra("request", "add");
-            setResult(Activity.RESULT_OK);
             finish();
-        }, 4000);
-
-        if (designsDialog.getWindow() != null) {
-            designsDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            designsDialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         }
 
-        designsDialog.show();
+        steptext.setText(getString(R.string.step) + " " + (step) + " " + getString(R.string.of_five));
     }
 
+    @SuppressLint("SetTextI18n")
+    private void goBack() {
+        if (currentStep > 0) {
+            currentStep--;
+            step--;
+        } else {
+            finish();
+        }
+        stepView.done(false);
+        stepView.go(currentStep, true);
+
+        Fragment activeFragment = getSupportFragmentManager().findFragmentByTag(String.valueOf(stepView.getCurrentStep()));
+        Fragment nextFragment = getSupportFragmentManager().findFragmentByTag(String.valueOf(currentStep));
+        fragmentManager.beginTransaction().hide(Objects.requireNonNull(activeFragment)).show(Objects.requireNonNull(nextFragment)).commit();
+
+        steptext.setText(getString(R.string.step) + " " + (step) + " " + getString(R.string.of_five));
+    }
+
+    @Override
+    public void onBackPressed() {
+        goBack();
+    }
 }

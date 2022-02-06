@@ -18,7 +18,7 @@ import com.picassos.mint.console.android.utils.Toasto;
 public class PaymentMethodBottomSheetModal extends BottomSheetDialogFragment {
 
     View view;
-    String method;
+    String paymentMethod;
 
     public interface OnSelectListener {
         void onSelectListener(String method);
@@ -56,7 +56,7 @@ public class PaymentMethodBottomSheetModal extends BottomSheetDialogFragment {
         totalCredits.setText(getString(R.string.your_available_balance) + " $" + requireArguments().getInt("credits"));
         view.findViewById(R.id.console_credits).setOnClickListener(v -> {
             if (requireArguments().getInt("price") <= requireArguments().getInt("credits")) {
-                method = "credits";
+                paymentMethod = "credits";
                 view.findViewById(R.id.checkout).setEnabled(true);
                 view.findViewById(R.id.console_credits).setBackground(requireContext().getDrawable(R.drawable.item_background_darker_selected));
                 view.findViewById(R.id.google_pay).setBackground(requireContext().getDrawable(R.drawable.item_background_darker));
@@ -70,13 +70,13 @@ public class PaymentMethodBottomSheetModal extends BottomSheetDialogFragment {
         view.findViewById(R.id.google_pay).setOnClickListener(v -> {
             view.findViewById(R.id.console_credits).setBackground(requireContext().getDrawable(R.drawable.item_background_darker));
             view.findViewById(R.id.google_pay).setBackground(requireContext().getDrawable(R.drawable.item_background_darker_selected));
-            method = "google_pay";
+            paymentMethod = "google_pay";
             view.findViewById(R.id.checkout).setEnabled(true);
         });
 
         // checkout button
         view.findViewById(R.id.checkout).setOnClickListener(v -> {
-            switch (method) {
+            switch (paymentMethod) {
                 case "google_pay":
                     onSelectListener.onSelectListener("google_pay");
                     dismiss();

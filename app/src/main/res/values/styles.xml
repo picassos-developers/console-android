@@ -1,6 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/color_white</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -50,8 +49,6 @@
     <style name="SmallSize">
         <item name="android:textSize">9sp</item>
     </style>
-
-    <!--  Custom Modal  -->
 
     <style name="AppBottomSheetDialogTheme"
         parent="Theme.Design.Light.BottomSheetDialog">

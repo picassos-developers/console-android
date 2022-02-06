@@ -149,9 +149,9 @@ public class SubmitTicketActivity extends AppCompatActivity {
         stylesRecyclerview.setLayoutManager(new LinearLayoutManager(this));
 
         ticketTypeList.add(new TicketType("Support"));
+        ticketTypeList.add(new TicketType("My Account"));
         ticketTypeList.add(new TicketType("Report a Bug"));
         ticketTypeList.add(new TicketType("Customization"));
-        ticketTypeList.add(new TicketType("Upgrade Request"));
         ticketTypeList.add(new TicketType("Other"));
         ticketTypeAdapter.notifyDataSetChanged();
 

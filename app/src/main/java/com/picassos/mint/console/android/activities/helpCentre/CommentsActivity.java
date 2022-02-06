@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -18,6 +17,7 @@ import com.android.volley.toolbox.Volley;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.adapter.CommentsAdapter;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.constants.RequestCodes;
 import com.picassos.mint.console.android.models.Comments;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.sheets.CommentOptionsBottomSheetModal;
@@ -34,16 +34,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CommentsActivity extends AppCompatActivity implements CommentOptionsBottomSheetModal.OnRemoveListener, CommentOptionsBottomSheetModal.OnUpdateListener {
+public class CommentsActivity extends AppCompatActivity implements CommentOptionsBottomSheetModal.OnRemoveListener,
+        CommentOptionsBottomSheetModal.OnUpdateListener {
 
     Bundle bundle;
 
+    RequestDialog requestDialog;
     ConsolePreferences consolePreferences;
 
-    // Comments
+    // comments
     private final List<Comments> commentsList = new ArrayList<>();
-    // request dialog
-    RequestDialog requestDialog;
     private CommentsAdapter commentsAdapter;
 
     private int articleId;
@@ -66,8 +66,7 @@ public class CommentsActivity extends AppCompatActivity implements CommentOption
         bundle = new Bundle();
 
         // request data
-        Intent data = getIntent();
-        articleId = data.getIntExtra("article_id", 0);
+        articleId = getIntent().getIntExtra("article_id", 0);
 
         // go back
         findViewById(R.id.go_back).setOnClickListener(v -> finish());
@@ -133,7 +132,7 @@ public class CommentsActivity extends AppCompatActivity implements CommentOption
 
                         JSONArray array = obj.getJSONArray("comments");
 
-                        // Check if data are empty
+                        // check if comments are empty
                         if (array.length() == 0) {
                             findViewById(R.id.no_items).setVisibility(View.VISIBLE);
                         } else {
@@ -207,7 +206,7 @@ public class CommentsActivity extends AppCompatActivity implements CommentOption
     @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onRemoveListener(int requestCode) {
-        if (requestCode == CommentOptionsBottomSheetModal.REQUEST_REMOVE_COMMENT_CODE) {
+        if (requestCode == RequestCodes.REQUEST_REMOVE_COMMENT_CODE) {
             commentsList.clear();
             commentsAdapter.notifyDataSetChanged();
             requestComments(articleId);
@@ -217,7 +216,7 @@ public class CommentsActivity extends AppCompatActivity implements CommentOption
     @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onUpdateListener(int requestCode) {
-        if (requestCode == CommentOptionsBottomSheetModal.REQUEST_UPDATE_COMMENT_CODE) {
+        if (requestCode == RequestCodes.REQUEST_UPDATE_COMMENT_CODE) {
             commentsList.clear();
             commentsAdapter.notifyDataSetChanged();
             requestComments(articleId);

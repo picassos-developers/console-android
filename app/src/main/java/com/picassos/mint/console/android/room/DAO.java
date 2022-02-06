@@ -5,29 +5,12 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import com.picassos.mint.console.android.entities.AccountEntity;
 import com.picassos.mint.console.android.entities.NotificationEntity;
 
 import java.util.List;
 
 @Dao
 public interface DAO {
-    // accounts
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void requestInsertAccount(AccountEntity account);
-
-    @Query("SELECT * FROM account ORDER BY id DESC")
-    List<AccountEntity> requestAllAccounts();
-
-    @Query("SELECT COUNT(id) FROM account")
-    Integer requestAccountsCount();
-
-    @Query("SELECT COUNT(id) FROM account WHERE token = :token")
-    Integer requestAccountsExists(String token);
-
-    @Query("DELETE FROM account WHERE token = :token")
-    void requestDeleteAccount(String token);
-
     // notifications
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void requestInsertNotification(NotificationEntity notification);

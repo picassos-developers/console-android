@@ -257,7 +257,7 @@
                     android:text="@string/claim_gift"
                     android:textAllCaps="false"
                     android:textColor="?color_dark"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/input_text_size" />
 
             </LinearLayout>
 

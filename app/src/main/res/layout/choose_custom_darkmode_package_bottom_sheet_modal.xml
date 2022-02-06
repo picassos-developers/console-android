@@ -28,7 +28,7 @@
                 android:text="@string/page_package"
                 android:textAllCaps="false"
                 android:textColor="@color/color_white"
-                android:textSize="12sp" />
+                android:textSize="@dimen/input_text_size" />
 
             <Button
                 android:id="@id/package_two"
@@ -40,7 +40,7 @@
                 android:text="@string/page_package"
                 android:textAllCaps="false"
                 android:textColor="@color/color_white"
-                android:textSize="12sp" />
+                android:textSize="@dimen/input_text_size" />
 
             <Button
                 android:id="@id/package_three"
@@ -52,7 +52,7 @@
                 android:text="@string/page_package"
                 android:textAllCaps="false"
                 android:textColor="@color/color_white"
-                android:textSize="12sp" />
+                android:textSize="@dimen/input_text_size" />
 
             <Button
                 android:id="@id/package_four"
@@ -64,7 +64,7 @@
                 android:text="@string/page_package"
                 android:textAllCaps="false"
                 android:textColor="@color/color_white"
-                android:textSize="12sp" />
+                android:textSize="@dimen/input_text_size" />
 
             <Button
                 android:id="@id/package_five"
@@ -76,7 +76,7 @@
                 android:text="@string/page_package"
                 android:textAllCaps="false"
                 android:textColor="@color/color_white"
-                android:textSize="12sp" />
+                android:textSize="@dimen/input_text_size" />
 
             <Button
                 android:id="@id/package_six"
@@ -88,7 +88,7 @@
                 android:text="@string/page_package"
                 android:textAllCaps="false"
                 android:textColor="@color/color_white"
-                android:textSize="12sp" />
+                android:textSize="@dimen/input_text_size" />
 
             <Button
                 android:id="@id/package_seven"
@@ -99,7 +99,7 @@
                 android:text="@string/page_package"
                 android:textAllCaps="false"
                 android:textColor="@color/color_white"
-                android:textSize="12sp" />
+                android:textSize="@dimen/input_text_size" />
 
         </LinearLayout>
 

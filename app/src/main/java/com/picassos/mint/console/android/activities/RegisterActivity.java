@@ -19,10 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.constants.API;
-import com.picassos.mint.console.android.entities.AccountEntity;
 import com.picassos.mint.console.android.libraries.passwordstrength.PasswordStrength;
-import com.picassos.mint.console.android.room.APP_DATABASE;
-import com.picassos.mint.console.android.room.DAO;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.utils.Helper;
 import com.picassos.mint.console.android.utils.RequestDialog;
@@ -159,15 +156,6 @@ public class RegisterActivity extends AppCompatActivity {
 
                         switch (responseCode.getInt("code")) {
                             case 200:
-                                // save account details on accounts center
-                                DAO dao = APP_DATABASE.requestDatabase(this).requestDAO();
-                                AccountEntity account = new AccountEntity();
-                                if (dao.requestAccountsExists(details.getString("token")) == 0) {
-                                    account.token = details.getString("token");
-                                    account.username = details.getString("username");
-                                    account.email = details.getString("email_address");
-                                    dao.requestInsertAccount(account);
-                                }
                                 // save account details
                                 consolePreferences.setSecretAPIKey("exception:error?sak");
                                 consolePreferences.setToken(details.getString("token"));

@@ -1,8 +1,6 @@
 package com.picassos.mint.console.android.sheets;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +8,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,7 +19,9 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.adapter.DefaultNavigationAdapter;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.constants.RequestCodes;
 import com.picassos.mint.console.android.models.Navigations;
+import com.picassos.mint.console.android.models.viewModel.SharedViewModel;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.utils.Toasto;
 
@@ -32,9 +33,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 public class ChooseDefaultNavigationBottomSheetModal extends BottomSheetDialogFragment {
+    SharedViewModel sharedViewModel;
 
     View view;
     ConsolePreferences consolePreferences;
@@ -75,6 +76,13 @@ public class ChooseDefaultNavigationBottomSheetModal extends BottomSheetDialogFr
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         consolePreferences = new ConsolePreferences(requireContext());
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
     }
 
     /**
@@ -122,7 +130,7 @@ public class ChooseDefaultNavigationBottomSheetModal extends BottomSheetDialogFr
 
     /**
      * request select default provider
-     * @param identifier for identifier
+     * @param identifier for provider id
      */
     private void requestUpdateDefaultProvider(int identifier) {
         if (consolePreferences.loadSecretAPIKey().equals("demo")) {
@@ -130,11 +138,8 @@ public class ChooseDefaultNavigationBottomSheetModal extends BottomSheetDialogFr
         } else {
             StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_PROVIDER,
                     response -> {
-                        //Intent intent = new Intent();
-                      //  intent.putExtra("request", "update");
-                       // Objects.requireNonNull(getTargetFragment()).onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, intent);
-
-                       // dismiss();
+                        sharedViewModel.setRequestCode(RequestCodes.REQUEST_UPDATE_NAVIGATIONS);
+                        dismiss();
                     }, error -> Toasto.show_toast(requireContext(), getString(R.string.unknown_issue), 1, 1)) {
                 @Override
                 protected Map<String, String> getParams() {

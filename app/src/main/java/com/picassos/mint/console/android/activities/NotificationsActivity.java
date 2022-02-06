@@ -28,7 +28,7 @@ import java.util.List;
 
 public class NotificationsActivity extends AppCompatActivity {
 
-    // adapter & notification model
+    // notifications
     private NotificationsAdapter adapter;
     private List<NotificationEntity> notifications;
 
@@ -47,9 +47,8 @@ public class NotificationsActivity extends AppCompatActivity {
         // initialize database
         dao = APP_DATABASE.requestDatabase(this).requestDAO();
 
-        // return back and finish activity
-        ImageView goBack = findViewById(R.id.go_back);
-        goBack.setOnClickListener(v -> finish());
+        // close activity
+        findViewById(R.id.go_back).setOnClickListener(v -> finish());
 
         // delete all notifications
         ImageView deleteAllNotifications = findViewById(R.id.delete_all_notifications);

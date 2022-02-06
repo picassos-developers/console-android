@@ -63,7 +63,7 @@ public class ManageAccountActivity extends AppCompatActivity {
 
         // profile
         TextView usernameProfile = findViewById(R.id.username_profile);
-        TextView username = findViewById(R.id.user_username);
+        TextView username = findViewById(R.id.member_username);
         TextView email = findViewById(R.id.email);
         usernameProfile.setText(consolePreferences.loadUsername().substring(0, 1).toUpperCase());
         username.setText(consolePreferences.loadUsername().substring(0, 1).toUpperCase() + consolePreferences.loadUsername().substring(1));

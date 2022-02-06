@@ -1,11 +1,9 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name">Mint Console</string>
-    <string name="play_console_license" tools:ignore="Typos">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgnGbet+lYyHJwbxB3JURnrnFnyeUqdyIsqOeMVBZI5+yjMutbyr7p1JmQ5jvkotbu/3Set25aKMCW4bDjx/J+6/J/EEoyU8osPweMaAr0x9dgSN86usUJqQ26H/qEDViqIyok58jwP7RzdX6i5iXHkIzFW11MEv6WT3vSD6XxG7J2jjQDHwpm07sslimAtKkVFa/sGXwyFgJxGfqpUPI7ECTc7xKyx1thyuwWWEhuYD2PtGwBcX1vkfufj0bhUuJUp0A0M9W0+ygyd32eUyuUMl9k69He5boZ3eTf7VUA0Qx90Nho+lcDtrlTUZuAFhu5XPvPILid5zLZJkt8FxUbQIDAQAB</string>
     <string name="signin">Sign in</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="home">Home</string>
-    <string name="notification">Send a Notification</string>
     <string name="navigation">Navigations</string>
     <string name="dashboard">Dashboard</string>
     <string name="database_size">Database Size</string>
@@ -59,7 +57,6 @@
     <string name="dark_mode_data_updated">Dark Mode Data Updated</string>
     <string name="notifications_preferences">Notification Preferences</string>
     <string name="notification_preferences_updated">Notification Preferences Updated</string>
-    <string name="users">Users</string>
     <string name="user_details">User Details</string>
     <string name="walkthrough">walkthrough</string>
     <string name="webview">WebView</string>
@@ -80,7 +77,7 @@
     <string name="imgur_updated">Imgur Data Updated Successfully</string>
     <string name="pinterest_updated">Pinterest Data Updated Successfully</string>
     <string name="maps_updated">Google Maps Data Updated Successfully</string>
-    <string name="no_users_found">We couldn\'t find any users associated with this email!</string>
+    <string name="no_users_found">We couldn\'t find any members associated with this email!</string>
     <string name="wrong_password">The password entered is incorrect. Try again.</string>
     <string name="delete_user">Delete user</string>
     <string name="all_fields_are_required">All fields are required.</string>
@@ -114,8 +111,6 @@
     <string name="choose_provider">Choose a default provider</string>
     <string name="about_console">About Console</string>
     <string name="package_name">Package Name</string>
-    <string name="package_name_saved_successfully">Package Name Updated Successfully</string>
-    <string name="package_name_empty">Package name can\'t be empty.</string>
     <string name="invalid_package_name">No apps with this package name found, Please add a valid application package name.</string>
     <string name="manage_account">Manage your Console Account</string>
     <string name="signin_with_qr">Sign in with QR code</string>
@@ -187,11 +182,11 @@
     <string name="notifications">My Notifications</string>
     <string name="notification_channel_server">channel</string>
     <string name="popup_confirm">Confirm</string>
-    <string name="notification_target_empty">Notification target can\'t be empty, type global to target all your users.</string>
+    <string name="notification_target_empty">Notification target can\'t be empty, type global to target all your members.</string>
     <string name="notification_send">Notifications Sent Successfully!</string>
     <string name="invalid_firebase_access_key">Invalid Firebase access key.</string>
     <string name="scan_qr_code_description">Scan the code below using the Mint Console app to log into your Console account.</string>
-    <string name="you_don_t_have_any_users_yet">You don\'t have any users yet.</string>
+    <string name="you_don_t_have_any_users_yet">You don\'t have any members yet.</string>
     <string name="you_don_t_have_any_walkthrough_yet">You don\'t have any walkthrough. Click to add a new walkthrough.</string>
     <string name="select_project">Open a Project</string>
     <string name="add_project">Add a new Project</string>
@@ -215,25 +210,25 @@
     <string name="user_exists">User already exists</string>
     <string name="password_empty">Password can\'t be empty</string>
     <string name="project_name">Project name</string>
-    <string name="project_purchasecode">Project Purchase Code</string>
+    <string name="purchasecode">Purchase Code</string>
     <string name="project_packagename">Project Package Name</string>
     <string name="create_project">Create Project</string>
     <string name="google_admob">Google Admob</string>
     <string name="mint_console_for_android">Mint Console for\nAndroid</string>
     <string name="version">Version</string>
     <string name="google_admob_updated">Google AdMob Updated Successfully</string>
-    <string name="facebook_network">Facebook network</string>
+    <string name="facebook_network">Facebook Network</string>
     <string name="facebook_native_ad_id">Facebook native AD id</string>
     <string name="facebook_interstitial_ad_id">Facebook interstitial AD id</string>
-    <string name="about_console_description">Console is the ultimate tool to configure and manage your Mint Application, with tons of tools to help you up your Android app game, like a fully fledged log-in system, custom CSS to customize the interface, ready-to-use dark mode, and a whole lot more! Boost your business with our user management functionalities, with the ability to send notifications to specific groups of users, and get analytical with users charts and data about your audience!</string>
+    <string name="about_console_description">Console is the ultimate tool to configure and manage your Mint Application, with tons of tools to help you up your Android app game, like a fully fledged log-in system, custom CSS to customize the interface, ready-to-use dark mode, and a whole lot more! Boost your business with our user management functionalities, with the ability to send notifications to specific groups of members, and get analytical with members charts and data about your audience!</string>
     <string name="manage_ads_description">Mint Console supports your business with easy-to-integrate AD providers, with it\'s quick easy set-up, you\'ll be making profit in no time!</string>
-    <string name="choose_ad_provider">Enable an AD Provider</string>
+    <string name="choose_ad_provider">Choose an AD Provider</string>
     <string name="responds">Responds</string>
     <string name="disable_ads">Disable Ads</string>
     <string name="ads_disabled">Ads Disabled Successfully</string>
     <string name="check_updates">Check for updates</string>
     <string name="using_latest_update">You already have the latest version of Mint Console installed.</string>
-    <string name="app_email_address_description">Enter an email for your users to get in contact with if they need help. (i.e. customer support email)</string>
+    <string name="app_email_address_description">Enter an email for your members to get in contact with if they need help. (i.e. customer support email)</string>
     <string name="loading_email_address">Loading email address</string>
     <string name="default_provider">Default Provider</string>
     <string name="loading_spinner">Loading Spinner</string>
@@ -250,8 +245,6 @@
     <string name="guide_one_description">Access quick settings and get useful information at a glance</string>
     <string name="guide_two_title">Navigation Tabs</string>
     <string name="guide_two_description">Add navigation tabs to your app and integrate unlimited providers!</string>
-    <string name="guide_three_title">Notification Tab</string>
-    <string name="guide_three_description">Easily send notifications to your users with custom settings</string>
     <string name="guide_four_title">Power Store</string>
     <string name="guide_four_description">Power up your application by exploring high-quality hand-picked services and products</string>
     <string name="guide_five_title">Help Centre</string>
@@ -280,7 +273,6 @@
     <string name="tap_to_download_all_your_project_data">Tap to download all your project data</string>
     <string name="configuration_data">Configuration Data</string>
     <string name="navigations_data">Navigations Data</string>
-    <string name="project_added_successfully">Project Added Successfully</string>
     <string name="project_exists">Project Already Exists</string>
     <string name="purchase_code_not_valid">Purchase code is not valid. Please enter a valid one.</string>
     <string name="downloading_navigation_data">Downloading navigation data…</string>
@@ -300,7 +292,7 @@
     <string name="you_dont_have_any_notifications_yet">You don\'t have any notifications yet</string>
     <string name="agreement_notice">By signing up you agree to Mint Console\'s <a href="https://console.themintapp.com/policies/terms">Terms of Use</a>, and you acknowledge that you have read our <a href="https://console.themintapp.com/policies/privacy">Privacy Policy</a>.</string>
     <string name="preview_walkthrough">Preview Walkthrough</string>
-    <string name="guide_next">Next</string>
+    <string name="next">Next</string>
     <string name="close_preview">Close Preview</string>
     <string name="walkthrough_empty">Please add at least one walkthrough to open preview.</string>
     <string name="get_a_free_customization">Claim your free gift!</string>
@@ -322,7 +314,6 @@
     <string name="claim_gift_steps">1. Write a review on your experience with Mint on Codecanyon. <a href="https://console.themintapp.com/hc/en-us/articles?ai=19876932&amp;s=63633709">How to write a review?</a>\n\n2. Upload a screenshot of the review and some essential files for the customization you need (i.e. splash screen logo) to Google Drive and copy the share link for said files.\n\n3. Fill the required fields (including the Google Drive link) and we\'ll do the rest for you! In no time, you\'ll have your customized app ready to go.</string>
     <string name="request_customization">Request Customization</string>
     <string name="drive_link">Google Drive Link</string>
-    <string name="we_will_send_the_customized_code_to">We will send the customized sourcecode to</string>
     <string name="request_submitted_successfully_we_will_verify_your_data_and_send_you_the_customized_source_code_to">Your customization request has been submitted, our developers will verify your data and customize your app in less than 2 business days. The customized source code will be checked for quality when finished and will be sent to </string>
     <string name="picassos_products">Picassos’ Products</string>
     <string name="explore_power_store">Explore Power Store</string>
@@ -346,7 +337,6 @@
     <string name="my_power_ups">My Power-Ups</string>
     <string name="id">Id:</string>
     <string name="total_spent">Total Spent</string>
-    <string name="visit_power_store">Visit Power Store</string>
     <string name="it_seems_like_you_don_t_have_any_purchases_visit_our_power_store_so_you_don_t_miss_out_on_awesome_power_ups_amp_special_offers"><![CDATA[It seems like you don\'t have any purchases. Visit our Power Store so you don\'t miss out on awesome power-ups & special offers!]]></string>
     <string name="server_status">Server Status</string>
     <string name="all_systems_operational">All systems operational!</string>
@@ -406,7 +396,6 @@
     <string name="creating_your_project">Creating your Project</string>
     <string name="we_are_setting_up_your_project">We are setting up your project…</string>
     <string name="select_account">Select Account</string>
-    <string name="search_accounts">Search Accounts</string>
     <string name="add_account">Add Account</string>
     <string name="credits">Your Credits</string>
     <string name="payment_method">Payment Method</string>
@@ -428,7 +417,6 @@
     <string name="got_a_gift_card_claim_it_for_free_credits">Got a gift card? Claim it for free credits!</string>
     <string name="gift_card_successfully_redeemed">Gift card successfully redeemed!</string>
     <string name="view_product">View Product</string>
-    <string name="merchant_id">11245554934034291677</string>
     <string name="general">General</string>
     <string name="label">Label</string>
     <string name="details">Details</string>
@@ -437,11 +425,9 @@
     <string name="qr_code_scanner">QR Code Scanner</string>
     <string name="open_in_default_browser">Open in Default Browser</string>
     <string name="push_notifications">Push Notifications</string>
-    <string name="send_push_notifications_to_your_app_users">Send push notifications to your users.</string>
+    <string name="send_push_notifications_to_your_app_users">Send push notifications to your members.</string>
     <string name="file_a_ticket_and_we_will_get_back_to_you_as_soon_as_possible">Open a ticket and we will be back with you in no time!</string>
     <string name="click_to_add_a_new_content_provider_as_a_navigation_tab">Click to add a new content provider as a navigation tab.</string>
-    <string name="total_tabs">Total Tabs</string>
-    <string name="navigation_tabs">Navigation Tabs</string>
     <string name="show_posts_news_articles_and_more_in_your_app_using_wordpress_content_provider">Show posts, news, articles and more in your app using WordPress content provider.</string>
     <string name="transform_your_website_webapp_webpage_into_an_application_using_webview_webkit">Transform your website, webapp, or webpage into an application using WebView Webkit.</string>
     <string name="show_your_youtube_channel_videos_livestreams_and_content_in_your_app_using_youtube_api">Show your YouTube channel videos, livestreams and content in your app using YouTube API.</string>
@@ -458,4 +444,29 @@
     <string name="manage_your_app_s_log_in_system_and_providers">Manage your App\'s log-in system and providers.</string>
     <string name="theme_style">Theme Style</string>
     <string name="preset_themes">Preset Themes</string>
+    <string name="step">Step</string>
+    <string name="of_five">of 5</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="use_your_card">Use Your Card!</string>
+    <string name="what_is_your_app_about">What is your application about?</string>
+    <string name="what_s_your_app_called">What\'s Your App Called?</string>
+    <string name="give_your_application_a_name">Give your application a name</string>
+    <string name="edit_package"><u>Edit Package</u></string>
+    <string name="edit_packagename">Edit Package Name</string>
+    <string name="enter_packagename">Enter Package Name</string>
+    <string name="packagename_notice">The name should be unique. The name may contain uppercase or lowercase letters (\'A\' through \'Z\'), numbers, and underscores (\'_\'). However, individual package name parts may only start with letters. For example (com.company.app).</string>
+    <string name="current_theme">Current Theme</string>
+    <string name="members">Members</string>
+    <string name="add_a_default_provider">Add a Default Provider</string>
+    <string name="choose_your_default_content_provider">Choose your default content provider</string>
+    <string name="custom_theme_style">Custom Theme Style</string>
+    <string name="solid_theme_description">One color that applies to the theme of the entire app. Use for a simplistic theme.</string>
+    <string name="gradient_theme">Gradient Theme</string>
+    <string name="gradient_theme_description">A gradient is the gradual blending from one color to another. It enables you to almost create a new color.</string>
+    <string name="solid_theme">Solid Theme</string>
+    <string name="invalid_hex_code">Please enter a valid hex code.</string>
+    <string name="enter_hex_code">Enter Hex Code</string>
+    <string name="last_members">Last Members</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="sign_into_your_mynta_account_to_continue">Sign into your Mynta account to continue</string>
 </resources>

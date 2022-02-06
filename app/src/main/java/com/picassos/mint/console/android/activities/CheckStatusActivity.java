@@ -31,10 +31,9 @@ import java.util.List;
 import java.util.Map;
 
 public class CheckStatusActivity extends AppCompatActivity {
-
     private RequestDialog requestDialog;
 
-    // Checkups
+    // checkups
     private final List<ServerStatus> statusList = new ArrayList<>();
     private ServerStatusAdapter serverStatusAdapter;
 
@@ -96,6 +95,7 @@ public class CheckStatusActivity extends AppCompatActivity {
                         up.setText(String.valueOf(root.getInt("up")));
                         TextView down = findViewById(R.id.overall_down);
                         down.setText(String.valueOf(root.getInt("down")));
+
                         findViewById(R.id.status_container).setVisibility(View.VISIBLE);
                         LottieAnimationView statusLottie = findViewById(R.id.animation_view);
                         TextView statusText = findViewById(R.id.status);
@@ -106,7 +106,6 @@ public class CheckStatusActivity extends AppCompatActivity {
                             statusLottie.setAnimation(R.raw.circle_pulse_danger);
                             statusText.setText(getString(R.string.server_is_down));
                         }
-                        statusLottie.loop(true);
                         statusLottie.playAnimation();
 
                         for (int i = 0; i < status.length(); i++) {

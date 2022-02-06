@@ -51,11 +51,10 @@ public class AboutConsoleActivity extends AppCompatActivity {
 
         // check for updates
         findViewById(R.id.check_updates).setOnClickListener(v -> requestCheckUpdates());
-
     }
 
     /**
-     * check for mint console updates
+     * check for updates
      */
     private void requestCheckUpdates() {
         requestDialog.show();
@@ -87,6 +86,4 @@ public class AboutConsoleActivity extends AppCompatActivity {
 
         Volley.newRequestQueue(this).add(request);
     }
-
-
 }

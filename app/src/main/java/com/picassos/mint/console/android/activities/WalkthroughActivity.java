@@ -19,6 +19,7 @@ import com.android.volley.toolbox.Volley;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.adapter.WalkthroughAdapter;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.constants.RequestCodes;
 import com.picassos.mint.console.android.models.Walkthrough;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.sheets.AddWalkthroughBottomSheetModal;
@@ -43,14 +44,14 @@ public class WalkthroughActivity extends AppCompatActivity implements AddWalkthr
     private RequestDialog requestDialog;
     private Bundle bundle;
 
-    // Walkthrough
+    // walkthrough
     private final List<Walkthrough> walkthroughList = new ArrayList<>();
     private WalkthroughAdapter walkthroughAdapter;
 
-    // Walkthrough option
+    // walkthrough option
     private SwitchCompat walkthroughOption;
 
-    // Data
+    // data
     private String data = "";
 
     @SuppressLint("WrongViewCast")
@@ -230,7 +231,7 @@ public class WalkthroughActivity extends AppCompatActivity implements AddWalkthr
 
     @Override
     public void onAddListener(int requestCode) {
-        if (requestCode == AddWalkthroughBottomSheetModal.REQUEST_ADD_WALKTHROUGH_CODE) {
+        if (requestCode == RequestCodes.REQUEST_ADD_WALKTHROUGH_CODE) {
             refresh();
             Toasto.show_toast(this, getString(R.string.walkthrough_added), 0, 0);
         }

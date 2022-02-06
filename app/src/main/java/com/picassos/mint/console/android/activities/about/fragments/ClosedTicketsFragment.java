@@ -1,5 +1,6 @@
 package com.picassos.mint.console.android.activities.about.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -17,11 +19,12 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.picassos.mint.console.android.R;
-import com.picassos.mint.console.android.activities.helpCentre.SubmitTicketActivity;
 import com.picassos.mint.console.android.activities.helpCentre.ViewTicketActivity;
 import com.picassos.mint.console.android.adapter.TicketsAdapter;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.constants.RequestCodes;
 import com.picassos.mint.console.android.models.Tickets;
+import com.picassos.mint.console.android.models.viewModel.SharedViewModel;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.sheets.TicketOptionsBottomSheetModal;
 import com.picassos.mint.console.android.utils.RequestDialog;
@@ -37,6 +40,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ClosedTicketsFragment extends Fragment {
+    SharedViewModel sharedViewModel;
 
     View view;
     Bundle bundle;
@@ -44,11 +48,9 @@ public class ClosedTicketsFragment extends Fragment {
     RequestDialog requestDialog;
     private ConsolePreferences consolePreferences;
 
-    // Closed Tickets
+    // closed tickets
     private final List<Tickets> ticketsList = new ArrayList<>();
     private TicketsAdapter ticketsAdapter;
-
-    private static final int REQUEST_TICKET_ACTION = 1;
 
     @Nullable
     @Override
@@ -60,6 +62,20 @@ public class ClosedTicketsFragment extends Fragment {
 
         // console shared preferences
         consolePreferences = new ConsolePreferences(requireActivity().getApplicationContext());
+
+        sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+        sharedViewModel.getRequestCode().observe(requireActivity(), item -> {
+            switch (item) {
+                case RequestCodes.REQUEST_CLOSE_TICKET_CODE:
+                    refreshFragment();
+                    Toasto.show_toast(requireContext(), getString(R.string.ticket_closed), 1, 0);
+                    break;
+                case RequestCodes.REQUEST_UPDATE_TICKET_CODE:
+                    refreshFragment();
+                    Toasto.show_toast(requireContext(), getString(R.string.ticket_updated), 0, 0);
+                    break;
+            }
+        });
 
         return view;
     }
@@ -87,10 +103,8 @@ public class ClosedTicketsFragment extends Fragment {
             bundle.putBoolean("is_opened", false);
             TicketOptionsBottomSheetModal ticketOptionsBottomSheetModal = new TicketOptionsBottomSheetModal();
             ticketOptionsBottomSheetModal.setArguments(bundle);
-            ticketOptionsBottomSheetModal.setTargetFragment(ClosedTicketsFragment.this, REQUEST_TICKET_ACTION);
-            ticketOptionsBottomSheetModal.show(requireFragmentManager(), "TAG");
+            ticketOptionsBottomSheetModal.show(getChildFragmentManager(), "TAG");
         });
-
         ticketsRecyclerview.setAdapter(ticketsAdapter);
         ticketsRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -111,6 +125,7 @@ public class ClosedTicketsFragment extends Fragment {
     /**
      * request tickets
      */
+    @SuppressLint("NotifyDataSetChanged")
     private void requestTickets() {
         view.findViewById(R.id.internet_connection).setVisibility(View.GONE);
         requestDialog.show();
@@ -122,7 +137,7 @@ public class ClosedTicketsFragment extends Fragment {
 
                         JSONArray array = obj.getJSONArray("tickets");
 
-                        // Check if data is empty
+                        // check if tickets are empty
                         if (array.length() == 0) {
                             view.findViewById(R.id.no_items).setVisibility(View.VISIBLE);
                         } else {
@@ -155,25 +170,10 @@ public class ClosedTicketsFragment extends Fragment {
         Volley.newRequestQueue(requireActivity().getApplicationContext()).add(request);
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     public void refreshFragment() {
         ticketsList.clear();
         ticketsAdapter.notifyDataSetChanged();
-        requireFragmentManager().beginTransaction().detach(this).attach(this).commit();
         requestTickets();
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_TICKET_ACTION) {
-            refreshFragment();
-            if (data != null) {
-                if (data.getStringExtra("request").equals("close")) {
-                    Toasto.show_toast(requireContext(), getString(R.string.ticket_closed), 1, 0);
-                } else if (data.getStringExtra("request").equals("update")) {
-                    Toasto.show_toast(requireContext(), getString(R.string.ticket_updated), 0, 0);
-                }
-            }
-        }
     }
 }

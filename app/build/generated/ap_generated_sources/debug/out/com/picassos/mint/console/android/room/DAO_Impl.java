@@ -8,7 +8,6 @@ import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
-import com.picassos.mint.console.android.entities.AccountEntity;
 import com.picassos.mint.console.android.entities.NotificationEntity;
 import java.lang.Class;
 import java.lang.Integer;
@@ -23,11 +22,7 @@ import java.util.List;
 public final class DAO_Impl implements DAO {
   private final RoomDatabase __db;
 
-  private final EntityInsertionAdapter<AccountEntity> __insertionAdapterOfAccountEntity;
-
   private final EntityInsertionAdapter<NotificationEntity> __insertionAdapterOfNotificationEntity;
-
-  private final SharedSQLiteStatement __preparedStmtOfRequestDeleteAccount;
 
   private final SharedSQLiteStatement __preparedStmtOfRequestDeleteNotification;
 
@@ -35,42 +30,6 @@ public final class DAO_Impl implements DAO {
 
   public DAO_Impl(RoomDatabase __db) {
     this.__db = __db;
-    this.__insertionAdapterOfAccountEntity = new EntityInsertionAdapter<AccountEntity>(__db) {
-      @Override
-      public String createQuery() {
-        return "INSERT OR REPLACE INTO `account` (`id`,`token`,`username`,`email`,`active`) VALUES (?,?,?,?,?)";
-      }
-
-      @Override
-      public void bind(SupportSQLiteStatement stmt, AccountEntity value) {
-        if (value.id == null) {
-          stmt.bindNull(1);
-        } else {
-          stmt.bindLong(1, value.id);
-        }
-        if (value.token == null) {
-          stmt.bindNull(2);
-        } else {
-          stmt.bindString(2, value.token);
-        }
-        if (value.username == null) {
-          stmt.bindNull(3);
-        } else {
-          stmt.bindString(3, value.username);
-        }
-        if (value.email == null) {
-          stmt.bindNull(4);
-        } else {
-          stmt.bindString(4, value.email);
-        }
-        final Integer _tmp = value.active == null ? null : (value.active ? 1 : 0);
-        if (_tmp == null) {
-          stmt.bindNull(5);
-        } else {
-          stmt.bindLong(5, _tmp);
-        }
-      }
-    };
     this.__insertionAdapterOfNotificationEntity = new EntityInsertionAdapter<NotificationEntity>(__db) {
       @Override
       public String createQuery() {
@@ -112,13 +71,6 @@ public final class DAO_Impl implements DAO {
         }
       }
     };
-    this.__preparedStmtOfRequestDeleteAccount = new SharedSQLiteStatement(__db) {
-      @Override
-      public String createQuery() {
-        final String _query = "DELETE FROM account WHERE token = ?";
-        return _query;
-      }
-    };
     this.__preparedStmtOfRequestDeleteNotification = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
@@ -136,18 +88,6 @@ public final class DAO_Impl implements DAO {
   }
 
   @Override
-  public void requestInsertAccount(final AccountEntity account) {
-    __db.assertNotSuspendingTransaction();
-    __db.beginTransaction();
-    try {
-      __insertionAdapterOfAccountEntity.insert(account);
-      __db.setTransactionSuccessful();
-    } finally {
-      __db.endTransaction();
-    }
-  }
-
-  @Override
   public void requestInsertNotification(final NotificationEntity notification) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
@@ -156,26 +96,6 @@ public final class DAO_Impl implements DAO {
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
-    }
-  }
-
-  @Override
-  public void requestDeleteAccount(final String token) {
-    __db.assertNotSuspendingTransaction();
-    final SupportSQLiteStatement _stmt = __preparedStmtOfRequestDeleteAccount.acquire();
-    int _argIndex = 1;
-    if (token == null) {
-      _stmt.bindNull(_argIndex);
-    } else {
-      _stmt.bindString(_argIndex, token);
-    }
-    __db.beginTransaction();
-    try {
-      _stmt.executeUpdateDelete();
-      __db.setTransactionSuccessful();
-    } finally {
-      __db.endTransaction();
-      __preparedStmtOfRequestDeleteAccount.release(_stmt);
     }
   }
 
@@ -206,116 +126,6 @@ public final class DAO_Impl implements DAO {
     } finally {
       __db.endTransaction();
       __preparedStmtOfRequestDeleteAllNotification.release(_stmt);
-    }
-  }
-
-  @Override
-  public List<AccountEntity> requestAllAccounts() {
-    final String _sql = "SELECT * FROM account ORDER BY id DESC";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
-    __db.assertNotSuspendingTransaction();
-    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
-    try {
-      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
-      final int _cursorIndexOfToken = CursorUtil.getColumnIndexOrThrow(_cursor, "token");
-      final int _cursorIndexOfUsername = CursorUtil.getColumnIndexOrThrow(_cursor, "username");
-      final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
-      final int _cursorIndexOfActive = CursorUtil.getColumnIndexOrThrow(_cursor, "active");
-      final List<AccountEntity> _result = new ArrayList<AccountEntity>(_cursor.getCount());
-      while(_cursor.moveToNext()) {
-        final AccountEntity _item;
-        _item = new AccountEntity();
-        if (_cursor.isNull(_cursorIndexOfId)) {
-          _item.id = null;
-        } else {
-          _item.id = _cursor.getLong(_cursorIndexOfId);
-        }
-        if (_cursor.isNull(_cursorIndexOfToken)) {
-          _item.token = null;
-        } else {
-          _item.token = _cursor.getString(_cursorIndexOfToken);
-        }
-        if (_cursor.isNull(_cursorIndexOfUsername)) {
-          _item.username = null;
-        } else {
-          _item.username = _cursor.getString(_cursorIndexOfUsername);
-        }
-        if (_cursor.isNull(_cursorIndexOfEmail)) {
-          _item.email = null;
-        } else {
-          _item.email = _cursor.getString(_cursorIndexOfEmail);
-        }
-        final Integer _tmp;
-        if (_cursor.isNull(_cursorIndexOfActive)) {
-          _tmp = null;
-        } else {
-          _tmp = _cursor.getInt(_cursorIndexOfActive);
-        }
-        _item.active = _tmp == null ? null : _tmp != 0;
-        _result.add(_item);
-      }
-      return _result;
-    } finally {
-      _cursor.close();
-      _statement.release();
-    }
-  }
-
-  @Override
-  public Integer requestAccountsCount() {
-    final String _sql = "SELECT COUNT(id) FROM account";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
-    __db.assertNotSuspendingTransaction();
-    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
-    try {
-      final Integer _result;
-      if(_cursor.moveToFirst()) {
-        final Integer _tmp;
-        if (_cursor.isNull(0)) {
-          _tmp = null;
-        } else {
-          _tmp = _cursor.getInt(0);
-        }
-        _result = _tmp;
-      } else {
-        _result = null;
-      }
-      return _result;
-    } finally {
-      _cursor.close();
-      _statement.release();
-    }
-  }
-
-  @Override
-  public Integer requestAccountsExists(final String token) {
-    final String _sql = "SELECT COUNT(id) FROM account WHERE token = ?";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
-    int _argIndex = 1;
-    if (token == null) {
-      _statement.bindNull(_argIndex);
-    } else {
-      _statement.bindString(_argIndex, token);
-    }
-    __db.assertNotSuspendingTransaction();
-    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
-    try {
-      final Integer _result;
-      if(_cursor.moveToFirst()) {
-        final Integer _tmp;
-        if (_cursor.isNull(0)) {
-          _tmp = null;
-        } else {
-          _tmp = _cursor.getInt(0);
-        }
-        _result = _tmp;
-      } else {
-        _result = null;
-      }
-      return _result;
-    } finally {
-      _cursor.close();
-      _statement.release();
     }
   }
 

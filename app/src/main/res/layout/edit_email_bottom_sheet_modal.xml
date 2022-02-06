@@ -51,7 +51,7 @@
                 android:paddingEnd="20dp"
                 android:textColor="?color_dark"
                 android:textColorHint="?color_dark"
-                android:textSize="14sp"
+                android:textSize="@dimen/input_text_size"
                 tools:ignore="Autofill" />
 
             <Button
@@ -63,7 +63,7 @@
                 android:background="@drawable/input_background_alternative"
                 android:text="@string/save"
                 android:textAllCaps="false"
-                android:textSize="14sp"
+                android:textSize="@dimen/input_text_size"
                 android:textColor="?color_dark" />
 
         </LinearLayout>

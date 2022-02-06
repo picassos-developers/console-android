@@ -77,6 +77,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
                         android:text="@string/darkmode_option"
                         android:textColor="?color_dark"
                         android:textSize="15sp"
@@ -133,7 +134,7 @@
                             android:textColor="?color_dark"
                             android:textColorHint="?color_dark"
                             android:textDirection="locale"
-                            android:textSize="13sp"
+                            android:textSize="@dimen/input_text_size"
                             tools:ignore="Autofill,LabelFor" />
 
                         <Button
@@ -148,7 +149,7 @@
                             android:text="@string/update"
                             android:textAllCaps="false"
                             android:textColor="?color_light_separate"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/input_text_size" />
 
                     </LinearLayout>
 

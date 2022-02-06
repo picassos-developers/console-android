@@ -32,10 +32,11 @@ import java.util.Map;
 
 public class ArticlesActivity extends AppCompatActivity {
 
-    // Articles
-    private final List<Articles> articlesList = new ArrayList<>();
     // request dialog
     RequestDialog requestDialog;
+
+    // articles
+    private final List<Articles> articlesList = new ArrayList<>();
     private ArticlesAdapter articlesAdapter;
 
     private int sectionId;
@@ -97,6 +98,7 @@ public class ArticlesActivity extends AppCompatActivity {
     /**
      * request articles
      */
+    @SuppressLint("NotifyDataSetChanged")
     private void requestArticles(int id) {
         findViewById(R.id.internet_connection).setVisibility(View.GONE);
         requestDialog.show();
@@ -108,7 +110,7 @@ public class ArticlesActivity extends AppCompatActivity {
 
                         JSONArray array = obj.getJSONArray("articles");
 
-                        // Check if data are empty
+                        // check if articles are empty
                         if (array.length() == 0) {
                             findViewById(R.id.no_items).setVisibility(View.VISIBLE);
                         } else {

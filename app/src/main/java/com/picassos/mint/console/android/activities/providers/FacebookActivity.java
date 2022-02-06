@@ -32,15 +32,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FacebookActivity extends AppCompatActivity implements ProviderOptionsBottomSheetModal.OnRemoveListener {
-
     private Bundle bundle;
     private Intent intent;
-    private ConsolePreferences consolePreferences;
+
     private RequestDialog requestDialog;
+    private ConsolePreferences consolePreferences;
 
     private String request;
 
-    private EditText label, icon, accessToken, perPage, username;
+    private EditText label, icon,
+            accessToken, perPage, username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

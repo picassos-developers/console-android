@@ -41,10 +41,10 @@ import java.util.Map;
 
 public class ViewArticleActivity extends AppCompatActivity {
 
-    // Context
+    // context
     Context context;
 
-    // Bundle
+    // bundle
     Bundle bundle;
 
     // console preferences
@@ -68,7 +68,7 @@ public class ViewArticleActivity extends AppCompatActivity {
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // context
+        // get context context
         context = getApplicationContext();
 
         // Check Connection

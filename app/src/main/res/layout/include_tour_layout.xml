@@ -18,7 +18,7 @@
         android:text="@string/skip_tour"
         android:textAllCaps="false"
         android:textColor="@color/color_white"
-        android:textSize="13sp"
+        android:textSize="@dimen/input_text_size"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,7 +66,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:textColor="@color/color_white"
-        android:textSize="13sp"
+        android:textSize="@dimen/input_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

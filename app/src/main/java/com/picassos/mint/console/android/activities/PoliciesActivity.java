@@ -3,6 +3,7 @@ package com.picassos.mint.console.android.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.picassos.mint.console.android.R;
+import com.picassos.mint.console.android.activities.store.powerups.policies.SetupPoliciesActivity;
 import com.picassos.mint.console.android.constants.API;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.utils.Helper;
@@ -113,6 +115,18 @@ public class PoliciesActivity extends AppCompatActivity {
                         JSONObject root = object.getJSONObject(REQUEST);
                         // set policies content
                         policiesContent.setText(root.getString("rendered"));
+
+                        // check if privacy policy is purchased
+                        if (root.getInt("is_purchased") == 1) {
+                            findViewById(R.id.setup_policies).setVisibility(View.VISIBLE);
+                        } else if (root.getInt("is_purchased") == 0) {
+                            findViewById(R.id.setup_policies).setVisibility(View.GONE);
+                        }
+                        findViewById(R.id.setup_policies).setOnClickListener(v -> {
+                            Intent intent = new Intent(this, SetupPoliciesActivity.class);
+                            intent.putExtra("request", REQUEST);
+                            startActivity(intent);
+                        });
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

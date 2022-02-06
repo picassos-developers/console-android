@@ -19,6 +19,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.constants.RequestCodes;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.utils.RequestDialog;
 import com.picassos.mint.console.android.utils.Toasto;
@@ -37,8 +38,6 @@ public class AddWalkthroughBottomSheetModal extends BottomSheetDialogFragment {
     }
 
     OnAddListener onAddListener;
-
-    public static final int REQUEST_ADD_WALKTHROUGH_CODE = 1;
 
     public AddWalkthroughBottomSheetModal() {
 
@@ -73,12 +72,14 @@ public class AddWalkthroughBottomSheetModal extends BottomSheetDialogFragment {
         // add walkthrough
         Button addWalkthrough = view.findViewById(R.id.add_walkthrough_button);
         addWalkthrough.setOnClickListener(v -> {
-            // Validate walkthrough data
+            // validate walkthrough data
             if (!TextUtils.isEmpty(walkthroughTitle.getText().toString())
                     && !TextUtils.isEmpty(walkthroughDescription.getText().toString())
                     && !TextUtils.isEmpty(walkthroughThumbnail.getText().toString())) {
                 requestAddWalkthrough(walkthroughTitle.getText().toString(), walkthroughDescription.getText().toString(), walkthroughThumbnail.getText().toString());
                 dismiss();
+            } else {
+                Toasto.show_toast(requireContext(), getString(R.string.all_fields_are_required), 1, 2);
             }
         });
 
@@ -90,7 +91,12 @@ public class AddWalkthroughBottomSheetModal extends BottomSheetDialogFragment {
         super.onCreate(savedInstanceState);
     }
 
-
+    /**
+     * request add walkthrough page
+     * @param title for heading
+     * @param description for subtitle
+     * @param thumbnail for walkthrough thumbnail
+     */
     private void requestAddWalkthrough(String title, String description, String thumbnail) {
         if (consolePreferences.loadSecretAPIKey().equals("demo")) {
             Toasto.show_toast(requireContext(), getString(R.string.demo_project), 1, 0);
@@ -100,10 +106,10 @@ public class AddWalkthroughBottomSheetModal extends BottomSheetDialogFragment {
             StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_ADD_WALKTHROUGH,
                     response -> {
                         if (response.contains("walkthrough:callback?success")) {
-                            onAddListener.onAddListener(REQUEST_ADD_WALKTHROUGH_CODE);
+                            onAddListener.onAddListener(RequestCodes.REQUEST_ADD_WALKTHROUGH_CODE);
                             dismiss();
                         } else {
-                            Toasto.show_toast(requireContext(), "exception:error?" + response, 1, 1);
+                            Toasto.show_toast(requireContext(), getString(R.string.unknown_issue), 1, 1);
                         }
                         requestDialog.dismiss();
                     }, error -> {

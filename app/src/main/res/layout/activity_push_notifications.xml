@@ -108,7 +108,7 @@
                     android:paddingEnd="20dp"
                     android:textColor="?color_dark"
                     android:textColorHint="?color_dark"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/input_text_size"
                     tools:ignore="Autofill" />
 
                 <EditText
@@ -123,7 +123,7 @@
                     android:paddingEnd="20dp"
                     android:textColor="?color_dark"
                     android:textColorHint="?color_dark"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/input_text_size"
                     tools:ignore="Autofill" />
 
                 <androidx.cardview.widget.CardView
@@ -142,6 +142,7 @@
                         android:layout_gravity="center_vertical"
                         android:paddingStart="20dp"
                         android:paddingEnd="20dp"
+                        android:textSize="@dimen/input_text_size"
                         android:text="@string/notification_target"
                         android:textColor="?color_dark" />
 
@@ -159,7 +160,7 @@
                     android:paddingEnd="20dp"
                     android:textColor="?color_dark"
                     android:textColorHint="?color_dark"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/input_text_size"
                     tools:ignore="Autofill" />
 
                 <EditText
@@ -174,7 +175,7 @@
                     android:paddingEnd="20dp"
                     android:textColor="?color_dark"
                     android:textColorHint="?color_dark"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/input_text_size"
                     tools:ignore="Autofill" />
 
                 <LinearLayout
@@ -195,7 +196,7 @@
                         android:text="@string/preview"
                         android:textAllCaps="false"
                         android:textColor="?color_light_separate"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/input_text_size" />
 
                     <Button
                         android:id="@id/send_notification"
@@ -208,7 +209,7 @@
                         android:text="@string/send"
                         android:textAllCaps="false"
                         android:textColor="?color_light_separate"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/input_text_size" />
 
                 </LinearLayout>
 

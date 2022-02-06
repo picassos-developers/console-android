@@ -95,7 +95,7 @@
                         android:textColor="?color_dark"
                         android:textColorHint="?color_dark"
                         android:textDirection="locale"
-                        android:textSize="13sp"
+                        android:textSize="@dimen/input_text_size"
                         tools:ignore="Autofill,LabelFor" />
 
                     <androidx.cardview.widget.CardView
@@ -114,6 +114,7 @@
                             android:layout_gravity="center_vertical"
                             android:paddingStart="20dp"
                             android:paddingEnd="20dp"
+                            android:textSize="@dimen/input_text_size"
                             android:text="@string/force_update"
                             android:textColor="?color_dark" />
 
@@ -131,7 +132,7 @@
                         android:text="@string/save"
                         android:textAllCaps="false"
                         android:textColor="?color_light_separate"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/input_text_size" />
 
                 </LinearLayout>
 

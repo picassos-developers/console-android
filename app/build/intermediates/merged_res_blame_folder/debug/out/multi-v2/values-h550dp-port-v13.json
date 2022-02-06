@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/noor/Desktop/Mint Console/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "outputFile": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/noor/.gradle/caches/transforms-3/0677d4bb01d29e14d78ee3ee6c843f4c/transformed/material-1.6.0-alpha01/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+                    "source": "/Users/noor/.gradle/caches/transforms-3/9c1c1ae3dd3b556d67637b0825a6e177/transformed/material-1.6.0-alpha02/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

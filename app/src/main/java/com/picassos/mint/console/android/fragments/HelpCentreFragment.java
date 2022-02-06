@@ -1,5 +1,6 @@
 package com.picassos.mint.console.android.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -41,7 +42,7 @@ public class HelpCentreFragment extends Fragment {
     // request dialog
     RequestDialog requestDialog;
 
-    // Sections
+    // sections
     private final List<Sections> sectionsList = new ArrayList<>();
     private SectionsAdapter sectionsAdapter;
 
@@ -53,6 +54,7 @@ public class HelpCentreFragment extends Fragment {
         return view;
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -92,7 +94,6 @@ public class HelpCentreFragment extends Fragment {
 
         // submit a ticket
         view.findViewById(R.id.submit_ticket).setOnClickListener(v -> startActivity(new Intent(requireContext(), SubmitTicketActivity.class)));
-        view.findViewById(R.id.submit_ticket_widget).setOnClickListener(v -> startActivity(new Intent(requireContext(), SubmitTicketActivity.class)));
 
         // search articles
         view.findViewById(R.id.search_articles).setOnClickListener(v -> startActivity(new Intent(requireContext(), SearchArticlesActivity.class)));
@@ -101,6 +102,7 @@ public class HelpCentreFragment extends Fragment {
     /**
      * request help centre sections
      */
+    @SuppressLint("NotifyDataSetChanged")
     private void requestSections() {
         view.findViewById(R.id.internet_connection).setVisibility(View.GONE);
         requestDialog.show();
@@ -139,7 +141,7 @@ public class HelpCentreFragment extends Fragment {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
-                params.put("token", "empty");
+                params.put("request", "sections");
                 return params;
             }
         };

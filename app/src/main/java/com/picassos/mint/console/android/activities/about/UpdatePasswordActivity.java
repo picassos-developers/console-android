@@ -21,16 +21,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class UpdatePasswordActivity extends AppCompatActivity {
-
     Bundle bundle;
 
     // console preferences
     ConsolePreferences consolePreferences;
 
-    // Request Dialog
+    // request dialog
     private RequestDialog requestDialog;
 
-    // Fields
+    // fields
     private EditText currentPassword;
     private EditText newPassword;
     private EditText confirmPassword;

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +16,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.constants.RequestCodes;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.utils.RequestDialog;
 import com.picassos.mint.console.android.utils.Toasto;
@@ -35,8 +35,6 @@ public class ProviderOptionsBottomSheetModal extends BottomSheetDialogFragment {
     }
 
     OnRemoveListener onRemoveListener;
-
-    public static final int REQUEST_REMOVE_PROVIDER_CODE = 1;
 
     public ProviderOptionsBottomSheetModal() {
 
@@ -81,14 +79,13 @@ public class ProviderOptionsBottomSheetModal extends BottomSheetDialogFragment {
 
     /**
      * request remove provider
-     *
      * @param id for provider id
      */
     private void requestRemoveProvider(int id) {
         requestDialog.show();
         StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_REMOVE_PROVIDER,
                 response -> {
-                    onRemoveListener.onRemoveListener(REQUEST_REMOVE_PROVIDER_CODE);
+                    onRemoveListener.onRemoveListener(RequestCodes.REQUEST_REMOVE_PROVIDER_CODE);
                     requestDialog.dismiss();
                 }, error -> {
             requestDialog.dismiss();

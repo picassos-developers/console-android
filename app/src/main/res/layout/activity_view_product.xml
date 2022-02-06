@@ -160,7 +160,7 @@
                     android:text="@string/continue_purchase"
                     android:textAllCaps="false"
                     android:textColor="?color_light_separate"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/input_text_size" />
 
                 <TextView
                     android:layout_width="wrap_content"

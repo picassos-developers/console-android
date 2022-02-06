@@ -102,7 +102,7 @@
                             android:layout_marginStart="5dp"
                             android:text="@string/donut"
                             android:textColor="?color_dark"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/input_text_size" />
 
                     </LinearLayout>
 
@@ -154,7 +154,7 @@
                             android:layout_marginStart="5dp"
                             android:text="@string/google"
                             android:textColor="?color_dark"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/input_text_size" />
 
                     </LinearLayout>
 
@@ -206,7 +206,7 @@
                             android:layout_marginStart="5dp"
                             android:text="@string/facebook"
                             android:textColor="?color_dark"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/input_text_size" />
 
                     </LinearLayout>
 
@@ -258,7 +258,7 @@
                             android:text="@string/firebase"
                             android:layout_marginStart="5dp"
                             android:textColor="?color_dark"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/input_text_size" />
 
                     </LinearLayout>
 
@@ -284,7 +284,7 @@
                     android:text="@string/update"
                     android:textAllCaps="false"
                     android:textColor="?color_light_separate"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/input_text_size" />
 
             </LinearLayout>
 

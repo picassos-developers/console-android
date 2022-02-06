@@ -62,7 +62,7 @@
             android:paddingEnd="20dp"
             android:textColor="?color_dark"
             android:textColorHint="?color_dark"
-            android:textSize="14sp"
+            android:textSize="@dimen/input_text_size"
             tools:ignore="Autofill" />
 
         <EditText
@@ -77,7 +77,7 @@
             android:paddingEnd="20dp"
             android:textColor="?color_dark"
             android:textColorHint="?color_dark"
-            android:textSize="14sp"
+            android:textSize="@dimen/input_text_size"
             tools:ignore="Autofill" />
 
         <EditText
@@ -92,7 +92,7 @@
             android:paddingEnd="20dp"
             android:textColor="?color_dark"
             android:textColorHint="?color_dark"
-            android:textSize="14sp"
+            android:textSize="@dimen/input_text_size"
             tools:ignore="Autofill" />
 
         <Button
@@ -104,7 +104,7 @@
             android:background="@drawable/input_background_primary"
             android:text="@string/update_project"
             android:textAllCaps="false"
-            android:textSize="14sp"
+            android:textSize="@dimen/input_text_size"
             android:textColor="?color_light_separate" />
 
     </LinearLayout>

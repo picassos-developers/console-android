@@ -96,7 +96,7 @@
             android:paddingEnd="20dp"
             android:textColor="?color_dark"
             android:textColorHint="?color_dark"
-            android:textSize="13sp"
+            android:textSize="@dimen/input_text_size"
             tools:ignore="Autofill" />
 
         <TextView
@@ -123,7 +123,7 @@
             android:paddingEnd="20dp"
             android:textColor="?color_dark"
             android:textColorHint="?color_dark"
-            android:textSize="13sp"
+            android:textSize="@dimen/input_text_size"
             tools:ignore="Autofill" />
 
         <TextView
@@ -150,7 +150,7 @@
             android:paddingEnd="20dp"
             android:textColor="?color_dark"
             android:textColorHint="?color_dark"
-            android:textSize="13sp"
+            android:textSize="@dimen/input_text_size"
             tools:ignore="Autofill" />
 
         <TextView
@@ -177,7 +177,7 @@
             android:paddingEnd="20dp"
             android:textColor="?color_dark"
             android:textColorHint="?color_dark"
-            android:textSize="13sp"
+            android:textSize="@dimen/input_text_size"
             tools:ignore="Autofill" />
 
         <TextView
@@ -204,7 +204,7 @@
             android:paddingEnd="20dp"
             android:textColor="?color_dark"
             android:textColorHint="?color_dark"
-            android:textSize="13sp"
+            android:textSize="@dimen/input_text_size"
             tools:ignore="Autofill" />
 
         <Button
@@ -216,7 +216,7 @@
             android:background="@drawable/input_background_primary"
             android:text="@string/generate_policies"
             android:textAllCaps="false"
-            android:textSize="13sp"
+            android:textSize="@dimen/input_text_size"
             android:textColor="?color_light_separate" />
 
         <LinearLayout

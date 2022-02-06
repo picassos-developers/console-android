@@ -151,7 +151,7 @@
             android:maxLength="250"
             android:textColorHint="?color_dark"
             android:textDirection="locale"
-            android:textSize="13sp"
+            android:textSize="@dimen/input_text_size"
             tools:ignore="Autofill,LabelFor" />
 
         <TextView
@@ -163,7 +163,7 @@
             android:layout_marginTop="7dp"
             android:layout_gravity="end"
             android:textColorLink="?color_dark"
-            android:text="0/250"
+            android:text="0 / 250"
             android:textColor="?color_dark"
             android:textSize="11sp"
             tools:ignore="HardcodedText,SmallSp" />
@@ -180,7 +180,7 @@
             android:text="@string/post_review"
             android:textAllCaps="false"
             android:textColor="?color_light_separate"
-            android:textSize="14sp" />
+            android:textSize="@dimen/input_text_size" />
 
     </LinearLayout>
 

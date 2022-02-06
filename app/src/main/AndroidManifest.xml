@@ -127,11 +127,10 @@
         </activity>
         <activity android:name=".activities.GetStartedActivity" />
         <activity android:name=".activities.providers.WebviewActivity" />
-        <activity android:name=".activities.ManageUsersActivity" />
+        <activity android:name=".activities.MembersActivity" />
         <activity android:name=".activities.ControllerActivity" />
         <activity android:name=".activities.about.PurchasesActivity" />
         <activity android:name=".activities.PoliciesActivity" />
-        <activity android:name=".activities.EditNavigationActivity" />
         <activity
             android:name=".activities.LoginActivity"
             android:screenOrientation="portrait"

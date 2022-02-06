@@ -289,7 +289,7 @@
 129        <activity android:name="com.picassos.mint.console.android.activities.providers.WebviewActivity" />
 129-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:120:9-74
 129-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:120:19-71
-130        <activity android:name="com.picassos.mint.console.android.activities.ManageUsersActivity" />
+130        <activity android:name="com.picassos.mint.console.android.activities.MembersActivity" />
 130-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:121:9-68
 130-->/Users/noor/Desktop/Mint Console/app/src/main/AndroidManifest.xml:121:19-65
 131        <activity android:name="com.picassos.mint.console.android.activities.ControllerActivity" />

@@ -62,13 +62,14 @@ public class PreviewWalkthroughActivity extends AppCompatActivity {
 
     /**
      * request set preview data
-     * @param response for response
+     * @param response for volley response
      */
     private void setPreview(String response) {
         try {
             JSONObject obj = new JSONObject(response);
 
-            JSONArray array = obj.getJSONArray("walkthrough");
+            JSONObject root = obj.getJSONObject("walkthrough");
+            JSONArray array = root.getJSONArray("rendered");
 
             for (int i = 0; i < array.length(); i++) {
                 JSONObject object = array.getJSONObject(i);

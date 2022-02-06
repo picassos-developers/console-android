@@ -127,7 +127,7 @@
         </activity>
         <activity android:name="com.picassos.mint.console.android.activities.GetStartedActivity" />
         <activity android:name="com.picassos.mint.console.android.activities.providers.WebviewActivity" />
-        <activity android:name="com.picassos.mint.console.android.activities.ManageUsersActivity" />
+        <activity android:name="com.picassos.mint.console.android.activities.MembersActivity" />
         <activity android:name="com.picassos.mint.console.android.activities.ControllerActivity" />
         <activity android:name="com.picassos.mint.console.android.activities.about.PurchasesActivity" />
         <activity android:name="com.picassos.mint.console.android.activities.PoliciesActivity" />

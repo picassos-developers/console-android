@@ -38,15 +38,13 @@ public final class APP_DATABASE_Impl extends APP_DATABASE {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `notification` (`id` INTEGER, `title` TEXT, `content` TEXT, `obj_id` INTEGER, `read` INTEGER, `created_at` INTEGER, PRIMARY KEY(`id`))");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `account` (`id` INTEGER, `token` TEXT, `username` TEXT, `email` TEXT, `active` INTEGER, PRIMARY KEY(`id`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9383a39b9e7b0076bd0e22868787382a')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2d3b9a7d96f5af3a1acdee597b419343')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `notification`");
-        _db.execSQL("DROP TABLE IF EXISTS `account`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -101,24 +99,9 @@ public final class APP_DATABASE_Impl extends APP_DATABASE {
                   + " Expected:\n" + _infoNotification + "\n"
                   + " Found:\n" + _existingNotification);
         }
-        final HashMap<String, TableInfo.Column> _columnsAccount = new HashMap<String, TableInfo.Column>(5);
-        _columnsAccount.put("id", new TableInfo.Column("id", "INTEGER", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsAccount.put("token", new TableInfo.Column("token", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsAccount.put("username", new TableInfo.Column("username", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsAccount.put("email", new TableInfo.Column("email", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsAccount.put("active", new TableInfo.Column("active", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysAccount = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesAccount = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoAccount = new TableInfo("account", _columnsAccount, _foreignKeysAccount, _indicesAccount);
-        final TableInfo _existingAccount = TableInfo.read(_db, "account");
-        if (! _infoAccount.equals(_existingAccount)) {
-          return new RoomOpenHelper.ValidationResult(false, "account(com.picassos.mint.console.android.entities.AccountEntity).\n"
-                  + " Expected:\n" + _infoAccount + "\n"
-                  + " Found:\n" + _existingAccount);
-        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "9383a39b9e7b0076bd0e22868787382a", "3c66306d89a4874e00e085514f2434cf");
+    }, "2d3b9a7d96f5af3a1acdee597b419343", "878def704abcdc8ea24bb4edf6f86c7e");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -131,7 +114,7 @@ public final class APP_DATABASE_Impl extends APP_DATABASE {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "notification","account");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "notification");
   }
 
   @Override
@@ -141,7 +124,6 @@ public final class APP_DATABASE_Impl extends APP_DATABASE {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `notification`");
-      _db.execSQL("DELETE FROM `account`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();

@@ -1,9 +1,6 @@
 package com.picassos.mint.console.android.sheets;
 
-import static android.app.Activity.RESULT_OK;
-
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +11,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
@@ -22,15 +20,17 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.activities.helpCentre.UpdateTicketActivity;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.constants.RequestCodes;
+import com.picassos.mint.console.android.models.viewModel.SharedViewModel;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.utils.RequestDialog;
 import com.picassos.mint.console.android.utils.Toasto;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class TicketOptionsBottomSheetModal extends BottomSheetDialogFragment {
+    SharedViewModel sharedViewModel;
 
     View view;
     RequestDialog requestDialog;
@@ -80,6 +80,13 @@ public class TicketOptionsBottomSheetModal extends BottomSheetDialogFragment {
         super.onCreate(savedInstanceState);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+    }
+
     /**
      * request close ticket
      *
@@ -91,9 +98,8 @@ public class TicketOptionsBottomSheetModal extends BottomSheetDialogFragment {
         StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_CLOSE_TICKET,
                 response -> {
                     if (response.equals("200")) {
-                        Intent intent = new Intent();
-                        intent.putExtra("request", "close");
-                        Objects.requireNonNull(getTargetFragment()).onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, intent);
+                        sharedViewModel.setRequestCode(RequestCodes.REQUEST_CLOSE_TICKET_CODE);
+                        dismiss();
                     } else {
                         Toasto.show_toast(requireContext(), getString(R.string.unknown_issue), 0, 2);
                     }
@@ -105,7 +111,7 @@ public class TicketOptionsBottomSheetModal extends BottomSheetDialogFragment {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
-                params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                params.put("token", consolePreferences.loadToken());
                 params.put("ticket_id", String.valueOf(id));
                 return params;
             }
@@ -115,10 +121,8 @@ public class TicketOptionsBottomSheetModal extends BottomSheetDialogFragment {
     }
 
     ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
-        if (result != null && result.getResultCode() == RESULT_OK) {
-            Intent intent = new Intent();
-            intent.putExtra("request", "update");
-            Objects.requireNonNull(getTargetFragment()).onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, intent);
+        if (result != null && result.getResultCode() == RequestCodes.REQUEST_UPDATE_TICKET_CODE) {
+            sharedViewModel.setRequestCode(RequestCodes.REQUEST_UPDATE_TICKET_CODE);
             dismiss();
         }
     });

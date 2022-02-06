@@ -1,7 +1,5 @@
 package com.picassos.mint.console.android.sheets;
 
-import static android.app.Activity.RESULT_OK;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -25,6 +23,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.activities.EditWalkthroughActivity;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.constants.RequestCodes;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.utils.RequestDialog;
 
@@ -32,10 +31,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class WalkthroughOptionsBottomSheetModal extends BottomSheetDialogFragment {
-
     View view;
+
     RequestDialog requestDialog;
-    private ConsolePreferences consolePreferences;
+    ConsolePreferences consolePreferences;
 
     public interface OnDeleteListener {
         void onDeleteListener(boolean delete);
@@ -154,9 +153,11 @@ public class WalkthroughOptionsBottomSheetModal extends BottomSheetDialogFragmen
     ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
-            if (result != null && result.getResultCode() == RESULT_OK) {
-                onEditListener.onEditListener(true);
-                dismiss();
+            if (result != null) {
+                if (result.getResultCode() == RequestCodes.REQUEST_UPDATE_WALKTRHOUGH_CODE) {
+                    onEditListener.onEditListener(true);
+                    dismiss();
+                }
             }
         }
     });

@@ -17,7 +17,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentResultListener;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -36,10 +36,11 @@ import com.picassos.mint.console.android.activities.providers.YoutubeActivity;
 import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.adapter.NavigationsAdapter;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.constants.RequestCodes;
 import com.picassos.mint.console.android.models.Navigations;
+import com.picassos.mint.console.android.models.viewModel.SharedViewModel;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
 import com.picassos.mint.console.android.sheets.ChooseProviderBottomSheetModal;
-import com.picassos.mint.console.android.sheets.ManageAccountsBottomSheetModal;
 import com.picassos.mint.console.android.sheets.ChooseDefaultNavigationBottomSheetModal;
 import com.picassos.mint.console.android.utils.AboutDialog;
 import com.picassos.mint.console.android.utils.RequestDialog;
@@ -55,18 +56,15 @@ import java.util.List;
 import java.util.Map;
 
 public class NavigationFragment extends Fragment {
+    SharedViewModel sharedViewModel;
 
     Bundle bundle;
     View view;
 
-
-    // REQUEST CODES
-    private static final int REQUEST_SELECT_PROVIDER = 1;
-
     RequestDialog requestDialog;
     private ConsolePreferences consolePreferences;
 
-    // Navigations
+    // navigations
     private final List<Navigations> navigationsList = new ArrayList<>();
     private NavigationsAdapter navigationsAdapter;
 
@@ -78,6 +76,13 @@ public class NavigationFragment extends Fragment {
         // initialize bundle & shared preferences
         bundle = new Bundle();
         consolePreferences = new ConsolePreferences(requireContext());
+
+        sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+        sharedViewModel.getRequestCode().observe(requireActivity(), item -> {
+            if (item == RequestCodes.REQUEST_UPDATE_NAVIGATIONS) {
+                requestNavigations();
+            }
+        });
 
         return view;
     }
@@ -96,11 +101,6 @@ public class NavigationFragment extends Fragment {
         view.findViewById(R.id.open_profile).setOnClickListener(v -> {
             AboutDialog aboutDialog = new AboutDialog(requireContext(), getActivity());
             aboutDialog.show();
-        });
-        view.findViewById(R.id.open_profile).setOnLongClickListener(v -> {
-            ManageAccountsBottomSheetModal manageAccountsBottomSheetModal = new ManageAccountsBottomSheetModal();
-            manageAccountsBottomSheetModal.show(getChildFragmentManager(), "TAG");
-            return true;
         });
 
         // Initialize navigations recyclerview
@@ -245,16 +245,9 @@ public class NavigationFragment extends Fragment {
                                 e.printStackTrace();
                             }
 
-                            requireActivity().getSupportFragmentManager().setFragmentResultListener("request", getViewLifecycleOwner(), new FragmentResultListener() {
-                                @Override
-                                public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
-
-                                }
-                            });
-
                             ChooseDefaultNavigationBottomSheetModal chooseDefaultNavigationBottomSheetModal = new ChooseDefaultNavigationBottomSheetModal();
                             chooseDefaultNavigationBottomSheetModal.setArguments(bundle);
-                            chooseDefaultNavigationBottomSheetModal.show(requireFragmentManager(), "TAG");
+                            chooseDefaultNavigationBottomSheetModal.show(getChildFragmentManager(), "TAG");
                         });
                     } catch (JSONException e) {
                         e.printStackTrace();

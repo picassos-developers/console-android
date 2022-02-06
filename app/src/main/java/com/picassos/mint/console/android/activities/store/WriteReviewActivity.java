@@ -169,7 +169,7 @@ public class WriteReviewActivity extends AppCompatActivity {
 
         @SuppressLint("SetTextI18n")
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            length.setText(s.length() + "/250");
+            length.setText(s.length() + " / 250");
         }
 
         @Override

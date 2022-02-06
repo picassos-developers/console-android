@@ -15,7 +15,6 @@ import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.utils.IntentHandler;
 
 public class LearnMoreBottomSheetModal extends BottomSheetDialogFragment {
-
     View view;
 
     public LearnMoreBottomSheetModal() {
@@ -48,5 +47,4 @@ public class LearnMoreBottomSheetModal extends BottomSheetDialogFragment {
 
         return view;
     }
-
 }
