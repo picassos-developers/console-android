@@ -24,7 +24,6 @@ import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.activities.EditProjectActivity;
 import com.picassos.mint.console.android.activities.MainActivity;
 import com.picassos.mint.console.android.activities.MembersActivity;
-import com.picassos.mint.console.android.activities.PushNotificationsActivity;
 import com.picassos.mint.console.android.adapter.MembersAdapter;
 import com.picassos.mint.console.android.constants.API;
 import com.picassos.mint.console.android.libraries.showcaseview.GuideView;
@@ -32,6 +31,7 @@ import com.picassos.mint.console.android.libraries.showcaseview.config.DismissTy
 import com.picassos.mint.console.android.libraries.showcaseview.config.Gravity;
 import com.picassos.mint.console.android.models.Members;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
+import com.picassos.mint.console.android.sheets.ChooseNotificationProviderBottomSheetModal;
 import com.picassos.mint.console.android.sheets.LaunchAppBottomSheetModal;
 import com.picassos.mint.console.android.utils.AboutDialog;
 import com.picassos.mint.console.android.utils.PromotionDialog;
@@ -102,7 +102,10 @@ public class HomeFragment extends Fragment {
         });
 
         // push notifications
-        view.findViewById(R.id.push_notifications_container).setOnClickListener(v -> startActivity(new Intent(requireContext(), PushNotificationsActivity.class)));
+        view.findViewById(R.id.push_notifications_container).setOnClickListener(v -> {
+            ChooseNotificationProviderBottomSheetModal chooseNotificationProviderBottomSheetModal = new ChooseNotificationProviderBottomSheetModal();
+            chooseNotificationProviderBottomSheetModal.show(getParentFragmentManager(), "TAG");
+        });
 
         // Refresh Layout
         SwipeRefreshLayout refresh = view.findViewById(R.id.refresh_layout);
@@ -153,7 +156,15 @@ public class HomeFragment extends Fragment {
                 response -> {
                     try {
                         JSONObject object = new JSONObject(response);
-                        JSONObject root = object.getJSONObject("home");
+                        JSONObject root = object.getJSONObject("app");
+
+                        /* statistics start **/
+                        TextView uniqueAppVisits = view.findViewById(R.id.unique_app_visits);
+                        TextView totalMembers = view.findViewById(R.id.total_members);
+
+                        uniqueAppVisits.setText(String.valueOf(root.getJSONObject("statistics").getInt("unique_app_visits")));
+                        totalMembers.setText(String.valueOf(root.getJSONObject("statistics").getInt("total_members")));
+                        /* statistics end **/
 
                         /* members container start **/
                         membersList.clear();
@@ -170,8 +181,9 @@ public class HomeFragment extends Fragment {
                         } else {
                             view.findViewById(R.id.members_container).setVisibility(View.VISIBLE);
                         }
+                        // view all members
+                        view.findViewById(R.id.view_all_members).setOnClickListener(v -> startActivity(new Intent(requireContext(), MembersActivity.class)));
                         /* members container end **/
-
 
 
 

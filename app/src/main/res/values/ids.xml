@@ -12,6 +12,7 @@
     <item name="comment_field" type="id" />
     <item name="post_comment" type="id" />
     <item name="recycler_comments" type="id" />
+    <item name="register_container" type="id" />
     <item name="gift_steps" type="id" />
     <item name="demo_project" type="id" />
     <item name="darkmode_container" type="id" />
@@ -60,6 +61,8 @@
     <item name="loading_spinner_container" type="id" />
     <item name="update_controller" type="id" />
     <item name="links" type="id" />
+    <item name="unique_app_visits" type="id" />
+    <item name="total_members" type="id" />
     <item name="default_provider_icon" type="id" />
     <item name="loading_spinner" type="id" />
     <item name="default_provider" type="id" />
@@ -83,6 +86,7 @@
     <item name="setup_custom_darkmode" type="id" />
     <item name="company_address" type="id" />
     <item name="help_centre" type="id" />
+    <item name="account" type="id" />
     <item name="qr_placeholder" type="id" />
     <item name="noted_product" type="id" />
     <item name="youtubely_product" type="id" />
@@ -151,8 +155,10 @@
     <item name="skip_tour" type="id" />
     <item name="skip_tour_container" type="id" />
     <item name="password_strength_indicator" type="id" />
+    <item name="about_container" type="id" />
     <item name="console_credits" type="id" />
     <item name="skip_store_tour_container" type="id" />
+    <item name="share_content_container" type="id" />
     <item name="ticket_type" type="id" />
     <item name="redeem" type="id" />
     <item name="ticket_description" type="id" />
@@ -176,11 +182,15 @@
     <item name="recycler_force_update" type="id" />
     <item name="notification_title" type="id" />
     <item name="setup_policies" type="id" />
+    <item name="about_content" type="id" />
+    <item name="update_about" type="id" />
     <item name="notification_description" type="id" />
     <item name="confirm_allow" type="id" />
     <item name="switch_project" type="id" />
     <item name="notification_date" type="id" />
     <item name="recycler_target" type="id" />
+    <item name="share_content" type="id" />
+    <item name="update_share_content" type="id" />
     <item name="manage_account" type="id" />
     <item name="open_profile" type="id" />
     <item name="copy_token" type="id" />
@@ -358,6 +368,7 @@
     <item name="update_password" type="id" />
     <item name="verification_code" type="id" />
     <item name="resend_again" type="id" />
+    <item name="resend_again_timer" type="id" />
     <item name="email_verification" type="id" />
     <item name="project_purchasecode" type="id" />
     <item name="home" type="id" />
@@ -368,6 +379,8 @@
     <item name="menu_members" type="id" />
     <item name="menu_manage_login_providers" type="id" />
     <item name="menu_walkthrough" type="id" />
+    <item name="onesignal" type="id" />
+    <item name="google_firebase" type="id" />
     <item name="menu_manage_updates" type="id" />
     <item name="menu_manage_ads" type="id" />
     <item name="menu_manage_login" type="id" />
@@ -386,13 +399,16 @@
     <item name="menu_dark_mode" type="id" />
     <item name="menu_privacy_policy" type="id" />
     <item name="menu_terms_of_use" type="id" />
+    <item name="menu_about_app" type="id" />
     <item name="copy_api_key" type="id" />
     <item name="edit_navigation" type="id" />
+    <item name="menu_app_settings" type="id" />
     <item name="delete_navigation" type="id" />
     <item name="notification_sound" type="id" />
     <item name="notification_vibration" type="id" />
     <item name="manage_credentials" type="id" />
     <item name="opened_tickets" type="id" />
+    <item name="menu_share_content" type="id" />
     <item name="closed_tickets" type="id" />
     <item name="custom_toast" type="id" />
     <item name="admob_app_id" type="id" />

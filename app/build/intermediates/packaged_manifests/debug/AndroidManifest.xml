@@ -30,6 +30,12 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.picassos.mint.console.android.activities.AppSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.picassos.mint.console.android.activities.AboutAppActivity"
+            android:exported="false" />
+        <activity
             android:name="com.picassos.mint.console.android.activities.ThemeStyleActivity"
             android:exported="false" />
         <activity
@@ -53,6 +59,9 @@
             android:exported="true" />
         <activity
             android:name="com.picassos.mint.console.android.activities.store.ViewProductActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.picassos.mint.console.android.activities.ShareContentActivity"
             android:exported="true" />
         <activity
             android:name="com.picassos.mint.console.android.activities.ClaimGiftActivity"

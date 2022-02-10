@@ -385,6 +385,8 @@ attr counterTextAppearance
 attr counterTextColor
 attr crossfade
 attr currentState
+attr cursorColor
+attr cursorWidth
 attr curveFit
 attr customBoolean
 attr customColorDrawableValue
@@ -565,6 +567,7 @@ attr helperTextEnabled
 attr helperTextTextAppearance
 attr helperTextTextColor
 attr hideAnimationBehavior
+attr hideLineWhenFilled
 attr hideMotionSpec
 attr hideOnContentScroll
 attr hideOnScroll
@@ -607,7 +610,9 @@ attr isMaterial3Theme
 attr isMaterialTheme
 attr itemActiveIndicatorStyle
 attr itemBackground
+attr itemCount
 attr itemFillColor
+attr itemHeight
 attr itemHorizontalPadding
 attr itemHorizontalTranslationEnabled
 attr itemIconPadding
@@ -618,6 +623,7 @@ attr itemMinHeight
 attr itemPadding
 attr itemPaddingBottom
 attr itemPaddingTop
+attr itemRadius
 attr itemRippleColor
 attr itemShapeAppearance
 attr itemShapeAppearanceOverlay
@@ -634,6 +640,7 @@ attr itemTextAppearanceActive
 attr itemTextAppearanceInactive
 attr itemTextColor
 attr itemVerticalPadding
+attr itemWidth
 attr item_drawer
 attr keyPositionType
 attr keyboardIcon
@@ -720,8 +727,10 @@ attr layout_wrapBehaviorInParent
 attr liftOnScroll
 attr liftOnScrollTargetViewId
 attr limitBoundsTo
+attr lineColor
 attr lineHeight
 attr lineSpacing
+attr lineWidth
 attr linearProgressIndicatorStyle
 attr listChoiceBackgroundIndicator
 attr listChoiceIndicatorMultipleAnimated
@@ -898,6 +907,7 @@ attr percentWidth
 attr percentX
 attr percentY
 attr perpendicularPath_percent
+attr pinViewStyle
 attr pivotAnchor
 attr placeholderImage
 attr placeholderImageScaleType
@@ -1247,6 +1257,7 @@ attr viewTransitionMode
 attr viewTransitionOnCross
 attr viewTransitionOnNegativeCross
 attr viewTransitionOnPositiveCross
+attr viewType
 attr visibilityMode
 attr voiceIcon
 attr warmth
@@ -2468,6 +2479,11 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen pv_pin_view_cursor_width
+dimen pv_pin_view_item_line_width
+dimen pv_pin_view_item_radius
+dimen pv_pin_view_item_size
+dimen pv_pin_view_item_spacing
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
@@ -2626,6 +2642,8 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable icon_account_filled
+drawable icon_account_outline
 drawable icon_add
 drawable icon_add_folder
 drawable icon_admob_color
@@ -2664,10 +2682,12 @@ drawable icon_facebook
 drawable icon_facebook_color
 drawable icon_file_download
 drawable icon_financial
+drawable icon_firebase_color
 drawable icon_forward
 drawable icon_full_screen
 drawable icon_gear_filled
 drawable icon_gear_outline
+drawable icon_gear_outline_two
 drawable icon_gift
 drawable icon_gift_card
 drawable icon_google
@@ -2697,6 +2717,7 @@ drawable icon_mic
 drawable icon_minus
 drawable icon_more_horizontal
 drawable icon_new_ticket
+drawable icon_onesignal_color
 drawable icon_opened_tickets_filled
 drawable icon_opened_tickets_outline
 drawable icon_other
@@ -2712,6 +2733,7 @@ drawable icon_search
 drawable icon_send_filled
 drawable icon_server_filled
 drawable icon_share
+drawable icon_share_two
 drawable icon_shopping_bag
 drawable icon_shopping_basket
 drawable icon_sleep
@@ -2731,6 +2753,7 @@ drawable icon_tickets
 drawable icon_transaction
 drawable icon_trash
 drawable icon_trash_outline
+drawable icon_tune_outline
 drawable icon_up_green
 drawable icon_updates
 drawable icon_user
@@ -2740,6 +2763,7 @@ drawable icon_visit
 drawable icon_webview
 drawable icon_wifi
 drawable icon_wordpress
+drawable icon_wrench_outline
 drawable icon_youtube
 drawable indicator_default
 drawable indicator_selected
@@ -2795,6 +2819,7 @@ drawable mtrl_navigation_bar_item_background
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_overlay
 drawable mtrl_tabs_default_indicator
+drawable navigation_account
 drawable navigation_background
 drawable navigation_closed_tickets
 drawable navigation_empty_icon
@@ -2818,6 +2843,7 @@ drawable notify_panel_notification_icon_bg
 drawable popup_background
 drawable progress_drawable
 drawable promotion_backgrond
+drawable pv_invisible_image
 drawable read_mark
 drawable rectangle
 drawable rectangle_secondary
@@ -2889,6 +2915,8 @@ id SYM
 id TOP_END
 id TOP_START
 id about_console
+id about_container
+id about_content
 id accelerate
 id access_token
 id accessibility_action_clickable_span
@@ -2924,6 +2952,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id account
 id account_avatar
 id account_avatar_container
 id account_container
@@ -3224,6 +3253,7 @@ id gift_steps
 id go_back
 id gone
 id google_admob
+id google_firebase
 id google_login
 id google_pay
 id gradient_theme
@@ -3283,6 +3313,7 @@ id leftToRight
 id legacy
 id length
 id light_mode
+id line
 id line1
 id line3
 id linear
@@ -3334,6 +3365,8 @@ id member_email
 id member_icon
 id member_username
 id members_container
+id menu_about_app
+id menu_app_settings
 id menu_custom_css
 id menu_dark_mode
 id menu_facebook
@@ -3346,6 +3379,7 @@ id menu_maps
 id menu_members
 id menu_pinterest
 id menu_privacy_policy
+id menu_share_content
 id menu_terms_of_use
 id menu_theme_style
 id menu_vimeo
@@ -3445,6 +3479,7 @@ id notifications_settings
 id off
 id on
 id onInterceptTouchReturnSwipe
+id onesignal
 id open_navigation
 id open_powerstore
 id open_profile
@@ -3540,6 +3575,7 @@ id qr_placeholder
 id radio
 id rating_callback
 id ratio
+id rectangle
 id rectangles
 id recycler_accounts
 id recycler_affiliate
@@ -3568,9 +3604,11 @@ id redeem_card
 id redeem_code
 id refresh_layout
 id register
+id register_container
 id remove_comment
 id remove_provider
 id resend_again
+id resend_again_timer
 id response
 id restart
 id reverse
@@ -3620,6 +3658,8 @@ id selection_type
 id send_notification
 id setup_custom_darkmode
 id setup_policies
+id share_content
+id share_content_container
 id share_product
 id sharedValueSet
 id sharedValueUnset
@@ -3732,6 +3772,7 @@ id toolbar_title
 id top
 id topPanel
 id total_credits
+id total_members
 id total_spent
 id total_tabs
 id total_users
@@ -3748,8 +3789,10 @@ id try_again
 id two_factor_auth
 id unchecked
 id uniform
+id unique_app_visits
 id unlabeled
 id up
+id update_about
 id update_app
 id update_comment
 id update_configuration
@@ -3765,6 +3808,7 @@ id update_pinterest
 id update_policies
 id update_project
 id update_provider
+id update_share_content
 id update_ticket
 id update_vimeo
 id update_walkthrough
@@ -3933,8 +3977,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_about_app
 layout activity_about_console
 layout activity_add_project
+layout activity_app_settings
 layout activity_articles
 layout activity_check_status
 layout activity_check_ticket
@@ -3978,6 +4024,7 @@ layout activity_set_facebook_network
 layout activity_set_google_admob
 layout activity_setup_custom_dark_mode
 layout activity_setup_policies
+layout activity_share_content
 layout activity_splash
 layout activity_submit_ticket
 layout activity_theme_style
@@ -3996,6 +4043,7 @@ layout add_walkthrough_bottom_sheet_modal
 layout article_options_bottom_sheet_modal
 layout choose_custom_darkmode_package_bottom_sheet_modal
 layout choose_default_navigation_bottom_sheet_modal
+layout choose_notification_provider_bottom_sheet_modal
 layout choose_provider_bottom_sheet_modal
 layout color_picker_dialog
 layout comment_options_bottom_sheet_modal
@@ -4034,6 +4082,7 @@ layout edit_email_bottom_sheet_modal
 layout edit_packagename_bottom_sheet_modal
 layout fragment4
 layout fragment5
+layout fragment_account
 layout fragment_add_first_content_provider
 layout fragment_choose_app_category
 layout fragment_closed_tickets
@@ -4146,7 +4195,6 @@ layout payment_method_bottom_sheet_modal
 layout project_options_bottom_sheet_modal
 layout provider_options_bottom_sheet_modal
 layout redeem_code_bottom_sheet_modal
-layout reset_password_email_bottom_sheet_modal
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -4215,9 +4263,12 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about_app_updated
+string about_application
 string about_console
 string about_console_description
 string access_token
+string account
 string account_updated_successfully
 string add_a_default_provider
 string add_account
@@ -4240,7 +4291,9 @@ string all_you_need_to_do_is_write_a_review_about_your_experience_with_mint_on_c
 string already_have_account
 string androidx_startup
 string app_email_address_description
+string app_information
 string app_name
+string app_settings
 string appbar_scrolling_view_behavior
 string appearance
 string application_name
@@ -4270,6 +4323,7 @@ string checkout
 string checkout_using_google_pay
 string checkout_using_your_console_credits
 string chip_text
+string choose_a_notification_provider
 string choose_ad_provider
 string choose_design
 string choose_provider
@@ -4296,6 +4350,7 @@ string console_visits
 string continue_purchase
 string copy_token
 string couldn_t_load_content_maybe_your_internet_connection_down_pull_to_try_again
+string create_a_mynta_account_to_continue
 string create_account
 string create_project
 string creating_your_project
@@ -4396,6 +4451,8 @@ string google_admob_updated
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
+string google_firebase
+string google_firebase_description
 string google_play_payment
 string google_storage_bucket
 string got_a_gift_card_claim_it_for_free_credits
@@ -4441,7 +4498,6 @@ string invalid_package_name
 string it_seems_like_you_don_t_have_any_purchases_visit_our_power_store_so_you_don_t_miss_out_on_awesome_power_ups_amp_special_offers
 string item_view_role_description
 string label
-string last_members
 string last_update
 string latest_update
 string launch_normal_process
@@ -4559,6 +4615,7 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
+string my_account
 string my_power_ups
 string my_tickets
 string navigation
@@ -4570,6 +4627,7 @@ string navigation_title_required
 string navigations_data
 string new_confirm_password_empty
 string new_confirm_password_not_same
+string new_members
 string new_password
 string newsletter
 string next
@@ -4595,6 +4653,8 @@ string notifications
 string notifications_preferences
 string of_five
 string oh_no_a_bad_review_maybe_we_can_help_improve_your_experience_with_mint_contact_us_whenever_you_need_and_we_ll_be_there_for_the_rescue
+string onesignal
+string onesignal_description
 string open_in_default_browser
 string open_outside_app
 string open_ticket
@@ -4626,6 +4686,7 @@ string pinterest
 string pinterest_is_an_image_sharing_and_social_media_service_show_your_pins_and_boards_inside_your_app_using_pinterest_content_provider
 string pinterest_updated
 string place_your_policies_here
+string please_enter_the_verification_code_sent_to
 string please_read_our_terms_of_use_for_details_about_our_customization_card_system
 string policies
 string policies_learnmore_description
@@ -4668,6 +4729,8 @@ string remove_provider
 string request_custom_darkmode
 string request_customization
 string request_submitted_successfully_we_will_verify_your_data_and_send_you_the_customized_source_code_to
+string resend
+string resend_code_in
 string responds
 string review_deleted_successfully
 string review_posted_successfully
@@ -4692,6 +4755,8 @@ string server_is_down
 string server_status
 string setup_google_firebase
 string setup_policies
+string share_content
+string share_content_updated
 string share_your_location_geolocation_in_your_app_with_google_maps_content_provider
 string short_password
 string show_posts_news_articles_and_more_in_your_app_using_wordpress_content_provider
@@ -4737,6 +4802,7 @@ string track_tickets
 string transform_your_website_webapp_webpage_into_an_application_using_webview_webkit
 string try_again
 string two_factor_auth
+string unique_app_visits
 string unknown_issue
 string update
 string update_comment
@@ -4762,6 +4828,7 @@ string verified_by_picassos_developers
 string verify
 string version
 string video_design
+string view_all
 string view_product
 string view_ticket
 string vimeo
@@ -4800,6 +4867,7 @@ string your_available_balance
 string your_country
 string your_file_downloaded_successfully
 string your_links
+string your_new_password_must_differ_nfrom_your_previous_used_password
 string your_review
 string youtube
 string youtube_updated
@@ -5104,6 +5172,8 @@ style MaterialAlertDialog_MaterialComponents_Title_Panel
 style MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked
 style MaterialAlertDialog_MaterialComponents_Title_Text
 style MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked
+style PinWidget
+style PinWidget_PinView
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents
@@ -5945,6 +6015,8 @@ styleable NavigationRailView headerLayout itemMinHeight menuGravity
 styleable NavigationView android_layout_gravity android_background android_fitsSystemWindows android_maxWidth bottomInsetScrimEnabled dividerInsetEnd dividerInsetStart drawerLayoutCornerSize elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconSize itemIconTint itemMaxLines itemShapeAppearance itemShapeAppearanceOverlay itemShapeFillColor itemShapeInsetBottom itemShapeInsetEnd itemShapeInsetStart itemShapeInsetTop itemTextAppearance itemTextColor itemVerticalPadding menu shapeAppearance shapeAppearanceOverlay subheaderColor subheaderInsetEnd subheaderInsetStart subheaderTextAppearance topInsetScrimEnabled
 styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
+styleable PinView android_itemBackground android_cursorVisible cursorColor cursorWidth hideLineWhenFilled itemCount itemHeight itemRadius itemSpacing itemWidth lineColor lineWidth viewType
+styleable PinViewTheme pinViewStyle
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode

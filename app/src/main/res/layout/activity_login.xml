@@ -45,6 +45,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/sign_into_your_mynta_account_to_continue"
                 android:textColor="?color_dark"
+                android:textAlignment="center"
                 android:textSize="14sp" />
 
             <EditText
@@ -90,11 +91,10 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:background="@drawable/button_primary"
+                android:background="@drawable/input_background_primary"
                 android:text="@string/signin"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="12dp"
                 android:textAllCaps="false"
-                android:enabled="false"
                 android:textColor="?color_light_separate"
                 android:textSize="@dimen/input_text_size" />
 
@@ -103,7 +103,7 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/input_background_primary"
                 android:text="@string/signin_with_qr"
                 android:textAllCaps="false"

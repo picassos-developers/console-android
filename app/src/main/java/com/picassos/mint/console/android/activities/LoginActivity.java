@@ -6,10 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -17,9 +14,9 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.picassos.mint.console.android.R;
+import com.picassos.mint.console.android.activities.forgotPassword.EnterVerificationActivity;
 import com.picassos.mint.console.android.constants.API;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
-import com.picassos.mint.console.android.sheets.ResetPasswordEmailBottomSheetModal;
 import com.picassos.mint.console.android.sheets.TwoFactorAuthBottomSheetModal;
 import com.picassos.mint.console.android.utils.Helper;
 import com.picassos.mint.console.android.utils.RequestDialog;
@@ -42,8 +39,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText email;
     private EditText password;
 
-    private Button login;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +56,9 @@ public class LoginActivity extends AppCompatActivity {
         // initialize request dialog
         requestDialog = new RequestDialog(this);
 
+        // go back
+        findViewById(R.id.go_back).setOnClickListener(v -> finish());
+
         // validate data
         if (getIntent().getStringExtra("add_account") == null) {
             if (!consolePreferences.loadToken().equals("exception:error?token")) {
@@ -73,18 +71,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
 
-        // email
+        // fields
         email = findViewById(R.id.email);
-        email.addTextChangedListener(validateLogin);
-
-        // password
         password = findViewById(R.id.password);
-        password.addTextChangedListener(validateLogin);
-
 
         // login
-        login = findViewById(R.id.login);
-        login.setOnClickListener(v -> {
+        findViewById(R.id.login).setOnClickListener(v -> {
             if (!TextUtils.isEmpty(email.getText().toString()) && !TextUtils.isEmpty(password.getText().toString())) {
                 requestLogin();
             } else {
@@ -119,10 +111,9 @@ public class LoginActivity extends AppCompatActivity {
                 response -> {
                     switch (response) {
                         case "200":
-                            bundle.putString("email", email.getText().toString());
-                            ResetPasswordEmailBottomSheetModal resetPasswordEmailBottomSheetModal = new ResetPasswordEmailBottomSheetModal();
-                            resetPasswordEmailBottomSheetModal.setArguments(bundle);
-                            resetPasswordEmailBottomSheetModal.show(getSupportFragmentManager(), "TAG");
+                            Intent intent = new Intent(LoginActivity.this, EnterVerificationActivity.class);
+                            intent.putExtra("email", email.getText().toString());
+                            startActivity(intent);
                             break;
                         case "403":
                             Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);
@@ -190,7 +181,7 @@ public class LoginActivity extends AppCompatActivity {
                     requestDialog.dismiss();
                 }, error -> {
             requestDialog.dismiss();
-            Toasto.show_toast(this, "exception:error?" + error.getMessage(), 1, 1);
+            Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);
         }){
           @Override
           protected Map<String, String> getParams() {
@@ -251,23 +242,6 @@ public class LoginActivity extends AppCompatActivity {
 
         Volley.newRequestQueue(this).add(request);
     }
-
-    private TextWatcher validateLogin = new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable editable) {
-            login.setEnabled(!email.getText().toString().equals("") && !password.getText().toString().equals(""));
-        }
-    };
 
     ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
         if (result != null && result.getResultCode() == RESULT_OK) {

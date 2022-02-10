@@ -33,6 +33,7 @@
         <entry key="app/src/main/res/drawable/item_background_active.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/item_background_darker.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/item_background_darker_selected.xml" value="0.271875" />
+        <entry key="app/src/main/res/drawable/navigation_account.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/drawable/navigation_menus.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/drawable/popup_background.xml" value="0.2713541666666667" />
         <entry key="app/src/main/res/drawable/progress_drawable.xml" value="0.271875" />
@@ -52,8 +53,10 @@
         <entry key="app/src/main/res/drawable/toast_warning.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/toolbar_background.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/toolbar_background_dark.xml" value="0.26875" />
+        <entry key="app/src/main/res/layout/activity_about_app.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_about_console.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_add_project.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_app_settings.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_articles.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_check_status.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_check_ticket.xml" value="0.2708333333333333" />
@@ -66,12 +69,12 @@
         <entry key="app/src/main/res/layout/activity_edit_project.xml" value="0.2677083333333333" />
         <entry key="app/src/main/res/layout/activity_edit_walkthrough.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_edit_wizard.xml" value="0.13385416666666666" />
-        <entry key="app/src/main/res/layout/activity_enter_verification.xml" value="0.2703125" />
+        <entry key="app/src/main/res/layout/activity_enter_verification.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_facebook.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/activity_finish_policies_setup.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_generate_auth_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_get_started.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_gift.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_gift.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_imgur.xml" value="0.2677083333333333" />
         <entry key="app/src/main/res/layout/activity_loading_bar.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
@@ -95,14 +98,15 @@
         <entry key="app/src/main/res/layout/activity_purchases.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_push_notifications.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_qr_login.xml" value="0.2703125" />
-        <entry key="app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.2557291666666667" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_search_articles.xml" value="0.4046875" />
         <entry key="app/src/main/res/layout/activity_set_facebook_network.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_set_google_admob.xml" value="0.25677083333333334" />
         <entry key="app/src/main/res/layout/activity_set_package_name.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_setup_custom_dark_mode.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_setup_policies.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_share_content.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_submit_ticket.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_theme_style.xml" value="0.33" />
@@ -124,7 +128,9 @@
         <entry key="app/src/main/res/layout/affiliate_product_details_sheet_modal.xml" value="0.5" />
         <entry key="app/src/main/res/layout/article_options_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/choose_custom_darkmode_package_bottom_sheet_modal.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/choose_default_ad_provider_bottom_sheet_modal.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/choose_default_navigation_bottom_sheet_modal.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/choose_default_notification_provider_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/choose_default_provider_bottom_sheet_modal.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/choose_provider_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/color_picker_dialog.xml" value="0.33" />
@@ -153,6 +159,7 @@
         <entry key="app/src/main/res/layout/fragment3.xml" value="0.25677083333333334" />
         <entry key="app/src/main/res/layout/fragment4.xml" value="0.25677083333333334" />
         <entry key="app/src/main/res/layout/fragment5.xml" value="0.25677083333333334" />
+        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_add_first_content_provider.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.2390625" />
         <entry key="app/src/main/res/layout/fragment_choose_app_category.xml" value="0.25364583333333335" />

@@ -1,25 +1,26 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:59:9-67:20
+INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:68:9-76:20
 	android:grantUriPermissions
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:63:13-47
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:72:13-47
 	android:authorities
 		INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:61:13-60
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:70:13-60
 	android:exported
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:62:13-37
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:71:13-37
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:60:13-62
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:69:13-62
 manifest
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-157:12
-INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-157:12
-INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-157:12
-INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-157:12
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-166:12
+INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-166:12
+INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-166:12
+INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-166:12
 MERGED from [com.karumi:dexter:6.2.3] /Users/noor/.gradle/caches/transforms-3/afc7caae05d5ef834370603226cfd9dc/transformed/jetified-dexter-6.2.3/AndroidManifest.xml:17:1-32:12
 MERGED from [com.ixuea:android-downloader:3.0.0] /Users/noor/.gradle/caches/transforms-3/90221f107b6b1d64eefc77b728d81d60/transformed/jetified-android-downloader-3.0.0/AndroidManifest.xml:2:1-19:12
 MERGED from [com.google.android.material:material:1.6.0-alpha02] /Users/noor/.gradle/caches/transforms-3/9c1c1ae3dd3b556d67637b0825a6e177/transformed/material-1.6.0-alpha02/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/noor/.gradle/caches/transforms-3/9812a3091facb96ebd65a46bfe369e67/transformed/constraintlayout-2.1.3/AndroidManifest.xml:2:1-11:12
 MERGED from [com.airbnb.android:lottie:4.2.2] /Users/noor/.gradle/caches/transforms-3/e2cd32d22851252d889b1e5f53bcdb74/transformed/jetified-lottie-4.2.2/AndroidManifest.xml:2:1-11:12
+MERGED from [io.github.chaosleung:pinview:1.4.4] /Users/noor/.gradle/caches/transforms-3/032be24a8d4257ffbe10d3796aafd999/transformed/jetified-pinview-1.4.4/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/noor/.gradle/caches/transforms-3/3572e02bed142adc2ebf684ead9d8083/transformed/appcompat-1.4.1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.billingclient:billing:4.0.0] /Users/noor/.gradle/caches/transforms-3/c207cf0a271434851ed86ffa87250232/transformed/jetified-billing-4.0.0/AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/noor/.gradle/caches/transforms-3/6453a77f00435ba994190ca62cf457ef/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -113,22 +114,22 @@ MERGED from [com.facebook.fresco:middleware:2.6.0] /Users/noor/.gradle/caches/tr
 MERGED from [com.facebook.fresco:ui-common:2.6.0] /Users/noor/.gradle/caches/transforms-3/562007da1e19e66e2deae9b30ba838c9/transformed/jetified-ui-common-2.6.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] /Users/noor/.gradle/caches/transforms-3/63bc0dc983f9fc08b04b1d897d0d6108/transformed/jetified-imagepipeline-base-2.6.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fbcore:2.6.0] /Users/noor/.gradle/caches/transforms-3/7bf303f47a132d238282d318d7abb103/transformed/jetified-fbcore-2.6.0/AndroidManifest.xml:2:1-9:12
-INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-157:12
-INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-157:12
-INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-157:12
+INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-166:12
+INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-166:12
+INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-166:12
 	package
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:4:5-48
 		INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-157:12
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-166:12
 		INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-157:12
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-166:12
 		INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:11-69
@@ -169,7 +170,7 @@ MERGED from [com.android.billingclient:billing:4.0.0] /Users/noor/.gradle/caches
 	android:name
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:11:22-64
 application
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:13:5-155:19
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:13:5-164:19
 MERGED from [com.karumi:dexter:6.2.3] /Users/noor/.gradle/caches/transforms-3/afc7caae05d5ef834370603226cfd9dc/transformed/jetified-dexter-6.2.3/AndroidManifest.xml:26:5-30:19
 MERGED from [com.karumi:dexter:6.2.3] /Users/noor/.gradle/caches/transforms-3/afc7caae05d5ef834370603226cfd9dc/transformed/jetified-dexter-6.2.3/AndroidManifest.xml:26:5-30:19
 MERGED from [com.ixuea:android-downloader:3.0.0] /Users/noor/.gradle/caches/transforms-3/90221f107b6b1d64eefc77b728d81d60/transformed/jetified-android-downloader-3.0.0/AndroidManifest.xml:9:5-17:19
@@ -252,330 +253,348 @@ MERGED from [com.facebook.soloader:soloader:0.10.1] /Users/noor/.gradle/caches/t
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:20:9-44
 	android:name
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:14:9-28
-activity#com.picassos.mint.console.android.activities.ThemeStyleActivity
+activity#com.picassos.mint.console.android.activities.AppSettingsActivity
 ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:21:9-23:40
 	android:exported
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:22:13-58
-activity#com.picassos.mint.console.android.activities.PushNotificationsActivity
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:22:13-59
+activity#com.picassos.mint.console.android.activities.AboutAppActivity
 ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:24:9-26:40
 	android:exported
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:25:13-65
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:25:13-56
+activity#com.picassos.mint.console.android.activities.ThemeStyleActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:27:9-29:40
+	android:exported
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:28:13-58
+activity#com.picassos.mint.console.android.activities.PushNotificationsActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:30:9-32:40
+	android:exported
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:31:13-65
 activity#com.picassos.mint.console.android.activities.store.powerups.customdarkmode.SetupCustomDarkModeActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:27:9-29:39
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:33:9-35:39
 	android:exported
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:29:13-36
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:35:13-36
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:28:13-97
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:34:13-97
 activity#com.picassos.mint.console.android.activities.store.powerups.policies.FinishPoliciesSetupActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:30:9-32:39
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:36:9-38:39
 	android:exported
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:32:13-36
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:38:13-36
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:31:13-91
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:37:13-91
 activity#com.picassos.mint.console.android.activities.store.powerups.policies.SetupPoliciesActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:33:9-94
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:39:9-94
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:33:19-91
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:39:19-91
 activity#com.picassos.mint.console.android.activities.store.WriteReviewActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:34:9-36:39
-	android:exported
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:36:13-36
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:35:13-65
-activity#com.picassos.mint.console.android.activities.CheckStatusActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:37:9-39:39
-	android:exported
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:39:13-36
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:38:13-59
-activity#com.picassos.mint.console.android.activities.store.ProductPurchasedActivity
 ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:40:9-42:39
 	android:exported
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:42:13-36
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:41:13-70
-activity#com.picassos.mint.console.android.activities.store.ViewProductActivity
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:41:13-65
+activity#com.picassos.mint.console.android.activities.CheckStatusActivity
 ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:43:9-45:39
 	android:exported
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:45:13-36
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:44:13-65
-activity#com.picassos.mint.console.android.activities.ClaimGiftActivity
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:44:13-59
+activity#com.picassos.mint.console.android.activities.store.ProductPurchasedActivity
 ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:46:9-48:39
 	android:exported
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:48:13-36
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:47:13-57
-activity#com.picassos.mint.console.android.activities.GiftActivity
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:47:13-70
+activity#com.picassos.mint.console.android.activities.store.ViewProductActivity
 ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:49:9-51:39
 	android:exported
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:51:13-36
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:50:13-52
-activity#com.picassos.mint.console.android.activities.PreviewWalkthroughActivity
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:50:13-65
+activity#com.picassos.mint.console.android.activities.ShareContentActivity
 ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:52:9-54:39
 	android:exported
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:54:13-36
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:53:13-66
-activity#com.picassos.mint.console.android.activities.LoginProvidersActivity
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:53:13-60
+activity#com.picassos.mint.console.android.activities.ClaimGiftActivity
 ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:55:9-57:39
 	android:exported
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:57:13-36
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:56:13-62
-activity#com.picassos.mint.console.android.activities.DownloadsActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:69:9-66
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:69:19-63
-activity#com.picassos.mint.console.android.activities.about.AboutConsoleActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:70:9-72:39
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:56:13-57
+activity#com.picassos.mint.console.android.activities.GiftActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:58:9-60:39
 	android:exported
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:72:13-36
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:60:13-36
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:71:13-66
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:59:13-52
+activity#com.picassos.mint.console.android.activities.PreviewWalkthroughActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:61:9-63:39
+	android:exported
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:63:13-36
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:62:13-66
+activity#com.picassos.mint.console.android.activities.LoginProvidersActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:64:9-66:39
+	android:exported
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:66:13-36
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:65:13-62
+activity#com.picassos.mint.console.android.activities.DownloadsActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:78:9-66
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:78:19-63
+activity#com.picassos.mint.console.android.activities.about.AboutConsoleActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:79:9-81:39
+	android:exported
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:81:13-36
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:80:13-66
 activity#com.picassos.mint.console.android.activities.EditProjectActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:73:9-68
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:82:9-68
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:73:19-65
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:82:19-65
 activity#com.picassos.mint.console.android.activities.manageAds.SetGoogleAdmobActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:74:9-81
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:83:9-81
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:74:19-78
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:83:19-78
 activity#com.picassos.mint.console.android.activities.manageAds.SetFacebookNetworkActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:75:9-85
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:84:9-85
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:75:19-82
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:84:19-82
 activity#com.picassos.mint.console.android.activities.forgotPassword.ResetPasswordActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:76:9-85
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:85:9-85
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:76:19-82
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:85:19-82
 activity#com.picassos.mint.console.android.activities.forgotPassword.EnterVerificationActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:77:9-89
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:86:9-89
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:77:19-86
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:86:19-86
 activity#com.picassos.mint.console.android.activities.ProjectsActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:78:9-65
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:87:9-65
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:78:19-62
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:87:19-62
 activity#com.picassos.mint.console.android.activities.RegisterActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:79:9-65
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:88:9-65
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:79:19-62
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:88:19-62
 activity#com.picassos.mint.console.android.activities.AddProjectActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:80:9-67
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:89:9-67
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:80:19-64
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:89:19-64
 activity#com.picassos.mint.console.android.activities.NotificationPreviewActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:81:9-76
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:90:9-76
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:81:19-73
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:90:19-73
 activity#com.picassos.mint.console.android.activities.NotificationsActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:82:9-70
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:91:9-70
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:82:19-67
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:91:19-67
 activity#com.picassos.mint.console.android.activities.helpCentre.SearchArticlesActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:83:9-82
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:92:9-82
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:83:19-79
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:92:19-79
 activity#com.picassos.mint.console.android.activities.helpCentre.UpdateTicketActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:84:9-80
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:93:9-80
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:84:19-77
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:93:19-77
 activity#com.picassos.mint.console.android.activities.helpCentre.EditCommentActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:85:9-79
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:94:9-79
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:85:19-76
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:94:19-76
 activity#com.picassos.mint.console.android.activities.helpCentre.CommentsActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:86:9-76
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:95:9-76
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:86:19-73
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:95:19-73
 activity#com.picassos.mint.console.android.activities.helpCentre.CheckTicketActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:87:9-79
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:96:9-79
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:87:19-76
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:96:19-76
 activity#com.picassos.mint.console.android.activities.helpCentre.ViewArticleActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:88:9-79
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:97:9-79
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:88:19-76
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:97:19-76
 activity#com.picassos.mint.console.android.activities.helpCentre.ArticlesActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:89:9-76
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:89:19-73
-activity#com.picassos.mint.console.android.activities.helpCentre.ViewTicketActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:90:9-78
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:90:19-75
-activity#com.picassos.mint.console.android.activities.about.MyTicketsActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:91:9-72
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:91:19-69
-activity#com.picassos.mint.console.android.activities.helpCentre.SubmitTicketActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:92:9-80
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:92:19-77
-activity#com.picassos.mint.console.android.activities.about.UpdatePasswordActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:93:9-77
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:93:19-74
-activity#com.picassos.mint.console.android.activities.about.ManageAccountActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:94:9-76
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:94:19-73
-activity#com.picassos.mint.console.android.activities.about.GenerateAuthLoginActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:95:9-80
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:95:19-77
-activity#com.picassos.mint.console.android.activities.QrLoginActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:96:9-64
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:96:19-61
-activity#com.picassos.mint.console.android.activities.EditWalkthroughActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:97:9-72
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:97:19-69
-activity#com.picassos.mint.console.android.activities.manageAds.ManageAdsActivity
 ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:98:9-76
 	android:name
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:98:19-73
+activity#com.picassos.mint.console.android.activities.helpCentre.ViewTicketActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:99:9-78
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:99:19-75
+activity#com.picassos.mint.console.android.activities.about.MyTicketsActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:100:9-72
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:100:19-69
+activity#com.picassos.mint.console.android.activities.helpCentre.SubmitTicketActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:101:9-80
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:101:19-77
+activity#com.picassos.mint.console.android.activities.about.UpdatePasswordActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:102:9-77
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:102:19-74
+activity#com.picassos.mint.console.android.activities.about.ManageAccountActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:103:9-76
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:103:19-73
+activity#com.picassos.mint.console.android.activities.about.GenerateAuthLoginActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:104:9-80
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:104:19-77
+activity#com.picassos.mint.console.android.activities.QrLoginActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:105:9-64
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:105:19-61
+activity#com.picassos.mint.console.android.activities.EditWalkthroughActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:106:9-72
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:106:19-69
+activity#com.picassos.mint.console.android.activities.manageAds.ManageAdsActivity
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:107:9-76
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:107:19-73
 activity#com.picassos.mint.console.android.activities.providers.WordpressActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:99:9-76
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:108:9-76
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:99:19-73
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:108:19-73
 activity#com.picassos.mint.console.android.activities.WalkthroughActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:100:9-68
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:109:9-68
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:100:19-65
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:109:19-65
 activity#com.picassos.mint.console.android.activities.providers.VimeoActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:101:9-72
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:110:9-72
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:101:19-69
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:110:19-69
 activity#com.picassos.mint.console.android.activities.providers.YoutubeActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:102:9-74
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:111:9-74
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:102:19-71
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:111:19-71
 activity#com.picassos.mint.console.android.activities.providers.MapsActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:103:9-71
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:112:9-71
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:103:19-68
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:112:19-68
 activity#com.picassos.mint.console.android.activities.providers.PinterestActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:104:9-76
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:113:9-76
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:104:19-73
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:113:19-73
 activity#com.picassos.mint.console.android.activities.providers.ImgurActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:105:9-72
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:114:9-72
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:105:19-69
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:114:19-69
 activity#com.picassos.mint.console.android.activities.providers.FacebookActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:106:9-75
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:115:9-75
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:106:19-72
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:115:19-72
 activity#com.picassos.mint.console.android.activities.ManageUpdatesActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:107:9-70
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:116:9-70
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:107:19-67
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:116:19-67
 activity#com.picassos.mint.console.android.activities.SplashActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:108:9-127:20
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:117:9-136:20
 	android:exported
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:110:13-36
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:119:13-36
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:109:13-54
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:118:13-54
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:111:13-115:29
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:120:13-124:29
 action#android.intent.action.MAIN
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:112:17-69
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:121:17-69
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:112:25-66
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:121:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:114:17-77
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:123:17-77
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:114:27-74
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:123:27-74
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:console.themintapp.com+data:pathPrefix:/tickets+data:scheme:https
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:116:13-126:29
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:125:13-135:29
 action#android.intent.action.VIEW
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:117:17-69
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:126:17-69
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:117:25-66
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:126:25-66
 category#android.intent.category.DEFAULT
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:119:17-76
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:128:17-76
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:119:27-73
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:128:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:120:17-78
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:129:17-78
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:120:27-75
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:129:27-75
 data
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:122:17-125:46
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:131:17-134:46
 	android:host
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:123:21-58
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:132:21-58
 	android:scheme
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:125:21-43
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:134:21-43
 	android:pathPrefix
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:124:21-50
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:133:21-50
 activity#com.picassos.mint.console.android.activities.GetStartedActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:128:9-67
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:137:9-67
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:128:19-64
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:137:19-64
 activity#com.picassos.mint.console.android.activities.providers.WebviewActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:129:9-74
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:138:9-74
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:129:19-71
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:138:19-71
 activity#com.picassos.mint.console.android.activities.MembersActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:130:9-64
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:139:9-64
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:130:19-61
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:139:19-61
 activity#com.picassos.mint.console.android.activities.ControllerActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:131:9-67
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:140:9-67
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:131:19-64
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:140:19-64
 activity#com.picassos.mint.console.android.activities.about.PurchasesActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:132:9-72
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:141:9-72
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:132:19-69
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:141:19-69
 activity#com.picassos.mint.console.android.activities.PoliciesActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:133:9-65
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:142:9-65
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:133:19-62
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:142:19-62
 activity#com.picassos.mint.console.android.activities.LoginActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:134:9-137:56
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:143:9-146:56
 	android:screenOrientation
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:136:13-49
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:145:13-49
 	tools:ignore
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:137:13-53
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:146:13-53
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:135:13-53
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:144:13-53
 activity#com.picassos.mint.console.android.activities.MainActivity
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:138:9-142:56
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:147:9-151:56
 	android:screenOrientation
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:141:13-49
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:150:13-49
 	android:exported
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:140:13-36
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:149:13-36
 	tools:ignore
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:142:13-53
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:151:13-53
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:139:13-52
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:148:13-52
 service#com.picassos.mint.console.android.firebase.MyFirebaseMessagingService
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:144:9-150:19
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:153:9-159:19
 	android:exported
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:146:13-37
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:155:13-37
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:145:13-64
-intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:147:13-149:29
-action#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:148:17-78
-	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:148:25-75
-meta-data#com.google.firebase.messaging.default_notification_channel_id
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:152:9-154:67
-	android:value
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:154:13-64
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:156:13-158:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:157:17-78
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:153:13-89
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:157:25-75
+meta-data#com.google.firebase.messaging.default_notification_channel_id
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:161:9-163:67
+	android:value
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:163:13-64
+	android:name
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:162:13-89
 uses-sdk
 INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml
@@ -590,6 +609,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/noor/.grad
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/noor/.gradle/caches/transforms-3/9812a3091facb96ebd65a46bfe369e67/transformed/constraintlayout-2.1.3/AndroidManifest.xml:5:5-7:41
 MERGED from [com.airbnb.android:lottie:4.2.2] /Users/noor/.gradle/caches/transforms-3/e2cd32d22851252d889b1e5f53bcdb74/transformed/jetified-lottie-4.2.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.airbnb.android:lottie:4.2.2] /Users/noor/.gradle/caches/transforms-3/e2cd32d22851252d889b1e5f53bcdb74/transformed/jetified-lottie-4.2.2/AndroidManifest.xml:5:5-7:41
+MERGED from [io.github.chaosleung:pinview:1.4.4] /Users/noor/.gradle/caches/transforms-3/032be24a8d4257ffbe10d3796aafd999/transformed/jetified-pinview-1.4.4/AndroidManifest.xml:20:5-22:41
+MERGED from [io.github.chaosleung:pinview:1.4.4] /Users/noor/.gradle/caches/transforms-3/032be24a8d4257ffbe10d3796aafd999/transformed/jetified-pinview-1.4.4/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/noor/.gradle/caches/transforms-3/3572e02bed142adc2ebf684ead9d8083/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/noor/.gradle/caches/transforms-3/3572e02bed142adc2ebf684ead9d8083/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.android.billingclient:billing:4.0.0] /Users/noor/.gradle/caches/transforms-3/c207cf0a271434851ed86ffa87250232/transformed/jetified-billing-4.0.0/AndroidManifest.xml:6:5-8:41
@@ -787,11 +808,11 @@ INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidMani
 		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:64:13-66:58
+ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:73:13-75:58
 	android:resource
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:66:17-55
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:75:17-55
 	android:name
-		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:65:17-67
+		ADDED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:74:17-67
 activity#com.karumi.dexter.DexterActivity
 ADDED from [com.karumi:dexter:6.2.3] /Users/noor/.gradle/caches/transforms-3/afc7caae05d5ef834370603226cfd9dc/transformed/jetified-dexter-6.2.3/AndroidManifest.xml:27:9-29:72
 	android:theme
@@ -835,7 +856,7 @@ ADDED from [com.squareup.picasso:picasso:2.71828] /Users/noor/.gradle/caches/tra
 	android:name
 		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/noor/.gradle/caches/transforms-3/dc1e83276c8dfdcb9bea0360b53d0297/transformed/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-157:12 reason: androidmads.library.qrgenearator requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/noor/Desktop/Projects/Mint Console/app/src/main/AndroidManifest.xml:2:1-166:12 reason: androidmads.library.qrgenearator requested WRITE_EXTERNAL_STORAGE
 service#androidx.room.MultiInstanceInvalidationService
 ADDED from [androidx.room:room-runtime:2.4.1] /Users/noor/.gradle/caches/transforms-3/82a0647e66df29822b676da95b41069c/transformed/room-runtime-2.4.1/AndroidManifest.xml:25:9-28:40
 	android:exported

@@ -28,6 +28,7 @@ import com.picassos.mint.console.android.R;
 import com.picassos.mint.console.android.activities.manageAds.ManageAdsActivity;
 import com.picassos.mint.console.android.bottomNavigation.BottomNavigationViewBehavior;
 import com.picassos.mint.console.android.constants.API;
+import com.picassos.mint.console.android.fragments.AccountFragment;
 import com.picassos.mint.console.android.fragments.HelpCentreFragment;
 import com.picassos.mint.console.android.fragments.StoreFragment;
 import com.picassos.mint.console.android.libraries.showcaseview.GuideView;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
     final Fragment navigationsFragment = new NavigationFragment();
     final Fragment powerStoreFragment = new StoreFragment();
     final Fragment helpCentreFragment = new HelpCentreFragment();
+    final Fragment accountFragment = new AccountFragment();
 
     // active fragment
     Fragment active = homeFragment;
@@ -111,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
         fragmentManager = getSupportFragmentManager();
 
         // fragment manager
+        fragmentManager.beginTransaction().add(R.id.fragment_container, accountFragment, "5").hide(accountFragment).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, helpCentreFragment, "4").hide(helpCentreFragment).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, powerStoreFragment, "3").hide(powerStoreFragment).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, navigationsFragment, "2").hide(navigationsFragment).commit();
@@ -144,6 +147,10 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
                 case R.id.help_centre:
                     fragmentManager.beginTransaction().hide(active).show(helpCentreFragment).commit();
                     active = helpCentreFragment;
+                    return true;
+                case R.id.account:
+                    fragmentManager.beginTransaction().hide(active).show(accountFragment).commit();
+                    active = accountFragment;
                     return true;
             }
             return false;
@@ -213,16 +220,16 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
             startActivity(new Intent(this, ThemeStyleActivity.class));
             drawer.closeDrawer(GravityCompat.START);
         });
-        navigationView.findViewById(R.id.menu_custom_css).setOnClickListener(v -> {
-            Intent customCSS = new Intent(this, ControllerActivity.class);
-            customCSS.putExtra("request", "customcss");
-            startActivity(customCSS);
+        navigationView.findViewById(R.id.menu_app_settings).setOnClickListener(v -> {
+            startActivity(new Intent(this, AppSettingsActivity.class));
             drawer.closeDrawer(GravityCompat.START);
         });
-        navigationView.findViewById(R.id.menu_dark_mode).setOnClickListener(v -> {
-            Intent darkMode = new Intent(this, ControllerActivity.class);
-            darkMode.putExtra("request", "darkmode");
-            startActivity(darkMode);
+        navigationView.findViewById(R.id.menu_about_app).setOnClickListener(v -> {
+            startActivity(new Intent(this, AboutAppActivity.class));
+            drawer.closeDrawer(GravityCompat.START);
+        });
+        navigationView.findViewById(R.id.menu_share_content).setOnClickListener(v -> {
+            startActivity(new Intent(this, ShareContentActivity.class));
             drawer.closeDrawer(GravityCompat.START);
         });
         navigationView.findViewById(R.id.menu_privacy_policy).setOnClickListener(v -> {

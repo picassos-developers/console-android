@@ -2,7 +2,11 @@ package com.picassos.mint.console.android.activities.forgotPassword;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +37,9 @@ public class ResetPasswordActivity extends AppCompatActivity {
     private EditText newPassword;
     private EditText confirmPassword;
 
+    // update password
+    private Button updatePassword;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +54,17 @@ public class ResetPasswordActivity extends AppCompatActivity {
         // initialize request dialog
         requestDialog = new RequestDialog(this);
 
-        // initialize fields
+        // new password
         newPassword = findViewById(R.id.new_password);
+        newPassword.addTextChangedListener(onPasswordValueChange);
+
+        // confirm password
         confirmPassword = findViewById(R.id.confirm_password);
+        confirmPassword.addTextChangedListener(onPasswordValueChange);
 
         // change password
-        findViewById(R.id.update_password).setOnClickListener(v -> {
+        updatePassword = findViewById(R.id.update_password);
+        updatePassword.setOnClickListener(v -> {
             if (!TextUtils.isEmpty(newPassword.getText().toString()) && !TextUtils.isEmpty(confirmPassword.getText().toString())) {
                 if (newPassword.getText().toString().length() >= 8) {
                     if (newPassword.getText().toString().equals(confirmPassword.getText().toString())) {
@@ -106,5 +118,34 @@ public class ResetPasswordActivity extends AppCompatActivity {
         Volley.newRequestQueue(this).add(request);
     }
 
+    /**
+     * on password field value change, update
+     * password button status
+     */
+    private final TextWatcher onPasswordValueChange = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+        }
 
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            validatePassword();
+        }
+    };
+
+    /**
+     * validate password
+     */
+    private void validatePassword() {
+        if(TextUtils.isEmpty(newPassword.getText().toString())
+                || TextUtils.isEmpty(confirmPassword.getText().toString())){
+            updatePassword.setVisibility(View.GONE);
+        } else {
+            updatePassword.setVisibility(View.VISIBLE);
+        }
+    }
 }

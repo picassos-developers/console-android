@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?color_background">
 
     <androidx.core.widget.NestedScrollView
@@ -14,50 +14,92 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:orientation="vertical"
             android:paddingTop="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/verification_code"
                 android:layout_marginTop="30dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/enter_verification_code"
                 android:textColor="?color_dark"
-                android:textSize="19sp" />
+                android:textSize="20sp" />
 
-            <EditText
-                android:id="@id/verification_code"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/input_rectangle_background"
-                android:hint="@string/verification_code"
-                android:inputType="number"
-                android:layoutDirection="ltr"
-                android:maxLines="1"
-                android:paddingStart="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+            <TextView
+                android:id="@id/email_verification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textAlignment="center"
+                android:text="@string/please_enter_the_verification_code_sent_to"
                 android:textColor="?color_dark"
-                android:textColorHint="?color_dark"
-                android:textSize="@dimen/input_text_size"
-                tools:ignore="Autofill,RtlSymmetry,SmallSp,TextFields" />
+                android:textSize="14sp" />
+
+            <com.chaos.view.PinView
+                android:id="@id/verification_code"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:itemBackground="?color_light_separate"
+                android:inputType="number"
+                android:layout_marginTop="30dp"
+                android:textColor="?color_dark"
+                android:textSize="16sp"
+                app:hideLineWhenFilled="false"
+                app:itemCount="4"
+                app:itemHeight="60dp"
+                app:itemWidth="60dp"
+                app:itemRadius="15dp"
+                app:itemSpacing="20dp"
+                app:lineColor="?color_light_separate"
+                app:viewType="rectangle" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/resend_again_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/resend_code_in"
+                    android:textColor="?color_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@id/resend_again"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resend"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:textColor="@color/color_blue"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
 
             <Button
                 android:id="@id/verify"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginEnd="30dp"
-                android:background="@drawable/input_rectangle_background"
+                android:visibility="gone"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/button_primary_rounded"
                 android:text="@string/verify"
                 android:textAllCaps="false"
-                android:textColor="?color_dark"
+                android:textColor="@color/color_white"
                 android:textSize="@dimen/input_text_size" />
 
         </LinearLayout>

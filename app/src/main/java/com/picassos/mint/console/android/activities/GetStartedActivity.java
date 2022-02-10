@@ -6,7 +6,6 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Button;
 
 import com.google.android.material.tabs.TabLayout;
 import com.picassos.mint.console.android.R;
@@ -95,14 +94,8 @@ public class GetStartedActivity extends AppCompatActivity {
 
         });
 
-        // Get Started button click listener
-        findViewById(R.id.get_started).setOnClickListener(v -> {
-            savePrefsData();
-
-            startActivity(new Intent(GetStartedActivity.this, LoginActivity.class));
-            finish();
-        });
-
+        findViewById(R.id.get_started).setOnClickListener(v -> startActivity(new Intent(GetStartedActivity.this, RegisterActivity.class)));
+        findViewById(R.id.login).setOnClickListener(v -> startActivity(new Intent(GetStartedActivity.this, LoginActivity.class)));
     }
 
     private boolean restorePrefData() {

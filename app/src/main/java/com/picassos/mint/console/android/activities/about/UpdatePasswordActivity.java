@@ -2,6 +2,7 @@ package com.picassos.mint.console.android.activities.about;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.EditText;
@@ -10,9 +11,10 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.picassos.mint.console.android.R;
+import com.picassos.mint.console.android.activities.LoginActivity;
+import com.picassos.mint.console.android.activities.forgotPassword.EnterVerificationActivity;
 import com.picassos.mint.console.android.constants.API;
 import com.picassos.mint.console.android.sharedPreferences.ConsolePreferences;
-import com.picassos.mint.console.android.sheets.ResetPasswordEmailBottomSheetModal;
 import com.picassos.mint.console.android.utils.Helper;
 import com.picassos.mint.console.android.utils.RequestDialog;
 import com.picassos.mint.console.android.utils.Toasto;
@@ -132,10 +134,9 @@ public class UpdatePasswordActivity extends AppCompatActivity {
                 response -> {
                     switch (response) {
                         case "200":
-                            bundle.putString("email", consolePreferences.loadEmail());
-                            ResetPasswordEmailBottomSheetModal resetPasswordEmailBottomSheetModal = new ResetPasswordEmailBottomSheetModal();
-                            resetPasswordEmailBottomSheetModal.setArguments(bundle);
-                            resetPasswordEmailBottomSheetModal.show(getSupportFragmentManager(), "TAG");
+                            Intent intent = new Intent(UpdatePasswordActivity.this, EnterVerificationActivity.class);
+                            intent.putExtra("email", consolePreferences.loadEmail());
+                            startActivity(intent);
                             break;
                         case "403":
                             Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);

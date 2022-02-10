@@ -85,6 +85,8 @@
     <string name="per_page">Per Page</string>
     <string name="you_don_t_have_any_opened_tickets_click_to_add_a_new_one">No open tickets found. \nClick here to open a ticket.</string>
     <string name="policies_updated">Policies Updated Successfully</string>
+    <string name="about_app_updated">About App Updated Successfully</string>
+    <string name="share_content_updated">Share Content Updated Successfully</string>
     <string name="board_name">Board Name</string>
     <string name="map_style">Map Style</string>
     <string name="choose_design">Choose Design</string>
@@ -466,7 +468,25 @@
     <string name="solid_theme">Solid Theme</string>
     <string name="invalid_hex_code">Please enter a valid hex code.</string>
     <string name="enter_hex_code">Enter Hex Code</string>
-    <string name="last_members">Last Members</string>
     <string name="welcome_back">Welcome Back!</string>
     <string name="sign_into_your_mynta_account_to_continue">Sign into your Mynta account to continue</string>
+    <string name="app_information">App Information</string>
+    <string name="about_application">About Application</string>
+    <string name="share_content">Share Content</string>
+    <string name="new_members">New Members</string>
+    <string name="view_all">View All</string>
+    <string name="create_a_mynta_account_to_continue">Create a Mynta account to continue</string>
+    <string name="resend">Resend</string>
+    <string name="resend_code_in">Resend code in 00:</string>
+    <string name="please_enter_the_verification_code_sent_to">Please enter the verification code sent to</string>
+    <string name="your_new_password_must_differ_nfrom_your_previous_used_password">Your new password must differ\nfrom your previous used password</string>
+    <string name="app_settings">App Settings</string>
+    <string name="unique_app_visits">Unique App Visits</string>
+    <string name="onesignal">OneSignal</string>
+    <string name="google_firebase">Google Firebase</string>
+    <string name="onesignal_description">The fastest and most reliable service to send push notifications, in-app messages, SMS, and emails.</string>
+    <string name="google_firebase_description">Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets you reliably send messages at no cost.</string>
+    <string name="choose_a_notification_provider">Choose a Notification Provider</string>
+    <string name="account">Account</string>
+    <string name="my_account">My Account</string>
 </resources>

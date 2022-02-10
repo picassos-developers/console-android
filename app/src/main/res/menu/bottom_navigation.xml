@@ -19,4 +19,9 @@
         android:id="@id/help_centre"
         android:title="@string/help_centre"
         android:icon="@drawable/navigation_help_centre"/>
+
+    <item
+        android:id="@id/account"
+        android:title="@string/account"
+        android:icon="@drawable/navigation_account" />
 </menu>

@@ -218,4 +218,21 @@ public class ConsolePreferences {
 
     }
 
+    /*---------------- Set Notification Provider ---------------*/
+    public void setDefaultNotificationProvider(String state) {
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putString("NotificationProvider", state);
+
+        editor.apply();
+
+    }
+
+    /*---------------- Load Notification Provider ---------------*/
+    public String loadDefaultNotificationProvider() {
+
+        return sharedPreferences.getString("NotificationProvider", "");
+
+    }
 }

@@ -19,6 +19,12 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.AppSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AboutAppActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.ThemeStyleActivity"
             android:exported="false" />
         <activity
@@ -42,6 +48,9 @@
             android:exported="true" />
         <activity
             android:name=".activities.store.ViewProductActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.ShareContentActivity"
             android:exported="true" />
         <activity
             android:name=".activities.ClaimGiftActivity"

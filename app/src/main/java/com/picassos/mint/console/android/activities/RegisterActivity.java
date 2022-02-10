@@ -109,11 +109,6 @@ public class RegisterActivity extends AppCompatActivity {
             }
 
         });
-
-        // login
-        TextView login = findViewById(R.id.login);
-        login.setOnClickListener(v -> startActivity(new Intent(RegisterActivity.this, LoginActivity.class)));
-
     }
 
     /**
