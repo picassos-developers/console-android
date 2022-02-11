@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "C:\\Users\\Lenovo\\StudioProjects\\console-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/noor/.gradle/caches/transforms-3/9c1c1ae3dd3b556d67637b0825a6e177/transformed/material-1.6.0-alpha02/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\ebe55602b522d645dd4f7a62403e8391\\transformed\\appcompat-1.4.1\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\e594ad2869b86feed3711bb579a70d0a\\transformed\\material-1.6.0-alpha02\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -23,17 +33,7 @@
                     }
                 },
                 {
-                    "source": "/Users/noor/.gradle/caches/transforms-3/3572e02bed142adc2ebf684ead9d8083/transformed/appcompat-1.4.1/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "/Users/noor/.gradle/caches/transforms-3/1d35406e78a5fb99ce0c08dd0fd2fc04/transformed/media-1.0.0/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\6b0ae67e7d2a10723a5e75e8638cf5ea\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

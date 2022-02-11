@@ -1,16 +1,33 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "C:\\Users\\Lenovo\\StudioProjects\\console-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldrtl-v17\\values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/Users/noor/.gradle/caches/transforms-3/9c1c1ae3dd3b556d67637b0825a6e177/transformed/material-1.6.0-alpha02/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\e594ad2869b86feed3711bb579a70d0a\\transformed\\material-1.6.0-alpha02\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
                         "startOffsets": "55,191",
                         "endColumns": "135,140",
                         "endOffsets": "186,327"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\760fa4069259cb1322525d3ae07e486a\\transformed\\jetified-android-sdk-0.2.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "52",
+                        "endOffsets": "103"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "332",
+                        "endColumns": "52",
+                        "endOffsets": "380"
                     }
                 }
             ]

@@ -1,16 +1,17 @@
 <component name="libraryTable">
   <library name="Gradle: com.ixuea:android-downloader:3.0.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/90221f107b6b1d64eefc77b728d81d60/transformed/jetified-android-downloader-3.0.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/acb02aff1a2bf84cf9390d19196e89f0/transformed/jetified-android-downloader-3.0.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/27996eaf409918a52075530ce383c992/jetified-android-downloader-3.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d070276c303d307412433a0b4907a6e0/transformed/jetified-android-downloader-3.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ceaad68bc5bb26bc167f2d266af8e285/transformed/jetified-android-downloader-3.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/239071a65c75a15e9cd0f4b8d6d63961/transformed/jetified-android-downloader-3.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/90221f107b6b1d64eefc77b728d81d60/transformed/jetified-android-downloader-3.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/90221f107b6b1d64eefc77b728d81d60/transformed/jetified-android-downloader-3.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/90221f107b6b1d64eefc77b728d81d60/transformed/jetified-android-downloader-3.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/acb02aff1a2bf84cf9390d19196e89f0/transformed/jetified-android-downloader-3.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/acb02aff1a2bf84cf9390d19196e89f0/transformed/jetified-android-downloader-3.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/acb02aff1a2bf84cf9390d19196e89f0/transformed/jetified-android-downloader-3.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

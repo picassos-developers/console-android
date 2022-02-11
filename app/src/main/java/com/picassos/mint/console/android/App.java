@@ -9,7 +9,14 @@ import android.util.Log;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.messaging.Constants;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.paypal.checkout.PayPalCheckout;
+import com.paypal.checkout.config.CheckoutConfig;
+import com.paypal.checkout.config.Environment;
+import com.paypal.checkout.config.SettingsConfig;
+import com.paypal.checkout.createorder.CurrencyCode;
+import com.paypal.checkout.createorder.UserAction;
 
 public class App extends Application {
 
@@ -25,9 +32,25 @@ public class App extends Application {
         super.onCreate();
         instance = this;
 
+        // init fresco
         Fresco.initialize(this);
 
-        // Init firebase.
+        // init paypal
+        CheckoutConfig config = new CheckoutConfig(
+                this,
+                Config.PAYPAL_CLIENT_ID,
+                Environment.SANDBOX,
+                String.format("%s://paypalpay", BuildConfig.APPLICATION_ID),
+                CurrencyCode.USD,
+                UserAction.PAY_NOW,
+                new SettingsConfig(
+                        true,
+                        false
+                )
+        );
+        PayPalCheckout.setConfig(config);
+
+        // init firebase.
         FirebaseApp.initializeApp(this);
 
         FirebaseMessaging.getInstance().getToken()

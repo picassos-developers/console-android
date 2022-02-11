@@ -104,6 +104,11 @@
 
         </LinearLayout>
 
+        <com.paypal.checkout.paymentbutton.PayPalButton
+            android:id="@+id/payPalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
         <LinearLayout
             android:id="@id/google_pay"
             android:layout_width="match_parent"
@@ -126,7 +131,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="8dp"
-                    android:src="@drawable/icon_google_pay"
+                    android:src="@drawable/icon_paypal"
                     app:tint="?color_dark"
                     tools:ignore="ContentDescription" />
 
