@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@color/color_white"
-    tools:context=".activities.SplashActivity">
+    tools:context="app.mynta.console.android.activities.SplashActivity">
 
     <ImageView
         android:layout_width="180dp"

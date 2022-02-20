@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Lenovo\\StudioProjects\\console-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
+            "outputFile": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\750fb316fd046da83045bc9326af3321\\transformed\\core-1.7.0\\res\\values-ms\\values-ms.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "94",
-                        "startColumns": "4",
-                        "startOffsets": "8076",
-                        "endColumns": "100",
-                        "endOffsets": "8172"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\7dc7925efce59477d54b88955af06710\\transformed\\jetified-firebase-messaging-23.0.0\\res\\values-ms\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "207",
-                        "endColumns": "72",
-                        "endOffsets": "279"
-                    },
-                    "to": {
-                        "startLines": "44",
-                        "startColumns": "4",
-                        "startOffsets": "4156",
-                        "endColumns": "76",
-                        "endOffsets": "4228"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\e594ad2869b86feed3711bb579a70d0a\\transformed\\material-1.6.0-alpha02\\res\\values-ms\\values-ms.xml",
+                    "source": "/Users/noor/.gradle/caches/transforms-3/e594ad2869b86feed3711bb579a70d0a/transformed/material-1.6.0-alpha02/res/values-ms/values-ms.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,7 +23,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\ebe55602b522d645dd4f7a62403e8391\\transformed\\appcompat-1.4.1\\res\\values-ms\\values-ms.xml",
+                    "source": "/Users/noor/.gradle/caches/transforms-3/4aee78ce9f7ecf8320102bba8f5fd4d0/transformed/jetified-play-services-basement-17.0.0/res/values-ms/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "204",
+                        "endOffsets": "451"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3368",
+                        "endColumns": "204",
+                        "endOffsets": "3568"
+                    }
+                },
+                {
+                    "source": "/Users/noor/.gradle/caches/transforms-3/750fb316fd046da83045bc9326af3321/transformed/core-1.7.0/res/values-ms/values-ms.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "94",
+                        "startColumns": "4",
+                        "startOffsets": "8076",
+                        "endColumns": "100",
+                        "endOffsets": "8172"
+                    }
+                },
+                {
+                    "source": "/Users/noor/.gradle/caches/transforms-3/ebe55602b522d645dd4f7a62403e8391/transformed/appcompat-1.4.1/res/values-ms/values-ms.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -74,7 +74,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\867317e385349f9b66995a05124ceec4\\transformed\\browser-1.2.0\\res\\values-ms\\values-ms.xml",
+                    "source": "/Users/noor/.gradle/caches/transforms-3/867317e385349f9b66995a05124ceec4/transformed/browser-1.2.0/res/values-ms/values-ms.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -91,20 +91,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\4aee78ce9f7ecf8320102bba8f5fd4d0\\transformed\\jetified-play-services-basement-17.0.0\\res\\values-ms\\values.xml",
+                    "source": "/Users/noor/.gradle/caches/transforms-3/7dc7925efce59477d54b88955af06710/transformed/jetified-firebase-messaging-23.0.0/res/values-ms/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "204",
-                        "endOffsets": "451"
+                        "startOffsets": "207",
+                        "endColumns": "72",
+                        "endOffsets": "279"
                     },
                     "to": {
-                        "startLines": "37",
+                        "startLines": "44",
                         "startColumns": "4",
-                        "startOffsets": "3368",
-                        "endColumns": "204",
-                        "endOffsets": "3568"
+                        "startOffsets": "4156",
+                        "endColumns": "76",
+                        "endOffsets": "4228"
                     }
                 }
             ]

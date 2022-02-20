@@ -489,4 +489,10 @@
     <string name="choose_a_notification_provider">Choose a Notification Provider</string>
     <string name="account">Account</string>
     <string name="my_account">My Account</string>
+    <string name="checkout_using_paypal">Checkout using PayPal.</string>
+    <string name="paypal_payment">PayPal Payment</string>
+    <string name="app_id">Application ID</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="rest_api_key">Rest API Key</string>
+    <string name="settings_saved">Settings Saved Successfully</string>
 </resources>

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.2791666666666667" />
         <entry key="..\:/Users/Lenovo/StudioProjects/console-android/app/src/main/res/layout/payment_method_bottom_sheet_modal.xml" value="0.5" />
         <entry key="app/src/main/res/drawable/active_mark.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/bottom_navigation_background.xml" value="0.2859375" />
@@ -126,9 +127,15 @@
         <entry key="app/src/main/res/layout/dialog_request.xml" value="0.2484375" />
         <entry key="app/src/main/res/layout/dialog_update.xml" value="0.33" />
         <entry key="app/src/main/res/layout/edit_email_bottom_sheet_modal.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/edit_packagename_bottom_sheet_modal.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/fragment4.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/fragment_add_first_content_provider.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.2390625" />
+        <entry key="app/src/main/res/layout/fragment_choose_app_category.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_help_centre.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_name_app.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_navigation.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_opened_tickets.xml" value="0.2484375" />
@@ -139,6 +146,7 @@
         <entry key="app/src/main/res/layout/include_store_tour_layout.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/include_tour_layout.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/item_account_listitem.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/item_app_category_listitem.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/item_article_listitem.xml" value="0.2682291666666667" />
         <entry key="app/src/main/res/layout/item_author_badge.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/item_comment_listitem.xml" value="0.2557291666666667" />
@@ -172,6 +180,7 @@
         <entry key="app/src/main/res/layout/navigation_header.xml" value="0.33" />
         <entry key="app/src/main/res/layout/navigation_options_bottom_sheet_modal.xml" value="0.2484375" />
         <entry key="app/src/main/res/layout/notifications_preferences_bottom_sheet_modal.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/onesignal_settings_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/payment_method_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/project_options_bottom_sheet_modal.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/provider_options_bottom_sheet_modal.xml" value="0.253125" />

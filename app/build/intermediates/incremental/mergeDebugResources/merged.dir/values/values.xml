@@ -591,15 +591,32 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <color name="add_card_blue">#0070BA</color>
+    <color name="add_card_gray">#757676</color>
+    <color name="add_card_green">#25694F</color>
+    <color name="add_card_green_bg">#CBF3EC</color>
+    <color name="add_card_red">#810019</color>
+    <color name="add_card_red_bg">#FFC9C9</color>
+    <color name="add_card_red_hint">#D9360B</color>
+    <color name="amp_blue">#005488</color>
+    <color name="amp_dark_blue">#0C2A4B</color>
+    <color name="amp_gray">#60758B</color>
+    <color name="amp_light_gray">#E5E5E5</color>
+    <color name="amp_light_gray_2">#C6D0D9</color>
+    <color name="amp_transparent">#00000000</color>
     <color name="androidx_core_ripple_material_light">#1f000000</color>
     <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
+    <color name="background_scrim_color">#CC2C2E2F</color>
     <color name="black_56">#8f000000</color>
     <color name="black_90">#E6000000</color>
+    <color name="black_solid">#000000</color>
     <color name="blue">#173DA3</color>
+    <color name="blue_100">#F5FBFE</color>
+    <color name="blue_200">#E4F1FB</color>
     <color name="blue_color_500">#009CDE</color>
     <color name="blue_color_600">#005ABA</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
@@ -614,6 +631,7 @@
     <color name="browser_actions_title_color">#646464</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <color name="cardview_border_blue">#BFDBEE</color>
     <color name="cardview_dark_background">#FF424242</color>
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
@@ -682,7 +700,10 @@
     <color name="error_color_material_light">#ff5722</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
-    <color name="gray_color_200">#EAECED</color>
+    <color name="gray_color_100">#EDEDED</color>
+    <color name="gray_color_101">#E0E0E0</color>
+    <color name="gray_color_200">#EAECED
+    </color>
     <color name="gray_color_300">#CBD2D6</color>
     <color name="gray_color_400">#b7bcbf</color>
     <color name="gray_color_500">#9DA3A6</color>
@@ -887,6 +908,7 @@
     <color name="test_color">#000</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
+    <color name="transparent_banner_bg_80">#CC2C2E2F</color>
     <color name="transparent_color_alpha_52">#84000000</color>
     <color name="transparent_color_alpha_70">#00000000</color>
     <color name="white_100">#00FFFFFF</color>
@@ -1067,10 +1089,12 @@
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
     <item format="float" name="dismissed_fi_alpha_value" type="dimen">0.6</item>
     <dimen name="divider_height">1dp</dimen>
+    <dimen name="divider_width">1dp</dimen>
     <dimen name="edit_text_border_padding">2dp</dimen>
     <dimen name="edit_text_border_radius">2dp</dimen>
     <dimen name="edit_text_border_width">1dp</dimen>
     <dimen name="edit_text_padding">6dp</dimen>
+    <item format="float" name="error_font_scalar" type="dimen">1.1</item>
     <dimen name="fab_margin">8dp</dimen>
     <dimen name="fab_margin_16">16dp</dimen>
     <dimen name="fab_margin_2">2dp</dimen>
@@ -1092,6 +1116,8 @@
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
     <dimen name="label_72_hour_margin_horizontal">60dp</dimen>
     <dimen name="landscape_padding">8dp</dimen>
+    <dimen name="large_loading_spinner">100dp</dimen>
+    <dimen name="line_spacing_5x">5dp</dimen>
     <dimen name="m3_alert_dialog_action_bottom_padding">14dp</dimen>
     <dimen name="m3_alert_dialog_action_top_padding">14dp</dimen>
     <dimen name="m3_alert_dialog_corner_size">28dp</dimen>
@@ -1252,6 +1278,7 @@
     <dimen name="marginBottom_10">10dp</dimen>
     <dimen name="marginTop">10dp</dimen>
     <dimen name="marginTop_20">20dp</dimen>
+    <dimen name="margin_12x">12dp</dimen>
     <dimen name="margin_16">16dp</dimen>
     <dimen name="margin_16x">16dp</dimen>
     <dimen name="margin_20x">20dp</dimen>
@@ -1523,10 +1550,8 @@
     <dimen name="padding_5x">5dp</dimen>
     <dimen name="padding_7x">7dp</dimen>
     <dimen name="padding_8x">8dp</dimen>
-    <dimen name="payment_source_height">134dp</dimen>
     <dimen name="payment_source_optional_margin_vertical">155dp</dimen>
-    <dimen name="payment_source_width">203dp</dimen>
-    <dimen name="payment_source_wrapper_width">206dp</dimen>
+    <dimen name="payment_source_wrapper_width">225dp</dimen>
     <dimen name="paypal_checkout_logo_height">20dp</dimen>
     <dimen name="paypal_checkout_logo_width">17dp</dimen>
     <dimen name="paypal_logo_elevation">10dp</dimen>
@@ -1542,6 +1567,7 @@
     <dimen name="paypal_payment_button_text_margin">@dimen/margin_8x</dimen>
     <dimen name="paypal_payment_button_vertical_padding">13dp</dimen>
     <dimen name="paypal_payment_button_vertical_padding_large">15dp</dimen>
+    <dimen name="paypal_payment_source_card_margin">8dp</dimen>
     <dimen name="paysheet_fading_length">5dp</dimen>
     <dimen name="policy_rights_layout_height">50dp</dimen>
     <dimen name="preferred_card_height">24dp</dimen>
@@ -1564,8 +1590,10 @@
     <dimen name="pv_pin_view_item_radius">5dp</dimen>
     <dimen name="pv_pin_view_item_size">48dp</dimen>
     <dimen name="pv_pin_view_item_spacing">5dp</dimen>
+    <dimen name="scroll_offset">-10dp</dimen>
     <dimen name="scroll_view_padding">60dp</dimen>
     <item format="float" name="selected_fi_alpha_value" type="dimen">1.0</item>
+    <dimen name="shadow_radius_10x">10</dimen>
     <dimen name="small_elevation">1dp</dimen>
     <dimen name="snapping_view_padding_height">8dp</dimen>
     <dimen name="subtitle_corner_radius">2dp</dimen>
@@ -1585,9 +1613,13 @@
     <dimen name="test_navigation_bar_label_padding">10dp</dimen>
     <dimen name="test_navigation_bar_shadow_height">1dp</dimen>
     <dimen name="test_navigation_bar_text_size">12sp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
     <dimen name="text_size_16">16sp</dimen>
     <dimen name="text_size_22">22sp</dimen>
     <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_6">6sp</dimen>
+    <dimen name="text_size_banner">37sp</dimen>
     <dimen name="text_size_body1">15sp</dimen>
     <dimen name="text_size_body2">15sp</dimen>
     <dimen name="text_size_button">17sp</dimen>
@@ -1921,6 +1953,8 @@
     <item name="notifications_list" type="id"/>
     <item name="notifications_settings" type="id"/>
     <item name="onesignal" type="id"/>
+    <item name="onesignal_app_id" type="id"/>
+    <item name="onesignal_rest_api_key" type="id"/>
     <item name="open_navigation" type="id"/>
     <item name="open_powerstore" type="id"/>
     <item name="open_profile" type="id"/>
@@ -1939,6 +1973,9 @@
     <item name="parent_matrix" type="id"/>
     <item name="password" type="id"/>
     <item name="password_strength_indicator" type="id"/>
+    <item name="paypal" type="id"/>
+    <item name="paypal_checkout" type="id"/>
+    <item name="paypal_checkout_container" type="id"/>
     <item name="per_page" type="id"/>
     <item name="picassos_newsletter" type="id"/>
     <item name="pinterest_container" type="id"/>
@@ -2041,6 +2078,7 @@
     <item name="save" type="id"/>
     <item name="save_non_transition_alpha" type="id"/>
     <item name="save_overlay_view" type="id"/>
+    <item name="save_settings" type="id"/>
     <item name="scanner_view" type="id"/>
     <item name="screen_sleep" type="id"/>
     <item name="search_accounts" type="id"/>
@@ -2311,8 +2349,15 @@
     <string name="all_systems_operational">All systems operational!</string>
     <string name="all_you_need_to_do_is_write_a_review_about_your_experience_with_mint_on_codecanyon_and_you_ll_be_gifted_a_free_card_to_have_picassos_team_customize_your_app_the_way_you_want_it_the_gift_includes_customizations_to">All you need to do is write a review about your experience with Mint on CodeCanyon, and you\'ll be gifted a free customization card to have Picassos Team customize your app the way you want it! The gift includes customizations to:</string>
     <string name="already_have_account">Already have an account? Sign in</string>
+    <string name="amp_label_copied">Copied To Clipboard</string>
+    <string name="amp_label_copy">Copy</string>
+    <string name="amp_label_device_id">DEVICE ID</string>
+    <string name="amp_label_not_avail">N/A</string>
+    <string name="amp_label_user_id">USER ID</string>
+    <string name="amp_label_user_info">User Information</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
     <string name="app_email_address_description">Enter an email for your members to get in contact with if they need help. (i.e. customer support email)</string>
+    <string name="app_id">Application ID</string>
     <string name="app_information">App Information</string>
     <string name="app_name">Mint Console</string>
     <string name="app_settings">App Settings</string>
@@ -2346,6 +2391,7 @@
     <string name="check_updates">Check for updates</string>
     <string name="checkout">Checkout</string>
     <string name="checkout_using_google_pay">Checkout using Google Pay.</string>
+    <string name="checkout_using_paypal">Checkout using PayPal.</string>
     <string name="checkout_using_your_console_credits">Checkout using your Console Credits.</string>
     <string name="chip_text">Chip text</string>
     <string name="choose_a_notification_provider">Choose a Notification Provider</string>
@@ -2401,7 +2447,7 @@
     <string name="database_size">Database Size</string>
     <string name="default_provider">Default Provider</string>
     <string name="default_provider_description">Your default provider starts working on each app startup.</string>
-    <string name="default_web_client_id" translatable="false">468765055023-kmg0dosl11eeqq0kfju8nrsrad89m613.apps.googleusercontent.com</string>
+    <string name="default_web_client_id" translatable="false">583096153246-k7asuo2jujg0nf7gt7l9bentmlilkq21.apps.googleusercontent.com</string>
     <string name="delete_navigation">Delete Navigation</string>
     <string name="delete_user">Delete user</string>
     <string name="delete_walkthrough">Delete Walkthrough</string>
@@ -2465,7 +2511,7 @@
     <string name="force_update">Force Update</string>
     <string name="forgot_your_password">Forgot your password?</string>
     <string name="fullscreen_mode">Fullscreen mode</string>
-    <string name="gcm_defaultSenderId" translatable="false">468765055023</string>
+    <string name="gcm_defaultSenderId" translatable="false">583096153246</string>
     <string name="general">General</string>
     <string name="generate_policies">Generate Policies</string>
     <string name="generating_your_policies">Generating your Policies</string>
@@ -2480,13 +2526,13 @@
     <string name="google">Google</string>
     <string name="google_admob">Google Admob</string>
     <string name="google_admob_updated">Google AdMob Updated Successfully</string>
-    <string name="google_api_key" translatable="false">AIzaSyA6wD_pz2NEszeL_x4AIq9LsinarVZ1egw</string>
-    <string name="google_app_id" translatable="false">1:468765055023:android:d53098ab0230fbe6518eda</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA6wD_pz2NEszeL_x4AIq9LsinarVZ1egw</string>
+    <string name="google_api_key" translatable="false">AIzaSyBhJD_pWzfV8INT1CRhfNi7tl3oLTAq1hE</string>
+    <string name="google_app_id" translatable="false">1:583096153246:android:70af9163edf28e3932f78f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBhJD_pWzfV8INT1CRhfNi7tl3oLTAq1hE</string>
     <string name="google_firebase">Google Firebase</string>
     <string name="google_firebase_description">Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets you reliably send messages at no cost.</string>
     <string name="google_play_payment">Google Play Payment</string>
-    <string name="google_storage_bucket" translatable="false">mint-console-app.appspot.com</string>
+    <string name="google_storage_bucket" translatable="false">mynta-console.appspot.com</string>
     <string name="got_a_gift_card_claim_it_for_free_credits">Got a gift card? Claim it for free credits!</string>
     <string name="got_it">Got It</string>
     <string name="gradient_theme">Gradient Theme</string>
@@ -2735,13 +2781,23 @@
     <string name="paypal_checkout_about_payment_sub_header">Selecting a preferred payment method</string>
     <string name="paypal_checkout_add_card">Add Card</string>
     <string name="paypal_checkout_add_card_button">Add card button</string>
+    <string name="paypal_checkout_add_card_error">Things don’t appear to be working at the moment. Please try again later.</string>
     <string name="paypal_checkout_add_card_message">To add a bank or card, you\'ll need to complete your purchase on PayPal.com. </string>
     <string name="paypal_checkout_add_card_plus">+ Add Card</string>
+    <string name="paypal_checkout_add_card_processor_error">Invalid card type. Please try a different card.</string>
+    <string name="paypal_checkout_add_card_success">You added a card</string>
+    <string name="paypal_checkout_add_card_validation_generic_error">Some of your information is missing or incorrect. Please check and try again.</string>
     <string name="paypal_checkout_add_debit_or_credit"> Add a new debit or credit card</string>
     <string name="paypal_checkout_add_fi">Add a new debit or credit card</string>
-    <string name="paypal_checkout_add_new_shipping_address">Add new shipping address</string>
+    <string name="paypal_checkout_add_manually">Add manually</string>
+    <string name="paypal_checkout_add_new_address">Add</string>
+    <string name="paypal_checkout_add_shipping_add_manually">Add manually</string>
+    <string name="paypal_checkout_add_shipping_address">Add an address</string>
+    <string name="paypal_checkout_add_shipping_address_failure">There was an error adding a new Shipping address</string>
+    <string name="paypal_checkout_add_shipping_address_success">You added a new Shipping address</string>
     <string name="paypal_checkout_address_book">Address Book</string>
     <string name="paypal_checkout_address_book_circle_image">Address Book Circle Image</string>
+    <string name="paypal_checkout_address_label">Address</string>
     <string name="paypal_checkout_address_translatable">Address</string>
     <string name="paypal_checkout_agree_terms">You agree to terms.</string>
     <string name="paypal_checkout_alphabet">Alphabet</string>
@@ -2749,18 +2805,6 @@
     <string name="paypal_checkout_apply_for_pay_in_four">Apply for Pay in 4</string>
     <string name="paypal_checkout_apply_for_paypal_credit">Apply for PayPal Credit</string>
     <string name="paypal_checkout_apply_now">Apply Now</string>
-    <string name="paypal_checkout_asset_statements" translatable="false">  [{
-    \"relation\": [\"delegate_permission/common.handle_all_urls\"],
-    \"target\": {
-      \"namespace\": \"web\",
-      \"site\": \"https://history.paypal.com\"
-    }
-   }, "relation\": [\"delegate_permission/common.handle_all_urls\"],
-    \"target\": {
-      \"namespace\": \"web\",
-      \"site\": \"https://paypal.com\"
-    }]
-   </string>
     <string name="paypal_checkout_attention_message">Your card issuer will determine the currency conversion rate and what fees they may charge. Check your statement for the final amount.</string>
     <string name="paypal_checkout_backup">Backup:</string>
     <string name="paypal_checkout_backup_amex_dont_translate" translatable="false">Backup: Amex 5508</string>
@@ -2771,12 +2815,14 @@
     <string name="paypal_checkout_blackhandbag_dont_translate" translatable="false">Black handbag</string>
     <string name="paypal_checkout_bnpl_pay_over_time">Pay over time</string>
     <string name="paypal_checkout_brownhat_dont_translate" translatable="false">Brown hat</string>
-    <string name="paypal_checkout_buf_backup_funding">If your balance doesn\'t cover the total purchase amount, we\'ll charge the rest to %1$s</string>
+    <string name="paypal_checkout_buf_backup_funding">If your PayPal balance doesn\'t cover the total purchase amount, we\'ll charge the rest to %1$s</string>
     <string name="paypal_checkout_buf_short">Backup: %1$s</string>
     <string name="paypal_checkout_buf_statement">If this doesn\'t work we\'ll use %1$s</string>
     <string name="paypal_checkout_button_session_id">Button Session ID:</string>
     <string name="paypal_checkout_buyNowPayLater">Buy now and pay in 14 days.</string>
     <string name="paypal_checkout_cancel">Cancel</string>
+    <string name="paypal_checkout_card_number">Card number</string>
+    <string name="paypal_checkout_card_number_error">Enter the complete card number</string>
     <string name="paypal_checkout_cart_summary_main_screen_dont_translate" translatable="false">Cart Summary / Main Screen</string>
     <string name="paypal_checkout_change_address_popup">Please choose another shipping address</string>
     <string name="paypal_checkout_changing_rates">We\’ll protect you from changing rates and prices. Continue now to lock in this rate and price for 72 hours.</string>
@@ -2785,11 +2831,12 @@
     <string name="paypal_checkout_checkout_story_text_phase_1_paynow">Your purchase is complete. Sending you back to the merchant…</string>
     <string name="paypal_checkout_checkout_story_text_phase_2">You’re all set…</string>
     <string name="paypal_checkout_choose_a_new_address">Choose a new address</string>
-    <string name="paypal_checkout_choose_a_pick_up_method">Choose a pick up method</string>
+    <string name="paypal_checkout_choose_a_pick_up_method">Choose a pickup method</string>
     <string name="paypal_checkout_choose_different_shipping_address">Choose a different shipping address</string>
     <string name="paypal_checkout_choose_new_pickup_method">Choose a new pickup method</string>
     <string name="paypal_checkout_choose_new_shipping_method">Choose a new shipping method</string>
     <string name="paypal_checkout_choose_shipping_method">Choose a shipping method</string>
+    <string name="paypal_checkout_city">City</string>
     <string name="paypal_checkout_client_id_import_success_dont_translate" translatable="false">client id: Import Success</string>
     <string name="paypal_checkout_complete_purchase"> You\'ll be able to review your order before you complete your purchase." </string>
     <string name="paypal_checkout_complete_purchase_order">Complete Purchase</string>
@@ -2801,7 +2848,10 @@
     <string name="paypal_checkout_converstion_72_hour_protection_disclaimer">We’ll protect you from changing rates for 72 hours. After that, the amount you’ll pay could change.</string>
     <string name="paypal_checkout_convert_with_card_issuer">Convert with card issuer</string>
     <string name="paypal_checkout_convert_with_card_issuer_a">Total before card issuer\'s conversion:</string>
+    <string name="paypal_checkout_country">Country</string>
     <string name="paypal_checkout_credit_text">Credit</string>
+    <string name="paypal_checkout_csc">CSC</string>
+    <string name="paypal_checkout_csc_error">Enter the correct CSC</string>
     <string name="paypal_checkout_currency_conversion">Currency Conversion</string>
     <string name="paypal_checkout_currency_conversion_spread">This rate includes a currency conversion spread.</string>
     <string name="paypal_checkout_currency_for_this_purchase">Currency for this purchase</string>
@@ -2815,9 +2865,18 @@
     <string name="paypal_checkout_enter_client_id_here_dont_translate" translatable="false">Enter client id here</string>
     <string name="paypal_checkout_environment_dont_translate" translatable="false">Environment</string>
     <string name="paypal_checkout_error">Error</string>
+    <string name="paypal_checkout_error_address">Type an Address</string>
     <string name="paypal_checkout_error_choose_another_address">Choose another shipping address</string>
+    <string name="paypal_checkout_error_city">Type a City</string>
     <string name="paypal_checkout_error_connecting_paypal">Some error has occurred</string>
+    <string name="paypal_checkout_error_first_name">Type a First name</string>
+    <string name="paypal_checkout_error_last_name">Type a Last name</string>
     <string name="paypal_checkout_error_merchant_cant_ship">The merchant can\'t ship to this address</string>
+    <string name="paypal_checkout_error_required">%1$s is required</string>
+    <string name="paypal_checkout_error_state">Type a State</string>
+    <string name="paypal_checkout_error_zipcode">Type a Zip code</string>
+    <string name="paypal_checkout_exp">MM/YY</string>
+    <string name="paypal_checkout_exp_error">Enter the correct MM/YY</string>
     <string name="paypal_checkout_expired">Expired</string>
     <string name="paypal_checkout_firebase_elmo_problem">We\'re sorry, things don\'t appear to be working right now. Please come back and try again later.</string>
     <string name="paypal_checkout_go_back_btn">Go Back</string>
@@ -2828,6 +2887,8 @@
     <string name="paypal_checkout_headline_not_right">Something\'s not right.</string>
     <string name="paypal_checkout_hi">Hi, </string>
     <string name="paypal_checkout_hi_name_template">Hi, %1$s</string>
+    <string name="paypal_checkout_hint_city">City</string>
+    <string name="paypal_checkout_hint_state">State</string>
     <string name="paypal_checkout_import_client_id_dont_translate" translatable="false">Import Client Id</string>
     <string name="paypal_checkout_import_environment_dont_translate" translatable="false">Import Environment</string>
     <string name="paypal_checkout_import_tokens_dont_translate" translatable="false">Import Tokens</string>
@@ -2838,6 +2899,7 @@
     <string name="paypal_checkout_item_total">Item Total</string>
     <string name="paypal_checkout_jump_to_screen_dont_translate" translatable="false">Jump To Screen</string>
     <string name="paypal_checkout_language_problem">It looks like our web experience may not support your language.</string>
+    <string name="paypal_checkout_last_name">Last Name</string>
     <string name="paypal_checkout_learn_more">Learn More</string>
     <string name="paypal_checkout_leaving_checkout">We\'ll return you to the merchant site to complete checkout.</string>
     <string name="paypal_checkout_leaving_checkout_3p">We\'ll return you to the merchant to complete checkout.</string>
@@ -2849,16 +2911,21 @@
     <string name="paypal_checkout_legal">Legal Agreements</string>
     <string name="paypal_checkout_legal_agreements">Legal agreements</string>
     <string name="paypal_checkout_live_dont_translate" translatable="false">Live</string>
+    <string name="paypal_checkout_loading_shipping_method">Loading shipping method...</string>
     <string name="paypal_checkout_logout">Log out</string>
     <string name="paypal_checkout_logout_headline">Are you sure you want to log out?</string>
     <string name="paypal_checkout_more_info">More info on the merchant site</string>
+    <string name="paypal_checkout_name">Name</string>
+    <string name="paypal_checkout_native_add_card_sub_title">Add a new debit, credit, or prepaid card</string>
+    <string name="paypal_checkout_native_add_continue_button">Add</string>
+    <string name="paypal_checkout_new_address_save">Save</string>
     <string name="paypal_checkout_new_shipping_address">Shipping Address</string>
     <string name="paypal_checkout_no">No</string>
     <string name="paypal_checkout_no_interest_fees"> No interest or fees.  See terms</string>
     <string name="paypal_checkout_no_interest_if_paid_in_full">No interest if paid in full in 6 months.</string>
     <string name="paypal_checkout_no_interest_or_fees_see_terms">No interest or fees. See terms</string>
     <string name="paypal_checkout_ok">Ok</string>
-    <string name="paypal_checkout_option_for_your_shipping_address_zip_code">Options for your shipping address zip code %1$s</string>
+    <string name="paypal_checkout_option_for_your_shipping_address_zip_code">Options for zip code %1$s</string>
     <string name="paypal_checkout_order_summary">Order Summary</string>
     <string name="paypal_checkout_pay_14">Pay after 14 days</string>
     <string name="paypal_checkout_pay_21">Pay after 21 days</string>
@@ -2868,18 +2935,104 @@
     <string name="paypal_checkout_pay_now">Pay Now</string>
     <string name="paypal_checkout_pay_over_time">Apply and pay over time with PayPal Credit</string>
     <string name="paypal_checkout_payment_method_rights_link">Payment Method Rights</string>
-    <string name="paypal_checkout_paypal_balance">PayPal Balance</string>
+    <string name="paypal_checkout_paypal_additional_information">Additional information</string>
+    <string name="paypal_checkout_paypal_address">Address</string>
+    <string name="paypal_checkout_paypal_address_line_1">Address line 1</string>
+    <string name="paypal_checkout_paypal_address_line_2">Address line 2</string>
+    <string name="paypal_checkout_paypal_adress_number">Address, Number</string>
+    <string name="paypal_checkout_paypal_apt_ste_bldg">Apt., ste., bldg</string>
+    <string name="paypal_checkout_paypal_balance">PayPal balance</string>
+    <string name="paypal_checkout_paypal_balance_amount_dont_translate" translatable="false">%1$s%2$s</string>
+    <string name="paypal_checkout_paypal_barangay_district">Barangay / District</string>
+    <string name="paypal_checkout_paypal_building_name_floor_room_number">Building name, floor, room number</string>
+    <string name="paypal_checkout_paypal_capital_province">Capital / Province</string>
+    <string name="paypal_checkout_paypal_center_population">Center of population</string>
+    <string name="paypal_checkout_paypal_center_population_city_village">Center of population (city, village)</string>
+    <string name="paypal_checkout_paypal_cep">CEP</string>
+    <string name="paypal_checkout_paypal_city_del_post_office">City / Delivery post office</string>
+    <string name="paypal_checkout_paypal_city_district">City / District</string>
+    <string name="paypal_checkout_paypal_city_municipality">City / Municipality</string>
+    <string name="paypal_checkout_paypal_city_neighborhood">City / Neighborhood</string>
+    <string name="paypal_checkout_paypal_city_suburb">City / Suburb</string>
+    <string name="paypal_checkout_paypal_city_town">City / Town</string>
+    <string name="paypal_checkout_paypal_city_town_locality">City / Town / Locality</string>
+    <string name="paypal_checkout_paypal_city_town_village">City / Town / Village</string>
+    <string name="paypal_checkout_paypal_city_ward_town_village">City / Ward / Town / Village</string>
+    <string name="paypal_checkout_paypal_commune_locality">Commune / Locality</string>
     <string name="paypal_checkout_paypal_conversion_rate">PayPal conversion rate:</string>
     <string name="paypal_checkout_paypal_conversion_rate_00_00_usd_dont_translate" translatable="false">PayPal conversion rate: $00.00 USD</string>
     <string name="paypal_checkout_paypal_conversion_rate_dynamic">PayPal conversion rate: %1$s</string>
+    <string name="paypal_checkout_paypal_county">County</string>
+    <string name="paypal_checkout_paypal_county_dublin_postal_district">County / Dublin postal district</string>
+    <string name="paypal_checkout_paypal_county_state">County / State</string>
     <string name="paypal_checkout_paypal_credit_apply">We\'ll take you to PayPal to apply</string>
+    <string name="paypal_checkout_paypal_delivery_post_office">Delivery post office</string>
+    <string name="paypal_checkout_paypal_dep_cap_district">Department / Capital District</string>
+    <string name="paypal_checkout_paypal_department">Department</string>
+    <string name="paypal_checkout_paypal_district">District</string>
+    <string name="paypal_checkout_paypal_district_area">District / Area</string>
+    <string name="paypal_checkout_paypal_district_capital">District / Capital</string>
+    <string name="paypal_checkout_paypal_district_dependency">District / Dependency</string>
+    <string name="paypal_checkout_paypal_district_neighborhood">District / Neighborhood</string>
+    <string name="paypal_checkout_paypal_district_parish">District / Parish</string>
+    <string name="paypal_checkout_paypal_district_sub_province">District / Sub-province</string>
+    <string name="paypal_checkout_paypal_emirate">Emirate</string>
+    <string name="paypal_checkout_paypal_exit_button">You are almost done! Please finalize your purchase with the merchant.</string>
+    <string name="paypal_checkout_paypal_judet_sector">Judet / Sector</string>
+    <string name="paypal_checkout_paypal_larger_city_province">Larger city / Province</string>
+    <string name="paypal_checkout_paypal_locality">Locality</string>
     <string name="paypal_checkout_paypal_logo">Pay Pal</string>
+    <string name="paypal_checkout_paypal_main_village_town">Main village / Town</string>
+    <string name="paypal_checkout_paypal_more_address_details">More address details</string>
+    <string name="paypal_checkout_paypal_more_island_name">Island’s name</string>
+    <string name="paypal_checkout_paypal_municipality">Municipality</string>
+    <string name="paypal_checkout_paypal_neighborhood_quarter">Neighborhood / Quarter</string>
+    <string name="paypal_checkout_paypal_new_address_name">Name</string>
+    <string name="paypal_checkout_paypal_pin_code">PIN code</string>
+    <string name="paypal_checkout_paypal_plot_house_number_moo_lane_street_name">Plot / house number, moo / lane and street name</string>
+    <string name="paypal_checkout_paypal_po_box">PO Box</string>
     <string name="paypal_checkout_paypal_policies">PayPal Policies</string>
+    <string name="paypal_checkout_paypal_post_code">Post Code</string>
+    <string name="paypal_checkout_paypal_post_office_name">Post Office name</string>
+    <string name="paypal_checkout_paypal_post_town">Post town</string>
+    <string name="paypal_checkout_paypal_postal_canton">Canton</string>
+    <string name="paypal_checkout_paypal_postal_capital_district">Capital District</string>
+    <string name="paypal_checkout_paypal_postal_code">Postal Code</string>
+    <string name="paypal_checkout_paypal_postal_code_department">Postal code, Department</string>
+    <string name="paypal_checkout_paypal_postcode">Postcode</string>
+    <string name="paypal_checkout_paypal_prefecture">Prefecture</string>
+    <string name="paypal_checkout_paypal_province">Province</string>
+    <string name="paypal_checkout_paypal_province_autonomous_city">Province / Autonomous city</string>
+    <string name="paypal_checkout_paypal_province_municipality">Province / Municipality</string>
+    <string name="paypal_checkout_paypal_province_national_district">Province / National District</string>
+    <string name="paypal_checkout_paypal_province_region">Province / Region</string>
+    <string name="paypal_checkout_paypal_region">Region</string>
+    <string name="paypal_checkout_paypal_region_independent_city">Region / Independent city</string>
+    <string name="paypal_checkout_paypal_state_capital">State / Capital</string>
+    <string name="paypal_checkout_paypal_state_capital_district_federal_dependencies">State / Capital District / Federal Dependencies</string>
+    <string name="paypal_checkout_paypal_state_federal_territory">State / Federal territory</string>
+    <string name="paypal_checkout_paypal_state_territory">State / Territory</string>
+    <string name="paypal_checkout_paypal_street_address">Street address</string>
+    <string name="paypal_checkout_paypal_street_building_apartment">Street, building, apartment</string>
+    <string name="paypal_checkout_paypal_street_house">Street and house number</string>
+    <string name="paypal_checkout_paypal_street_name">Street name, street number</string>
+    <string name="paypal_checkout_paypal_street_name_house_number">Street name and house number</string>
+    <string name="paypal_checkout_paypal_street_name_house_number_subdivision">Street name, house number, subdivision</string>
+    <string name="paypal_checkout_paypal_sub_district_sub_division">Sub-district / Sub-division</string>
+    <string name="paypal_checkout_paypal_sub_locality">Sub-locality</string>
+    <string name="paypal_checkout_paypal_subdistrict">Subdistrict</string>
+    <string name="paypal_checkout_paypal_town">Town</string>
+    <string name="paypal_checkout_paypal_town_city">Town / City</string>
+    <string name="paypal_checkout_paypal_town_village_post_office">Town / Village / Post office</string>
+    <string name="paypal_checkout_paypal_zip_code">Zip code</string>
+    <string name="paypal_checkout_paypal_zone">Zone</string>
+    <string name="paypal_checkout_paypal_zone_capital">Zone / Capital</string>
     <string name="paypal_checkout_pick_it_up">Pick it up</string>
-    <string name="paypal_checkout_plus_shipping">+ New shipping address</string>
+    <string name="paypal_checkout_plus_shipping">Add Shipping Address</string>
     <string name="paypal_checkout_policies">Policies</string>
     <string name="paypal_checkout_policies_and_rights">PayPal policies and your rights</string>
     <string name="paypal_checkout_policy">Policy</string>
+    <string name="paypal_checkout_powered_by_google">Powered by Google</string>
     <string name="paypal_checkout_preferred">Preferred</string>
     <string name="paypal_checkout_preferred_fi_instrument_button">Select as preferred payment method</string>
     <string name="paypal_checkout_preferred_fi_instrument_button_selected">Selected as preferred payment method</string>
@@ -2888,6 +3041,7 @@
     <string name="paypal_checkout_privacy_2">Privacy</string>
     <string name="paypal_checkout_privacy_label">Privacy</string>
     <string name="paypal_checkout_profile_link_to_legal_agreements_dont_translate" translatable="false">Profile Page- logout or link to legal agreements</string>
+    <string name="paypal_checkout_pseudo_snackbar_onboarding_message">You\'re checking out with the PayPal app</string>
     <string name="paypal_checkout_pulling_up_digital_wallet">Pulling up your digital wallet...</string>
     <string name="paypal_checkout_quantity">Quantity:</string>
     <string name="paypal_checkout_rate_lock_72_hour">Rate locked for 72 hours.</string>
@@ -2902,18 +3056,23 @@
     <string name="paypal_checkout_sandbox_dont_translate" translatable="false">Sandbox</string>
     <string name="paypal_checkout_savings">Savings</string>
     <string name="paypal_checkout_sdk_app_name" translatable="false">PYPL Checkout</string>
+    <string name="paypal_checkout_search_screen_name">%1$s %2$s</string>
     <string name="paypal_checkout_secure_easy">The secure easy way to pay</string>
     <string name="paypal_checkout_secure_easy_fixed">The secure, easy way to pay</string>
     <string name="paypal_checkout_securely_logging_you_in">Securely logging you in...</string>
     <string name="paypal_checkout_see_conversion_options">See conversion options</string>
     <string name="paypal_checkout_see_more">See More</string>
+    <string name="paypal_checkout_select_country">Select country</string>
     <string name="paypal_checkout_selected">Selected</string>
     <string name="paypal_checkout_session_id">Session ID:</string>
     <string name="paypal_checkout_sherman_dont_translate" translatable="false">Sherman</string>
     <string name="paypal_checkout_shermango_dont_translate" translatable="false">Shermango</string>
     <string name="paypal_checkout_ship_it">Ship it</string>
     <string name="paypal_checkout_ship_to">Ship to: </string>
-    <string name="paypal_checkout_shipping_address">Shipping Address</string>
+    <string name="paypal_checkout_shipping_address">Choose a shipping address</string>
+    <string name="paypal_checkout_shipping_address_hint">Shipping address</string>
+    <string name="paypal_checkout_shipping_address_matches">List of potential matches shown</string>
+    <string name="paypal_checkout_shipping_choose_way_to_get_it">Choose a way to get it</string>
     <string name="paypal_checkout_shipping_discount">Shipping Discount</string>
     <string name="paypal_checkout_shipping_handling">Shipping and handling</string>
     <string name="paypal_checkout_shipping_redirect">To add a new shipping address, you\'ll need to complete your purchase on PayPal.com.</string>
@@ -2925,8 +3084,11 @@
     <string name="paypal_checkout_smart_payment_button_label_pay_later">Pay Later</string>
     <string name="paypal_checkout_sorry_one_touch">Sorry we could not log you in with one touch</string>
     <string name="paypal_checkout_stage_dont_translate" translatable="false">Stage</string>
+    <string name="paypal_checkout_start_typing">Start typing your shipping address</string>
+    <string name="paypal_checkout_state">State</string>
     <string name="paypal_checkout_sub_total">Sub Total</string>
     <string name="paypal_checkout_subject_to_credit_approval">Subject to credit approval. See terms</string>
+    <string name="paypal_checkout_switch_to_web_checkout">Switch to Web Checkout</string>
     <string name="paypal_checkout_tax">Tax</string>
     <string name="paypal_checkout_terms">Terms</string>
     <string name="paypal_checkout_terms_2">Terms</string>
@@ -2934,13 +3096,14 @@
     <string name="paypal_checkout_testcost2_dont_translate" translatable="false">1 x £20.00</string>
     <string name="paypal_checkout_testcost_dont_translate" translatable="false">5 x £10.00</string>
     <string name="paypal_checkout_testhat_dont_translate" translatable="false">testhat</string>
-    <string name="paypal_checkout_the_merchant_cannot_ship_to_this_address_choose_different_one">The merchant can\'t ship to this address. Choose a different one</string>
-    <string name="paypal_checkout_this_method_is_not_available_choose_different_one">This method isn\'t available. Choose a different one</string>
+    <string name="paypal_checkout_the_merchant_cannot_ship_to_this_address_choose_different_one">The merchant can\'t ship to this address. Choose a different address.</string>
+    <string name="paypal_checkout_this_method_is_not_available_choose_different_one">This method isn\'t available. Choose a different method.</string>
     <string name="paypal_checkout_this_rate_could_change_72">This rate could change.</string>
     <string name="paypal_checkout_token_import_success_dont_translate" translatable="false">Token import success</string>
     <string name="paypal_checkout_total">Total</string>
     <string name="paypal_checkout_total_before_conversion_dynamic">"Total before conversion: "</string>
     <string name="paypal_checkout_transaction_details">Transaction Details</string>
+    <string name="paypal_checkout_type_address">address</string>
     <string name="paypal_checkout_unavailable">Unavailable</string>
     <string name="paypal_checkout_update_card">Update Card</string>
     <string name="paypal_checkout_upper_conversion_text">You\'ll pay in %1$s using the card issuer\'s conversion rate.</string>
@@ -2948,7 +3111,7 @@
     <string name="paypal_checkout_use">Use </string>
     <string name="paypal_checkout_use_card_issuer_s_conversion_rate">Use Card Issuer\'s Conversion Rate</string>
     <string name="paypal_checkout_use_currency">Use</string>
-    <string name="paypal_checkout_use_paypal_balance">Use %1$s PayPal Balance</string>
+    <string name="paypal_checkout_use_paypal_balance">Use %1$s PayPal balance</string>
     <string name="paypal_checkout_use_paypal_exchange_rate">Use PayPal\'s Exchange Rate</string>
     <string name="paypal_checkout_use_with_format">Use %1$s</string>
     <string name="paypal_checkout_user_profile_icon">Profile</string>
@@ -2964,13 +3127,16 @@
     <string name="paypal_checkout_you_agree">"You agree to terms</string>
     <string name="paypal_checkout_you_ll_pay">You\'ll pay: </string>
     <string name="paypal_checkout_you_ll_pay2">You\'ll pay</string>
-    <string name="paypal_checkout_your_balance_can_not_be_used_with_paypal_credit">Your %1$s balance can\'t be used with PayPal Credit.</string>
-    <string name="paypal_checkout_your_balance_can_not_be_used_with_store_cash">Your %1$s balance can\'t be used with Store Cash.</string>
-    <string name="paypal_checkout_your_balance_can_not_be_used_with_this_bank_account">Your %1$s balance can\'t be used with this bank account.</string>
-    <string name="paypal_checkout_your_balance_can_not_be_used_with_this_credit_card">Your %1$s balance can\'t be used with this credit card.</string>
-    <string name="paypal_checkout_your_balance_can_not_be_used_with_this_debit_card">Your %1$s balance can\'t be used with this debit card.</string>
-    <string name="paypal_checkout_your_balance_can_not_be_used_with_your_balance">Your %1$s balance can\'t be used with your %2$s balance.</string>
+    <string name="paypal_checkout_your_balance_can_not_be_used_with_paypal_credit">Your %1$s PayPal balance can\'t be used with PayPal Credit.</string>
+    <string name="paypal_checkout_your_balance_can_not_be_used_with_store_cash">Your %1$s PayPal balance can\'t be used with Store Cash.</string>
+    <string name="paypal_checkout_your_balance_can_not_be_used_with_this_bank_account">Your %1$s PayPal balance can\'t be used with this bank account.</string>
+    <string name="paypal_checkout_your_balance_can_not_be_used_with_this_credit_card">Your %1$s PayPal balance can\'t be used with this credit card.</string>
+    <string name="paypal_checkout_your_balance_can_not_be_used_with_this_debit_card">Your %1$s PayPal balance can\'t be used with this debit card.</string>
+    <string name="paypal_checkout_your_balance_can_not_be_used_with_your_balance">Your %1$s PayPal balance can\'t be used with your %2$s PayPal balance.</string>
+    <string name="paypal_checkout_zip_code">Zip code</string>
+    <string name="paypal_checkout_zip_code_error">Enter the correct Zip Code</string>
     <string name="paypal_logo">Pay Pal</string>
+    <string name="paypal_payment">PayPal Payment</string>
     <string name="per_page">Per Page</string>
     <string name="picassos_author">Picassos Author</string>
     <string name="picassos_newsletter">Picassos newsletter</string>
@@ -3001,7 +3167,7 @@
     <string name="project_data_updated">Project Data Updated Successfully</string>
     <string name="project_exists">Project Already Exists</string>
     <string name="project_firebase_access_key">Firebase access key</string>
-    <string name="project_id" translatable="false">mint-console-app</string>
+    <string name="project_id" translatable="false">mynta-console</string>
     <string name="project_name">Project name</string>
     <string name="project_options">Project Options</string>
     <string name="project_packagename">Project Package Name</string>
@@ -3029,6 +3195,7 @@
     <string name="resend_code">RESEND CODE</string>
     <string name="resend_code_in">Resend code in 00:</string>
     <string name="responds">Responds</string>
+    <string name="rest_api_key">Rest API Key</string>
     <string name="review_deleted_successfully">Your review has been deleted successfully!</string>
     <string name="review_posted_successfully">Your review has been posted successfully, thank you.</string>
     <string name="reviews">Reviews</string>
@@ -3036,6 +3203,7 @@
     <string name="sak_copied">Secret API Key Copied to Clipboard</string>
     <string name="sak_notice">Secret API Key (SAK) is the code to identify each of your projects and link them to your account. Make sure the Secret API Key of your projects stays a secret please.</string>
     <string name="save">Save</string>
+    <string name="save_settings">Save Settings</string>
     <string name="scan_qr_code">Scan QR Code</string>
     <string name="scan_qr_code_description">Scan the code below using the Mint Console app to log into your Console account.</string>
     <string name="screen_sleep">Screen Sleep mode</string>
@@ -3043,6 +3211,7 @@
     <string name="search_articles">Search articles</string>
     <string name="search_empty">Search can\'t be empty.</string>
     <string name="search_menu_title">Search</string>
+    <string name="search_screen_name">%1$s %2$s</string>
     <string name="secured_checkout">SECURE CHECKOUT</string>
     <string name="select_account">Select Account</string>
     <string name="select_project">Open a Project</string>
@@ -3051,6 +3220,7 @@
     <string name="send_push_notifications_to_your_app_users">Send push notifications to your members.</string>
     <string name="server_is_down">Server is down!</string>
     <string name="server_status">Server Status</string>
+    <string name="settings_saved">Settings Saved Successfully</string>
     <string name="setup_google_firebase">Setup Google Firebase</string>
     <string name="setup_policies">Setup Policies</string>
     <string name="share_content">Share Content</string>
@@ -6338,7 +6508,28 @@
     <item name="android:windowIsFloating">true</item>
     <item name="android:backgroundDimEnabled">false</item>
   </style>
+    <style name="EditTextTheme">
+        <item name="colorControlActivated">@color/add_card_blue</item>
+        <item name="colorControlHighlight">@color/add_card_blue</item>
+    </style>
+    <style name="EdittextUnderlineStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:paddingLeft">@dimen/width_0</item>
+        <item name="android:paddingTop">@dimen/padding_4x</item>
+        <item name="android:paddingRight">@dimen/width_0</item>
+        <item name="android:paddingBottom">@dimen/padding_4x</item>
+        <item name="android:textColor">@color/add_card_blue</item>
+        <item name="android:textColorHighlight">@color/black_90</item>
+        <item name="android:textColorLink">@color/black_90</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_blue</item>
+        <item name="backgroundTint">@color/add_card_blue</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
     <style name="EmptyTheme"/>
+    <style name="FullEditTextStyle" parent="PYPLEditTextStyle">
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColor">@color/paypal_edittext</item>
+    </style>
     <style name="MaterialAlertDialog.Material3" parent="MaterialAlertDialog.MaterialComponents">
     <item name="enforceMaterialTheme">true</item>
     <item name="android:layout">@layout/m3_alert_dialog</item>
@@ -6446,6 +6637,28 @@
     <style name="PYPLBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@android:color/transparent</item>
     </style>
+    <style name="PYPLEditTextStyle">
+        <item name="fontFamily">sans-serif</item>
+    </style>
+    <style name="PYPLLargeCaptionStyle">
+        <item name="android:textSize">@dimen/text_size_body1</item>
+        <item name="android:textAppearance">@style/TextAppearance.PayPal.Checkout.Banner</item>
+    </style>
+    <style name="PYPLListSelectorCardViewStyle" parent="Theme.MaterialComponents.DayNight">
+        <item name="strokeColor">@android:color/white</item>
+        <item name="strokeWidth">@dimen/divider_height</item>
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+    </style>
+    <style name="PYPLListSelectorItem1Style" parent="PYPLTextViewBody1Style">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/add_card_blue</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+    <style name="PYPLListSelectorItem2Style" parent="PYPLTextViewBody2Style">
+        <item name="android:textColor">@color/add_card_blue</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
     <style name="PYPLSwitchWidgetStyle">
         <!-- active thumb & track color (30% transparency) -->
         <item name="colorControlActivated">@color/green_color_500</item>
@@ -6453,6 +6666,10 @@
         <item name="colorSwitchThumbNormal">@color/switch_color_thumb</item>
         <!-- inactive track color (30% transparency) -->
         <item name="android:colorForeground">@color/switch_color_track</item>
+    </style>
+    <style name="PYPLTextViewBannerStyle">
+        <item name="android:textSize">@dimen/text_size_display</item>
+        <item name="android:textAppearance">@style/TextAppearance.PayPal.Checkout.Banner</item>
     </style>
     <style name="PYPLTextViewBody1Style">
         <item name="android:textAppearance">@style/TextAppearance.PayPal.Checkout.Body1</item>
@@ -6470,6 +6687,12 @@
     <style name="PYPLTextViewCaption2Style">
         <item name="android:textAppearance">@style/TextAppearance.PayPal.Checkout.Caption2</item>
     </style>
+    <style name="PYPLTextViewCardBalanceAmountStyle">
+        <item name="android:textAppearance">@style/TextAppearance.PayPal.Checkout.Card.Balance.Amount</item>
+    </style>
+    <style name="PYPLTextViewCardBalanceTitleStyle">
+        <item name="android:textAppearance">@style/TextAppearance.PayPal.Checkout.Card.Balance.Title</item>
+    </style>
     <style name="PYPLTextViewHintStyle">
         <item name="android:textAppearance">@style/TextAppearance.PayPal.Checkout.Hint</item>
     </style>
@@ -6480,6 +6703,10 @@
     <style name="PYPLTextViewTitleStyle">
         <item name="android:textAppearance">@style/TextAppearance.PayPal.Checkout.Title</item>
         <item name="android:textAlignment">center</item>
+    </style>
+    <style name="PayPalHintStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/margin_12x</item>
+        <item name="android:textColor">@color/add_card_gray</item>
     </style>
     <style name="PinWidget"/>
     <style name="PinWidget.PinView" parent="Widget.AppCompat.EditText">
@@ -7172,49 +7399,65 @@
     <style name="TextAppearance.MaterialComponents.Tooltip" parent="TextAppearance.MaterialComponents.Body2">
     <item name="android:textColor">?attr/colorOnPrimary</item>
   </style>
+    <style name="TextAppearance.PayPal.Checkout.Banner" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/white_color</item>
+    </style>
     <style name="TextAppearance.PayPal.Checkout.Body1" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="fontFamily">@font/sans_small_regular_fonts</item>
+        <item name="fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/text_size_body1</item>
         <item name="android:textColor">@color/gray_color_700</item>
     </style>
     <style name="TextAppearance.PayPal.Checkout.Body2" parent="TextAppearance.MaterialComponents.Subtitle2">
-        <item name="fontFamily">@font/sans_small_medium_fonts</item>
+        <item name="fontFamily">sans-serif-medium</item>
         <item name="android:textSize">@dimen/text_size_body2</item>
         <item name="android:textColor">@color/gray_color_700</item>
     </style>
     <style name="TextAppearance.PayPal.Checkout.Button" parent="TextAppearance.PayPal.Checkout.Body2">
         <item name="android:textSize">@dimen/text_size_button</item>
+        <item name="fontFamily">sans-serif</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textColor">@color/blue_color_600</item>
     </style>
     <style name="TextAppearance.PayPal.Checkout.Caption1" parent="TextAppearance.MaterialComponents.Caption">
-        <item name="fontFamily">@font/sans_small_regular_fonts</item>
+        <item name="fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/text_size_caption1</item>
         <item name="android:textColor">@color/gray_color_700</item>
     </style>
     <style name="TextAppearance.PayPal.Checkout.Caption2" parent="TextAppearance.MaterialComponents.Caption">
-        <item name="fontFamily">@font/sans_small_medium_fonts</item>
+        <item name="fontFamily">sans-serif-medium</item>
         <item name="android:textSize">@dimen/text_size_caption2</item>
         <item name="android:textColor">@color/gray_color_700</item>
     </style>
+    <style name="TextAppearance.PayPal.Checkout.Card.Balance.Amount" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/white_color</item>
+    </style>
+    <style name="TextAppearance.PayPal.Checkout.Card.Balance.Title" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/text_size_10</item>
+        <item name="android:textColor">@color/white_color</item>
+    </style>
     <style name="TextAppearance.PayPal.Checkout.Display" parent="TextAppearance.MaterialComponents.Headline4">
-        <item name="fontFamily">@font/sans_big_light_fonts</item>
+        <item name="fontFamily">sans-serif-light</item>
         <item name="android:textSize">@dimen/text_size_display</item>
         <item name="android:textColor">@color/gray_color_700</item>
     </style>
     <style name="TextAppearance.PayPal.Checkout.Hint" parent="TextAppearance.MaterialComponents.Caption">
-        <item name="fontFamily">@font/sans_small_medium_fonts</item>
+        <item name="fontFamily">sans-serif-light</item>
         <item name="android:textSize">@dimen/text_size_hint</item>
         <item name="android:textColor">@color/gray_color_700</item>
     </style>
     <style name="TextAppearance.PayPal.Checkout.Title" parent="TextAppearance.MaterialComponents.Headline6">
-        <item name="fontFamily">@font/sans_big_regular_fonts</item>
+        <item name="fontFamily">sans-serif-medium</item>
         <item name="android:textSize">@dimen/text_size_title</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textColor">@color/gray_color_700</item>
     </style>
     <style name="TextAppearance.PayPal.Checkout.Title1" parent="TextAppearance.MaterialComponents.Headline6">
-        <item name="fontFamily">@font/sans_small_regular_fonts</item>
+        <item name="fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/text_size_title1</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textColor">@color/gray_color_700</item>
@@ -9617,7 +9860,7 @@
     <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Tooltip</item>
   </style>
     <style name="Widget.PayPal.Checkout.TextView" parent="@android:style/Widget.Material.TextView">
-        <item name="android:fontFamily">@font/sans_small_regular_fonts</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/text_size_body1</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textStyle">normal</item>
@@ -13350,19 +13593,19 @@
 
     </declare-styleable>
     <declare-styleable name="PayPalActionButton">
-        <attr format="enum" name="button_color">
+        <attr format="enum" name="paypal_checkout_button_color">
             <enum name="blue" value="0"/>
             <enum name="gray" value="1"/>
             <enum name="white" value="2"/>
         </attr>
 
-        <attr format="enum" name="button_size">
+        <attr format="enum" name="paypal_checkout_button_size">
             <enum name="small" value="0"/>
             <enum name="medium" value="1"/>
             <enum name="large" value="2"/>
         </attr>
 
-        <attr format="enum" name="button_shape">
+        <attr format="enum" name="paypal_checkout_button_shape">
             <enum name="rectangle" value="0"/>
             <enum name="pill" value="1"/>
             <enum name="rounded" value="2"/>

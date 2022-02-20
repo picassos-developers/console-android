@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="41dp"
+                android:layout_height="6dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="?divider_inline" />
+
+            <EditText
+                android:id="@id/onesignal_app_id"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/input_rectangle_background_sheet"
+                android:hint="@string/app_id"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textSize="@dimen/input_text_size"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@id/onesignal_rest_api_key"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_rectangle_background_sheet"
+                android:hint="@string/rest_api_key"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="?color_dark"
+                android:textColorHint="?color_dark"
+                android:textSize="@dimen/input_text_size"
+                tools:ignore="Autofill" />
+
+            <Button
+                android:id="@id/save_settings"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_primary"
+                android:text="@string/save_settings"
+                android:textAllCaps="false"
+                android:textSize="@dimen/input_text_size"
+                android:textColor="@color/color_white" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

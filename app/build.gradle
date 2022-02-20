@@ -18,13 +18,13 @@ repositories {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.picassos.mint.console.android"
+        applicationId "app.mynta.console.android"
         minSdkVersion 22
-        targetSdkVersion 31
+        targetSdkVersion 32
         versionCode 23
         versionName "23.0"
 
@@ -75,6 +75,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-messaging'
     implementation "androidx.core:core-ktx:1.7.0"
-    implementation "com.paypal.checkout:android-sdk:0.2.0"
+    implementation 'com.paypal.checkout:android-sdk:0.6.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"
 }

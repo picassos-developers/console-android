@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.picassos.mint.console.android",
+  "applicationId": "app.mynta.console.android",
   "variantName": "debug",
   "elements": []
 }

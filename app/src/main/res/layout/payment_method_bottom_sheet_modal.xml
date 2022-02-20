@@ -104,13 +104,8 @@
 
         </LinearLayout>
 
-        <com.paypal.checkout.paymentbutton.PayPalButton
-            android:id="@+id/payPalButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
         <LinearLayout
-            android:id="@id/google_pay"
+            android:id="@id/paypal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -147,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_bold"
-                    android:text="@string/google_play_payment"
+                    android:text="@string/paypal_payment"
                     android:textColor="?color_dark"
                     android:textSize="10sp"
                     tools:ignore="SmallSp" />
@@ -159,7 +154,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/poppins_regular"
                     android:maxLines="2"
-                    android:text="@string/checkout_using_google_pay"
+                    android:text="@string/checkout_using_paypal"
                     android:textColor="?color_dark"
                     android:textSize="10sp"
                     tools:ignore="SmallSp" />
@@ -167,6 +162,26 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@id/paypal_checkout_container"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            app:cardElevation="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="15dp">
+
+            <com.paypal.checkout.paymentbutton.PayPalButton
+                android:id="@id/paypal_checkout"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"/>
+
+        </androidx.cardview.widget.CardView>
+
 
         <Button
             android:id="@id/checkout"

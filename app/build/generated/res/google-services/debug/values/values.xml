@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">468765055023-kmg0dosl11eeqq0kfju8nrsrad89m613.apps.googleusercontent.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">468765055023</string>
-    <string name="google_api_key" translatable="false">AIzaSyA6wD_pz2NEszeL_x4AIq9LsinarVZ1egw</string>
-    <string name="google_app_id" translatable="false">1:468765055023:android:d53098ab0230fbe6518eda</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA6wD_pz2NEszeL_x4AIq9LsinarVZ1egw</string>
-    <string name="google_storage_bucket" translatable="false">mint-console-app.appspot.com</string>
-    <string name="project_id" translatable="false">mint-console-app</string>
+    <string name="default_web_client_id" translatable="false">583096153246-k7asuo2jujg0nf7gt7l9bentmlilkq21.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">583096153246</string>
+    <string name="google_api_key" translatable="false">AIzaSyBhJD_pWzfV8INT1CRhfNi7tl3oLTAq1hE</string>
+    <string name="google_app_id" translatable="false">1:583096153246:android:70af9163edf28e3932f78f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBhJD_pWzfV8INT1CRhfNi7tl3oLTAq1hE</string>
+    <string name="google_storage_bucket" translatable="false">mynta-console.appspot.com</string>
+    <string name="project_id" translatable="false">mynta-console</string>
 </resources>

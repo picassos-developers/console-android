@@ -1,0 +1,264 @@
+package app.mynta.console.android.activities.providers;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.InputFilter;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import app.mynta.console.android.R;
+
+import app.mynta.console.android.sharedPreferences.ConsolePreferences;
+import app.mynta.console.android.constants.API;
+import app.mynta.console.android.sheets.ProviderOptionsBottomSheetModal;
+import app.mynta.console.android.utils.Helper;
+import app.mynta.console.android.utils.InputFilterRange;
+import app.mynta.console.android.utils.RequestDialog;
+import app.mynta.console.android.utils.Toasto;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class PinterestActivity extends AppCompatActivity implements ProviderOptionsBottomSheetModal.OnRemoveListener {
+
+    private Bundle bundle;
+    private Intent intent;
+    private ConsolePreferences consolePreferences;
+    private RequestDialog requestDialog;
+
+    private String request;
+
+    private EditText label, icon, accessToken, perPage, username, boardName;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // OPTIONS
+        Helper.darkMode(this);
+
+        consolePreferences = new ConsolePreferences(this);
+
+        setContentView(R.layout.activity_pinterest);
+
+        bundle = new Bundle();
+        intent = new Intent();
+
+        // get request type
+        request = getIntent().getStringExtra("request");
+
+        // initialize request dialog
+        requestDialog = new RequestDialog(this);
+
+        // close activity
+        findViewById(R.id.go_back).setOnClickListener(v -> finish());
+
+        // more options
+        findViewById(R.id.more_options).setOnClickListener(v -> {
+            bundle.putInt("identifier", getIntent().getIntExtra("identifier", 0));
+            bundle.putString("type", getIntent().getStringExtra("type"));
+            ProviderOptionsBottomSheetModal providerOptionsBottomSheetModal = new ProviderOptionsBottomSheetModal();
+            providerOptionsBottomSheetModal.setArguments(bundle);
+            providerOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
+        });
+        if (request.equals("add")) {
+            findViewById(R.id.more_options).setVisibility(View.GONE);
+        }
+
+        // toolbar title
+        TextView toolbarTitle = findViewById(R.id.toolbar_title);
+        if (request.equals("update")) {
+            toolbarTitle.setText(getIntent().getStringExtra("label"));
+        }
+
+        // pinterest data
+        label = findViewById(R.id.provider_label);
+        icon = findViewById(R.id.provider_icon);
+        accessToken = findViewById(R.id.access_token);
+        username = findViewById(R.id.username);
+        perPage = findViewById(R.id.per_page);
+        perPage.setFilters(new InputFilter[]{ new InputFilterRange("1", "25")});
+        boardName = findViewById(R.id.board_name);
+
+        // request data
+        if (request.equals("update")) {
+            requestData();
+        }
+
+        // save data
+        Button save = findViewById(R.id.update_pinterest);
+        save.setOnClickListener(v -> {
+            if (!TextUtils.isEmpty(accessToken.getText().toString())
+                    && !TextUtils.isEmpty(username.getText().toString())
+                    && !TextUtils.isEmpty(perPage.getText().toString())
+                    && !TextUtils.isEmpty(boardName.getText().toString())) {
+                switch (request) {
+                    case "add":
+                        requestAddPinterest();
+                        break;
+                    case "update":
+                        requestUpdatePinterest();
+                        break;
+                }
+            } else {
+                Toasto.show_toast(this, getString(R.string.all_fields_are_required), 0, 2);
+            }
+        });
+
+        // refresh
+        SwipeRefreshLayout refresh = findViewById(R.id.refresh_layout);
+        refresh.setOnRefreshListener(() -> {
+            if (refresh.isRefreshing()) {
+                refresh.setRefreshing(false);
+            }
+
+            requestData();
+        });
+        if (request.equals("add")) {
+            refresh.setEnabled(false);
+        }
+    }
+
+    /**
+     * request pinterest data
+     */
+    private void requestData() {
+        findViewById(R.id.pinterest_container).setVisibility(View.VISIBLE);
+        findViewById(R.id.internet_connection).setVisibility(View.GONE);
+        requestDialog.show();
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_PINTEREST_DETAILS,
+                response -> {
+                    try {
+                        JSONObject object = new JSONObject(response);
+                        JSONObject root = object.getJSONObject("pinterest");
+                        JSONObject general = root.getJSONObject("general");
+
+                        // label, icon
+                        label.setText(general.getString("label"));
+                        icon.setText(general.getString("icon"));
+
+                        accessToken.setText(root.getString("access_token"));
+                        username.setText(root.getString("username"));
+                        perPage.setText(root.getString("per_page"));
+                        boardName.setText(root.getString("board_name"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    requestDialog.dismiss();
+                }, error -> {
+            requestDialog.dismiss();
+            findViewById(R.id.pinterest_container).setVisibility(View.GONE);
+            findViewById(R.id.internet_connection).setVisibility(View.VISIBLE);
+            findViewById(R.id.try_again).setOnClickListener(v -> requestData());
+        }) {
+
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                params.put("identifier", String.valueOf(getIntent().getIntExtra("identifier", 0)));
+                return params;
+            }
+        };
+
+        Volley.newRequestQueue(this).add(request);
+    }
+
+    /**
+     * request add pinterest provider
+     */
+    private void requestAddPinterest() {
+        if (consolePreferences.loadSecretAPIKey().equals("demo")) {
+            Toasto.show_toast(this, getString(R.string.demo_project), 1, 0);
+        } else {
+            requestDialog.show();
+            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_ADD_PINTEREST_PROVIDER,
+                    response -> {
+                        if (response.equals("200")) {
+                            intent.putExtra("added", true);
+                            setResult(Activity.RESULT_OK, intent);
+                            finish();
+                        }
+                        requestDialog.dismiss();
+                    }, error -> {
+                requestDialog.dismiss();
+                Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);
+            }){
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                    params.put("label", label.getText().toString());
+                    params.put("icon", icon.getText().toString());
+                    params.put("access_token", accessToken.getText().toString());
+                    params.put("username", username.getText().toString());
+                    params.put("per_page", perPage.getText().toString());
+                    params.put("board_name", boardName.getText().toString());
+                    return params;
+                }
+            };
+
+            Volley.newRequestQueue(this).add(request);
+        }
+    }
+
+    /**
+     * request update pinterest
+     */
+    private void requestUpdatePinterest() {
+        if (consolePreferences.loadSecretAPIKey().equals("demo")) {
+            Toasto.show_toast(this, getString(R.string.demo_project), 1, 0);
+        } else {
+            requestDialog.show();
+            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_PINTEREST_PROVIDER,
+                    response -> {
+                        if (response.equals("200")) {
+                            Toasto.show_toast(this, getString(R.string.pinterest_updated), 1, 0);
+                            intent.putExtra("updated", true);
+                            setResult(Activity.RESULT_OK, intent);
+                            finish();
+                        }
+                        requestDialog.dismiss();
+                    }, error -> {
+                requestDialog.dismiss();
+                Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);
+            }){
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("secret_api_key", consolePreferences.loadSecretAPIKey());
+                    params.put("identifier", String.valueOf(getIntent().getIntExtra("identifier", 0)));
+                    params.put("label", label.getText().toString());
+                    params.put("icon", icon.getText().toString());
+                    params.put("access_token", accessToken.getText().toString());
+                    params.put("username", username.getText().toString());
+                    params.put("per_page", perPage.getText().toString());
+                    params.put("board_name", boardName.getText().toString());
+                    return params;
+                }
+            };
+
+            Volley.newRequestQueue(this).add(request);
+        }
+    }
+
+    @Override
+    public void onRemoveListener(int requestCode) {
+        intent.putExtra("remove", true);
+        setResult(Activity.RESULT_OK, intent);
+        finish();
+    }
+}

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?color_background"
-    tools:context=".activities.about.MyTicketsActivity">
+    tools:context="app.mynta.console.android.activities.about.MyTicketsActivity">
 
     <FrameLayout
         android:id="@id/fragment_container"
