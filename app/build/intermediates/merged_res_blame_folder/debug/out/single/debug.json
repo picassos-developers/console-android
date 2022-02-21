@@ -48,12 +48,12 @@
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/layout/redeem_code_bottom_sheet_modal.xml"
     },
     {
-        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_gear_outline_two.png.flat",
-        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_gear_outline_two.png"
-    },
-    {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/layout_item_category_design.xml.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/layout/item_category_design.xml"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_gear_outline_two.png.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_gear_outline_two.png"
     },
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_onesignal_color.png.flat",
@@ -484,6 +484,10 @@
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_vibration.png"
     },
     {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/layout_dialog_location.xml.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/layout/dialog_location.xml"
+    },
+    {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_share.png.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_share.png"
     },
@@ -534,6 +538,10 @@
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_map_dark.png.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/map_dark.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/layout_item_country.xml.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/layout/item_country.xml"
     },
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_key.png.flat",

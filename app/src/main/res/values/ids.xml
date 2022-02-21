@@ -190,6 +190,7 @@
     <item name="notification_description" type="id" />
     <item name="confirm_allow" type="id" />
     <item name="switch_project" type="id" />
+    <item name="recycler_countries" type="id" />
     <item name="notification_date" type="id" />
     <item name="recycler_target" type="id" />
     <item name="share_content" type="id" />
@@ -201,6 +202,7 @@
     <item name="launch_app" type="id" />
     <item name="notifications" type="id" />
     <item name="logout" type="id" />
+    <item name="country_title" type="id" />
     <item name="downloads" type="id" />
     <item name="privacy_policy" type="id" />
     <item name="terms_of_use" type="id" />

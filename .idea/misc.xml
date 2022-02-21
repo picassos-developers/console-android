@@ -120,7 +120,9 @@
         <entry key="app/src/main/res/layout/dialog_learn_more.xml" value="0.33" />
         <entry key="app/src/main/res/layout/dialog_loading_bar.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/dialog_loading_spinners.xml" value="0.2677083333333333" />
+        <entry key="app/src/main/res/layout/dialog_location.xml" value="0.25" />
         <entry key="app/src/main/res/layout/dialog_manage_credentials.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_map_styles.xml" value="0.22" />
         <entry key="app/src/main/res/layout/dialog_notification_target.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/dialog_preview_notification.xml" value="0.4046875" />
         <entry key="app/src/main/res/layout/dialog_promotion.xml" value="0.2552083333333333" />
@@ -149,7 +151,9 @@
         <entry key="app/src/main/res/layout/item_app_category_listitem.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/item_article_listitem.xml" value="0.2682291666666667" />
         <entry key="app/src/main/res/layout/item_author_badge.xml" value="0.253125" />
+        <entry key="app/src/main/res/layout/item_category_design.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/item_comment_listitem.xml" value="0.2557291666666667" />
+        <entry key="app/src/main/res/layout/item_country.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/item_default_navigation_listitem.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_force_update.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/item_guide_listitem.xml" value="0.2484375" />
@@ -172,6 +176,7 @@
         <entry key="app/src/main/res/layout/item_server_status_listitem.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/item_step_account.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_ticket_listitem.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/layout/item_ticket_type.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/item_wizard_preview.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/launch_app_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/learn_more_bottom_sheet_modal.xml" value="0.33" />
