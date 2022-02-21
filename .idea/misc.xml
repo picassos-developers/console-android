@@ -48,7 +48,7 @@
         <entry key="app/src/main/res/drawable/toolbar_background.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/toolbar_background_dark.xml" value="0.26875" />
         <entry key="app/src/main/res/layout/activity_about_console.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_add_project.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_add_project.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_articles.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_check_status.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_check_ticket.xml" value="0.2708333333333333" />
@@ -61,7 +61,7 @@
         <entry key="app/src/main/res/layout/activity_edit_project.xml" value="0.2677083333333333" />
         <entry key="app/src/main/res/layout/activity_enter_verification.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_facebook.xml" value="0.253125" />
-        <entry key="app/src/main/res/layout/activity_finish_policies_setup.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_finish_policies_setup.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_generate_auth_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_get_started.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_gift.xml" value="0.33" />

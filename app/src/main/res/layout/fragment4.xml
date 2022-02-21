@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
     android:background="?color_background">
 
@@ -17,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_semibold"
-            android:text="@string/add_a_default_provider"
+            android:text="Tell us More about Organization"
             android:textColor="?color_dark"
             android:textSize="20sp" />
 
@@ -25,37 +26,63 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_regular"
-            android:text="@string/choose_your_default_content_provider"
+            android:text="@string/give_your_application_a_name"
             android:textColor="?color_dark"
             android:textSize="14sp" />
 
-        <LinearLayout
+        <EditText
+            android:id="@id/organization"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_height="50dp"
+            android:background="@drawable/input_rectangle_background"
+            android:hint="@string/application_name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:maxLength="30"
+            android:gravity="center_vertical"
             android:layout_marginTop="30dp"
-            android:orientation="horizontal">
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="?color_dark"
+            android:textColorHint="?color_dark"
+            android:textSize="@dimen/input_text_size"
+            tools:ignore="Autofill,RtlSymmetry,SmallSp,TextFields" />
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_weight=".5"
-                android:padding="30dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/toolbar_background"
-                android:src="@drawable/logo_android" />
+        <androidx.cardview.widget.CardView
+            android:id="@id/location_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="?color_light_separate"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp">
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:padding="30dp"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/toolbar_background"
-                android:layout_weight=".5"
-                android:src="@drawable/logo_apple" />
+            <TextView
+                android:id="@id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="@dimen/input_text_size"
+                android:text="@string/location"
+                android:textColor="?color_dark" />
 
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@id/next"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_primary_rounded"
+            android:text="@string/next_step"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:textColor="?color_light_separate"
+            android:textSize="14sp" />
 
     </LinearLayout>
 

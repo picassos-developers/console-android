@@ -44,6 +44,7 @@
     <item name="controller_title" type="id" />
     <item name="checkup_list" type="id" />
     <item name="status" type="id" />
+    <item name="skip" type="id" />
     <item name="screen_sleep" type="id" />
     <item name="fullscreen" type="id" />
     <item name="force_fullscreen" type="id" />
@@ -288,6 +289,7 @@
     <item name="project_settings" type="id" />
     <item name="project_packagename" type="id" />
     <item name="project_options" type="id" />
+    <item name="organization" type="id" />
     <item name="section_description" type="id" />
     <item name="provider" type="id" />
     <item name="notification_is_read" type="id" />
@@ -348,6 +350,8 @@
     <item name="author_image" type="id" />
     <item name="author_name" type="id" />
     <item name="video_design" type="id" />
+    <item name="location_chooser" type="id" />
+    <item name="location" type="id" />
     <item name="update_vimeo" type="id" />
     <item name="promotion_image" type="id" />
     <item name="channel_id" type="id" />

@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
     android:background="?color_background">
 
@@ -103,48 +102,6 @@
 
         </LinearLayout>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardElevation="0dp"
-            android:layout_gravity="start"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="15dp"
-            app:cardBackgroundColor="?color_card_alert">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="15dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tip: How to find a perfect name for your app?"
-                    android:textColor="?color_dark"
-                    android:textStyle="bold"
-                    android:textSize="13sp"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="
-1. Use Keyword for Your App's Core Features.\n
-2. Pick the Obvious Name and Play on Words.\n
-3. Best App Name Tips: Keep a Name Short and Memorable.\n
-4. Your Name Must Be Searchable.\n
-5. Check if Available: App Name and Domain."
-                    android:textColor="?color_dark"
-                    android:layout_marginTop="5dp"
-                    android:textSize="12sp"
-                    tools:ignore="HardcodedText" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
         <Button
             android:id="@id/next"
             style="@style/Widget.AppCompat.Button.Borderless"
@@ -152,7 +109,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/button_primary_rounded"
-            android:text="@string/next"
+            android:text="@string/next_step"
             android:textAllCaps="false"
             android:visibility="gone"
             android:textColor="?color_light_separate"

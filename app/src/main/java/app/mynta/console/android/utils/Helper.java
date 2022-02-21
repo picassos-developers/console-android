@@ -15,6 +15,9 @@ import app.mynta.console.android.BuildConfig;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.R;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.text.Normalizer;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -135,7 +138,7 @@ public class Helper {
         String nonWhiteSpace = Pattern.compile("[\\s]").matcher(package_name).replaceAll("_");
         String normalized = Normalizer.normalize(nonWhiteSpace, Normalizer.Form.NFD);
         String slug = Pattern.compile("[^\\w-]").matcher(normalized).replaceAll("");
-        return slug.toLowerCase(Locale.ENGLISH);
+        return slug.toLowerCase(Locale.ENGLISH).replaceAll("-", "_");
     }
 
     /**
@@ -145,5 +148,27 @@ public class Helper {
      */
     public static boolean validatePackagename(String package_name) {
         return package_name.matches("^([A-Za-z]{1}[A-Za-z\\d_]*\\.)+[A-Za-z][A-Za-z\\d_]*$");
+    }
+
+    /**
+     * get json from assets folder
+     * @param context for content
+     * @param path for path in assets
+     * @return json in string format
+     */
+    public static String getJsonFromAssets(Context context, String path) {
+        String json;
+        try {
+            InputStream is = context.getAssets().open(path);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, StandardCharsets.UTF_8);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
     }
 }

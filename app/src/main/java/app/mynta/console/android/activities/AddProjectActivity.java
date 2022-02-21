@@ -1,7 +1,15 @@
 package app.mynta.console.android.activities;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,8 +21,9 @@ import app.mynta.console.android.R;
 import app.mynta.console.android.activities.addProject.fragments.AddFirstContentProviderFragment;
 import app.mynta.console.android.activities.addProject.fragments.ChooseAppCategoryFragment;
 import app.mynta.console.android.activities.addProject.fragments.Fragment4;
-import app.mynta.console.android.activities.addProject.fragments.Fragment5;
 import app.mynta.console.android.activities.addProject.fragments.NameAppFragment;
+import app.mynta.console.android.activities.store.powerups.policies.FinishPoliciesSetupActivity;
+import app.mynta.console.android.activities.store.powerups.policies.SetupPoliciesActivity;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.utils.Helper;
 import com.shuhart.stepview.StepView;
@@ -35,16 +44,17 @@ public class AddProjectActivity extends AppCompatActivity {
 
     final Fragment fragment1 = new ChooseAppCategoryFragment();
     final Fragment fragment2 = new NameAppFragment();
-    final Fragment fragment3 = new AddFirstContentProviderFragment();
-    final Fragment fragment4 = new Fragment4();
-    final Fragment fragment5 = new Fragment5();
+    final Fragment fragment3 = new Fragment4();
+    final Fragment fragment4 = new AddFirstContentProviderFragment();
 
-    TextView steptext;
+    TextView stepText;
 
     // project details
     public String appCategory;
     public String applicationName;
     public String packageName;
+    public String organization;
+    public String countryCode;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -61,22 +71,23 @@ public class AddProjectActivity extends AppCompatActivity {
         stepView = findViewById(R.id.step_view);
         stepView.getState()
                 .animationType(StepView.ANIMATION_ALL)
-                .stepsNumber(5)
+                .stepsNumber(4)
                 .commit();
 
-        steptext = findViewById(R.id.current_step);
-        steptext.setText(getString(R.string.step) + " 1 " + getString(R.string.of_five));
+        stepText = findViewById(R.id.current_step);
+        stepText.setText(getString(R.string.step) + " 1 " + getString(R.string.of_four));
 
         fragmentManager = getSupportFragmentManager();
 
         // add fragments
-        fragmentManager.beginTransaction().add(R.id.fragment_container, fragment5, "4").hide(fragment5).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, fragment4, "3").hide(fragment4).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, fragment3, "2").hide(fragment3).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, fragment2, "1").hide(fragment2).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, fragment1, "0").commit();
 
         findViewById(R.id.go_back).setOnClickListener(v -> goBack());
+
+        findViewById(R.id.skip).setOnClickListener(v -> showProgress());
     }
 
     @SuppressLint("SetTextI18n")
@@ -94,8 +105,13 @@ public class AddProjectActivity extends AppCompatActivity {
 
             finish();
         }
+        if (currentStep == 3) {
+            findViewById(R.id.skip).setVisibility(View.VISIBLE);
+        } else {
+            findViewById(R.id.skip).setVisibility(View.INVISIBLE);
+        }
 
-        steptext.setText(getString(R.string.step) + " " + (step) + " " + getString(R.string.of_five));
+        stepText.setText(getString(R.string.step) + " " + (step) + " " + getString(R.string.of_four));
     }
 
     @SuppressLint("SetTextI18n")
@@ -106,6 +122,11 @@ public class AddProjectActivity extends AppCompatActivity {
         } else {
             finish();
         }
+        if (currentStep == 3) {
+            findViewById(R.id.skip).setVisibility(View.VISIBLE);
+        } else {
+            findViewById(R.id.skip).setVisibility(View.INVISIBLE);
+        }
         stepView.done(false);
         stepView.go(currentStep, true);
 
@@ -113,7 +134,49 @@ public class AddProjectActivity extends AppCompatActivity {
         Fragment nextFragment = getSupportFragmentManager().findFragmentByTag(String.valueOf(currentStep));
         fragmentManager.beginTransaction().hide(Objects.requireNonNull(activeFragment)).show(Objects.requireNonNull(nextFragment)).commit();
 
-        steptext.setText(getString(R.string.step) + " " + (step) + " " + getString(R.string.of_five));
+        stepText.setText(getString(R.string.step) + " " + (step) + " " + getString(R.string.of_four));
+    }
+
+    /**
+     * request show progress dialog
+     */
+    private void showProgress() {
+        Dialog designsDialog = new Dialog(this);
+
+        designsDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        designsDialog.setContentView(R.layout.dialog_loading_bar);
+
+        // set cancelable
+        designsDialog.setCancelable(false);
+        designsDialog.setCanceledOnTouchOutside(false);
+
+        TextView loadingTitle = designsDialog.findViewById(R.id.loading_title);
+        loadingTitle.setText("Creating" + " " + applicationName);
+
+        TextView loadingDescription = designsDialog.findViewById(R.id.loading_description);
+        Handler handler = new Handler();
+        for (int i = 100; i <= 3500; i=i+100) {
+            handler.postDelayed(() -> {
+                if(i%300 == 0){
+                    loadingDescription.setText("Loading.");
+                }else if(i%200 == 0){
+                    loadingDescription.setText("Loading..");
+                }else if(i%100 == 0){
+                    loadingDescription.setText("Loading...");
+                }
+            }, i);
+        }
+
+        new Handler().postDelayed(() -> {
+            // TODO: Add here please
+        }, 4000);
+
+        if (designsDialog.getWindow() != null) {
+            designsDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            designsDialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
+        }
+
+        designsDialog.show();
     }
 
     @Override

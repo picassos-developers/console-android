@@ -11,16 +11,15 @@ import com.google.android.material.tabs.TabLayout;
 import app.mynta.console.android.R;
 import app.mynta.console.android.adapter.GetStartedAdapter;
 import app.mynta.console.android.models.Guide;
+import app.mynta.console.android.utils.Helper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class GetStartedActivity extends AppCompatActivity {
 
@@ -49,7 +48,7 @@ public class GetStartedActivity extends AppCompatActivity {
         final List<Guide> guide_list = new ArrayList<>();
 
         try {
-            JSONObject obj = new JSONObject(loadJSONFromAsset());
+            JSONObject obj = new JSONObject(Objects.requireNonNull(Helper.getJsonFromAssets(this, "adapter/wizards.json")));
             JSONArray wizards = obj.getJSONArray("wizards");
 
             for (int i = 0; i < wizards.length(); i++) {
@@ -107,27 +106,10 @@ public class GetStartedActivity extends AppCompatActivity {
 
     private void savePrefsData() {
 
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("Shared Preferences",MODE_PRIVATE);
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("Shared Preferences", MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
-        editor.putBoolean("isGuideOpened",true);
+        editor.putBoolean("isGuideOpened", true);
         editor.apply();
 
     }
-
-    public String loadJSONFromAsset() {
-        String json;
-        try {
-            InputStream is = getApplicationContext().getAssets().open("adapter/wizards.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, StandardCharsets.UTF_8);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-        return json;
-    }
-
 }

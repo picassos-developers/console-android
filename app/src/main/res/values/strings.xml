@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mint Console</string>
+    <string name="app_name">Mynta Console</string>
     <string name="signin">Sign in</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
@@ -294,7 +294,7 @@
     <string name="you_dont_have_any_notifications_yet">You don\'t have any notifications yet</string>
     <string name="agreement_notice">By signing up you agree to Mint Console\'s <a href="https://console.themintapp.com/policies/terms">Terms of Use</a>, and you acknowledge that you have read our <a href="https://console.themintapp.com/policies/privacy">Privacy Policy</a>.</string>
     <string name="preview_walkthrough">Preview Walkthrough</string>
-    <string name="next">Next</string>
+    <string name="next_step">Next</string>
     <string name="close_preview">Close Preview</string>
     <string name="walkthrough_empty">Please add at least one walkthrough to open preview.</string>
     <string name="get_a_free_customization">Claim your free gift!</string>
@@ -447,7 +447,7 @@
     <string name="theme_style">Theme Style</string>
     <string name="preset_themes">Preset Themes</string>
     <string name="step">Step</string>
-    <string name="of_five">of 5</string>
+    <string name="of_four">of 4</string>
     <string name="let_s_get_started">Let\'s Get Started</string>
     <string name="use_your_card">Use Your Card!</string>
     <string name="what_is_your_app_about">What is your application about?</string>
@@ -495,4 +495,7 @@
     <string name="save_settings">Save Settings</string>
     <string name="rest_api_key">Rest API Key</string>
     <string name="settings_saved">Settings Saved Successfully</string>
+    <string name="location">Location</string>
+    <string name="step_1_of_4">Step 1 of 4</string>
+    <string name="skip">Skip</string>
 </resources>

@@ -21,7 +21,7 @@
             android:layout_marginEnd="20dp"
             android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
@@ -31,8 +31,9 @@
                     android:id="@id/go_back"
                     android:layout_width="40dp"
                     android:layout_height="30dp"
-                    android:layout_marginEnd="15dp"
                     app:cardBackgroundColor="?color_grey"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="0dp">
 
@@ -48,12 +49,17 @@
 
                 <com.shuhart.stepview.StepView
                     android:id="@+id/step_view"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/go_back"
+                    android:layout_toStartOf="@id/skip"
                     app:sv_animationType="All"
                     app:sv_doneCircleColor="@color/color_blue"
                     app:sv_doneCircleRadius="12dp"
                     app:sv_doneStepLineColor="@color/color_blue"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     app:sv_doneStepMarkColor="@color/color_white"
                     app:sv_nextStepLineColor="?color_grey"
                     app:sv_nextTextColor="@color/color_white"
@@ -65,7 +71,31 @@
                     app:sv_stepPadding="4dp"
                     app:sv_stepViewStyle="@style/StepView" />
 
-            </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:id="@id/skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:visibility="invisible"
+                    android:layout_alignParentEnd="true"
+                    app:cardBackgroundColor="?color_grey"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:alpha=".7"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/skip"
+                        android:textColor="?color_dark"
+                        android:textSize="12sp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
 
             <TextView
                 android:id="@id/current_step"
@@ -74,10 +104,9 @@
                 android:layout_margin="7dp"
                 android:alpha=".7"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Step 1 of 5"
+                android:text="@string/step_1_of_4"
                 android:textColor="?color_dark"
-                android:textSize="12sp"
-                tools:ignore="HardcodedText" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
