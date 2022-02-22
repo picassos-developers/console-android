@@ -93,6 +93,8 @@ public class HomeFragment extends Fragment {
         // open navigation
         view.findViewById(R.id.open_navigation).setOnClickListener(v -> ((MainActivity) requireActivity()).openNavigation());
 
+        requestDialog.show();
+
         // profile
         username_profile = view.findViewById(R.id.username_profile);
         username_profile.setText(consolePreferences.loadUsername().substring(0, 1));
@@ -201,7 +203,6 @@ public class HomeFragment extends Fragment {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-
                     requestDialog.dismiss();
                 }, error -> {
             requestDialog.dismiss();

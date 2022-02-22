@@ -27,6 +27,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import app.mynta.console.android.App;
 import app.mynta.console.android.activities.manageAds.ManageAdsActivity;
 import app.mynta.console.android.bottomNavigation.BottomNavigationViewBehavior;
+import app.mynta.console.android.fragments.AccountFragment;
 import app.mynta.console.android.fragments.HelpCentreFragment;
 import app.mynta.console.android.fragments.HomeFragment;
 import app.mynta.console.android.fragments.NavigationFragment;
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
     final Fragment navigationsFragment = new NavigationFragment();
     final Fragment powerStoreFragment = new StoreFragment();
     final Fragment helpCentreFragment = new HelpCentreFragment();
+    final Fragment accountFragment = new AccountFragment();
 
     // active fragment
     Fragment active = homeFragment;
@@ -114,6 +116,7 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
         fragmentManager = getSupportFragmentManager();
 
         // fragment manager
+        fragmentManager.beginTransaction().add(R.id.fragment_container, accountFragment, "5").hide(accountFragment).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, helpCentreFragment, "4").hide(helpCentreFragment).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, powerStoreFragment, "3").hide(powerStoreFragment).commit();
         fragmentManager.beginTransaction().add(R.id.fragment_container, navigationsFragment, "2").hide(navigationsFragment).commit();
@@ -147,6 +150,10 @@ public class MainActivity extends AppCompatActivity implements ProjectOptionsBot
                 case R.id.help_centre:
                     fragmentManager.beginTransaction().hide(active).show(helpCentreFragment).commit();
                     active = helpCentreFragment;
+                    return true;
+                case R.id.account:
+                    fragmentManager.beginTransaction().hide(active).show(accountFragment).commit();
+                    active = accountFragment;
                     return true;
             }
             return false;

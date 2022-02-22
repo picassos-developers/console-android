@@ -77,23 +77,11 @@ public class RegisterActivity extends AppCompatActivity {
         final Button register = findViewById(R.id.register);
 
         register.setOnClickListener(v -> {
-
-            if (TextUtils.isEmpty(username.getText().toString())) {
-                username.setError(getString(R.string.username_empty));
-                username.requestFocus();
-                register.setEnabled(true);
-                return;
-            }
-
-            if (TextUtils.isEmpty(email.getText().toString())) {
-                email.setError(getString(R.string.email_empty));
-                email.requestFocus();
-                register.setEnabled(true);
-                return;
-            }
-
-            if (TextUtils.isEmpty(password.getText().toString()) || TextUtils.isEmpty(confirmPassword.getText().toString())) {
-                Toasto.show_toast(this, getString(R.string.passwords_empty), 1, 1);
+            if (TextUtils.isEmpty(username.getText().toString())
+                    || TextUtils.isEmpty(email.getText().toString())
+                    || TextUtils.isEmpty(password.getText().toString())
+                    || TextUtils.isEmpty(confirmPassword.getText().toString())) {
+                Toasto.show_toast(this, getString(R.string.all_fields_are_required), 1, 1);
             } else {
                 if (password.getText().toString().length() >= 8) {
                     if (!password.getText().toString().equals(confirmPassword.getText().toString())) {

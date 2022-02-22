@@ -1,16 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:background="?color_background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="90sp"
-        android:textColor="@color/color_dark"
-        android:layout_centerInParent="true"
-        android:text="5"
-        android:fontFamily="@font/opensans_bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Tell us about your organization"
+            android:textColor="?color_dark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/give_your_application_a_name"
+            android:textColor="?color_dark"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@id/organization"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_rectangle_background"
+            android:hint="Purchase Code"
+            android:inputType="text"
+            android:maxLines="1"
+            android:maxLength="30"
+            android:gravity="center_vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="?color_dark"
+            android:textColorHint="?color_dark"
+            android:textSize="@dimen/input_text_size"
+            tools:ignore="Autofill,RtlSymmetry,SmallSp,TextFields" />
+
+        <Button
+            android:id="@id/next"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_primary_rounded"
+            android:text="@string/next_step"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:textColor="?color_light_separate"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

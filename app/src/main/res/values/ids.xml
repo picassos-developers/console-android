@@ -183,6 +183,8 @@
     <item name="recycler_types" type="id" />
     <item name="recycler_styles" type="id" />
     <item name="recycler_spinners" type="id" />
+    <item name="language_arabic" type="id" />
+    <item name="language_english" type="id" />
     <item name="recycler_force_update" type="id" />
     <item name="notification_title" type="id" />
     <item name="setup_policies" type="id" />
@@ -279,6 +281,7 @@
     <item name="download" type="id" />
     <item name="claim_gift" type="id" />
     <item name="design" type="id" />
+    <item name="language" type="id" />
     <item name="member_icon" type="id" />
     <item name="member_email" type="id" />
     <item name="ticket_title" type="id" />

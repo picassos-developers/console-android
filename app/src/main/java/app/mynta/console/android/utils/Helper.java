@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
+import android.util.DisplayMetrics;
 import android.view.View;
 
 import app.mynta.console.android.BuildConfig;
@@ -170,5 +172,15 @@ public class Helper {
             return null;
         }
         return json;
+    }
+
+    public static void setLocale(Context context, String language) {
+        Locale myLocale = new Locale(language);
+        Resources resources = context.getResources();
+        DisplayMetrics display = resources.getDisplayMetrics();
+        Configuration configuration = resources.getConfiguration();
+        configuration.locale = myLocale;
+        resources.updateConfiguration(configuration, display);
+
     }
 }

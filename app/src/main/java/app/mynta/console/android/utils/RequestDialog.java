@@ -41,7 +41,7 @@ public class RequestDialog extends Dialog {
 
         if (getWindow() != null) {
             getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+            getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
             Window window = getWindow();
             WindowManager.LayoutParams WLP = window.getAttributes();
             WLP.gravity = Gravity.CENTER;

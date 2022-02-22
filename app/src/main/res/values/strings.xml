@@ -447,7 +447,7 @@
     <string name="theme_style">Theme Style</string>
     <string name="preset_themes">Preset Themes</string>
     <string name="step">Step</string>
-    <string name="of_four">of 4</string>
+    <string name="of_five">of 5</string>
     <string name="let_s_get_started">Let\'s Get Started</string>
     <string name="use_your_card">Use Your Card!</string>
     <string name="what_is_your_app_about">What is your application about?</string>
@@ -498,4 +498,10 @@
     <string name="location">Location</string>
     <string name="step_1_of_4">Step 1 of 4</string>
     <string name="skip">Skip</string>
+    <string name="adding_final_touches">Adding final touches...</string>
+    <string name="about">About</string>
+    <string name="language">Language</string>
+    <string name="choose_language">Choose Language</string>
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
 </resources>

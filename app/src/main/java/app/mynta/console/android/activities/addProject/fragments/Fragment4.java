@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.Objects;
 
 import app.mynta.console.android.R;
-import app.mynta.console.android.activities.AddProjectActivity;
+import app.mynta.console.android.activities.addProject.AddProjectActivity;
 import app.mynta.console.android.adapter.CountriesAdapter;
 import app.mynta.console.android.models.Countries;
 import app.mynta.console.android.utils.Helper;

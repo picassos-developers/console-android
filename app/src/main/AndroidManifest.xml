@@ -86,7 +86,7 @@
         <activity android:name="app.mynta.console.android.activities.forgotPassword.EnterVerificationActivity" />
         <activity android:name="app.mynta.console.android.activities.ProjectsActivity" />
         <activity android:name="app.mynta.console.android.activities.RegisterActivity" />
-        <activity android:name="app.mynta.console.android.activities.AddProjectActivity" />
+        <activity android:name="app.mynta.console.android.activities.addProject.AddProjectActivity" />
         <activity android:name="app.mynta.console.android.activities.NotificationPreviewActivity" />
         <activity android:name="app.mynta.console.android.activities.NotificationsActivity" />
         <activity android:name="app.mynta.console.android.activities.helpCentre.SearchArticlesActivity" />

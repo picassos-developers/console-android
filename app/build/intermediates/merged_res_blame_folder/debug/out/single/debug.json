@@ -596,6 +596,10 @@
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/layout/item_purchase_listitem.xml"
     },
     {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/layout_fragment_account.xml.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/layout/fragment_account.xml"
+    },
+    {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_logout.png.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_logout.png"
     },
@@ -852,6 +856,10 @@
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_home_filled.png"
     },
     {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_flag_usa.png.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/flag_usa.png"
+    },
+    {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_popup_background.xml.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/popup_background.xml"
     },
@@ -1066,6 +1074,14 @@
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_swipe.png.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_swipe.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_flag_egypt.png.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/flag_egypt.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/layout_dialog_language.xml.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/layout/dialog_language.xml"
     },
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/layout_item_review_listitem.xml.flat",

@@ -16,14 +16,14 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
         android:textSize="16sp"
-        android:text="@string/generating_your_policies"
         android:textColor="?color_dark" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="25dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_gravity="center_horizontal"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
@@ -34,7 +34,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="@string/applying_your_privacy_policy_terms_of_use"
         android:alpha=".7"
         android:textSize="13sp"
         android:textColor="?color_dark" />

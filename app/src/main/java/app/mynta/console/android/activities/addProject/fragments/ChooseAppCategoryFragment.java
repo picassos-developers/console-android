@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import app.mynta.console.android.R;
-import app.mynta.console.android.activities.AddProjectActivity;
+import app.mynta.console.android.activities.addProject.AddProjectActivity;
 import app.mynta.console.android.adapter.AppCategoryAdapter;
 import app.mynta.console.android.models.AppCategory;
 

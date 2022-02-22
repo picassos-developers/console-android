@@ -30,6 +30,7 @@
         <entry key="app/src/main/res/drawable/item_background_active.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/item_background_darker.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/item_background_darker_selected.xml" value="0.271875" />
+        <entry key="app/src/main/res/drawable/navigation_account.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/navigation_menus.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/drawable/popup_background.xml" value="0.2713541666666667" />
         <entry key="app/src/main/res/drawable/progress_drawable.xml" value="0.271875" />
@@ -47,6 +48,7 @@
         <entry key="app/src/main/res/drawable/toast_warning.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/toolbar_background.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/toolbar_background_dark.xml" value="0.26875" />
+        <entry key="app/src/main/res/layout/activity_about_app.xml" value="0.12685185185185185" />
         <entry key="app/src/main/res/layout/activity_about_console.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_add_project.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_articles.xml" value="0.2703125" />
@@ -117,6 +119,7 @@
         <entry key="app/src/main/res/layout/dialog_appearance.xml" value="0.4046875" />
         <entry key="app/src/main/res/layout/dialog_designs.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/dialog_force_update.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/layout/dialog_language.xml" value="0.25" />
         <entry key="app/src/main/res/layout/dialog_learn_more.xml" value="0.33" />
         <entry key="app/src/main/res/layout/dialog_loading_bar.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/dialog_loading_spinners.xml" value="0.2677083333333333" />
@@ -127,16 +130,18 @@
         <entry key="app/src/main/res/layout/dialog_preview_notification.xml" value="0.4046875" />
         <entry key="app/src/main/res/layout/dialog_promotion.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/dialog_request.xml" value="0.2484375" />
+        <entry key="app/src/main/res/layout/dialog_ticket_types.xml" value="0.23425925925925925" />
         <entry key="app/src/main/res/layout/dialog_update.xml" value="0.33" />
         <entry key="app/src/main/res/layout/edit_email_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/edit_packagename_bottom_sheet_modal.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/fragment4.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/fragment4.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment5.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_add_first_content_provider.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.2390625" />
         <entry key="app/src/main/res/layout/fragment_choose_app_category.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_help_centre.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_name_app.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_navigation.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.33" />

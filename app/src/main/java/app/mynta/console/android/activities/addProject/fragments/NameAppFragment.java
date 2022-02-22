@@ -18,14 +18,13 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import app.mynta.console.android.R;
-import app.mynta.console.android.activities.AddProjectActivity;
+import app.mynta.console.android.activities.addProject.AddProjectActivity;
 import app.mynta.console.android.models.viewModel.SharedViewModel;
 import app.mynta.console.android.sheets.EditPackageNameCodeBottomSheetModal;
 import app.mynta.console.android.utils.Helper;
 
 public class NameAppFragment extends Fragment {
     SharedViewModel sharedViewModel;
-
     View view;
 
     // fields
@@ -58,7 +57,8 @@ public class NameAppFragment extends Fragment {
         // next step
         nextStep = view.findViewById(R.id.next);
         nextStep.setOnClickListener(v -> {
-            ((AddProjectActivity) requireActivity()).applicationName = applicationName.getText().toString();
+            ((AddProjectActivity) requireActivity()).applicationName =
+                    applicationName.getText().toString().substring(0, 1).toUpperCase() + applicationName.getText().toString().substring(1);
             ((AddProjectActivity) requireActivity()).packageName = packageName.getText().toString();
             ((AddProjectActivity) requireActivity()).goForward();
         });
