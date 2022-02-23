@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_semibold"
-            android:text="@string/add_a_default_provider"
+            android:text="Choose your First Navigation"
             android:textColor="?color_dark"
             android:textSize="20sp" />
 
@@ -39,7 +39,7 @@
             android:columnCount="2">
 
             <androidx.cardview.widget.CardView
-                android:id="@id/webview_provider"
+                android:id="@id/wordpress_provider"
                 android:layout_width="0dp"
                 android:layout_columnWeight=".5"
                 android:layout_height="wrap_content"

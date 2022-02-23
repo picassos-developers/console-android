@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@id/refresh_layout"
     android:layout_width="match_parent"
@@ -41,29 +40,6 @@
                     android:textColor="?color_dark"
                     android:textSize="14sp"
                     tools:ignore="RelativeOverlap" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@id/open_profile"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentEnd="true"
-                    app:cardBackgroundColor="?color_dark"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="0dp">
-
-                    <TextView
-                        android:id="@id/username_profile"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="R"
-                        android:textAllCaps="true"
-                        android:textColor="?color_light_separate"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText" />
-
-                </androidx.cardview.widget.CardView>
 
             </RelativeLayout>
 

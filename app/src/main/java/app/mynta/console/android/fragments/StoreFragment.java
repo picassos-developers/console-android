@@ -2,12 +2,10 @@ package app.mynta.console.android.fragments;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,7 +24,6 @@ import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.adapter.ProductsAdapter;
 import app.mynta.console.android.constants.API;
 import app.mynta.console.android.models.Product;
-import app.mynta.console.android.utils.AboutDialog;
 import app.mynta.console.android.utils.RequestDialog;
 
 import org.json.JSONArray;
@@ -50,9 +47,6 @@ public class StoreFragment extends Fragment {
     private final List<Product> productList = new ArrayList<>();
     private ProductsAdapter productsAdapter;
 
-    // fonts
-    private Typeface title, content;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -73,18 +67,6 @@ public class StoreFragment extends Fragment {
 
         // initialize request dialog
         requestDialog = new RequestDialog(requireContext());
-
-        title = Typeface.createFromAsset(requireActivity().getAssets(), "fonts/poppins_bold.ttf");
-        content = Typeface.createFromAsset(requireActivity().getAssets(), "fonts/poppins_regular.ttf");
-
-        // username profile
-        TextView usernameProfile = view.findViewById(R.id.username_profile);
-        usernameProfile.setText(consolePreferences.loadUsername().substring(0, 1));
-        // open profile
-        view.findViewById(R.id.open_profile).setOnClickListener(v -> {
-            AboutDialog aboutDialog = new AboutDialog(requireContext(), getActivity());
-            aboutDialog.show();
-        });
 
         // Initialize store recyclerview
         RecyclerView storeRecyclerview = view.findViewById(R.id.recycler_store);

@@ -34,7 +34,6 @@ import app.mynta.console.android.libraries.showcaseview.config.Gravity;
 import app.mynta.console.android.models.Members;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.sheets.LaunchAppBottomSheetModal;
-import app.mynta.console.android.utils.AboutDialog;
 import app.mynta.console.android.utils.PromotionDialog;
 import app.mynta.console.android.utils.RequestDialog;
 import app.mynta.console.android.utils.Toasto;
@@ -57,9 +56,6 @@ public class HomeFragment extends Fragment {
 
     // fonts
     private Typeface title, content;
-
-    // profile
-    private TextView username_profile;
 
     // members
     private final List<Members> membersList = new ArrayList<>();
@@ -94,15 +90,6 @@ public class HomeFragment extends Fragment {
         view.findViewById(R.id.open_navigation).setOnClickListener(v -> ((MainActivity) requireActivity()).openNavigation());
 
         requestDialog.show();
-
-        // profile
-        username_profile = view.findViewById(R.id.username_profile);
-        username_profile.setText(consolePreferences.loadUsername().substring(0, 1));
-        // open profile
-        view.findViewById(R.id.open_profile).setOnClickListener(v -> {
-            AboutDialog aboutDialog = new AboutDialog(requireContext(), getActivity());
-            aboutDialog.show();
-        });
 
         // push notifications
         view.findViewById(R.id.push_notifications_container).setOnClickListener(v -> {
@@ -265,7 +252,7 @@ public class HomeFragment extends Fragment {
                 .setContentText(getString(R.string.guide_six_description))
                 .setGravity(Gravity.auto)
                 .setDismissType(DismissType.anywhere)
-                .setTargetView(username_profile)
+                .setTargetView(view.findViewById(R.id.launch_app))
                 .setTitleTypeFace(title)
                 .setContentTypeFace(content)
                 .setContentTextSize(12)

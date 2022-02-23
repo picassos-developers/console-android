@@ -1,69 +1,35 @@
 package app.mynta.console.android.fragments;
 
-import static android.app.Activity.RESULT_OK;
-
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.android.volley.Request;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import app.mynta.console.android.R;
-import app.mynta.console.android.activities.providers.FacebookActivity;
-import app.mynta.console.android.activities.providers.ImgurActivity;
-import app.mynta.console.android.activities.providers.MapsActivity;
-import app.mynta.console.android.activities.providers.PinterestActivity;
-import app.mynta.console.android.activities.providers.VimeoActivity;
-import app.mynta.console.android.activities.providers.WebviewActivity;
-import app.mynta.console.android.activities.providers.WordpressActivity;
-import app.mynta.console.android.activities.providers.YoutubeActivity;
-import app.mynta.console.android.adapter.NavigationsAdapter;
-import app.mynta.console.android.adapter.wordpress.PostStylesAdapter;
-import app.mynta.console.android.constants.API;
-import app.mynta.console.android.constants.AuthAPI;
-import app.mynta.console.android.constants.RequestCodes;
-import app.mynta.console.android.models.Navigations;
+import app.mynta.console.android.activities.GetStartedActivity;
+import app.mynta.console.android.activities.LoginActivity;
+import app.mynta.console.android.activities.ProjectsActivity;
+import app.mynta.console.android.activities.about.AboutConsoleActivity;
+import app.mynta.console.android.activities.about.GenerateAuthLoginActivity;
+import app.mynta.console.android.activities.about.MyTicketsActivity;
+import app.mynta.console.android.activities.about.PurchasesActivity;
 import app.mynta.console.android.models.viewModel.SharedViewModel;
-import app.mynta.console.android.models.wordpress.PostDesigns;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
-import app.mynta.console.android.sheets.ChooseDefaultNavigationBottomSheetModal;
-import app.mynta.console.android.sheets.ChooseProviderBottomSheetModal;
-import app.mynta.console.android.utils.AboutDialog;
+import app.mynta.console.android.utils.Helper;
 import app.mynta.console.android.utils.RequestDialog;
-import app.mynta.console.android.utils.Toasto;
 
 public class AccountFragment extends Fragment {
     SharedViewModel sharedViewModel;
@@ -73,10 +39,6 @@ public class AccountFragment extends Fragment {
 
     RequestDialog requestDialog;
     private ConsolePreferences consolePreferences;
-
-    // navigations
-    private final List<Navigations> navigationsList = new ArrayList<>();
-    private NavigationsAdapter navigationsAdapter;
 
     @Nullable
     @Override
@@ -92,9 +54,76 @@ public class AccountFragment extends Fragment {
 
         });
 
+        // switch project
+        view.findViewById(R.id.switch_project).setOnClickListener(v -> startActivity(new Intent(requireContext(), ProjectsActivity.class)));
+
+        // my tickets
+        view.findViewById(R.id.my_tickets).setOnClickListener(v -> startActivity(new Intent(requireContext(), MyTicketsActivity.class)));
+
+        // qr login
+        view.findViewById(R.id.qr_login).setOnClickListener(v -> startActivity(new Intent(requireContext(), GenerateAuthLoginActivity.class)));
+
+        // purchases & history
+        view.findViewById(R.id.purchases).setOnClickListener(v -> startActivity(new Intent(requireContext(), PurchasesActivity.class)));
+
+        // appearance
+        view.findViewById(R.id.appearance).setOnClickListener(v -> {
+            Dialog darkModeDialog = new Dialog(requireContext());
+
+            darkModeDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+            darkModeDialog.setContentView(R.layout.dialog_appearance);
+
+            // enable dialog cancel
+            darkModeDialog.setCancelable(true);
+            darkModeDialog.setOnCancelListener(dialog -> darkModeDialog.dismiss());
+
+            // close dialog
+            ImageView close = darkModeDialog.findViewById(R.id.dialog_close);
+            close.setOnClickListener(v1 -> darkModeDialog.dismiss());
+
+            // light mode
+            darkModeDialog.findViewById(R.id.light_mode).setOnClickListener(v1 -> {
+                consolePreferences.setDarkMode(1);
+                Helper.restartContext(requireContext(), requireActivity());
+            });
+
+            // dark mode
+            darkModeDialog.findViewById(R.id.dark_mode).setOnClickListener(v1 -> {
+                consolePreferences.setDarkMode(2);
+                Helper.restartContext(requireContext(), requireActivity());
+            });
+
+            // system default
+            darkModeDialog.findViewById(R.id.system_default).setOnClickListener(v1 -> {
+                consolePreferences.setDarkMode(3);
+                Helper.restartContext(requireContext(), requireActivity());
+            });
+
+            if (darkModeDialog.getWindow() != null) {
+                darkModeDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                darkModeDialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
+            }
+
+            darkModeDialog.show();
+        });
+
         // language
-        view.findViewById(R.id.language).setOnClickListener(v -> {
-            chooseLanguage();
+        view.findViewById(R.id.language).setOnClickListener(v -> chooseLanguage());
+
+        // about app
+        view.findViewById(R.id.about_console).setOnClickListener(view -> startActivity(new Intent(requireContext(), AboutConsoleActivity.class)));
+
+        // sign out from account
+        view.findViewById(R.id.logout).setOnClickListener(v -> {
+            consolePreferences.setUsername("exception:error?username");
+            consolePreferences.setEmail("exception:error?email");
+            consolePreferences.setPackageName("exception:error?package_name");
+            consolePreferences.setSecretAPIKey("exception:error?sak");
+            consolePreferences.setToken("exception:error?token");
+
+            startActivity(new Intent(requireContext(), GetStartedActivity.class));
+            requireActivity().finishAffinity();
         });
 
         return view;
@@ -114,11 +143,12 @@ public class AccountFragment extends Fragment {
             if (refresh.isRefreshing()) {
                 refresh.setRefreshing(false);
             }
-
-
         });
     }
 
+    /**
+     * change app language
+     */
     private void chooseLanguage() {
         Dialog designsDialog = new Dialog(requireContext());
 

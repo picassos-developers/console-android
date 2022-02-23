@@ -44,7 +44,6 @@ import app.mynta.console.android.models.Navigations;
 import app.mynta.console.android.models.viewModel.SharedViewModel;
 import app.mynta.console.android.sheets.ChooseProviderBottomSheetModal;
 import app.mynta.console.android.sheets.ChooseDefaultNavigationBottomSheetModal;
-import app.mynta.console.android.utils.AboutDialog;
 import app.mynta.console.android.utils.RequestDialog;
 import app.mynta.console.android.utils.Toasto;
 
@@ -95,15 +94,6 @@ public class NavigationFragment extends Fragment {
 
         // initialize request dialog
         requestDialog = new RequestDialog(requireContext());
-
-        // username profile
-        TextView usernameProfile = view.findViewById(R.id.username_profile);
-        usernameProfile.setText(consolePreferences.loadUsername().substring(0, 1));
-        // open profile
-        view.findViewById(R.id.open_profile).setOnClickListener(v -> {
-            AboutDialog aboutDialog = new AboutDialog(requireContext(), getActivity());
-            aboutDialog.show();
-        });
 
         // Initialize navigations recyclerview
         RecyclerView navigationsRecyclerview = view.findViewById(R.id.recycler_providers);

@@ -608,6 +608,10 @@
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/layout/item_app_category_listitem.xml"
     },
     {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_vimeo_color.png.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_vimeo_color.png"
+    },
+    {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_map_sangaspano.png.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/map_sangaspano.png"
     },
@@ -634,6 +638,10 @@
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_pinterest_color.png.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_pinterest_color.png"
     },
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/layout_two_factor_auth_bottom_sheet_modal.xml.flat",
@@ -1148,6 +1156,10 @@
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_star_color.png"
     },
     {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_imgur_color.png.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_imgur_color.png"
+    },
+    {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_up_green.png.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_up_green.png"
     },
@@ -1386,6 +1398,14 @@
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_other.png.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_other.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_google_color.png.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_google_color.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_maps_color.png.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_maps_color.png"
     },
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_header_logo_dark.png.flat",

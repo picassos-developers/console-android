@@ -1,27 +1,15 @@
 package app.mynta.console.android.activities.addProject.fragments;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import app.mynta.console.android.R;
-import app.mynta.console.android.activities.providers.FacebookActivity;
-import app.mynta.console.android.activities.providers.ImgurActivity;
-import app.mynta.console.android.activities.providers.MapsActivity;
-import app.mynta.console.android.activities.providers.PinterestActivity;
-import app.mynta.console.android.activities.providers.VimeoActivity;
-import app.mynta.console.android.activities.providers.WebviewActivity;
-import app.mynta.console.android.activities.providers.WordpressActivity;
-import app.mynta.console.android.activities.providers.YoutubeActivity;
 
 public class AddFirstContentProviderFragment extends Fragment {
     @Nullable
@@ -43,48 +31,6 @@ public class AddFirstContentProviderFragment extends Fragment {
     }
 
     private void addProvider(String activity) {
-        Intent intent = new Intent();
-        intent.putExtra("request", "add");
 
-        switch (activity) {
-            case "webview":
-                intent.setClass(requireContext(), WebviewActivity.class);
-                startActivityForResult.launch(intent);
-                break;
-            case "wordpress":
-                intent.setClass(requireContext(), WordpressActivity.class);
-                startActivityForResult.launch(intent);
-                break;
-            case "youtube":
-                intent.setClass(requireContext(), YoutubeActivity.class);
-                startActivityForResult.launch(intent);
-                break;
-            case "vimeo":
-                intent.setClass(requireContext(), VimeoActivity.class);
-                startActivityForResult.launch(intent);
-                break;
-            case "pinterest":
-                intent.setClass(requireContext(), PinterestActivity.class);
-                startActivityForResult.launch(intent);
-                break;
-            case "facebook":
-                intent.setClass(requireContext(), FacebookActivity.class);
-                startActivityForResult.launch(intent);
-                break;
-            case "imgur":
-                intent.setClass(requireContext(), ImgurActivity.class);
-                startActivityForResult.launch(intent);
-                break;
-            case "google_maps":
-                intent.setClass(requireContext(), MapsActivity.class);
-                startActivityForResult.launch(intent);
-                break;
-        }
     }
-
-    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
-        if (result != null && result.getResultCode() == Activity.RESULT_OK) {
-
-        }
-    });
 }

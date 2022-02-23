@@ -210,7 +210,12 @@ public class AddProjectActivity extends AppCompatActivity {
                                 }
                             };
                             handler.postDelayed(runnable, 1000);
-                            new Handler().postDelayed(this::requestCreateProject, 10500);
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    createProjectDialog.dismiss();
+                                }
+                            }, 10500);
                             break;
                         case "403":
                             Toasto.show_toast(getApplicationContext(), getString(R.string.purchase_code_already_exists), 1, 1);
@@ -239,8 +244,11 @@ public class AddProjectActivity extends AppCompatActivity {
         Volley.newRequestQueue(this).add(request);
     }
 
+    /**
+     * request create a new project
+     */
     private void requestCreateProject() {
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_SERVER_STATUS,
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_PROJECT,
                 response -> {
                     try {
                         JSONObject object = new JSONObject(response);

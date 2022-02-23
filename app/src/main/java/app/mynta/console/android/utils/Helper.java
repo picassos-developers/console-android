@@ -1,6 +1,7 @@
 package app.mynta.console.android.utils;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -14,6 +15,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 
 import app.mynta.console.android.BuildConfig;
+import app.mynta.console.android.activities.MainActivity;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.R;
 
@@ -54,6 +56,16 @@ public class Helper {
                     break;
             }
         }
+    }
+
+    /**
+     * restart app context
+     * @param context for application
+     * @param activity for activity
+     */
+    public static void restartContext(Context context, Activity activity) {
+        context.startActivity(new Intent(context, MainActivity.class));
+        activity.finish();
     }
 
     /**
