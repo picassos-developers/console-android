@@ -146,10 +146,19 @@ public class Helper {
     /**
      * check if package name is valid
      * @param package_name for package name
-     * @return validated package name
+     * @return check if package name is valid
      */
     public static boolean validatePackagename(String package_name) {
         return package_name.matches("^([A-Za-z]{1}[A-Za-z\\d_]*\\.)+[A-Za-z][A-Za-z\\d_]*$");
+    }
+
+    /**
+     * check if package name is valid
+     * @param purchasecode for envato purchase code
+     * @return check if code is valid
+     */
+    public static boolean validatePurchaseCode(String purchasecode) {
+        return purchasecode.matches("^([a-f0-9]{8})-(([a-f0-9]{4})-){3}([a-f0-9]{12})*$");
     }
 
     /**

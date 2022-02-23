@@ -89,7 +89,7 @@ public class Fragment4 extends Fragment {
         List<Countries> countriesList = new ArrayList<>();
         RecyclerView countriesRecyclerview = locationDialog.findViewById(R.id.recycler_countries);
 
-        CountriesAdapter countriesAdapter = new CountriesAdapter(countriesList, click -> {
+        CountriesAdapter countriesAdapter = new CountriesAdapter(requireContext(), countriesList, click -> {
             location.setText(click.getTitle());
             code = click.getCode();
             organization.setText(organization.getText().toString());
@@ -107,7 +107,7 @@ public class Fragment4 extends Fragment {
                 String name = countriesObject.getString("name");
                 String code = countriesObject.getString("code");
 
-                countriesList.add(new Countries(name, code));
+                countriesList.add(new Countries(name, code, "flag_egypt"));
             }
         } catch (JSONException e) {
             e.printStackTrace();

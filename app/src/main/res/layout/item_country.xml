@@ -7,18 +7,26 @@
     android:layout_marginEnd="10dp"
     android:layout_marginBottom="10dp"
     android:background="@drawable/toolbar_background"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
     android:paddingStart="20dp"
     android:paddingTop="13dp"
     android:paddingEnd="20dp"
     android:paddingBottom="13dp">
+
+    <ImageView
+        android:id="@id/country_flag"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/flag_egypt"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@id/country_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Country"
+        android:layout_marginStart="10dp"
         android:textColor="?color_dark"
         tools:ignore="HardcodedText" />
 

@@ -111,4 +111,5 @@ public class API {
     public static final String REQUEST_UPDATE_ABOUT_APP = "app_information/request_update_about_app.inc.php";
     public static final String REQUEST_SHARE_CONTENT = "app_information/request_share_content.inc.php";
     public static final String REQUEST_UPDATE_SHARE_CONTENT = "app_information/request_update_share_content.inc.php";
+    public static final String REQUEST_VERIFY_PROJECT = "projects/request_verify_project.inc.php";
 }

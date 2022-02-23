@@ -52,6 +52,7 @@
     <item name="email_address_container" type="id" />
     <item name="get_started" type="id" />
     <item name="manage_login_providers" type="id" />
+    <item name="step_view" type="id" />
     <item name="download_via_wifi" type="id" />
     <item name="push_notifications_container" type="id" />
     <item name="status_container" type="id" />
@@ -215,6 +216,7 @@
     <item name="remove_comment" type="id" />
     <item name="article_title" type="id" />
     <item name="app_category_title" type="id" />
+    <item name="country_flag" type="id" />
     <item name="app_category_thumbnail" type="id" />
     <item name="article_author" type="id" />
     <item name="facebook_link" type="id" />
@@ -293,6 +295,7 @@
     <item name="project_packagename" type="id" />
     <item name="project_options" type="id" />
     <item name="organization" type="id" />
+    <item name="description" type="id" />
     <item name="section_description" type="id" />
     <item name="provider" type="id" />
     <item name="notification_is_read" type="id" />
@@ -385,7 +388,7 @@
     <item name="resend_again" type="id" />
     <item name="resend_again_timer" type="id" />
     <item name="email_verification" type="id" />
-    <item name="project_purchasecode" type="id" />
+    <item name="purchasecode" type="id" />
     <item name="home" type="id" />
     <item name="navigation" type="id" />
     <item name="notification" type="id" />

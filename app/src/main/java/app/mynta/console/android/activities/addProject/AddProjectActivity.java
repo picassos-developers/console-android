@@ -20,7 +20,7 @@ import app.mynta.console.android.R;
 import app.mynta.console.android.activities.addProject.fragments.AddFirstContentProviderFragment;
 import app.mynta.console.android.activities.addProject.fragments.ChooseAppCategoryFragment;
 import app.mynta.console.android.activities.addProject.fragments.Fragment4;
-import app.mynta.console.android.activities.addProject.fragments.Fragment5;
+import app.mynta.console.android.activities.addProject.fragments.VerifyPurchaseFragment;
 import app.mynta.console.android.activities.addProject.fragments.NameAppFragment;
 import app.mynta.console.android.constants.API;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
@@ -41,6 +41,7 @@ import java.util.Objects;
 
 public class AddProjectActivity extends AppCompatActivity {
     Dialog createProjectDialog;
+    TextView loadingDescription;
     StepView stepView;
 
     private int currentStep = 0;
@@ -55,7 +56,7 @@ public class AddProjectActivity extends AppCompatActivity {
     final Fragment fragment1 = new ChooseAppCategoryFragment();
     final Fragment fragment2 = new NameAppFragment();
     final Fragment fragment3 = new Fragment4();
-    final Fragment fragment4 = new Fragment5();
+    final Fragment fragment4 = new VerifyPurchaseFragment();
     final Fragment fragment5 = new AddFirstContentProviderFragment();
 
     TextView stepText;
@@ -66,6 +67,7 @@ public class AddProjectActivity extends AppCompatActivity {
     public String packageName;
     public String organization;
     public String countryCode;
+    public String purchaseCode;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -168,30 +170,73 @@ public class AddProjectActivity extends AppCompatActivity {
         loadingTitle.setText("Creating" + " " + applicationName);
 
         // set loading description
-        TextView loadingDescription = createProjectDialog.findViewById(R.id.loading_description);
-        loadingDescription.setText("Applying your design...");
-        final Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
-            int count = 0;
-            @Override
-            public void run() {
-                count++;
-                if (count == 1) { loadingDescription.setText("Applying your design...");
-                } else if (count == 2) { loadingDescription.setText("Playing a little with project...");
-                } else if (count == 3) { loadingDescription.setText(getString(R.string.adding_final_touches)); }
-                if (count == 3) {count = 0; }
-                handler.postDelayed(this, 3500);
-            }
-        };
-        handler.postDelayed(runnable, 1000);
-
-        new Handler().postDelayed(this::requestCreateProject, 10500);
+        loadingDescription = createProjectDialog.findViewById(R.id.loading_description);
+        loadingDescription.setText(R.string.verifying_your_purchase);
+        // request verify project
+        requestVerifyProject();
 
         if (createProjectDialog.getWindow() != null) {
             createProjectDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             createProjectDialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         }
         createProjectDialog.show();
+    }
+
+    /**
+     * request verify project's
+     * purchase code provided by envato
+     */
+    private void requestVerifyProject() {
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_VERIFY_PROJECT,
+                response -> new Handler().postDelayed(() -> {
+                    switch (response) {
+                        case "200":
+                            Toasto.show_toast(getApplicationContext(), getString(R.string.purchase_successful), 1, 2);
+                            final Handler handler = new Handler();
+                            Runnable runnable = new Runnable() {
+                                int count = 0;
+                                @Override
+                                public void run() {
+                                    count++;
+                                    if (count == 1) {
+                                        loadingDescription.setText(R.string.adjusting_colors_and_design);
+                                    } else if (count == 2) {
+                                        loadingDescription.setText(R.string.adding_extra_mint_to_your_app);
+                                    } else if (count == 3) {
+                                        loadingDescription.setText(getString(R.string.adding_final_touches));
+                                    }
+                                    if (count == 3) { count = 0; }
+                                    handler.postDelayed(this, 3500);
+                                }
+                            };
+                            handler.postDelayed(runnable, 1000);
+                            new Handler().postDelayed(this::requestCreateProject, 10500);
+                            break;
+                        case "403":
+                            Toasto.show_toast(getApplicationContext(), getString(R.string.purchase_code_already_exists), 1, 1);
+                            createProjectDialog.dismiss();
+                            break;
+                        case "404":
+                            Toasto.show_toast(getApplicationContext(), getString(R.string.purchase_code_not_valid), 1, 1);
+                            createProjectDialog.dismiss();
+                            break;
+                        default:
+                            Toasto.show_toast(getApplicationContext(), getString(R.string.unknown_issue), 1, 1);
+                            createProjectDialog.dismiss();
+                            break;
+                    }
+                }, 2000), error -> {
+            Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);
+            createProjectDialog.dismiss();
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("purchasecode", purchaseCode);
+                return params;
+            }
+        };
+        Volley.newRequestQueue(this).add(request);
     }
 
     private void requestCreateProject() {

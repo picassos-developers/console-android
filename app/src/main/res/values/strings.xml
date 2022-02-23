@@ -496,12 +496,19 @@
     <string name="rest_api_key">Rest API Key</string>
     <string name="settings_saved">Settings Saved Successfully</string>
     <string name="location">Location</string>
-    <string name="step_1_of_4">Step 1 of 4</string>
+    <string name="step_1_of_5">Step 1 of 5</string>
     <string name="skip">Skip</string>
-    <string name="adding_final_touches">Adding final touches...</string>
+    <string name="adding_final_touches">Adding final touches…</string>
     <string name="about">About</string>
     <string name="language">Language</string>
     <string name="choose_language">Choose Language</string>
     <string name="arabic">Arabic</string>
     <string name="english">English</string>
+    <string name="purchase_code_already_exists">Purchase code already exists</string>
+    <string name="verifying_your_purchase">Verifying your Purchase…</string>
+    <string name="adding_extra_mint_to_your_app">Adding extra mint to your app…</string>
+    <string name="adjusting_colors_and_design">Adjusting colors and design…</string>
+    <string name="verify_your_mynta_app">Verify your Mynta App!</string>
+    <string name="enter_the_purchase_code_acquired_on_codecanyon_after_your_purchase_of_mynta_you_can_find_it_here">Enter the purchase code acquired on CodeCanyon after your purchase of Mynta. You can find it <a href="https://codecanyon.net/item/mint-full-fresh-android-webview-app/24821012/support">here.</a></string>
+    <string name="please_enter_a_valid_purchase_code">* Please enter a valid purchase code</string>
 </resources>
