@@ -68,6 +68,7 @@
         <entry key="app/src/main/res/layout/activity_get_started.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_gift.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_imgur.xml" value="0.2677083333333333" />
+        <entry key="app/src/main/res/layout/activity_legal.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_loading_bar.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login_providers.xml" value="0.33" />
@@ -134,10 +135,10 @@
         <entry key="app/src/main/res/layout/dialog_update.xml" value="0.33" />
         <entry key="app/src/main/res/layout/edit_email_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/edit_packagename_bottom_sheet_modal.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/fragment4.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment4.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment5.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_account.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_add_first_content_provider.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_add_first_content_provider.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.2390625" />
         <entry key="app/src/main/res/layout/fragment_choose_app_category.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_help_centre.xml" value="0.25364583333333335" />

@@ -2,6 +2,7 @@ package app.mynta.console.android.activities.about;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -49,6 +50,20 @@ public class AboutConsoleActivity extends AppCompatActivity {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
+
+        // privacy policy
+        findViewById(R.id.privacy_policy).setOnClickListener(v -> {
+            Intent intent = new Intent(this, LegalActivity.class);
+            intent.putExtra("request", "privacy");
+            startActivity(intent);
+        });
+
+        // terms of use
+        findViewById(R.id.terms_of_use).setOnClickListener(v -> {
+            Intent intent = new Intent(this, LegalActivity.class);
+            intent.putExtra("request", "terms");
+            startActivity(intent);
+        });
 
         // check for updates
         findViewById(R.id.check_updates).setOnClickListener(v -> requestCheckUpdates());

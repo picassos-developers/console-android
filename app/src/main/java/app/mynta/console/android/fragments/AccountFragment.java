@@ -20,7 +20,6 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import app.mynta.console.android.R;
 import app.mynta.console.android.activities.GetStartedActivity;
-import app.mynta.console.android.activities.LoginActivity;
 import app.mynta.console.android.activities.ProjectsActivity;
 import app.mynta.console.android.activities.about.AboutConsoleActivity;
 import app.mynta.console.android.activities.about.GenerateAuthLoginActivity;
