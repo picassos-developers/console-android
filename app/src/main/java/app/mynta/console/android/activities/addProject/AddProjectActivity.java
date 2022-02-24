@@ -19,7 +19,7 @@ import app.mynta.console.android.R;
 
 import app.mynta.console.android.activities.addProject.fragments.AddFirstContentProviderFragment;
 import app.mynta.console.android.activities.addProject.fragments.ChooseAppCategoryFragment;
-import app.mynta.console.android.activities.addProject.fragments.Fragment4;
+import app.mynta.console.android.activities.addProject.fragments.BusinessDetailsFragment;
 import app.mynta.console.android.activities.addProject.fragments.VerifyPurchaseFragment;
 import app.mynta.console.android.activities.addProject.fragments.NameAppFragment;
 import app.mynta.console.android.constants.API;
@@ -55,7 +55,7 @@ public class AddProjectActivity extends AppCompatActivity {
 
     final Fragment fragment1 = new ChooseAppCategoryFragment();
     final Fragment fragment2 = new NameAppFragment();
-    final Fragment fragment3 = new Fragment4();
+    final Fragment fragment3 = new BusinessDetailsFragment();
     final Fragment fragment4 = new VerifyPurchaseFragment();
     final Fragment fragment5 = new AddFirstContentProviderFragment();
 
@@ -65,7 +65,7 @@ public class AddProjectActivity extends AppCompatActivity {
     public String appCategory;
     public String applicationName;
     public String packageName;
-    public String organization;
+    public String businessName;
     public String countryCode;
     public String purchaseCode;
 
@@ -191,7 +191,6 @@ public class AddProjectActivity extends AppCompatActivity {
                 response -> new Handler().postDelayed(() -> {
                     switch (response) {
                         case "200":
-                            Toasto.show_toast(getApplicationContext(), getString(R.string.purchase_successful), 1, 2);
                             final Handler handler = new Handler();
                             Runnable runnable = new Runnable() {
                                 int count = 0;

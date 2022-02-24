@@ -174,6 +174,15 @@ public class Helper {
     }
 
     /**
+     * check if email address is valid
+     * @param email for email
+     * @return check if email is valid
+     */
+    public static boolean validateEmailAddress(String email) {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
+
+    /**
      * get json from assets folder
      * @param context for content
      * @param path for path in assets

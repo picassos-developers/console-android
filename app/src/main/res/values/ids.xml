@@ -294,7 +294,7 @@
     <item name="project_settings" type="id" />
     <item name="project_packagename" type="id" />
     <item name="project_options" type="id" />
-    <item name="organization" type="id" />
+    <item name="business" type="id" />
     <item name="description" type="id" />
     <item name="section_description" type="id" />
     <item name="provider" type="id" />

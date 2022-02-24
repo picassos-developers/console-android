@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +14,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,21 +36,26 @@ import app.mynta.console.android.adapter.CountriesAdapter;
 import app.mynta.console.android.models.Countries;
 import app.mynta.console.android.utils.Helper;
 
-public class Fragment4 extends Fragment {
+public class BusinessDetailsFragment extends Fragment {
     View view;
 
-    private EditText organization;
+    private EditText businessName;
+    private EditText email;
     private TextView location;
     private String code;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment4, container, false);
+        view = inflater.inflate(R.layout.fragment_business_details, container, false);
 
-        // organization
-        organization = view.findViewById(R.id.organization);
-        organization.addTextChangedListener(onOrganizationValueChange);
+        // business name
+        businessName = view.findViewById(R.id.business);
+        businessName.addTextChangedListener(onOrganizationValueChange);
+
+        // email
+        email = view.findViewById(R.id.email_address);
+        email.addTextChangedListener(onOrganizationValueChange);
 
         // choose location
         view.findViewById(R.id.location_chooser).setOnClickListener(v -> locationChooserDialog());
@@ -58,7 +63,7 @@ public class Fragment4 extends Fragment {
 
         // next
         view.findViewById(R.id.next).setOnClickListener(v -> {
-            ((AddProjectActivity) requireActivity()).organization = organization.getText().toString();
+            ((AddProjectActivity) requireActivity()).businessName = businessName.getText().toString();
             ((AddProjectActivity) requireActivity()).countryCode = code;
             ((AddProjectActivity) requireActivity()).goForward();
         });
@@ -82,8 +87,7 @@ public class Fragment4 extends Fragment {
         locationDialog.setOnCancelListener(dialog -> locationDialog.dismiss());
 
         // close dialog
-        ImageView dialogClose = locationDialog.findViewById(R.id.dialog_close);
-        dialogClose.setOnClickListener(v -> locationDialog.dismiss());
+        locationDialog.findViewById(R.id.dialog_close).setOnClickListener(v -> locationDialog.dismiss());
 
         // countries
         List<Countries> countriesList = new ArrayList<>();
@@ -92,7 +96,7 @@ public class Fragment4 extends Fragment {
         CountriesAdapter countriesAdapter = new CountriesAdapter(requireContext(), countriesList, click -> {
             location.setText(click.getTitle());
             code = click.getCode();
-            organization.setText(organization.getText().toString());
+            businessName.setText(businessName.getText().toString());
             locationDialog.dismiss();
         });
         countriesRecyclerview.setAdapter(countriesAdapter);
@@ -106,8 +110,9 @@ public class Fragment4 extends Fragment {
                 JSONObject countriesObject = countries.getJSONObject(i);
                 String name = countriesObject.getString("name");
                 String code = countriesObject.getString("code");
+                String flag = countriesObject.getString("flag");
 
-                countriesList.add(new Countries(name, code, "flag_egypt"));
+                countriesList.add(new Countries(name, code, flag));
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -123,19 +128,26 @@ public class Fragment4 extends Fragment {
     }
 
     /**
-     * on organization field value change, update
+     * on business details value change, update
      * next button visibility if valid.
      */
     private final TextWatcher onOrganizationValueChange = new TextWatcher() {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
         }
 
         @SuppressLint("SetTextI18n")
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            if (s.length() == 0 || location.getText().toString().equals(getString(R.string.location))) {
+            if (TextUtils.isEmpty(businessName.getText().toString())
+                    || TextUtils.isEmpty(email.getText().toString())
+                    || location.getText().toString().equals(getString(R.string.where_is_your_business_located))) {
                 view.findViewById(R.id.next).setVisibility(View.GONE);
             } else {
-                view.findViewById(R.id.next).setVisibility(View.VISIBLE);
+                if (Helper.validateEmailAddress(email.getText().toString().trim())) {
+                    view.findViewById(R.id.next).setVisibility(View.VISIBLE);
+                } else {
+                    view.findViewById(R.id.next).setVisibility(View.GONE);
+                }
             }
         }
 

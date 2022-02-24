@@ -511,4 +511,7 @@
     <string name="verify_your_mynta_app">Verify your Mynta App!</string>
     <string name="enter_the_purchase_code_acquired_on_codecanyon_after_your_purchase_of_mynta_you_can_find_it_here">Enter the purchase code acquired on CodeCanyon after your purchase of Mynta. You can find it <a href="https://codecanyon.net/item/mint-full-fresh-android-webview-app/24821012/support">here.</a></string>
     <string name="please_enter_a_valid_purchase_code">* Please enter a valid purchase code</string>
+    <string name="country">Country</string>
+    <string name="where_is_your_business_located">Where is your Business Located?</string>
+    <string name="business_name">Business Name</string>
 </resources>

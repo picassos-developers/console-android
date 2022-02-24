@@ -1,6 +1,8 @@
 package app.mynta.console.android.adapter;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.IOException;
 import java.util.List;
 
 import app.mynta.console.android.R;
@@ -28,7 +31,6 @@ public class CountriesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     class CountriesHolder extends RecyclerView.ViewHolder {
-
         ImageView flag;
         TextView title;
 
@@ -39,8 +41,12 @@ public class CountriesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
 
         public void setData(Countries data) {
-            flag.setImageResource(context.getResources().getIdentifier(data.getFlag(),
-                    "drawable", context.getPackageName()));
+            try {
+                AssetManager assetManager = context.getAssets();
+                flag.setImageBitmap(BitmapFactory.decodeStream(assetManager.open("countries/flags/" + data.getFlag() + ".png")));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             title.setText(data.getTitle());
         }
 

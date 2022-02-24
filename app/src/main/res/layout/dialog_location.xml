@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/opensans_bold"
-            android:text="@string/map_style"
+            android:text="@string/country"
             android:textColor="?color_dark" />
 
     </RelativeLayout>
