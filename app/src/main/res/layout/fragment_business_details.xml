@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Tell us about your Business"
+            android:text="@string/tell_us_about_your_business"
             android:textColor="?color_dark"
             android:textSize="20sp" />
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_regular"
             android:textAlignment="center"
-            android:text="Let your audience know more about your business."
+            android:text="@string/give_us_information_about_your_business_or_team"
             android:textColor="?color_dark"
             android:textSize="14sp" />
 
@@ -81,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/input_rectangle_background"
-            android:hint="@string/email_address"
+            android:hint="@string/business_email"
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:maxLength="30"
@@ -100,7 +100,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Users will use this email to send you feedback, etc..."
+            android:text="@string/your_users_will_use_this_email_to_send_you_feedback"
             android:layout_marginStart="20dp"
             android:layout_marginTop="7dp"
             android:textSize="12sp"

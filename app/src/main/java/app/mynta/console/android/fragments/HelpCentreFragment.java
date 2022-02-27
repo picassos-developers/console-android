@@ -19,6 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import app.mynta.console.android.R;
 
+import app.mynta.console.android.activities.MainActivity;
 import app.mynta.console.android.activities.helpCentre.ArticlesActivity;
 import app.mynta.console.android.activities.helpCentre.SearchArticlesActivity;
 import app.mynta.console.android.activities.helpCentre.SubmitTicketActivity;
@@ -62,6 +63,9 @@ public class HelpCentreFragment extends Fragment {
 
         // initialize request dialog
         requestDialog = new RequestDialog(requireContext());
+
+        // open navigation
+        view.findViewById(R.id.open_navigation).setOnClickListener(v -> ((MainActivity) requireActivity()).openNavigation());
 
         // Initialize sections recyclerview
         RecyclerView sectionsRecyclerview = view.findViewById(R.id.recycler_sections);

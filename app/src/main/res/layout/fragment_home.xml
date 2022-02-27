@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:orientation="horizontal"
-                    tools:ignore="RelativeOverlap,UseCompoundDrawables">
+                    tools:ignore="RelativeOverlap,UseCompoundDrawables,UselessParent">
 
                     <ImageView
                         android:id="@id/open_navigation"

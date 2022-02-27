@@ -19,6 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import app.mynta.console.android.R;
 
+import app.mynta.console.android.activities.MainActivity;
 import app.mynta.console.android.activities.store.ViewProductActivity;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.adapter.ProductsAdapter;
@@ -67,6 +68,9 @@ public class StoreFragment extends Fragment {
 
         // initialize request dialog
         requestDialog = new RequestDialog(requireContext());
+
+        // open navigation
+        view.findViewById(R.id.open_navigation).setOnClickListener(v -> ((MainActivity) requireActivity()).openNavigation());
 
         // Initialize store recyclerview
         RecyclerView storeRecyclerview = view.findViewById(R.id.recycler_store);

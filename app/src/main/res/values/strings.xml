@@ -514,4 +514,9 @@
     <string name="country">Country</string>
     <string name="where_is_your_business_located">Where is your Business Located?</string>
     <string name="business_name">Business Name</string>
+    <string name="business_email">Business Email</string>
+    <string name="your_users_will_use_this_email_to_send_you_feedback">Your users will use this email to send you feedback.</string>
+    <string name="tell_us_about_your_business">Tell us about your Business</string>
+    <string name="give_us_information_about_your_business_or_team">Give us information about your business or team*</string>
+    <string name="account_settings">Account Settings</string>
 </resources>

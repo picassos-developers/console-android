@@ -26,6 +26,7 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import app.mynta.console.android.activities.MainActivity;
 import app.mynta.console.android.activities.providers.FacebookActivity;
 import app.mynta.console.android.activities.providers.ImgurActivity;
 import app.mynta.console.android.activities.providers.MapsActivity;
@@ -94,6 +95,9 @@ public class NavigationFragment extends Fragment {
 
         // initialize request dialog
         requestDialog = new RequestDialog(requireContext());
+
+        // open navigation
+        view.findViewById(R.id.open_navigation).setOnClickListener(v -> ((MainActivity) requireActivity()).openNavigation());
 
         // Initialize navigations recyclerview
         RecyclerView navigationsRecyclerview = view.findViewById(R.id.recycler_providers);

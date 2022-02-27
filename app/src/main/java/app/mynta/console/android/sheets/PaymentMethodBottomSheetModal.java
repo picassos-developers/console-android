@@ -3,16 +3,29 @@ package app.mynta.console.android.sheets;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.paypal.checkout.createorder.CreateOrderActions;
+import com.paypal.checkout.createorder.CurrencyCode;
+import com.paypal.checkout.createorder.OrderIntent;
+import com.paypal.checkout.createorder.UserAction;
+import com.paypal.checkout.order.Amount;
+import com.paypal.checkout.order.AppContext;
+import com.paypal.checkout.order.Order;
+import com.paypal.checkout.order.PurchaseUnit;
 import com.paypal.checkout.paymentbutton.PayPalButton;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import app.mynta.console.android.R;
 import app.mynta.console.android.utils.Toasto;
@@ -88,9 +101,9 @@ public class PaymentMethodBottomSheetModal extends BottomSheetDialogFragment {
 
         // paypal checkout button
         PayPalButton paypalCheckout = view.findViewById(R.id.paypal_checkout);
-       /** paypalCheckout.setup(
+        paypalCheckout.setup(
                 createOrderActions -> {
-                    List<PurchaseUnit> purchaseUnits = new List<>();
+                    List<PurchaseUnit> purchaseUnits = new ArrayList<>();
                     purchaseUnits.add(
                             new PurchaseUnit.Builder()
                                     .amount(
@@ -106,14 +119,15 @@ public class PaymentMethodBottomSheetModal extends BottomSheetDialogFragment {
                             new AppContext.Builder()
                                     .userAction(UserAction.PAY_NOW)
                                     .build(),
-                            purchaseUnits
+                            purchaseUnits,
+                            null
                     );
                     createOrderActions.create(order, (CreateOrderActions.OnOrderCreated) null);
                 },
                 approval -> approval.getOrderActions().capture(result -> {
-                    Log.i("CaptureOrder", String.format("CaptureOrderResult: %s", result));
+                    Toast.makeText(requireContext(), "done: " + result, Toast.LENGTH_SHORT).show();
                 })
-        );**/
+        );
 
         return view;
     }

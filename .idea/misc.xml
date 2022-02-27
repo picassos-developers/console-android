@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable/active_mark.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/bottom_navigation_background.xml" value="0.2859375" />
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.26458333333333334" />
+        <entry key="app/src/main/res/drawable/button_danger.xml" value="0.1485" />
         <entry key="app/src/main/res/drawable/button_getstarted.xml" value="0.26458333333333334" />
         <entry key="app/src/main/res/drawable/button_primary.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/button_primary_disabled.xml" value="0.271875" />
@@ -48,6 +49,7 @@
         <entry key="app/src/main/res/drawable/toast_warning.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/toolbar_background.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/toolbar_background_dark.xml" value="0.26875" />
+        <entry key="app/src/main/res/layout/account_settings_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_about_app.xml" value="0.12685185185185185" />
         <entry key="app/src/main/res/layout/activity_about_console.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_add_project.xml" value="0.25" />
@@ -68,7 +70,7 @@
         <entry key="app/src/main/res/layout/activity_get_started.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_gift.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_imgur.xml" value="0.2677083333333333" />
-        <entry key="app/src/main/res/layout/activity_legal.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/activity_legal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_loading_bar.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login_providers.xml" value="0.33" />
@@ -109,6 +111,7 @@
         <entry key="app/src/main/res/layout/activity_write_review.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_youtube.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/add_navigation_bottom_sheet_modal.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/add_walkthrough_bottom_sheet_modal.xml" value="0.23425925925925925" />
         <entry key="app/src/main/res/layout/affiliate_product_details_sheet_modal.xml" value="0.5" />
         <entry key="app/src/main/res/layout/article_options_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/choose_custom_darkmode_package_bottom_sheet_modal.xml" value="0.25" />
@@ -137,12 +140,12 @@
         <entry key="app/src/main/res/layout/edit_packagename_bottom_sheet_modal.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment4.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment5.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_add_first_content_provider.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_add_first_content_provider.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.2390625" />
-        <entry key="app/src/main/res/layout/fragment_business_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_business_details.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_choose_app_category.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/fragment_help_centre.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/layout/fragment_help_centre.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_name_app.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_navigation.xml" value="0.33" />
@@ -200,6 +203,7 @@
         <entry key="app/src/main/res/layout/providers_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/redeem_code_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/reset_password_email_bottom_sheet_modal.xml" value="0.2557291666666667" />
+        <entry key="app/src/main/res/layout/ticket_options_bottom_sheet_modal.xml" value="0.25" />
         <entry key="app/src/main/res/layout/toast_layout_alert.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/toast_layout_warning.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/two_factor_auth_bottom_sheet_modal.xml" value="0.2557291666666667" />

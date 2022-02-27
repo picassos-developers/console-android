@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Add a Navigation"
+            android:text="Select your Content Provider"
             android:textColor="?color_dark"
             android:textSize="20sp" />
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_regular"
             android:textAlignment="center"
-            android:text="@string/choose_your_default_content_provider"
+            android:text="The one you select here will be the default, you can add more providers later"
             android:textColor="?color_dark"
             android:textSize="14sp" />
 
