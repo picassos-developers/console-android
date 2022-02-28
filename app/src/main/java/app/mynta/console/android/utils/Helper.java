@@ -204,13 +204,15 @@ public class Helper {
         return json;
     }
 
-    public static void setLocale(Context context, String language) {
+    public static void setLocale(Activity activity, Context context, String language) {
         Locale myLocale = new Locale(language);
         Resources resources = context.getResources();
         DisplayMetrics display = resources.getDisplayMetrics();
         Configuration configuration = resources.getConfiguration();
         configuration.locale = myLocale;
         resources.updateConfiguration(configuration, display);
-
+        Intent refresh = new Intent(context, MainActivity.class);
+        activity.finish();
+        activity.startActivity(refresh);
     }
 }

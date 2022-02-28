@@ -16,6 +16,8 @@
         <entry key="app/src/main/res/drawable/card_background.xml" value="0.2859375" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.2864583333333333" />
         <entry key="app/src/main/res/drawable/circle_blue.xml" value="0.2859375" />
+        <entry key="app/src/main/res/drawable/circle_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/circular_progress_bar.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/horizontal_progress_bar.xml" value="0.271875" />
         <entry key="app/src/main/res/drawable/indicator_default.xml" value="0.26458333333333334" />
         <entry key="app/src/main/res/drawable/indicator_selected.xml" value="0.26458333333333334" />
@@ -53,6 +55,7 @@
         <entry key="app/src/main/res/layout/activity_about_app.xml" value="0.12685185185185185" />
         <entry key="app/src/main/res/layout/activity_about_console.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_add_project.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_app_settings.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_articles.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_check_status.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_check_ticket.xml" value="0.2708333333333333" />
@@ -67,12 +70,12 @@
         <entry key="app/src/main/res/layout/activity_facebook.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/activity_finish_policies_setup.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_generate_auth_login.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_get_started.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_get_started.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_gift.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_imgur.xml" value="0.2677083333333333" />
         <entry key="app/src/main/res/layout/activity_legal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_loading_bar.xml" value="0.2557291666666667" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login_providers.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_manage_account.xml" value="0.33" />
@@ -91,7 +94,7 @@
         <entry key="app/src/main/res/layout/activity_purchases.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_push_notifications.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_qr_login.xml" value="0.2703125" />
-        <entry key="app/src/main/res/layout/activity_register.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/activity_search_articles.xml" value="0.4046875" />
         <entry key="app/src/main/res/layout/activity_set_facebook_network.xml" value="0.2557291666666667" />
@@ -113,6 +116,7 @@
         <entry key="app/src/main/res/layout/add_navigation_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/add_walkthrough_bottom_sheet_modal.xml" value="0.23425925925925925" />
         <entry key="app/src/main/res/layout/affiliate_product_details_sheet_modal.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/app_settings_bottom_sheet_modal.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/article_options_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/choose_custom_darkmode_package_bottom_sheet_modal.xml" value="0.25" />
         <entry key="app/src/main/res/layout/choose_default_navigation_bottom_sheet_modal.xml" value="0.25364583333333335" />
@@ -167,7 +171,8 @@
         <entry key="app/src/main/res/layout/item_country.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/item_default_navigation_listitem.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_force_update.xml" value="0.26979166666666665" />
-        <entry key="app/src/main/res/layout/item_guide_listitem.xml" value="0.2484375" />
+        <entry key="app/src/main/res/layout/item_guide_listitem.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_home_member_listitem.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_loading_spinner.xml" value="0.2677083333333333" />
         <entry key="app/src/main/res/layout/item_map_style.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_navigation_listitem.xml" value="0.33" />

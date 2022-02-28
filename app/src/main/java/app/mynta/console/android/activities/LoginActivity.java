@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
@@ -91,14 +90,16 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         // Forgot Password
-        TextView forgot_password = findViewById(R.id.forgot_password);
-        forgot_password.setOnClickListener(v -> {
+        findViewById(R.id.forgot_password).setOnClickListener(v -> {
             if (!TextUtils.isEmpty(email.getText().toString())) {
                 requestSendResetEmail();
             } else {
                 Toasto.show_toast(this, getString(R.string.email_empty), 1, 1);
             }
         });
+
+        // Register
+        findViewById(R.id.register).setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
     }
 
     /**

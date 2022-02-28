@@ -19,12 +19,11 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import app.mynta.console.android.R;
 import app.mynta.console.android.activities.ProjectsActivity;
-import app.mynta.console.android.activities.about.LegalActivity;
 import app.mynta.console.android.activities.about.MyTicketsActivity;
 import app.mynta.console.android.activities.about.PurchasesActivity;
 import app.mynta.console.android.models.viewModel.SharedViewModel;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
-import app.mynta.console.android.sheets.AccountSettingsBottomSheetModal;
+import app.mynta.console.android.sheets.AppSettingsBottomSheetModal;
 import app.mynta.console.android.utils.RequestDialog;
 
 public class AccountFragment extends Fragment {
@@ -52,8 +51,8 @@ public class AccountFragment extends Fragment {
 
         // account settings
         view.findViewById(R.id.account_settings).setOnClickListener(v -> {
-            AccountSettingsBottomSheetModal accountSettingsBottomSheetModal = new AccountSettingsBottomSheetModal();
-            accountSettingsBottomSheetModal.show(getChildFragmentManager(), "TAG");
+            AppSettingsBottomSheetModal appSettingsBottomSheetModal = new AppSettingsBottomSheetModal();
+            appSettingsBottomSheetModal.show(getChildFragmentManager(), "TAG");
         });
 
         // switch project

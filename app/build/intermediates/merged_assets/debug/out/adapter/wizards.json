@@ -1,19 +1,34 @@
 {
   "wizards": [
     {
-      "title": "Limitless control",
-      "description": "Configure and access your application's controls on any platform at any time!",
+      "title": "Reduce Stress",
+      "description": "We are here to help you get rid of the stress you might have.",
       "thumbnail": "guide_one"
     },
     {
-      "title": "Elite Set Up",
-      "description": "Building your app is now as easy as toggling on and off, with on-target outcomes every time!",
-      "thumbnail": "guide_two"
+      "title": "Reduce Stress",
+      "description": "We are here to help you get rid of the stress you might have.",
+      "thumbnail": "guide_one"
     },
     {
-      "title": "Your app, your design!",
-      "description": "Mint Console offers you a variety of design configurations to choose from, so your app can look as unique and clean as ever.",
-      "thumbnail": "guide_three"
+      "title": "Reduce Stress",
+      "description": "We are here to help you get rid of the stress you might have.",
+      "thumbnail": "guide_one"
+    },
+    {
+      "title": "Reduce Stress",
+      "description": "We are here to help you get rid of the stress you might have.",
+      "thumbnail": "guide_one"
+    },
+    {
+      "title": "Reduce Stress",
+      "description": "We are here to help you get rid of the stress you might have.",
+      "thumbnail": "guide_one"
+    },
+    {
+      "title": "Reduce Stress",
+      "description": "We are here to help you get rid of the stress you might have.",
+      "thumbnail": "guide_one"
     }
   ]
 }

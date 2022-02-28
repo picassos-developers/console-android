@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Button;
 
 import com.google.android.material.tabs.TabLayout;
 import app.mynta.console.android.R;
@@ -25,25 +26,22 @@ public class GetStartedActivity extends AppCompatActivity {
 
     GetStartedAdapter getStartedAdapter;
     TabLayout tabIndicator;
+    Button btnGetStarted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // when this activity is about to be launch we need to check if its opened before or not
-
         if (restorePrefData()) {
-
             Intent login = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(login);
             finish();
-
         }
 
         setContentView(R.layout.activity_get_started);
 
+        btnGetStarted = findViewById(R.id.btn_get_started);
         tabIndicator = findViewById(R.id.tab_indicator);
-        // fill list screen
 
         final List<Guide> guide_list = new ArrayList<>();
 
@@ -68,48 +66,26 @@ public class GetStartedActivity extends AppCompatActivity {
         ViewPager screenPager = findViewById(R.id.guide_viewpager);
         getStartedAdapter = new GetStartedAdapter(this, guide_list);
         screenPager.setAdapter(getStartedAdapter);
-
-        // setup tab layout with viewpager
-
         tabIndicator.setupWithViewPager(screenPager);
 
-        // tab layout add change listener
+        // Get Started button click listener
+        btnGetStarted.setOnClickListener(v -> {
+            savePrefsData();
 
-        tabIndicator.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-
+            startActivity(new Intent(GetStartedActivity.this, LoginActivity.class));
+            finish();
         });
-
-        findViewById(R.id.get_started).setOnClickListener(v -> startActivity(new Intent(GetStartedActivity.this, RegisterActivity.class)));
-        findViewById(R.id.login).setOnClickListener(v -> startActivity(new Intent(GetStartedActivity.this, LoginActivity.class)));
     }
 
     private boolean restorePrefData() {
-
         SharedPreferences pref = getApplicationContext().getSharedPreferences("Shared Preferences",MODE_PRIVATE);
         return pref.getBoolean("isGuideOpened",false);
-
     }
 
     private void savePrefsData() {
-
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("Shared Preferences", MODE_PRIVATE);
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("Shared Preferences",MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
-        editor.putBoolean("isGuideOpened", true);
+        editor.putBoolean("isGuideOpened",true);
         editor.apply();
-
     }
 }

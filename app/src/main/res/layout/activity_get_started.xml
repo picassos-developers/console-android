@@ -1,68 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="?color_background">
+    android:orientation="vertical"
+    android:background="@color/color_background">
 
-    <LinearLayout
+    <androidx.viewpager.widget.ViewPager
+        android:id="@id/guide_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:padding="20dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/logo_mini"
-            tools:ignore="ContentDescription" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@id/tab_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollIndicators="none"
+        android:scrollbars="none"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        app:tabBackground="@drawable/indicator_selector"
+        app:tabIndicatorHeight="0dp"
+        tools:ignore="UnusedAttribute">
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@id/guide_viewpager"
-            android:layout_width="match_parent"
-            android:layout_marginTop="30dp"
-            android:layout_height="100dp" />
+    </com.google.android.material.tabs.TabLayout>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@id/tab_indicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scrollIndicators="none"
-            android:scrollbars="none"
-            android:layout_marginTop="15dp"
-            app:tabBackground="@drawable/indicator_selector"
-            app:tabIndicatorHeight="0dp"
-            tools:ignore="UnusedAttribute" />
+    <Button
+        android:id="@id/btn_get_started"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/get_started"
+        android:textAllCaps="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:textColor="?color_dark"
+        android:textSize="14sp"
+        tools:ignore="RelativeOverlap" />
 
-        <Button
-            android:id="@id/get_started"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/button_primary"
-            android:text="@string/get_started"
-            android:textAllCaps="false"
-            android:textColor="?color_light_separate"
-            android:textSize="@dimen/input_text_size" />
-
-        <Button
-            android:id="@id/login"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/button_primary"
-            android:text="I Already Have a Console Account"
-            android:textAllCaps="false"
-            android:textColor="?color_light_separate"
-            android:textSize="@dimen/input_text_size" />
-
-    </LinearLayout>
-
-</androidx.core.widget.NestedScrollView>
+</RelativeLayout>

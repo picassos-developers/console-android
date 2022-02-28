@@ -47,6 +47,7 @@
         android:gravity="center_vertical"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
         android:paddingStart="20dp"
         android:paddingTop="10dp"
         android:paddingEnd="20dp"
@@ -62,37 +63,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/english"
-            android:layout_marginStart="10dp"
-            android:textColor="?color_dark" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@id/language_arabic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/toolbar_background"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingStart="20dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="20dp"
-        android:paddingBottom="10dp">
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/flag_egypt"
-            tools:ignore="ContentDescription" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/arabic"
             android:layout_marginStart="10dp"
             android:textColor="?color_dark" />
 
