@@ -196,6 +196,7 @@
         <entry key="app/src/main/res/layout/item_wizard_preview.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/launch_app_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/learn_more_bottom_sheet_modal.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/login_qr_code_bottom_sheet_modal.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/manage_account_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/manage_ads_wizard_bottom_sheet_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/navigation_header.xml" value="0.33" />

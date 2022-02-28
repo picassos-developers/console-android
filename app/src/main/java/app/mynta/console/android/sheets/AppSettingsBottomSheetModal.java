@@ -21,7 +21,6 @@ import app.mynta.console.android.R;
 import app.mynta.console.android.activities.LoginActivity;
 import app.mynta.console.android.activities.MainActivity;
 import app.mynta.console.android.activities.about.AboutConsoleActivity;
-import app.mynta.console.android.activities.about.GenerateAuthLoginActivity;
 import app.mynta.console.android.activities.about.ManageAccountActivity;
 import app.mynta.console.android.models.viewModel.SharedViewModel;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
@@ -49,7 +48,10 @@ public class AppSettingsBottomSheetModal extends BottomSheetDialogFragment {
         view.findViewById(R.id.account_settings).setOnClickListener(v -> startActivity(new Intent(requireContext(), ManageAccountActivity.class)));
 
         // sign in with qr code
-        view.findViewById(R.id.qr_login).setOnClickListener(v -> startActivity(new Intent(requireContext(), GenerateAuthLoginActivity.class)));
+        view.findViewById(R.id.qr_login).setOnClickListener(v -> {
+            LoginQrCodeBottomSheetModal loginQrCodeBottomSheetModal = new LoginQrCodeBottomSheetModal();
+            loginQrCodeBottomSheetModal.show(getChildFragmentManager(), "TAG");
+        });
 
         // language
         view.findViewById(R.id.language).setOnClickListener(v -> {

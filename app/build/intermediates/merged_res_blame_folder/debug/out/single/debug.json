@@ -68,12 +68,12 @@
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/layout/dialog_manage_credentials.xml"
     },
     {
-        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_logo_apple.png.flat",
-        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/logo_apple.png"
-    },
-    {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_logo_apple.png.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/logo_apple.png"
     },
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/layout_dialog_notification_target.xml.flat",
@@ -146,6 +146,10 @@
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_video_style_eight.png.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/video_style_eight.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/layout_login_qr_code_bottom_sheet_modal.xml.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/layout/login_qr_code_bottom_sheet_modal.xml"
     },
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_wordpress_category_style_four.png.flat",
@@ -1702,6 +1706,10 @@
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_thumb_up.png.flat",
         "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_thumb_up.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/drawable_icon_carrot.png.flat",
+        "source": "/Users/noor/Desktop/Projects/Mint Console/app/src/main/res/drawable/icon_carrot.png"
     },
     {
         "merged": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/merged_res/debug/layout_toast_layout_warning.xml.flat",
