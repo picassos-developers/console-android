@@ -38,8 +38,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class WalkthroughActivity extends AppCompatActivity implements AddWalkthroughBottomSheetModal.OnAddListener,
-        WalkthroughOptionsBottomSheetModal.OnDeleteListener, WalkthroughOptionsBottomSheetModal.OnEditListener {
+public class WalkthroughActivity extends AppCompatActivity implements WalkthroughOptionsBottomSheetModal.OnDeleteListener,
+        WalkthroughOptionsBottomSheetModal.OnEditListener, AddWalkthroughBottomSheetModal.OnAddListener {
 
     private ConsolePreferences consolePreferences;
     private RequestDialog requestDialog;
@@ -165,7 +165,7 @@ public class WalkthroughActivity extends AppCompatActivity implements AddWalkthr
 
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
-                            Walkthrough walkthrough = new Walkthrough(object.getInt("id"), object.getString("title"), object.getString("description"), object.getString("thumbnail"), object.getString("date"));
+                            Walkthrough walkthrough = new Walkthrough(object.getInt("id"), object.getString("title"), object.getString("description"), object.getString("thumbnail"));
                             walkthroughList.add(walkthrough);
                             walkthroughAdapter.notifyDataSetChanged();
                             data = response;
@@ -230,13 +230,7 @@ public class WalkthroughActivity extends AppCompatActivity implements AddWalkthr
         requestData();
     }
 
-    @Override
-    public void onAddListener(int requestCode) {
-        if (requestCode == RequestCodes.REQUEST_ADD_WALKTHROUGH_CODE) {
-            refresh();
-            Toasto.show_toast(this, getString(R.string.walkthrough_added), 0, 0);
-        }
-    }
+
 
     @Override
     public void onDeleteListener(boolean delete) {
@@ -251,6 +245,14 @@ public class WalkthroughActivity extends AppCompatActivity implements AddWalkthr
         if (edit) {
             refresh();
             Toasto.show_toast(this, getString(R.string.walkthrough_edited), 0, 0);
+        }
+    }
+
+    @Override
+    public void onAddListener(int requestCode) {
+        if (requestCode == RequestCodes.REQUEST_ADD_WALKTHROUGH_CODE) {
+            refresh();
+            Toasto.show_toast(this, getString(R.string.walkthrough_added), 0, 0);
         }
     }
 }

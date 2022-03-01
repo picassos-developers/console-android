@@ -13,6 +13,7 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import app.mynta.console.android.R;
+import app.mynta.console.android.activities.addProject.ProjectsActivity;
 import app.mynta.console.android.activities.forgotPassword.EnterVerificationActivity;
 import app.mynta.console.android.constants.API;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
@@ -187,8 +188,8 @@ public class LoginActivity extends AppCompatActivity {
           @Override
           protected Map<String, String> getParams() {
               Map<String, String> params = new HashMap<>();
-              params.put("email", email.getText().toString());
-              params.put("password", password.getText().toString());
+              params.put("email", email.getText().toString().trim());
+              params.put("password", password.getText().toString().trim());
               return params;
           }
         };

@@ -67,6 +67,7 @@ public class AddProjectActivity extends AppCompatActivity {
     public String packageName;
     public String businessName;
     public String countryCode;
+    public String emailAddress;
     public String purchaseCode;
 
     @SuppressLint("SetTextI18n")
@@ -212,7 +213,7 @@ public class AddProjectActivity extends AppCompatActivity {
                             new Handler().postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
-                                    createProjectDialog.dismiss();
+                                    requestCreateProject();
                                 }
                             }, 10500);
                             break;
@@ -247,7 +248,7 @@ public class AddProjectActivity extends AppCompatActivity {
      * request create a new project
      */
     private void requestCreateProject() {
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_PROJECT,
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_CREATE_PROJECT,
                 response -> {
                     try {
                         JSONObject object = new JSONObject(response);
@@ -276,7 +277,10 @@ public class AddProjectActivity extends AppCompatActivity {
                 params.put("category", appCategory);
                 params.put("name", applicationName);
                 params.put("packagename", packageName);
-                params.put("country", countryCode);
+                params.put("business_name", businessName);
+                params.put("business_location", countryCode.toLowerCase());
+                params.put("business_email", emailAddress);
+                params.put("purchasecode", purchaseCode);
                 return params;
             }
         };

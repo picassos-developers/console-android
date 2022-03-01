@@ -18,7 +18,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import app.mynta.console.android.R;
-import app.mynta.console.android.activities.ProjectsActivity;
+import app.mynta.console.android.activities.addProject.ProjectsActivity;
 import app.mynta.console.android.activities.about.MyTicketsActivity;
 import app.mynta.console.android.activities.about.PurchasesActivity;
 import app.mynta.console.android.models.viewModel.SharedViewModel;

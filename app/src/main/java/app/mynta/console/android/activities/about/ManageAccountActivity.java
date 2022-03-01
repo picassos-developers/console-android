@@ -40,7 +40,6 @@ public class ManageAccountActivity extends AppCompatActivity {
     // account details
     private EditText username2;
     private SwitchCompat mintConsoleNewsletter;
-    private SwitchCompat betaNewsletter;
     private SwitchCompat picassosNewsletter;
     private SwitchCompat _2fa;
 
@@ -73,7 +72,6 @@ public class ManageAccountActivity extends AppCompatActivity {
         // account details
         username2 = findViewById(R.id.username);
         mintConsoleNewsletter = findViewById(R.id.mint_console_newsletter);
-        betaNewsletter = findViewById(R.id.beta_newsletter);
         picassosNewsletter = findViewById(R.id.picassos_newsletter);
         _2fa = findViewById(R.id.two_factor_auth);
 
@@ -123,7 +121,6 @@ public class ManageAccountActivity extends AppCompatActivity {
                             username2.setText(details.getString("username"));
                             consolePreferences.setUsername(details.getString("username"));
                             mintConsoleNewsletter.setChecked(getChecked(newsletter.getInt("newsletter")));
-                            betaNewsletter.setChecked(getChecked(newsletter.getInt("beta")));
                             picassosNewsletter.setChecked(getChecked(newsletter.getInt("picassos_newsletter")));
                             _2fa.setChecked(getChecked(details.getInt("2fa")));
                         } else {
@@ -171,10 +168,9 @@ public class ManageAccountActivity extends AppCompatActivity {
                 Map<String, String> params = new HashMap<>();
                 params.put("token", consolePreferences.loadToken());
                 params.put("username", username2.getText().toString());
-                params.put("subscribed_to_newsletter", String.valueOf(getState(mintConsoleNewsletter)));
-                params.put("subscribed_to_beta", String.valueOf(getState(betaNewsletter)));
-                params.put("subscribed_to_picassos_newsletter", String.valueOf(getState(picassosNewsletter)));
-                params.put("two_factor_auth", String.valueOf(getState(_2fa)));
+                params.put("newsletter", String.valueOf(getState(mintConsoleNewsletter)));
+                params.put("picassos_newsletter", String.valueOf(getState(picassosNewsletter)));
+                params.put("two_factor_authentication", String.valueOf(getState(_2fa)));
                 return params;
             }
         };

@@ -110,7 +110,7 @@ public class CommentOptionsBottomSheetModal extends BottomSheetDialogFragment {
     private void requestRemoveComment(int id) {
         requestDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_REMOVE_COMMENT,
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_REMOVE_HC_COMMENT,
                 response -> {
                     if (response.equals("200")) {
                         onRemoveListener.onRemoveListener(RequestCodes.REQUEST_REMOVE_COMMENT_CODE);

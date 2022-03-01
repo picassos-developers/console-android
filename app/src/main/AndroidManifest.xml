@@ -87,7 +87,7 @@
         <activity android:name=".activities.manageAds.SetFacebookNetworkActivity" />
         <activity android:name=".activities.forgotPassword.ResetPasswordActivity" />
         <activity android:name=".activities.forgotPassword.EnterVerificationActivity" />
-        <activity android:name=".activities.ProjectsActivity" />
+        <activity android:name=".activities.addProject.ProjectsActivity" />
         <activity android:name=".activities.RegisterActivity" />
         <activity android:name=".activities.addProject.AddProjectActivity" />
         <activity android:name=".activities.NotificationPreviewActivity" />

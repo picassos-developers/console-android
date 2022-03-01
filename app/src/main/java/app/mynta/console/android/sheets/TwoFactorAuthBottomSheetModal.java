@@ -3,11 +3,12 @@ package app.mynta.console.android.sheets;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -20,7 +21,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import app.mynta.console.android.R;
 
-import app.mynta.console.android.activities.ProjectsActivity;
+import app.mynta.console.android.activities.addProject.ProjectsActivity;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.constants.API;
 import app.mynta.console.android.utils.RequestDialog;
@@ -30,7 +31,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoFactorAuthBottomSheetModal extends BottomSheetDialogFragment {
-
     View view;
     RequestDialog requestDialog;
     private ConsolePreferences consolePreferences;
@@ -52,14 +52,29 @@ public class TwoFactorAuthBottomSheetModal extends BottomSheetDialogFragment {
 
         // verification code
         EditText verificationCode = view.findViewById(R.id.verification_code);
+        verificationCode.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                view.findViewById(R.id.verify).setEnabled(charSequence.length() >= 4);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
 
         // email verification
         TextView emailVerification = view.findViewById(R.id.email_verification);
-        emailVerification.setText(getString(R.string.we_sent_verification_code_to) + "\n" + requireArguments().getString("EMAIL"));
+        emailVerification.setText(getString(R.string.we_sent_verification_code_to) + " " + requireArguments().getString("EMAIL"));
 
         // verify
-        Button verify = view.findViewById(R.id.verify);
-        verify.setOnClickListener(v -> {
+        view.findViewById(R.id.verify).setOnClickListener(v -> {
             if (!TextUtils.isEmpty(verificationCode.getText().toString())) {
                 requestVerify(verificationCode.getText().toString());
             } else {

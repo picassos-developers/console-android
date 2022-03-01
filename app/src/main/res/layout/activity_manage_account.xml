@@ -229,35 +229,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
-                            android:text="@string/beta_newsletter"
-                            android:textColor="?color_dark"
-                            android:textSize="@dimen/input_text_size"
-                            tools:ignore="RelativeOverlap" />
-
-                        <androidx.appcompat.widget.SwitchCompat
-                            android:id="@id/beta_newsletter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="20dp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginEnd="8dp"
-                            android:thumb="@drawable/switch_thumb"
-                            app:track="@drawable/switch_track" />
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/toolbar_background"
-                        android:orientation="horizontal"
-                        android:padding="15dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
                             android:text="@string/picassos_newsletter"
                             android:textColor="?color_dark"
                             android:textSize="@dimen/input_text_size"

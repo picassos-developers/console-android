@@ -103,7 +103,7 @@ public class ArticlesActivity extends AppCompatActivity {
         findViewById(R.id.internet_connection).setVisibility(View.GONE);
         requestDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_ARTICLES,
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_HC_ARTICLES,
                 response -> {
                     try {
                         JSONObject obj = new JSONObject(response);
@@ -136,7 +136,7 @@ public class ArticlesActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
-                params.put("section", String.valueOf(id));
+                params.put("section_id", String.valueOf(id));
                 return params;
             }
         };

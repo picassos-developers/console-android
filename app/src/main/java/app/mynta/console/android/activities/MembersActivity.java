@@ -125,7 +125,7 @@ public class MembersActivity extends AppCompatActivity implements MemberDetailsB
 
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
-                            Members members = new Members(object.getInt("user_id"), object.getString("username"), object.getString("email"), object.getString("verified"));
+                            Members members = new Members(object.getInt("member_id"), object.getString("username"), object.getString("email"), object.getString("verified"));
                             membersList.add(members);
                             membersAdapter.notifyDataSetChanged();
                         }

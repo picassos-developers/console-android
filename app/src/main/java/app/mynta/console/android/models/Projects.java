@@ -6,15 +6,13 @@ public class Projects {
     private String name;
     private String purchasecode;
     private String packagename;
-    private String firebase_access_key;
 
-    public Projects(int id, String sak, String name, String purchasecode, String packagename, String firebase_access_key) {
+    public Projects(int id, String sak, String name, String purchasecode, String packagename) {
         this.id = id;
         this.sak = sak;
         this.name = name;
         this.purchasecode = purchasecode;
         this.packagename = packagename;
-        this.firebase_access_key = firebase_access_key;
     }
 
     public int getId() {
@@ -55,13 +53,5 @@ public class Projects {
 
     public void setPackagename(String packagename) {
         this.packagename = packagename;
-    }
-
-    public String getFirebase_access_key() {
-        return firebase_access_key;
-    }
-
-    public void setFirebase_access_key(String firebase_access_key) {
-        this.firebase_access_key = firebase_access_key;
     }
 }

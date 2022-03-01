@@ -123,9 +123,9 @@ public class WalkthroughOptionsBottomSheetModal extends BottomSheetDialogFragmen
         } else {
             requestDialog.show();
 
-            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_DELETE_WALKTHROUGH,
+            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_REMOVE_WALKTHROUGH,
                     response -> {
-                        if (response.contains("200")) {
+                        if (response.equals("200")) {
                             onDeleteListener.onDeleteListener(true);
                             dismiss();
                         } else {

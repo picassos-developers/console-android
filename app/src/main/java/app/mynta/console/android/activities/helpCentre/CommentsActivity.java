@@ -126,7 +126,7 @@ public class CommentsActivity extends AppCompatActivity implements CommentOption
         findViewById(R.id.internet_connection).setVisibility(View.GONE);
         requestDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_COMMENTS,
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_HC_COMMENTS,
                 response -> {
                     try {
                         JSONObject obj = new JSONObject(response);
@@ -142,7 +142,7 @@ public class CommentsActivity extends AppCompatActivity implements CommentOption
 
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
-                            Comments comments = new Comments(object.getString("token"), object.getInt("comment_id"), object.getString("comment_username"), object.getString("comment_email"), object.getString("comment_description"), object.getString("comment_date"), object.getInt("comment_article"), object.getInt("comment_votes"), object.getInt("is_edited"));
+                            Comments comments = new Comments(object.getString("token"), object.getInt("comment_id"), object.getString("comment_username"), object.getString("comment_email"), object.getString("comment_description"), object.getString("comment_date"), object.getInt("article_id"), object.getInt("comment_votes"), object.getInt("edited"));
                             commentsList.add(comments);
                             commentsAdapter.notifyDataSetChanged();
                         }
@@ -159,7 +159,7 @@ public class CommentsActivity extends AppCompatActivity implements CommentOption
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
-                params.put("article", String.valueOf(id));
+                params.put("article_id", String.valueOf(id));
                 return params;
             }
         };
@@ -175,7 +175,7 @@ public class CommentsActivity extends AppCompatActivity implements CommentOption
     private void requestAddComment(String comment) {
         requestDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_POST_COMMENT,
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_POST_HC_COMMENT,
                 response -> {
                     if (response.equals("200")) {
                         Toasto.show_toast(this, getString(R.string.comment_added), 0, 0);
@@ -195,7 +195,7 @@ public class CommentsActivity extends AppCompatActivity implements CommentOption
                 params.put("token", consolePreferences.loadToken());
                 params.put("username", consolePreferences.loadUsername());
                 params.put("email", consolePreferences.loadEmail());
-                params.put("comment", comment);
+                params.put("comment_description", comment);
                 params.put("article_id", String.valueOf(articleId));
                 return params;
             }

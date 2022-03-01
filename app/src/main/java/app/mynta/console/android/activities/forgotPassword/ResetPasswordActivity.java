@@ -95,7 +95,6 @@ public class ResetPasswordActivity extends AppCompatActivity {
                             startActivity(new Intent(ResetPasswordActivity.this, LoginActivity.class));
                             finishAffinity();
                             break;
-                        case "0":
                         case "403":
                             Toasto.show_toast(this, getString(R.string.unknown_issue), 0, 1);
                             break;

@@ -48,6 +48,7 @@
                 android:background="@drawable/input_rectangle_background_sheet"
                 android:hint="@string/verification_code"
                 android:inputType="number"
+                android:maxLength="4"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:textColor="?color_dark"
@@ -61,11 +62,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:layout_marginTop="15dp"
+                android:enabled="false"
                 android:background="@drawable/button_primary"
                 android:text="@string/verify"
                 android:textAllCaps="false"
                 android:textSize="@dimen/input_text_size"
-                android:textColor="@color/color_white" />
+                android:textColor="@color/color_white"
+                tools:ignore="PrivateResource" />
 
         </LinearLayout>
 

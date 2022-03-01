@@ -3,11 +3,12 @@ package app.mynta.console.android.sheets;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -33,6 +34,10 @@ public class AddWalkthroughBottomSheetModal extends BottomSheetDialogFragment {
     View view;
     RequestDialog requestDialog;
     private ConsolePreferences consolePreferences;
+
+    EditText walkthroughTitle;
+    EditText walkthroughDescription;
+    EditText walkthroughThumbnail;
 
     public interface OnAddListener {
         void onAddListener(int requestCode);
@@ -60,19 +65,22 @@ public class AddWalkthroughBottomSheetModal extends BottomSheetDialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.add_walkthrough_bottom_sheet_modal, container, false);
 
-        consolePreferences = new ConsolePreferences(requireActivity().getApplicationContext());
+        consolePreferences = new ConsolePreferences(requireContext());
 
         // initialize request dialog
         requestDialog = new RequestDialog(requireContext());
 
         // walkthrough fields
-        EditText walkthroughTitle = view.findViewById(R.id.walkthrough_title);
-        EditText walkthroughDescription = view.findViewById(R.id.walkthrough_description);
-        EditText walkthroughThumbnail = view.findViewById(R.id.walkthrough_thumbnail);
+        walkthroughTitle = view.findViewById(R.id.walkthrough_title);
+        walkthroughDescription = view.findViewById(R.id.walkthrough_description);
+        walkthroughThumbnail = view.findViewById(R.id.walkthrough_thumbnail);
+
+        walkthroughTitle.addTextChangedListener(onValueChange);
+        walkthroughDescription.addTextChangedListener(onValueChange);
+        walkthroughThumbnail.addTextChangedListener(onValueChange);
 
         // add walkthrough
-        Button addWalkthrough = view.findViewById(R.id.add_walkthrough_button);
-        addWalkthrough.setOnClickListener(v -> {
+        view.findViewById(R.id.add_walkthrough).setOnClickListener(v -> {
             // validate walkthrough data
             if (!TextUtils.isEmpty(walkthroughTitle.getText().toString())
                     && !TextUtils.isEmpty(walkthroughDescription.getText().toString())
@@ -106,7 +114,7 @@ public class AddWalkthroughBottomSheetModal extends BottomSheetDialogFragment {
 
             StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_ADD_WALKTHROUGH,
                     response -> {
-                        if (response.contains("200")) {
+                        if (response.equals("200")) {
                             onAddListener.onAddListener(RequestCodes.REQUEST_ADD_WALKTHROUGH_CODE);
                             dismiss();
                         } else {
@@ -131,4 +139,25 @@ public class AddWalkthroughBottomSheetModal extends BottomSheetDialogFragment {
             Volley.newRequestQueue(requireActivity().getApplicationContext()).add(request);
         }
     }
+
+    /**
+     * on fields value change, update
+     * button activity
+     */
+    private final TextWatcher onValueChange = new TextWatcher() {
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @SuppressLint("SetTextI18n")
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            view.findViewById(R.id.add_walkthrough).setEnabled(!TextUtils.isEmpty(walkthroughTitle.getText().toString())
+                    && !TextUtils.isEmpty(walkthroughDescription.getText().toString())
+                    && !TextUtils.isEmpty(walkthroughThumbnail.getText().toString()));
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+
+        }
+    };
 }

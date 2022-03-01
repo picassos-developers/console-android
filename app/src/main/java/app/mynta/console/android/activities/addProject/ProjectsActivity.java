@@ -1,4 +1,4 @@
-package app.mynta.console.android.activities;
+package app.mynta.console.android.activities.addProject;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -17,7 +17,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import app.mynta.console.android.R;
 
-import app.mynta.console.android.activities.addProject.AddProjectActivity;
+import app.mynta.console.android.activities.MainActivity;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.adapter.ProjectsAdapter;
 import app.mynta.console.android.constants.API;
@@ -85,7 +85,6 @@ public class ProjectsActivity extends AppCompatActivity {
             consolePreferences.setProjectName(project.getName());
             consolePreferences.setSecretAPIKey(project.getSak());
             consolePreferences.setPackageName(project.getPackagename());
-            consolePreferences.setFirebaseAccessToken(project.getFirebase_access_key());
             startActivity(new Intent(ProjectsActivity.this, MainActivity.class));
             finishAffinity();
         });
@@ -136,7 +135,7 @@ public class ProjectsActivity extends AppCompatActivity {
 
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
-                            Projects projects = new Projects(object.getInt("id"), object.getString("sak"), object.getString("name"), object.getString("purchasecode"), object.getString("packagename"), object.getString("firebase_access_key"));
+                            Projects projects = new Projects(object.getInt("id"), object.getString("sak"), object.getString("name"), object.getString("purchasecode"), object.getString("package"));
                             projectsList.add(projects);
                             projectsAdapter.notifyDataSetChanged();
                         }

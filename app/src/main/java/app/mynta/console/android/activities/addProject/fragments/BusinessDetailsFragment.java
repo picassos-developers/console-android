@@ -65,6 +65,7 @@ public class BusinessDetailsFragment extends Fragment {
         view.findViewById(R.id.next).setOnClickListener(v -> {
             ((AddProjectActivity) requireActivity()).businessName = businessName.getText().toString();
             ((AddProjectActivity) requireActivity()).countryCode = code;
+            ((AddProjectActivity) requireActivity()).emailAddress = email.getText().toString();
             ((AddProjectActivity) requireActivity()).goForward();
         });
 

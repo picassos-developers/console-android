@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Mynta Console</string>
     <string name="signin">Sign in</string>
     <string name="username">Username</string>
@@ -193,13 +193,13 @@
     <string name="select_project">Open a Project</string>
     <string name="add_project">Add a new Project</string>
     <string name="password_reset_email_send">Password Reset Email Sent</string>
-    <string name="we_sent_verification_code_to">Verification code to</string>
+    <string name="we_sent_verification_code_to">Verification Code sent to:</string>
     <string name="enter_verification_code">Enter Verification Code</string>
     <string name="verification_code">Verification Code</string>
     <string name="did_not_get_email">Haven\'t received the email?</string>
     <string name="email_resent">Password Reset Email has Been Re-sent</string>
     <string name="tap_here_to_resend_it">Click here to re-send email</string>
-    <string name="verify">Verify</string>
+    <string name="verify" tools:ignore="PrivateResource">Verify</string>
     <string name="verification_code_empty">Verification code can\'t be empty</string>
     <string name="update_password">Update Password</string>
     <string name="add_new_project_description">Import a new project to your Mint Console</string>

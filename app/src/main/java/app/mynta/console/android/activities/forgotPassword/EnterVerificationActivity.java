@@ -79,10 +79,10 @@ public class EnterVerificationActivity extends AppCompatActivity {
                         Toasto.show_toast(this, getString(R.string.verification_code_expired), 1, 1);
                     } else if (response.equals("404")) {
                         Toasto.show_toast(this, getString(R.string.no_users_found), 1, 1);
-                    } else {
+                    } else if (response.startsWith("_TOK?")) {
                         Intent intent = new Intent(EnterVerificationActivity.this, ResetPasswordActivity.class);
                         intent.putExtra("email", getIntent().getStringExtra("email"));
-                        intent.putExtra("token", response);
+                        intent.putExtra("token", response.substring(5));
                         startActivity(intent);
                     }
                     requestDialog.dismiss();

@@ -5,14 +5,12 @@ public class Walkthrough {
     private String title;
     private String description;
     private String thumbnail;
-    private String date;
 
-    public Walkthrough(int id, String title, String description, String thumbnail, String date) {
+    public Walkthrough(int id, String title, String description, String thumbnail) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.thumbnail = thumbnail;
-        this.date = date;
     }
 
     public int getId() {
@@ -45,13 +43,5 @@ public class Walkthrough {
 
     public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 }

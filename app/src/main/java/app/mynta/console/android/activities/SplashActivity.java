@@ -106,7 +106,8 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
             }
         } else {
-            new Handler().postDelayed(this::requestLaunchMainInstance, 500);
+            startActivity(new Intent(SplashActivity.this, GetStartedActivity.class));
+            finish();
         }
     }
 

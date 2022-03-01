@@ -172,7 +172,7 @@ public class ViewArticleActivity extends AppCompatActivity {
         findViewById(R.id.internet_connection).setVisibility(View.GONE);
         requestDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_ARTICLE,
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_HC_ARTICLE,
                 response -> {
                     try {
                         JSONObject obj = new JSONObject(response);

@@ -81,7 +81,7 @@ public class EditCommentActivity extends AppCompatActivity {
     private void requestUpdateComment() {
         requestDialog.show();
 
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_COMMENT,
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_HC_COMMENT,
                 response -> {
                     if (response.equals("200")) {
                         Intent intent = new Intent();
