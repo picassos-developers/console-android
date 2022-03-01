@@ -42,13 +42,12 @@ public class API {
     public static final String REQUEST_UPDATE_ACCOUNT = "credentials/manage_account/request_update_account.inc.php";
     public static final String REQUEST_UPDATE_PASSWORD = "credentials/manage_account/request_update_password.inc.php";
 
-
+    public static final String REQUEST_ONESIGNAL_SETTINGS = "push_notifications/request_onesignal_settings.inc.php";
+    public static final String REQUEST_SAVE_ONESIGNAL_SETTINGS = "push_notifications/request_save_onesignal_settings.inc.php";
 
 
 
     public static final String REQUEST_REMOVE_PROVIDER = "providers/request_remove_provider.inc.php";
-    public static final String REQUEST_ONESIGNAL_SETTINGS = "push_notifications/request_onesignal_settings.inc.php";
-    public static final String REQUEST_SAVE_ONESIGNAL_SETTINGS = "push_notifications/request_save_onesignal_settings.inc.php";
     public static final String REQUEST_SAVE_FIREBASE_SETTINGS = "push_notifications/request_save_firebase_settings.inc.php";
     public static final String REQUEST_CONFIGURATION = "request_configuration.inc.php";
     public static final String REQUEST_SEND_FIREBASE_NOTIFICATION = "push_notifications/request_send_firebase_notification.inc.php";
