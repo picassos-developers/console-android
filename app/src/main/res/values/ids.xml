@@ -57,7 +57,7 @@
     <item name="push_notifications_container" type="id" />
     <item name="status_container" type="id" />
     <item name="controller_content" type="id" />
-    <item name="default_provider_container" type="id" />
+    <item name="default_navigation_container" type="id" />
     <item name="customization_card" type="id" />
     <item name="redeem_card" type="id" />
     <item name="loading_spinner_container" type="id" />
@@ -65,9 +65,9 @@
     <item name="links" type="id" />
     <item name="unique_app_visits" type="id" />
     <item name="total_members" type="id" />
-    <item name="default_provider_icon" type="id" />
+    <item name="default_navigation_icon" type="id" />
     <item name="loading_spinner" type="id" />
-    <item name="default_provider" type="id" />
+    <item name="default_navigation" type="id" />
     <item name="comment_description" type="id" />
     <item name="update_comment" type="id" />
     <item name="navigation_title_input" type="id" />

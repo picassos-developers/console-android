@@ -1,4 +1,4 @@
-package app.mynta.console.android.activities.addProject;
+package app.mynta.console.android.activities.projects;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;

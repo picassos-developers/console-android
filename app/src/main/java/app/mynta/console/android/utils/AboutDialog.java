@@ -21,7 +21,7 @@ import androidx.annotation.NonNull;
 
 import app.mynta.console.android.Config;
 import app.mynta.console.android.activities.LoginActivity;
-import app.mynta.console.android.activities.addProject.ProjectsActivity;
+import app.mynta.console.android.activities.projects.ProjectsActivity;
 import app.mynta.console.android.activities.about.AboutConsoleActivity;
 import app.mynta.console.android.activities.about.GenerateAuthLoginActivity;
 import app.mynta.console.android.activities.about.ManageAccountActivity;

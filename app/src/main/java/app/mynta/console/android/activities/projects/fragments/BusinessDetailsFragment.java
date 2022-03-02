@@ -1,4 +1,4 @@
-package app.mynta.console.android.activities.addProject.fragments;
+package app.mynta.console.android.activities.projects.fragments;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.Objects;
 
 import app.mynta.console.android.R;
-import app.mynta.console.android.activities.addProject.AddProjectActivity;
+import app.mynta.console.android.activities.projects.AddProjectActivity;
 import app.mynta.console.android.adapter.CountriesAdapter;
 import app.mynta.console.android.models.Countries;
 import app.mynta.console.android.utils.Helper;

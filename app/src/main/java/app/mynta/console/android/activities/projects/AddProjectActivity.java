@@ -1,7 +1,8 @@
-package app.mynta.console.android.activities.addProject;
+package app.mynta.console.android.activities.projects;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -17,11 +18,12 @@ import androidx.fragment.app.FragmentManager;
 
 import app.mynta.console.android.R;
 
-import app.mynta.console.android.activities.addProject.fragments.AddFirstContentProviderFragment;
-import app.mynta.console.android.activities.addProject.fragments.ChooseAppCategoryFragment;
-import app.mynta.console.android.activities.addProject.fragments.BusinessDetailsFragment;
-import app.mynta.console.android.activities.addProject.fragments.VerifyPurchaseFragment;
-import app.mynta.console.android.activities.addProject.fragments.NameAppFragment;
+import app.mynta.console.android.activities.MainActivity;
+import app.mynta.console.android.activities.projects.fragments.AddFirstContentProviderFragment;
+import app.mynta.console.android.activities.projects.fragments.ChooseAppCategoryFragment;
+import app.mynta.console.android.activities.projects.fragments.BusinessDetailsFragment;
+import app.mynta.console.android.activities.projects.fragments.VerifyPurchaseFragment;
+import app.mynta.console.android.activities.projects.fragments.NameAppFragment;
 import app.mynta.console.android.constants.API;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.utils.Helper;
@@ -32,6 +34,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.shuhart.stepview.StepView;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -210,12 +213,7 @@ public class AddProjectActivity extends AppCompatActivity {
                                 }
                             };
                             handler.postDelayed(runnable, 1000);
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    requestCreateProject();
-                                }
-                            }, 10500);
+                            new Handler().postDelayed(this::requestCreateProject, 10000);
                             break;
                         case "403":
                             Toasto.show_toast(getApplicationContext(), getString(R.string.purchase_code_already_exists), 1, 1);
@@ -254,14 +252,21 @@ public class AddProjectActivity extends AppCompatActivity {
                         JSONObject object = new JSONObject(response);
                         JSONObject root = object.getJSONObject("project");
 
-                        JSONObject callback = root.getJSONObject("callback");
-                        if (callback.getString("code").equals("200")) {
-                            Toasto.show_toast(this, "done", 1, 2);
-                            createProjectDialog.dismiss();
+                        JSONObject callback = root.getJSONObject("response");
+                        if (callback.getInt("code") == 200) {
+                            JSONArray array = root.getJSONArray("details");
+                            for (int i = 0; i < array.length(); i++) {
+                                JSONObject project = array.getJSONObject(i);
+                                consolePreferences.setProjectName(project.getString("name"));
+                                consolePreferences.setSecretAPIKey(project.getString("sak"));
+                                consolePreferences.setPackageName(project.getString("package"));
+                            }
+                            startActivity(new Intent(AddProjectActivity.this, MainActivity.class));
+                            finishAffinity();
                         } else {
                             Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);
-                            createProjectDialog.dismiss();
                         }
+                        createProjectDialog.dismiss();
                     } catch (JSONException e) {
                         Toasto.show_toast(this, getString(R.string.unknown_issue), 1, 1);
                         createProjectDialog.dismiss();

@@ -1,4 +1,4 @@
-package app.mynta.console.android.activities.addProject.fragments;
+package app.mynta.console.android.activities.projects.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -18,7 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import app.mynta.console.android.R;
-import app.mynta.console.android.activities.addProject.AddProjectActivity;
+import app.mynta.console.android.activities.projects.AddProjectActivity;
 import app.mynta.console.android.models.viewModel.SharedViewModel;
 import app.mynta.console.android.sheets.EditPackageNameCodeBottomSheetModal;
 import app.mynta.console.android.utils.Helper;

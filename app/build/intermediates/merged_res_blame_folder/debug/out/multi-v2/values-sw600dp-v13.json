@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "/Users/noor/Desktop/console-android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "/Users/noor/.gradle/caches/transforms-3/30c5ef947b73ebb7a08a2cbb0b159f1d/transformed/jetified-cardinalmobilesdk-2.2.4-1/res/values-sw600dp-v13/values-sw600dp-v13.xml",

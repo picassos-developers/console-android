@@ -78,7 +78,7 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login_providers.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_manage_account.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_manage_account.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_manage_ads.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/activity_manage_updates.xml" value="0.26979166666666665" />
         <entry key="app/src/main/res/layout/activity_manage_users.xml" value="0.2677083333333333" />

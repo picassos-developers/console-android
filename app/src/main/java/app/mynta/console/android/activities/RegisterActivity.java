@@ -19,7 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import app.mynta.console.android.R;
 
-import app.mynta.console.android.activities.addProject.ProjectsActivity;
+import app.mynta.console.android.activities.projects.ProjectsActivity;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.constants.API;
 import app.mynta.console.android.libraries.passwordstrength.PasswordStrength;

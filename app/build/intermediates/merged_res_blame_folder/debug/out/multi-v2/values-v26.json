@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
+            "outputFile": "/Users/noor/Desktop/console-android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
                     "source": "/Users/noor/.gradle/caches/transforms-3/195ecb8f78333c195fc14bdeec3bab62/transformed/jetified-android-sdk-0.6.0/res/values-v26/values-v26.xml",

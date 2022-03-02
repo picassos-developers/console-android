@@ -184,7 +184,7 @@ public class NavigationFragment extends Fragment {
         navigationsList.clear();
         navigationsAdapter.notifyDataSetChanged();
 
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_PROVIDER_MENUS,
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_NAVIGATIONS,
                 response -> {
                     Log.v("TEST", response);
 
@@ -196,47 +196,47 @@ public class NavigationFragment extends Fragment {
 
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
-                            Navigations menus = new Navigations(object.getInt("id"), object.getInt("identifier"), object.getInt("enabled"), object.getString("type"),  object.getString("label"), object.getString("icon"));
+                            Navigations menus = new Navigations(object.getInt("id"), object.getInt("navigation_id"), object.getInt("enabled"), object.getString("type"),  object.getString("label"), object.getString("icon"));
                             navigationsList.add(menus);
                             navigationsAdapter.notifyDataSetChanged();
                         }
 
-                        // default provider
-                        JSONObject default_provider = root.getJSONObject("default_provider");
+                        // default navigation
+                        JSONObject default_navigation = root.getJSONObject("default_navigation");
 
-                        ImageView defaultProviderIcon = view.findViewById(R.id.default_provider_icon);
-                        switch (default_provider.getString("type")) {
+                        ImageView defaultNavigationIcon = view.findViewById(R.id.default_navigation_icon);
+                        switch (default_navigation.getString("type")) {
                             case "wordpress":
-                                defaultProviderIcon.setImageResource(R.drawable.icon_wordpress);
+                                defaultNavigationIcon.setImageResource(R.drawable.icon_wordpress);
                                 break;
                             case "webview":
-                                defaultProviderIcon.setImageResource(R.drawable.icon_webview);
+                                defaultNavigationIcon.setImageResource(R.drawable.icon_webview);
                                 break;
                             case "youtube":
-                                defaultProviderIcon.setImageResource(R.drawable.icon_youtube);
+                                defaultNavigationIcon.setImageResource(R.drawable.icon_youtube);
                                 break;
                             case "vimeo":
-                                defaultProviderIcon.setImageResource(R.drawable.icon_vimeo);
+                                defaultNavigationIcon.setImageResource(R.drawable.icon_vimeo);
                                 break;
                             case "facebook":
-                                defaultProviderIcon.setImageResource(R.drawable.icon_facebook);
+                                defaultNavigationIcon.setImageResource(R.drawable.icon_facebook);
                                 break;
                             case "pinterest":
-                                defaultProviderIcon.setImageResource(R.drawable.icon_pinterest);
+                                defaultNavigationIcon.setImageResource(R.drawable.icon_pinterest);
                                 break;
                             case "maps":
-                                defaultProviderIcon.setImageResource(R.drawable.icon_maps);
+                                defaultNavigationIcon.setImageResource(R.drawable.icon_maps);
                                 break;
                             case "imgur":
-                                defaultProviderIcon.setImageResource(R.drawable.icon_imgur);
+                                defaultNavigationIcon.setImageResource(R.drawable.icon_imgur);
                                 break;
                         }
-                        TextView defaultProvider = view.findViewById(R.id.default_provider);
-                        defaultProvider.setText(getString(R.string.default_provider) + ": " + default_provider.getString("label").substring(0, 1).toUpperCase() + default_provider.getString("label").substring(1));
-                        // set provider
-                        view.findViewById(R.id.default_provider_container).setOnClickListener(v -> {
+                        TextView defaultNavigation = view.findViewById(R.id.default_navigation);
+                        defaultNavigation.setText(getString(R.string.default_provider) + ": " + default_navigation.getString("label").substring(0, 1).toUpperCase() + default_navigation.getString("label").substring(1));
+                        // set navigation
+                        view.findViewById(R.id.default_navigation_container).setOnClickListener(v -> {
                             try {
-                                bundle.putInt("identifier", default_provider.getInt("identifier"));
+                                bundle.putInt("identifier", default_navigation.getInt("identifier"));
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }

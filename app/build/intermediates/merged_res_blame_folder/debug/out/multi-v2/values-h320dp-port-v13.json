@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "outputFile": "/Users/noor/Desktop/console-android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
                     "source": "/Users/noor/.gradle/caches/transforms-3/e594ad2869b86feed3711bb579a70d0a/transformed/material-1.6.0-alpha02/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",

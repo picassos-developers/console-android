@@ -21,7 +21,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import app.mynta.console.android.R;
 
-import app.mynta.console.android.activities.addProject.ProjectsActivity;
+import app.mynta.console.android.activities.projects.ProjectsActivity;
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.constants.API;
 import app.mynta.console.android.utils.RequestDialog;

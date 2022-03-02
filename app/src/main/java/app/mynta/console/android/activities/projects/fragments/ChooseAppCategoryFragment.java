@@ -1,4 +1,4 @@
-package app.mynta.console.android.activities.addProject.fragments;
+package app.mynta.console.android.activities.projects.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import app.mynta.console.android.R;
-import app.mynta.console.android.activities.addProject.AddProjectActivity;
+import app.mynta.console.android.activities.projects.AddProjectActivity;
 import app.mynta.console.android.adapter.AppCategoryAdapter;
 import app.mynta.console.android.models.AppCategory;
 

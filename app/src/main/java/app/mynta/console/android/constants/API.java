@@ -45,6 +45,8 @@ public class API {
     public static final String REQUEST_ONESIGNAL_SETTINGS = "push_notifications/request_onesignal_settings.inc.php";
     public static final String REQUEST_SAVE_ONESIGNAL_SETTINGS = "push_notifications/request_save_onesignal_settings.inc.php";
 
+    public static final String REQUEST_NAVIGATIONS = "navigations/request_navigations.inc.php";
+
 
 
     public static final String REQUEST_REMOVE_PROVIDER = "providers/request_remove_provider.inc.php";
@@ -64,7 +66,6 @@ public class API {
 
     public static final String REQUEST_UPDATE_NOTIFICATION_PREFERENCES_OPTION = "configuration/request_update_notifications_preferences_option.inc.php";
     public static final String REQUEST_NOTIFICATIONS_PREFERENCES = "request_notifications_preferences.inc.php";
-    public static final String REQUEST_PROVIDER_MENUS = "providers/request_provider_menus.inc.php";
     public static final String REQUEST_WEBVIEW_DETAILS = "providers/request_webview_provider.inc.php";
     public static final String REQUEST_ADD_WEBVIEW_PROVIDER = "providers/request_add_webview_provider.inc.php";
     public static final String REQUEST_LOGIN_PROVIDERS = "members/login_providers/request_login_providers.inc.php";

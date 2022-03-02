@@ -97,7 +97,7 @@ public class ChooseDefaultNavigationBottomSheetModal extends BottomSheetDialogFr
         navigationsList.clear();
         defaultNavigationAdapter.notifyDataSetChanged();
 
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_PROVIDER_MENUS,
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_NAVIGATIONS,
                 response -> {
                     try {
                         JSONObject obj = new JSONObject(response);

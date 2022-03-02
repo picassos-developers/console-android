@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
+            "outputFile": "/Users/noor/Desktop/console-android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
             "map": [
                 {
                     "source": "/Users/noor/.gradle/caches/transforms-3/ebe55602b522d645dd4f7a62403e8391/transformed/appcompat-1.4.1/res/values-hu/values-hu.xml",

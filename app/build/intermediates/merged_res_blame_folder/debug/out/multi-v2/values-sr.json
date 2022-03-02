@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/noor/Desktop/Projects/Mint Console/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sr/values-sr.xml",
+            "outputFile": "/Users/noor/Desktop/console-android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sr/values-sr.xml",
             "map": [
                 {
                     "source": "/Users/noor/.gradle/caches/transforms-3/7dc7925efce59477d54b88955af06710/transformed/jetified-firebase-messaging-23.0.0/res/values-sr/values.xml",

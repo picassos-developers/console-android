@@ -1,4 +1,4 @@
-package app.mynta.console.android.activities.addProject.fragments;
+package app.mynta.console.android.activities.projects.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import app.mynta.console.android.R;
-import app.mynta.console.android.activities.addProject.AddProjectActivity;
+import app.mynta.console.android.activities.projects.AddProjectActivity;
 import app.mynta.console.android.utils.Helper;
 
 public class VerifyPurchaseFragment extends Fragment {

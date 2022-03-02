@@ -1,4 +1,4 @@
-package app.mynta.console.android.activities.addProject.fragments;
+package app.mynta.console.android.activities.projects.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
