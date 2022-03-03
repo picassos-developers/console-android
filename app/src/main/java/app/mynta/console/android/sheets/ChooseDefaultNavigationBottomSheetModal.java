@@ -63,7 +63,7 @@ public class ChooseDefaultNavigationBottomSheetModal extends BottomSheetDialogFr
         RecyclerView navigationsRecyclerview = view.findViewById(R.id.recycler_providers);
 
         // providers adapter
-        defaultNavigationAdapter = new DefaultNavigationAdapter(requireContext(), navigationsList, defaultNavigation, click -> requestUpdateDefaultProvider(click.getIdentifier()));
+        defaultNavigationAdapter = new DefaultNavigationAdapter(requireContext(), navigationsList, defaultNavigation, click -> requestUpdateDefaultNavigation(click.getIdentifier()));
         navigationsRecyclerview.setAdapter(defaultNavigationAdapter);
         navigationsRecyclerview.setLayoutManager(new LinearLayoutManager(requireContext()));
 
@@ -107,7 +107,7 @@ public class ChooseDefaultNavigationBottomSheetModal extends BottomSheetDialogFr
 
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
-                            Navigations menus = new Navigations(object.getInt("id"), object.getInt("identifier"), object.getInt("enabled"), object.getString("type"),  object.getString("label"), object.getString("icon"));
+                            Navigations menus = new Navigations(object.getInt("id"), object.getInt("navigation_id"), object.getInt("enabled"), object.getString("type"),  object.getString("label"), object.getString("icon"));
                             navigationsList.add(menus);
                             defaultNavigationAdapter.notifyDataSetChanged();
                         }
@@ -130,14 +130,14 @@ public class ChooseDefaultNavigationBottomSheetModal extends BottomSheetDialogFr
     }
 
     /**
-     * request select default provider
+     * request select default navigation
      * @param identifier for provider id
      */
-    private void requestUpdateDefaultProvider(int identifier) {
+    private void requestUpdateDefaultNavigation(int identifier) {
         if (consolePreferences.loadSecretAPIKey().equals("demo")) {
             Toasto.show_toast(requireContext(), getString(R.string.demo_project), 1, 0);
         } else {
-            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_PROVIDER,
+            StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_UPDATE_DEFAULT_NAVIGATION,
                     response -> {
                         sharedViewModel.setRequestCode(RequestCodes.REQUEST_UPDATE_NAVIGATIONS);
                         dismiss();

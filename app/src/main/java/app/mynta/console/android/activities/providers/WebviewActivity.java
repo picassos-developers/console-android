@@ -31,7 +31,7 @@ import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.adapter.LoadingSpinnerAdapter;
 import app.mynta.console.android.constants.API;
 import app.mynta.console.android.models.LoadingSpinners;
-import app.mynta.console.android.sheets.ProviderOptionsBottomSheetModal;
+import app.mynta.console.android.sheets.NavigationOptionsBottomSheetModal;
 import app.mynta.console.android.utils.Helper;
 import app.mynta.console.android.utils.RequestDialog;
 import app.mynta.console.android.utils.Toasto;
@@ -44,7 +44,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class WebviewActivity extends AppCompatActivity implements ProviderOptionsBottomSheetModal.OnRemoveListener {
+public class WebviewActivity extends AppCompatActivity implements NavigationOptionsBottomSheetModal.OnRemoveListener {
 
     private Bundle bundle;
     private Intent intent;
@@ -53,11 +53,11 @@ public class WebviewActivity extends AppCompatActivity implements ProviderOption
 
     private String request;
     private String spinner;
-    private int default_browser, bookmarks, downloads, qrscanner;
+    private int launch_browser, bookmarks, downloads, qrscanner;
 
     private TextView loadingSpinner;
     private EditText label, icon, baseUrl;
-    private SwitchCompat defaultBrowser, bookmarksPage, downloadsPage, qrCodeScanner;
+    private SwitchCompat launchBrowser, bookmarksPage, downloadsPage, qrCodeScanner;
 
     @SuppressLint({"WrongViewCast", "NotifyDataSetChanged"})
     @Override
@@ -87,9 +87,9 @@ public class WebviewActivity extends AppCompatActivity implements ProviderOption
         findViewById(R.id.more_options).setOnClickListener(v -> {
             bundle.putInt("identifier", getIntent().getIntExtra("identifier", 0));
             bundle.putString("type", getIntent().getStringExtra("type"));
-            ProviderOptionsBottomSheetModal providerOptionsBottomSheetModal = new ProviderOptionsBottomSheetModal();
-            providerOptionsBottomSheetModal.setArguments(bundle);
-            providerOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
+            NavigationOptionsBottomSheetModal navigationOptionsBottomSheetModal = new NavigationOptionsBottomSheetModal();
+            navigationOptionsBottomSheetModal.setArguments(bundle);
+            navigationOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
         });
         if (request.equals("add")) {
             findViewById(R.id.more_options).setVisibility(View.GONE);
@@ -108,7 +108,7 @@ public class WebviewActivity extends AppCompatActivity implements ProviderOption
         // webview data
         baseUrl = findViewById(R.id.base_url);
         loadingSpinner = findViewById(R.id.loading_spinner);
-        defaultBrowser = findViewById(R.id.system_default_browser);
+        launchBrowser = findViewById(R.id.system_default_browser);
         bookmarksPage = findViewById(R.id.bookmarks_page);
         downloadsPage = findViewById(R.id.downloads_page);
         qrCodeScanner = findViewById(R.id.qr_code_scanner);
@@ -174,7 +174,7 @@ public class WebviewActivity extends AppCompatActivity implements ProviderOption
         Button save = findViewById(R.id.update_webview);
         save.setOnClickListener(v -> {
             if (!TextUtils.isEmpty(baseUrl.getText().toString()) && spinner != null) {
-                if (defaultBrowser.isChecked()) { default_browser = 1; } else { default_browser = 0; }
+                if (launchBrowser.isChecked()) { launch_browser = 1; } else { launch_browser = 0; }
                 if (bookmarksPage.isChecked()) { bookmarks = 1; } else { bookmarks = 0; }
                 if (downloadsPage.isChecked()) { downloads = 1; } else { downloads = 0; }
                 if (qrCodeScanner.isChecked()) { qrscanner = 1; } else { qrscanner = 0; }
@@ -231,10 +231,10 @@ public class WebviewActivity extends AppCompatActivity implements ProviderOption
                         // default browser
                         switch (root.getInt("default_browser")) {
                             case 1:
-                                defaultBrowser.setChecked(true);
+                                launchBrowser.setChecked(true);
                                 break;
                             case 0:
-                                defaultBrowser.setChecked(false);
+                                launchBrowser.setChecked(false);
                                 break;
                         }
 
@@ -320,7 +320,7 @@ public class WebviewActivity extends AppCompatActivity implements ProviderOption
                     params.put("icon", icon.getText().toString());
                     params.put("base_url", baseUrl.getText().toString());
                     params.put("loading_spinner", spinner);
-                    params.put("default_browser", String.valueOf(default_browser));
+                    params.put("launch_browser", String.valueOf(launch_browser));
                     params.put("bookmarks_page", String.valueOf(bookmarks));
                     params.put("downloads_page", String.valueOf(downloads));
                     params.put("qr_code_scanner", String.valueOf(qrscanner));
@@ -363,7 +363,7 @@ public class WebviewActivity extends AppCompatActivity implements ProviderOption
                     params.put("icon", icon.getText().toString());
                     params.put("base_url", baseUrl.getText().toString());
                     params.put("loading_spinner", spinner);
-                    params.put("default_browser", String.valueOf(default_browser));
+                    params.put("default_browser", String.valueOf(launch_browser));
                     params.put("bookmarks_page", String.valueOf(bookmarks));
                     params.put("downloads_page", String.valueOf(downloads));
                     params.put("qr_code_scanner", String.valueOf(qrscanner));

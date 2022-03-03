@@ -25,7 +25,7 @@ import app.mynta.console.android.utils.Toasto;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ProviderOptionsBottomSheetModal extends BottomSheetDialogFragment {
+public class NavigationOptionsBottomSheetModal extends BottomSheetDialogFragment {
 
     View view;
     RequestDialog requestDialog;
@@ -37,7 +37,7 @@ public class ProviderOptionsBottomSheetModal extends BottomSheetDialogFragment {
 
     OnRemoveListener onRemoveListener;
 
-    public ProviderOptionsBottomSheetModal() {
+    public NavigationOptionsBottomSheetModal() {
 
     }
 
@@ -47,7 +47,7 @@ public class ProviderOptionsBottomSheetModal extends BottomSheetDialogFragment {
         try {
             onRemoveListener = (OnRemoveListener) context;
         } catch (final ClassCastException e) {
-            throw new ClassCastException(context.toString() + " must implement onRemoveListener");
+            throw new ClassCastException(context + " must implement onRemoveListener");
         }
     }
 
@@ -55,17 +55,17 @@ public class ProviderOptionsBottomSheetModal extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.provider_options_bottom_sheet_modal, container, false);
+        view = inflater.inflate(R.layout.navigation_options_bottom_sheet_modal, container, false);
 
-        // get provider details
+        // get navigation details
         int identifier = requireArguments().getInt("identifier");
 
         // initialize request dialog
         requestDialog = new RequestDialog(requireContext());
 
-        // remove provider
-        view.findViewById(R.id.remove_provider).setOnClickListener(v -> {
-            requestRemoveProvider(identifier);
+        // remove navigation
+        view.findViewById(R.id.remove_navigation).setOnClickListener(v -> {
+            requestRemoveNavigation(identifier);
             dismiss();
         });
 
@@ -79,14 +79,14 @@ public class ProviderOptionsBottomSheetModal extends BottomSheetDialogFragment {
     }
 
     /**
-     * request remove provider
-     * @param id for provider id
+     * request remove navigation
+     * @param id for navigation id
      */
-    private void requestRemoveProvider(int id) {
+    private void requestRemoveNavigation(int id) {
         requestDialog.show();
-        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_REMOVE_PROVIDER,
+        StringRequest request = new StringRequest(Request.Method.POST, API.API_URL + API.REQUEST_REMOVE_NAVIGATION,
                 response -> {
-                    onRemoveListener.onRemoveListener(RequestCodes.REQUEST_REMOVE_PROVIDER_CODE);
+                    onRemoveListener.onRemoveListener(RequestCodes.REQUEST_REMOVE_NAVIGATION_CODE);
                     requestDialog.dismiss();
                 }, error -> {
             requestDialog.dismiss();

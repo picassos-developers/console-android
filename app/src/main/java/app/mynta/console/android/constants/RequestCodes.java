@@ -7,7 +7,7 @@ public class RequestCodes {
     public static final int REQUEST_ADD_WALKTHROUGH_CODE = 4;
     public static final int REQUEST_REMOVE_COMMENT_CODE = 5;
     public static final int REQUEST_UPDATE_COMMENT_CODE = 6;
-    public static final int REQUEST_REMOVE_PROVIDER_CODE = 7;
+    public static final int REQUEST_REMOVE_NAVIGATION_CODE = 7;
     public static final int REQUEST_REMOVE_MEMBER_CODE = 8;
     public static final int REQUEST_UPDATE_WALKTRHOUGH_CODE = 9;
 }

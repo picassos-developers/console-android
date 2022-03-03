@@ -33,7 +33,7 @@ import app.mynta.console.android.adapter.VideoStylesAdapter;
 import app.mynta.console.android.constants.API;
 import app.mynta.console.android.constants.AuthAPI;
 import app.mynta.console.android.models.VideoDesigns;
-import app.mynta.console.android.sheets.ProviderOptionsBottomSheetModal;
+import app.mynta.console.android.sheets.NavigationOptionsBottomSheetModal;
 import app.mynta.console.android.utils.Helper;
 import app.mynta.console.android.utils.InputFilterRange;
 import app.mynta.console.android.utils.RequestDialog;
@@ -47,7 +47,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class YoutubeActivity extends AppCompatActivity implements ProviderOptionsBottomSheetModal.OnRemoveListener {
+public class YoutubeActivity extends AppCompatActivity implements NavigationOptionsBottomSheetModal.OnRemoveListener {
 
     private Bundle bundle;
     private Intent intent;
@@ -87,9 +87,9 @@ public class YoutubeActivity extends AppCompatActivity implements ProviderOption
         findViewById(R.id.more_options).setOnClickListener(v -> {
             bundle.putInt("identifier", getIntent().getIntExtra("identifier", 0));
             bundle.putString("type", getIntent().getStringExtra("type"));
-            ProviderOptionsBottomSheetModal providerOptionsBottomSheetModal = new ProviderOptionsBottomSheetModal();
-            providerOptionsBottomSheetModal.setArguments(bundle);
-            providerOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
+            NavigationOptionsBottomSheetModal navigationOptionsBottomSheetModal = new NavigationOptionsBottomSheetModal();
+            navigationOptionsBottomSheetModal.setArguments(bundle);
+            navigationOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
         });
         if (request.equals("add")) {
             findViewById(R.id.more_options).setVisibility(View.GONE);
@@ -176,7 +176,7 @@ public class YoutubeActivity extends AppCompatActivity implements ProviderOption
 
                         accessToken.setText(root.getString("access_token"));
                         channelId.setText(root.getString("channel_id"));
-                        perPage.setText(root.getString("per_page"));
+                        perPage.setText(String.valueOf(root.getInt("per_page")));
 
                         auth = root.getString("video_design");
                         switch (root.getString("video_design")) {

@@ -46,10 +46,27 @@ public class API {
     public static final String REQUEST_SAVE_ONESIGNAL_SETTINGS = "push_notifications/request_save_onesignal_settings.inc.php";
 
     public static final String REQUEST_NAVIGATIONS = "navigations/request_navigations.inc.php";
+    public static final String REQUEST_UPDATE_DEFAULT_NAVIGATION = "navigations/request_update_default_navigation.inc.php";
+    public static final String REQUEST_REMOVE_NAVIGATION = "navigations/request_remove_navigation.inc.php";
+    public static final String REQUEST_ADD_WEBVIEW_PROVIDER = "navigations/request_add_webview_provider.inc.php";
+    public static final String REQUEST_YOUTUBE_DETAILS = "navigations/request_youtube_provider.inc.php";
+    public static final String REQUEST_UPDATE_YOUTUBE_PROVIDER = "navigations/request_update_youtube_provider.inc.php";
+    public static final String REQUEST_ADD_YOUTUBE_PROVIDER = "navigations/request_add_youtube_provider.inc.php";
+    public static final String REQUEST_VIMEO_DETAILS = "navigations/request_vimeo_provider.inc.php";
+    public static final String REQUEST_UPDATE_VIMEO_PROVIDER = "navigations/request_update_vimeo_provider.inc.php";
+    public static final String REQUEST_ADD_VIMEO_PROVIDER = "navigations/request_add_vimeo_provider.inc.php";
 
 
 
-    public static final String REQUEST_REMOVE_PROVIDER = "providers/request_remove_provider.inc.php";
+
+
+
+
+
+
+
+
+
     public static final String REQUEST_SAVE_FIREBASE_SETTINGS = "push_notifications/request_save_firebase_settings.inc.php";
     public static final String REQUEST_CONFIGURATION = "request_configuration.inc.php";
     public static final String REQUEST_SEND_FIREBASE_NOTIFICATION = "push_notifications/request_send_firebase_notification.inc.php";
@@ -66,34 +83,27 @@ public class API {
 
     public static final String REQUEST_UPDATE_NOTIFICATION_PREFERENCES_OPTION = "configuration/request_update_notifications_preferences_option.inc.php";
     public static final String REQUEST_NOTIFICATIONS_PREFERENCES = "request_notifications_preferences.inc.php";
-    public static final String REQUEST_WEBVIEW_DETAILS = "providers/request_webview_provider.inc.php";
-    public static final String REQUEST_ADD_WEBVIEW_PROVIDER = "providers/request_add_webview_provider.inc.php";
+    public static final String REQUEST_WEBVIEW_DETAILS = "navigations/request_webview_provider.inc.php";
     public static final String REQUEST_LOGIN_PROVIDERS = "members/login_providers/request_login_providers.inc.php";
     public static final String REQUEST_UPDATE_LOGIN_PROVIDERS = "app/request_update_login_providers.inc.php";
-    public static final String REQUEST_UPDATE_WEBVIEW = "providers/request_update_webview_provider.inc.php";
-    public static final String REQUEST_FACEBOOK_DETAILS = "providers/request_facebook_provider.inc.php";
-    public static final String REQUEST_UPDATE_FACEBOOK_PROVIDER = "providers/request_update_facebook_provider.inc.php";
-    public static final String REQUEST_ADD_FACEBOOK_PROVIDER = "providers/request_add_facebook_provider.inc.php";
-    public static final String REQUEST_YOUTUBE_DETAILS = "providers/request_youtube_provider.inc.php";
-    public static final String REQUEST_UPDATE_YOUTUBE_PROVIDER = "providers/request_update_youtube_provider.inc.php";
-    public static final String REQUEST_ADD_YOUTUBE_PROVIDER = "providers/request_add_youtube_provider.inc.php";
-    public static final String REQUEST_VIMEO_DETAILS = "providers/request_vimeo_provider.inc.php";
-    public static final String REQUEST_UPDATE_VIMEO_PROVIDER = "providers/request_update_vimeo_provider.inc.php";
-    public static final String REQUEST_ADD_VIMEO_PROVIDER = "providers/request_add_vimeo_provider.inc.php";
-    public static final String REQUEST_PINTEREST_DETAILS = "providers/request_pinterest_provider.inc.php";
-    public static final String REQUEST_UPDATE_PINTEREST_PROVIDER = "providers/request_update_pinterest_provider.inc.php";
-    public static final String REQUEST_ADD_PINTEREST_PROVIDER = "providers/request_add_pinterest_provider.inc.php";
-    public static final String REQUEST_IMGUR_DETAILS = "providers/request_imgur_provider.inc.php";
-    public static final String REQUEST_UPDATE_IMGUR_PROVIDER = "providers/request_update_imgur_provider.inc.php";
-    public static final String REQUEST_ADD_IMGUR_PROVIDER = "providers/request_add_imgur_provider.inc.php";
-    public static final String REQUEST_MAPS_DETAILS = "providers/request_google_maps_provider.inc.php";
-    public static final String REQUEST_UPDATE_MAPS_PROVIDER = "providers/request_update_google_maps_provider.inc.php";
-    public static final String REQUEST_ADD_MAPS_PROVIDER = "providers/request_add_google_maps_provider.inc.php";
-    public static final String REQUEST_UPDATE_PROVIDERS = "providers/request_update_providers.inc.php";
-    public static final String REQUEST_WORDPRESS_DETAILS = "providers/request_wordpress_provider.inc.php";
+    public static final String REQUEST_UPDATE_WEBVIEW = "navigations/request_update_webview_provider.inc.php";
+    public static final String REQUEST_FACEBOOK_DETAILS = "navigations/request_facebook_provider.inc.php";
+    public static final String REQUEST_UPDATE_FACEBOOK_PROVIDER = "navigations/request_update_facebook_provider.inc.php";
+    public static final String REQUEST_ADD_FACEBOOK_PROVIDER = "navigations/request_add_facebook_provider.inc.php";
+    public static final String REQUEST_PINTEREST_DETAILS = "navigations/request_pinterest_provider.inc.php";
+    public static final String REQUEST_UPDATE_PINTEREST_PROVIDER = "navigations/request_update_pinterest_provider.inc.php";
+    public static final String REQUEST_ADD_PINTEREST_PROVIDER = "navigations/request_add_pinterest_provider.inc.php";
+    public static final String REQUEST_IMGUR_DETAILS = "navigations/request_imgur_provider.inc.php";
+    public static final String REQUEST_UPDATE_IMGUR_PROVIDER = "navigations/request_update_imgur_provider.inc.php";
+    public static final String REQUEST_ADD_IMGUR_PROVIDER = "navigations/request_add_imgur_provider.inc.php";
+    public static final String REQUEST_MAPS_DETAILS = "navigations/request_google_maps_provider.inc.php";
+    public static final String REQUEST_UPDATE_MAPS_PROVIDER = "navigations/request_update_google_maps_provider.inc.php";
+    public static final String REQUEST_ADD_MAPS_PROVIDER = "navigations/request_add_google_maps_provider.inc.php";
+    public static final String REQUEST_UPDATE_PROVIDERS = "navigations/request_update_providers.inc.php";
+    public static final String REQUEST_WORDPRESS_DETAILS = "navigations/request_wordpress_provider.inc.php";
     public static final String REQUEST_MANAGE_UPDATES = "manage_updates/request_manage_updates.inc.php";
-    public static final String REQUEST_UPDATE_WORDPRESS = "providers/request_update_wordpress_provider.inc.php";
-    public static final String REQUEST_ADD_WORDPRESS_PROVIDER = "providers/request_add_wordpress_provider.inc.php";
+    public static final String REQUEST_UPDATE_WORDPRESS = "navigations/request_update_wordpress_provider.inc.php";
+    public static final String REQUEST_ADD_WORDPRESS_PROVIDER = "navigations/request_add_wordpress_provider.inc.php";
     public static final String REQUEST_UPDATE_MANAGE_UPDATES = "manage_updates/request_update_manage_updates.inc.php";
 
     public static final String REQUEST_SUBMIT_TICKET = "help_centre/request_submit_request.inc.php";
@@ -109,7 +119,6 @@ public class API {
     public static final String REQUEST_PROMOTION = "app/request_promotion.inc.php";
     public static final String REQUEST_UPDATE_PROJECT_VISITS = "app/request_update_project_visits.inc.php";
     public static final String REQUEST_UPDATE_EMAIL = "app/request_update_email.inc.php";
-    public static final String REQUEST_UPDATE_PROVIDER = "providers/request_update_default_provider.inc.php";
     public static final String REQUEST_PRODUCTS = "store/request_products.inc.php";
     public static final String REQUEST_RECOMMENDED_PRODUCTS = "store/request_recommended_products.inc.php";
     public static final String REQUEST_STORE_REVIEWS = "store/request_reviews.inc.php";

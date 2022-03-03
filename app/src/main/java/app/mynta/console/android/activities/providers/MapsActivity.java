@@ -31,7 +31,7 @@ import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.adapter.MapStylesAdapter;
 import app.mynta.console.android.constants.API;
 import app.mynta.console.android.models.Maps;
-import app.mynta.console.android.sheets.ProviderOptionsBottomSheetModal;
+import app.mynta.console.android.sheets.NavigationOptionsBottomSheetModal;
 import app.mynta.console.android.utils.Helper;
 import app.mynta.console.android.utils.RequestDialog;
 import app.mynta.console.android.utils.Toasto;
@@ -44,7 +44,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MapsActivity extends AppCompatActivity implements ProviderOptionsBottomSheetModal.OnRemoveListener {
+public class MapsActivity extends AppCompatActivity implements NavigationOptionsBottomSheetModal.OnRemoveListener {
 
     private Bundle bundle;
     private Intent intent;
@@ -84,9 +84,9 @@ public class MapsActivity extends AppCompatActivity implements ProviderOptionsBo
         findViewById(R.id.more_options).setOnClickListener(v -> {
             bundle.putInt("identifier", getIntent().getIntExtra("identifier", 0));
             bundle.putString("type", getIntent().getStringExtra("type"));
-            ProviderOptionsBottomSheetModal providerOptionsBottomSheetModal = new ProviderOptionsBottomSheetModal();
-            providerOptionsBottomSheetModal.setArguments(bundle);
-            providerOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
+            NavigationOptionsBottomSheetModal navigationOptionsBottomSheetModal = new NavigationOptionsBottomSheetModal();
+            navigationOptionsBottomSheetModal.setArguments(bundle);
+            navigationOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
         });
         if (request.equals("add")) {
             findViewById(R.id.more_options).setVisibility(View.GONE);

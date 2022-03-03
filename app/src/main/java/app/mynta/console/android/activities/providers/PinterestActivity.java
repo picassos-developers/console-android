@@ -20,7 +20,7 @@ import app.mynta.console.android.R;
 
 import app.mynta.console.android.sharedPreferences.ConsolePreferences;
 import app.mynta.console.android.constants.API;
-import app.mynta.console.android.sheets.ProviderOptionsBottomSheetModal;
+import app.mynta.console.android.sheets.NavigationOptionsBottomSheetModal;
 import app.mynta.console.android.utils.Helper;
 import app.mynta.console.android.utils.InputFilterRange;
 import app.mynta.console.android.utils.RequestDialog;
@@ -32,7 +32,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PinterestActivity extends AppCompatActivity implements ProviderOptionsBottomSheetModal.OnRemoveListener {
+public class PinterestActivity extends AppCompatActivity implements NavigationOptionsBottomSheetModal.OnRemoveListener {
 
     private Bundle bundle;
     private Intent intent;
@@ -70,9 +70,9 @@ public class PinterestActivity extends AppCompatActivity implements ProviderOpti
         findViewById(R.id.more_options).setOnClickListener(v -> {
             bundle.putInt("identifier", getIntent().getIntExtra("identifier", 0));
             bundle.putString("type", getIntent().getStringExtra("type"));
-            ProviderOptionsBottomSheetModal providerOptionsBottomSheetModal = new ProviderOptionsBottomSheetModal();
-            providerOptionsBottomSheetModal.setArguments(bundle);
-            providerOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
+            NavigationOptionsBottomSheetModal navigationOptionsBottomSheetModal = new NavigationOptionsBottomSheetModal();
+            navigationOptionsBottomSheetModal.setArguments(bundle);
+            navigationOptionsBottomSheetModal.show(getSupportFragmentManager(), "TAG");
         });
         if (request.equals("add")) {
             findViewById(R.id.more_options).setVisibility(View.GONE);
@@ -152,7 +152,7 @@ public class PinterestActivity extends AppCompatActivity implements ProviderOpti
 
                         accessToken.setText(root.getString("access_token"));
                         username.setText(root.getString("username"));
-                        perPage.setText(root.getString("per_page"));
+                        perPage.setText(String.valueOf(root.getInt("per_page")));
                         boardName.setText(root.getString("board_name"));
                     } catch (JSONException e) {
                         e.printStackTrace();

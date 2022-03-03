@@ -225,7 +225,7 @@
     <item name="copy_link" type="id" />
     <item name="save_settings" type="id" />
     <item name="walkthrough_title" type="id" />
-    <item name="remove_provider" type="id" />
+    <item name="remove_navigation" type="id" />
     <item name="onesignal_app_id" type="id" />
     <item name="onesignal_rest_api_key" type="id" />
     <item name="walkthrough_description" type="id" />

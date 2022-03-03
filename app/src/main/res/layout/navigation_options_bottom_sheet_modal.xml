@@ -14,7 +14,7 @@
         android:background="?divider_inline" />
 
     <LinearLayout
-        android:id="@id/remove_provider"
+        android:id="@id/remove_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
