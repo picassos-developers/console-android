@@ -115,7 +115,8 @@ public class MapsActivity extends AppCompatActivity implements NavigationOptions
         // save data
         Button save = findViewById(R.id.update_maps);
         save.setOnClickListener(v -> {
-            if (!TextUtils.isEmpty(mapStyle.getText().toString())) {
+            if (!TextUtils.isEmpty(mapStyle.getText().toString())
+                && !mapStyle.getText().toString().equals(getString(R.string.map_style))) {
                 switch (request) {
                     case "add":
                         requestAddMaps();

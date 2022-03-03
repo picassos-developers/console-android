@@ -229,7 +229,7 @@ public class WebviewActivity extends AppCompatActivity implements NavigationOpti
                         baseUrl.setText(root.getString("base_url"));
 
                         // default browser
-                        switch (root.getInt("default_browser")) {
+                        switch (root.getInt("launch_browser")) {
                             case 1:
                                 launchBrowser.setChecked(true);
                                 break;
@@ -363,7 +363,7 @@ public class WebviewActivity extends AppCompatActivity implements NavigationOpti
                     params.put("icon", icon.getText().toString());
                     params.put("base_url", baseUrl.getText().toString());
                     params.put("loading_spinner", spinner);
-                    params.put("default_browser", String.valueOf(launch_browser));
+                    params.put("launch_browser", String.valueOf(launch_browser));
                     params.put("bookmarks_page", String.valueOf(bookmarks));
                     params.put("downloads_page", String.valueOf(downloads));
                     params.put("qr_code_scanner", String.valueOf(qrscanner));

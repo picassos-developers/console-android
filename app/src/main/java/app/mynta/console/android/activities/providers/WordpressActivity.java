@@ -18,7 +18,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -131,12 +130,13 @@ public class WordpressActivity extends AppCompatActivity implements NavigationOp
         }
 
         // save data
-        Button save = findViewById(R.id.update_wordpress);
-        save.setOnClickListener(v -> {
+        findViewById(R.id.update_wordpress).setOnClickListener(v -> {
             if (!TextUtils.isEmpty(baseUrl.getText().toString())
                     && !TextUtils.isEmpty(perPage.getText().toString())
                     && !TextUtils.isEmpty(categoryDesign.getText().toString())
-                    && !TextUtils.isEmpty(postDesign.getText().toString())) {
+                    && !TextUtils.isEmpty(postDesign.getText().toString())
+                    && !categoryDesign.getText().toString().equals(getString(R.string.category_design))
+                    && !postDesign.getText().toString().equals(getString(R.string.post_design))) {
                 switch (request) {
                     case "add":
                         requestAddWordpress();

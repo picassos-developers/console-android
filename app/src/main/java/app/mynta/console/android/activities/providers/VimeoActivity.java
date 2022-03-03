@@ -126,7 +126,8 @@ public class VimeoActivity extends AppCompatActivity implements NavigationOption
             if (!TextUtils.isEmpty(accessToken.getText().toString())
                     && !TextUtils.isEmpty(username.getText().toString())
                     && !TextUtils.isEmpty(perPage.getText().toString())
-                    && !TextUtils.isEmpty(design.getText().toString())) {
+                    && !TextUtils.isEmpty(design.getText().toString())
+                    && !design.getText().toString().equals(getString(R.string.video_design))) {
                 switch (request) {
                     case "add":
                         requestAddVimeo();
