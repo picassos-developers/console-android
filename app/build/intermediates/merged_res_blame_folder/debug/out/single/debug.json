@@ -16,12 +16,12 @@
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/fragment_verify_purchase.xml"
     },
     {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_financial.png.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/icon_financial.png"
-    },
-    {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_activity_login.xml.flat",
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_financial.png.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/icon_financial.png"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_google.png.flat",
@@ -76,12 +76,12 @@
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/notifications_preferences_bottom_sheet_modal.xml"
     },
     {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_item_member_listitem.xml.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/item_member_listitem.xml"
-    },
-    {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_share.png.flat",
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/icon_share.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_item_member_listitem.xml.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/item_member_listitem.xml"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_cart_filled.png.flat",
@@ -92,16 +92,16 @@
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/icon_mail.png"
     },
     {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_wordpress_post_style_one.png.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/wordpress_post_style_one.png"
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_horizontal_progress_bar.xml.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/horizontal_progress_bar.xml"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_facebook_ads.png.flat",
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/facebook_ads.png"
     },
     {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_horizontal_progress_bar.xml.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/horizontal_progress_bar.xml"
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_wordpress_post_style_one.png.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/wordpress_post_style_one.png"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_imgur.png.flat",
@@ -116,12 +116,12 @@
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/active_mark.xml"
     },
     {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_navigation_opened_tickets.xml.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/navigation_opened_tickets.xml"
-    },
-    {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_transaction.png.flat",
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/icon_transaction.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_navigation_opened_tickets.xml.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/navigation_opened_tickets.xml"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_edit_email_bottom_sheet_modal.xml.flat",
@@ -136,12 +136,12 @@
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/icon_file_download.png"
     },
     {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_item_product_horizontal.xml.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/item_product_horizontal.xml"
-    },
-    {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_activity_view_article.xml.flat",
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/activity_view_article.xml"
+    },
+    {
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_item_product_horizontal.xml.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/item_product_horizontal.xml"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_tickets.png.flat",
@@ -200,12 +200,12 @@
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/icon_full_screen.png"
     },
     {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_divider_inline_dark.xml.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/divider_inline_dark.xml"
-    },
-    {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_language.png.flat",
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/icon_language.png"
+    },
+    {
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_divider_inline_dark.xml.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/divider_inline_dark.xml"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_dialog_designs.xml.flat",
@@ -284,12 +284,12 @@
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/input_rectangle_background.xml"
     },
     {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_item_category_design.xml.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/item_category_design.xml"
-    },
-    {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_edit_packagename_bottom_sheet_modal.xml.flat",
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/edit_packagename_bottom_sheet_modal.xml"
+    },
+    {
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_item_category_design.xml.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/item_category_design.xml"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_shopping_basket.png.flat",
@@ -324,12 +324,12 @@
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/rectangle_secondary.xml"
     },
     {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_gradient_background.xml.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/gradient_background.xml"
-    },
-    {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_item_purchase_listitem.xml.flat",
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/item_purchase_listitem.xml"
+    },
+    {
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_gradient_background.xml.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/gradient_background.xml"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_google_pay.png.flat",
@@ -556,16 +556,16 @@
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/icon_closed_tickets_outline.png"
     },
     {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_item_server_status_listitem.xml.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/item_server_status_listitem.xml"
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_activity_my_tickets.xml.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/activity_my_tickets.xml"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_download.png.flat",
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/icon_download.png"
     },
     {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_activity_my_tickets.xml.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/activity_my_tickets.xml"
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_item_server_status_listitem.xml.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/item_server_status_listitem.xml"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_paint.png.flat",
@@ -1060,6 +1060,10 @@
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/header_logo_light.png"
     },
     {
+        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_navigation_options_bottom_sheet_modal.xml.flat",
+        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/navigation_options_bottom_sheet_modal.xml"
+    },
+    {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_activity_members.xml.flat",
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/activity_members.xml"
     },
@@ -1194,10 +1198,6 @@
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/drawable_icon_darkmode.png.flat",
         "source": "/Users/noor/Desktop/console-android/app/src/main/res/drawable/icon_darkmode.png"
-    },
-    {
-        "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_provider_options_bottom_sheet_modal.xml.flat",
-        "source": "/Users/noor/Desktop/console-android/app/src/main/res/layout/provider_options_bottom_sheet_modal.xml"
     },
     {
         "merged": "/Users/noor/Desktop/console-android/app/build/intermediates/merged_res/debug/layout_item_guide_listitem.xml.flat",
